@@ -33,6 +33,8 @@ After the user explicitly authorizes committing and pushing:
 3. Run **Deploy GitHub Pages** from the Actions tab if the initial push happened before Pages was enabled.
 4. Wait for the deployment to finish, then verify the public homepage, browser, documentation and downloadable data at the Pages URL.
 
+The project declares its seven-day package release cutoff in `pyproject.toml`, so the lockfile does not depend on a contributor’s global `uv` configuration.
+
 The workflow runs on pushes to `main`, pull requests to `main`, and manual dispatch. Pull requests build and validate only; deployment is restricted to `main` outside pull requests. The build job has read-only repository access. The deploy job has Pages deployment and identity-token permissions and uses the `github-pages` environment. Action references are pinned to reviewed commit SHAs.
 
 ## Updating the site

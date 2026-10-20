@@ -11,3 +11,7 @@ dev = [
     "pyshacl==0.30.1",
     "markdown-it-py==4.0.0",
 ]
+
+[tool.uv]
+# Keep local and CI resolution policies identical.
+exclude-newer = "7 days"

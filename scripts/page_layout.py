@@ -130,7 +130,7 @@ def prepare_body(body,current):
     if facts and kind!='home':heading+=scope_panel(facts,note)
     if kind=='home':
         heading+=f'''<nav class="entry-routes" aria-label="Choose your path">
-<a class="entry-path" href="{relative('docs/concept-browser.html',current)}"><span class="entry-label">For learning</span><strong>Study SysML concepts</strong><p>Understand what concepts mean, how they relate and compose, and how they appear in diagrams. Follow examples and links to the official specification.</p><span class="entry-action">Explore concepts</span></a>
+<a class="entry-path" href="{relative('docs/concept-browser.html',current)}"><span class="entry-label">Concept reference</span><strong>Understand SysML concepts</strong><p>Understand what concepts mean, how they relate and compose, and how they appear in diagrams. Follow examples and links to the official specification.</p><span class="entry-action">Explore concepts</span></a>
 <a class="entry-path" href="{relative('docs/svg-shapes.html',current)}"><span class="entry-label">For building tools</span><strong>Borrow graphical components</strong><p>Download reusable SVG parts, ports and connections for your renderer. Inspect shapes, edit labels and colors, and use attachment coordinates.</p><span class="entry-action">Open the SVG library</span></a>
 <a class="entry-evidence" href="{relative('docs/notation-coverage.html',current)}"><strong>Inspect the evidence and coverage</strong><span>Trace notation to official sources and see what has been indexed, illustrated or reviewed.</span></a>
 </nav>'''

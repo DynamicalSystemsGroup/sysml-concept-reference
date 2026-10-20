@@ -1,6 +1,6 @@
 # SysML concepts and components
 
-Study the language with source-backed explanations, or borrow graphical components for your own modeling tools. Choose the path that fits what you want to do.
+Look up SysML concepts, their properties and relationships, or borrow graphical components for your own modeling tools. Choose the path that fits what you want to do.
 
 ## Start with the foundations
 

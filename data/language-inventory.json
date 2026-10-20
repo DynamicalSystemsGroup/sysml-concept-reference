@@ -1,0 +1,3062 @@
+{
+  "schema_version": 1,
+  "title": "SysML v2 Language Part 1 declared metamodel inventory",
+  "status": "research extraction; not an executable metamodel or proof of completeness",
+  "provenance": {
+    "notebook_url": "https://notebooklm.google.com/notebook/68f78add-cb6f-42cf-9e2e-cb1b1ce42511",
+    "notebook_title": "SysML 2.0 Language Specification",
+    "source_id": "c83ee3d3-22d7-4c7c-97f5-196a6fe0c27d",
+    "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF",
+    "document_number": "formal/2026-03-02",
+    "document_date": "March 2026",
+    "research_date": "2026-10-20",
+    "retrieved_source_text_sha256": "0939422c839a155fed88404f3eb6b497f77e8b787daeb986541c9f8fd3b41441",
+    "research_repository": "https://github.com/rororowyourboat/sysmlv2_inventory"
+  },
+  "scope": {
+    "sections": "8.3.6\u20138.3.27 dedicated named subsections",
+    "excludes": [
+      "full inherited KerML metamodel",
+      "foundation diagram-only properties in 8.3.2\u20138.3.5",
+      "operations and OCL bodies",
+      "complete textual/graphical productions",
+      "complete library members and their attributes",
+      "implementation or conformance claims"
+    ],
+    "extraction_method": "Unique numbered subsection/name pairs, resolved to final source occurrence. Read General Classes and one-line declaration signatures between Attributes and Operations; retain constraint identifiers. Source text wrapping can omit signatures; review against official metamodel before implementation.",
+    "slash_meaning": "A leading slash in a property declaration marks derivation; derived does not mean writable.",
+    "empty_attribute_list_meaning": "No matching own declaration extracted; inherited properties and multiline declarations may still exist."
+  },
+  "counts": {
+    "entries": 98,
+    "metaclasses": 93,
+    "enumerations": 5,
+    "declared_attribute_signatures": 218,
+    "constraint_names": 365
+  },
+  "entries": [
+    {
+      "section": "8.3.6.2",
+      "name": "Definition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "deriveDefinitionDirectedUsage",
+        "deriveDefinitionOwnedAction",
+        "deriveDefinitionOwnedAllocation",
+        "deriveDefinitionOwnedAnalysisCase",
+        "deriveDefinitionOwnedAttribute",
+        "deriveDefinitionOwnedCalculation",
+        "deriveDefinitionOwnedCase",
+        "deriveDefinitionOwnedConcern",
+        "deriveDefinitionOwnedConnection",
+        "deriveDefinitionOwnedConstraint",
+        "deriveDefinitionOwnedEnumeration",
+        "deriveDefinitionOwnedFlow",
+        "deriveDefinitionOwnedInterface",
+        "deriveDefinitionOwnedItem",
+        "deriveDefinitionOwnedMetadata",
+        "deriveDefinitionOwnedOccurrence",
+        "deriveDefinitionOwnedPart",
+        "deriveDefinitionOwnedPort",
+        "deriveDefinitionOwnedReference",
+        "deriveDefinitionOwnedRendering",
+        "deriveDefinitionOwnedRequirement",
+        "deriveDefinitionOwnedState",
+        "deriveDefinitionOwnedTransition",
+        "deriveDefinitionOwnedUsage",
+        "deriveDefinitionOwnedUseCase",
+        "deriveDefinitionOwnedVerificationCase",
+        "deriveDefinitionOwnedView",
+        "deriveDefinitionOwnedViewpoint",
+        "deriveDefinitionUsage",
+        "deriveDefinitionVariant",
+        "deriveDefinitionVariantMembership",
+        "validateDefinitionVariationIsAbstract",
+        "validateDefinitionVariationOwnedFeatureMembership",
+        "validateDefinitionVariationSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "directedUsage",
+          "derived": true,
+          "declaration": "/directedUsage : Usage [0..*] {subsets directedFeature, usage, ordered}"
+        },
+        {
+          "name": "isVariation",
+          "derived": false,
+          "declaration": "isVariation : Boolean"
+        },
+        {
+          "name": "ownedAction",
+          "derived": true,
+          "declaration": "/ownedAction : ActionUsage [0..*] {subsets ownedOccurrence, ordered}"
+        },
+        {
+          "name": "ownedAllocation",
+          "derived": true,
+          "declaration": "/ownedAllocation : AllocationUsage [0..*] {subsets ownedConnection, ordered}"
+        },
+        {
+          "name": "ownedAnalysisCase",
+          "derived": true,
+          "declaration": "/ownedAnalysisCase : AnalysisCaseUsage [0..*] {subsets ownedCase, ordered}"
+        },
+        {
+          "name": "ownedAttribute",
+          "derived": true,
+          "declaration": "/ownedAttribute : AttributeUsage [0..*] {subsets ownedUsage, ordered}"
+        },
+        {
+          "name": "ownedCalculation",
+          "derived": true,
+          "declaration": "/ownedCalculation : CalculationUsage [0..*] {subsets ownedAction, ordered}"
+        },
+        {
+          "name": "ownedCase",
+          "derived": true,
+          "declaration": "/ownedCase : CaseUsage [0..*] {subsets ownedCalculation, ordered}"
+        },
+        {
+          "name": "ownedConcern",
+          "derived": true,
+          "declaration": "/ownedConcern : ConcernUsage [0..*] {subsets ownedRequirement}"
+        },
+        {
+          "name": "ownedConnection",
+          "derived": true,
+          "declaration": "/ownedConnection : ConnectorAsUsage [0..*] {subsets ownedUsage, ordered}"
+        },
+        {
+          "name": "ownedConstraint",
+          "derived": true,
+          "declaration": "/ownedConstraint : ConstraintUsage [0..*] {subsets ownedOccurrence, ordered}"
+        },
+        {
+          "name": "ownedEnumeration",
+          "derived": true,
+          "declaration": "/ownedEnumeration : EnumerationUsage [0..*] {subsets ownedAttribute, ordered}"
+        },
+        {
+          "name": "ownedFlow",
+          "derived": true,
+          "declaration": "/ownedFlow : FlowUsage [0..*] {subsets ownedConnection}"
+        },
+        {
+          "name": "ownedInterface",
+          "derived": true,
+          "declaration": "/ownedInterface : InterfaceUsage [0..*] {subsets ownedConnection, ordered}"
+        },
+        {
+          "name": "ownedItem",
+          "derived": true,
+          "declaration": "/ownedItem : ItemUsage [0..*] {subsets ownedOccurrence, ordered}"
+        },
+        {
+          "name": "ownedMetadata",
+          "derived": true,
+          "declaration": "/ownedMetadata : MetadataUsage [0..*] {subsets ownedItem, ordered}"
+        },
+        {
+          "name": "ownedOccurrence",
+          "derived": true,
+          "declaration": "/ownedOccurrence : OccurrenceUsage [0..*] {subsets ownedUsage, ordered}"
+        },
+        {
+          "name": "ownedPart",
+          "derived": true,
+          "declaration": "/ownedPart : PartUsage [0..*] {subsets ownedItem, ordered}"
+        },
+        {
+          "name": "ownedPort",
+          "derived": true,
+          "declaration": "/ownedPort : PortUsage [0..*] {subsets ownedUsage, ordered}"
+        },
+        {
+          "name": "ownedReference",
+          "derived": true,
+          "declaration": "/ownedReference : ReferenceUsage [0..*] {subsets ownedUsage, ordered}"
+        },
+        {
+          "name": "ownedRendering",
+          "derived": true,
+          "declaration": "/ownedRendering : RenderingUsage [0..*] {subsets ownedPart, ordered}"
+        },
+        {
+          "name": "ownedRequirement",
+          "derived": true,
+          "declaration": "/ownedRequirement : RequirementUsage [0..*] {subsets ownedConstraint, ordered}"
+        },
+        {
+          "name": "ownedState",
+          "derived": true,
+          "declaration": "/ownedState : StateUsage [0..*] {subsets ownedAction, ordered}"
+        },
+        {
+          "name": "ownedTransition",
+          "derived": true,
+          "declaration": "/ownedTransition : TransitionUsage [0..*] {subsets ownedUsage}"
+        },
+        {
+          "name": "ownedUsage",
+          "derived": true,
+          "declaration": "/ownedUsage : Usage [0..*] {subsets ownedFeature, usage, ordered}"
+        },
+        {
+          "name": "ownedUseCase",
+          "derived": true,
+          "declaration": "/ownedUseCase : UseCaseUsage [0..*] {subsets ownedCase, ordered}"
+        },
+        {
+          "name": "ownedVerificationCase",
+          "derived": true,
+          "declaration": "/ownedVerificationCase : VerificationCaseUsage [0..*] {subsets ownedCase, ordered}"
+        },
+        {
+          "name": "ownedView",
+          "derived": true,
+          "declaration": "/ownedView : ViewUsage [0..*] {subsets ownedPart, ordered}"
+        },
+        {
+          "name": "ownedViewpoint",
+          "derived": true,
+          "declaration": "/ownedViewpoint : ViewpointUsage [0..*] {subsets ownedRequirement, ordered}"
+        },
+        {
+          "name": "usage",
+          "derived": true,
+          "declaration": "/usage : Usage [0..*] {subsets feature, ordered}"
+        },
+        {
+          "name": "variant",
+          "derived": true,
+          "declaration": "/variant : Usage [0..*] {subsets ownedMember}"
+        },
+        {
+          "name": "variantMembership",
+          "derived": true,
+          "declaration": "/variantMembership : VariantMembership [0..*] {subsets ownedMembership}"
+        }
+      ],
+      "general_classes": [
+        "Classifier"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.6.3",
+      "name": "ReferenceUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateReferenceUsageIsReference"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "isReference",
+          "derived": true,
+          "declaration": "/isReference : Boolean {redefines isReference}"
+        }
+      ],
+      "general_classes": [
+        "Usage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.6.4",
+      "name": "Usage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkUsageVariationDefinitionSpecialization",
+        "checkUsageVariationUsageSpecialization",
+        "checkUsageVariationUsageTypeFeaturing",
+        "deriveUsageDirectedUsage",
+        "deriveUsageIsReference",
+        "deriveUsageMayTimeVary",
+        "deriveUsageNestedAction",
+        "deriveUsageNestedAllocation",
+        "deriveUsageNestedAnalysisCase",
+        "deriveUsageNestedAttribute",
+        "deriveUsageNestedCalculation",
+        "deriveUsageNestedCase",
+        "deriveUsageNestedConcern",
+        "deriveUsageNestedConnection",
+        "deriveUsageNestedConstraint",
+        "deriveUsageNestedEnumeration",
+        "deriveUsageNestedFlow",
+        "deriveUsageNestedInterface",
+        "deriveUsageNestedItem",
+        "deriveUsageNestedMetadata",
+        "deriveUsageNestedOccurrence",
+        "deriveUsageNestedPart",
+        "deriveUsageNestedPort",
+        "deriveUsageNestedReference",
+        "deriveUsageNestedRendering",
+        "deriveUsageNestedRequirement",
+        "deriveUsageNestedState",
+        "deriveUsageNestedTransition",
+        "deriveUsageNestedUsage",
+        "deriveUsageNestedUseCase",
+        "deriveUsageNestedVerificationCase",
+        "deriveUsageNestedView",
+        "deriveUsageNestedViewpoint",
+        "deriveUsageUsage",
+        "deriveUsageVariant",
+        "deriveUsageVariantMembership",
+        "validateUsageIsReferential",
+        "validateUsageVariationIsAbstract",
+        "validateUsageVariationOwnedFeatureMembership",
+        "validateUsageVariationSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "definition",
+          "derived": true,
+          "declaration": "/definition : Classifier [0..*] {redefines type, ordered}"
+        },
+        {
+          "name": "directedUsage",
+          "derived": true,
+          "declaration": "/directedUsage : Usage [0..*] {subsets directedFeature, usage, ordered}"
+        },
+        {
+          "name": "isReference",
+          "derived": true,
+          "declaration": "/isReference : Boolean"
+        },
+        {
+          "name": "isVariation",
+          "derived": false,
+          "declaration": "isVariation : Boolean"
+        },
+        {
+          "name": "mayTimeVary",
+          "derived": true,
+          "declaration": "/mayTimeVary : Boolean {redefines isVariable}"
+        },
+        {
+          "name": "nestedAction",
+          "derived": true,
+          "declaration": "/nestedAction : ActionUsage [0..*] {subsets nestedOccurrence, ordered}"
+        },
+        {
+          "name": "nestedAllocation",
+          "derived": true,
+          "declaration": "/nestedAllocation : AllocationUsage [0..*] {subsets nestedConnection, ordered}"
+        },
+        {
+          "name": "nestedAnalysisCase",
+          "derived": true,
+          "declaration": "/nestedAnalysisCase : AnalysisCaseUsage [0..*] {subsets nestedCase, ordered}"
+        },
+        {
+          "name": "nestedAttribute",
+          "derived": true,
+          "declaration": "/nestedAttribute : AttributeUsage [0..*] {subsets nestedUsage, ordered}"
+        },
+        {
+          "name": "nestedCalculation",
+          "derived": true,
+          "declaration": "/nestedCalculation : CalculationUsage [0..*] {subsets nestedAction, ordered}"
+        },
+        {
+          "name": "nestedCase",
+          "derived": true,
+          "declaration": "/nestedCase : CaseUsage [0..*] {subsets nestedCalculation, ordered}"
+        },
+        {
+          "name": "nestedConcern",
+          "derived": true,
+          "declaration": "/nestedConcern : ConcernUsage [0..*] {subsets nestedRequirement}"
+        },
+        {
+          "name": "nestedConnection",
+          "derived": true,
+          "declaration": "/nestedConnection : ConnectorAsUsage [0..*] {subsets nestedUsage, ordered}"
+        },
+        {
+          "name": "nestedConstraint",
+          "derived": true,
+          "declaration": "/nestedConstraint : ConstraintUsage [0..*] {subsets nestedOccurrence, ordered}"
+        },
+        {
+          "name": "nestedEnumeration",
+          "derived": true,
+          "declaration": "/nestedEnumeration : EnumerationUsage [0..*] {subsets nestedAttribute, ordered}"
+        },
+        {
+          "name": "nestedFlow",
+          "derived": true,
+          "declaration": "/nestedFlow : FlowUsage [0..*] {subsets nestedConnection}"
+        },
+        {
+          "name": "nestedInterface",
+          "derived": true,
+          "declaration": "/nestedInterface : InterfaceUsage [0..*] {subsets nestedConnection, ordered}"
+        },
+        {
+          "name": "nestedItem",
+          "derived": true,
+          "declaration": "/nestedItem : ItemUsage [0..*] {subsets nestedOccurrence, ordered}"
+        },
+        {
+          "name": "nestedMetadata",
+          "derived": true,
+          "declaration": "/nestedMetadata : MetadataUsage [0..*] {subsets nestedItem, ordered}"
+        },
+        {
+          "name": "nestedOccurrence",
+          "derived": true,
+          "declaration": "/nestedOccurrence : OccurrenceUsage [0..*] {subsets nestedUsage, ordered}"
+        },
+        {
+          "name": "nestedPart",
+          "derived": true,
+          "declaration": "/nestedPart : PartUsage [0..*] {subsets nestedItem, ordered}"
+        },
+        {
+          "name": "nestedPort",
+          "derived": true,
+          "declaration": "/nestedPort : PortUsage [0..*] {subsets nestedUsage, ordered}"
+        },
+        {
+          "name": "nestedReference",
+          "derived": true,
+          "declaration": "/nestedReference : ReferenceUsage [0..*] {subsets nestedUsage, ordered}"
+        },
+        {
+          "name": "nestedRendering",
+          "derived": true,
+          "declaration": "/nestedRendering : RenderingUsage [0..*] {subsets nestedPart, ordered}"
+        },
+        {
+          "name": "nestedRequirement",
+          "derived": true,
+          "declaration": "/nestedRequirement : RequirementUsage [0..*] {subsets nestedConstraint, ordered}"
+        },
+        {
+          "name": "nestedState",
+          "derived": true,
+          "declaration": "/nestedState : StateUsage [0..*] {subsets nestedAction, ordered}"
+        },
+        {
+          "name": "nestedTransition",
+          "derived": true,
+          "declaration": "/nestedTransition : TransitionUsage [0..*] {subsets nestedUsage}"
+        },
+        {
+          "name": "nestedUsage",
+          "derived": true,
+          "declaration": "/nestedUsage : Usage [0..*] {subsets ownedFeature, usage, ordered}"
+        },
+        {
+          "name": "nestedUseCase",
+          "derived": true,
+          "declaration": "/nestedUseCase : UseCaseUsage [0..*] {subsets nestedCase, ordered}"
+        },
+        {
+          "name": "nestedVerificationCase",
+          "derived": true,
+          "declaration": "/nestedVerificationCase : VerificationCaseUsage [0..*] {subsets nestedCase, ordered}"
+        },
+        {
+          "name": "nestedView",
+          "derived": true,
+          "declaration": "/nestedView : ViewUsage [0..*] {subsets nestedPart, ordered}"
+        },
+        {
+          "name": "nestedViewpoint",
+          "derived": true,
+          "declaration": "/nestedViewpoint : ViewpointUsage [0..*] {subsets nestedRequirement, ordered}"
+        },
+        {
+          "name": "owningDefinition",
+          "derived": true,
+          "declaration": "/owningDefinition : Definition [0..1] {subsets owningType, featuringDefinition}"
+        },
+        {
+          "name": "owningUsage",
+          "derived": true,
+          "declaration": "/owningUsage : Usage [0..1] {subsets owningType}"
+        },
+        {
+          "name": "usage",
+          "derived": true,
+          "declaration": "/usage : Usage [0..*] {subsets feature, ordered}"
+        },
+        {
+          "name": "variant",
+          "derived": true,
+          "declaration": "/variant : Usage [0..*] {subsets ownedMember}"
+        },
+        {
+          "name": "variantMembership",
+          "derived": true,
+          "declaration": "/variantMembership : VariantMembership [0..*] {subsets ownedMembership}"
+        }
+      ],
+      "general_classes": [
+        "Feature"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.6.5",
+      "name": "VariantMembership",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateVariantMembershipOwningNamespace"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "ownedVariantUsage",
+          "derived": true,
+          "declaration": "/ownedVariantUsage : Usage {redefines ownedMemberElement}"
+        }
+      ],
+      "general_classes": [
+        "OwningMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.7.2",
+      "name": "AttributeDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateAttributeDefinitionFeatures"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "Definition",
+        "DataType"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.7.3",
+      "name": "AttributeUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkAttributeUsageSpecialization",
+        "validateAttributeUsageFeatures",
+        "validateAttributeUsageIsReference"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "attributeDefinition",
+          "derived": true,
+          "declaration": "/attributeDefinition : DataType [0..*] {redefines definition, ordered}"
+        },
+        {
+          "name": "isReference",
+          "derived": true,
+          "declaration": "/isReference : Boolean {redefines isReference}"
+        }
+      ],
+      "general_classes": [
+        "Usage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.8.2",
+      "name": "EnumerationDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateEnumerationDefinitionIsVariation"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "enumeratedValue",
+          "derived": true,
+          "declaration": "/enumeratedValue : EnumerationUsage [0..*] {redefines variant, ordered}"
+        },
+        {
+          "name": "isVariation",
+          "derived": false,
+          "declaration": "isVariation : Boolean {redefines isVariation}"
+        }
+      ],
+      "general_classes": [
+        "AttributeDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.8.3",
+      "name": "EnumerationUsage",
+      "kind": "metaclass",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "enumerationDefinition",
+          "derived": true,
+          "declaration": "/enumerationDefinition : EnumerationDefinition {redefines attributeDefinition}"
+        }
+      ],
+      "general_classes": [
+        "AttributeUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.9.2",
+      "name": "EventOccurrenceUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkEventOccurrenceUsageSpecialization",
+        "deriveEventOccurrenceUsageEventOccurrence",
+        "validateEventOccurrenceUsageIsReference",
+        "validateEventOccurrenceUsageReference"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "eventOccurrence",
+          "derived": true,
+          "declaration": "/eventOccurrence : OccurrenceUsage"
+        },
+        {
+          "name": "isReference",
+          "derived": true,
+          "declaration": "/isReference : Boolean {redefines isReference}"
+        }
+      ],
+      "general_classes": [
+        "OccurrenceUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.9.3",
+      "name": "OccurrenceDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkOccurrenceDefinitionIndividualSpecialization",
+        "checkOccurrenceDefinitionMultiplicitySpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "isIndividual",
+          "derived": false,
+          "declaration": "isIndividual : Boolean"
+        }
+      ],
+      "general_classes": [
+        "Definition",
+        "Class"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.9.4",
+      "name": "OccurrenceUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkOccurrenceUsageSnapshotSpecialization",
+        "checkOccurrenceUsageSpecialization",
+        "checkOccurrenceUsageSuboccurrenceSpecialization",
+        "checkOccurrenceUsageTimeSliceSpecialization",
+        "deriveOccurrenceUsageIndividualDefinition",
+        "validateOccurrenceUsageIndividualDefinition",
+        "validateOccurrenceUsageIndividualUsage",
+        "validateOccurrenceUsageIsPortion",
+        "validateOccurrenceUsagePortionKind"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "individualDefinition",
+          "derived": true,
+          "declaration": "/individualDefinition : OccurrenceDefinition [0..1] {subsets occurrenceDefinition}"
+        },
+        {
+          "name": "isIndividual",
+          "derived": false,
+          "declaration": "isIndividual : Boolean"
+        },
+        {
+          "name": "occurrenceDefinition",
+          "derived": true,
+          "declaration": "/occurrenceDefinition : Class [0..*] {redefines definition, ordered}"
+        },
+        {
+          "name": "portionKind",
+          "derived": false,
+          "declaration": "portionKind : PortionKind [0..1]"
+        }
+      ],
+      "general_classes": [
+        "Usage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.9.5",
+      "name": "PortionKind",
+      "kind": "enumeration",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "Literal",
+        "Values",
+        "A",
+        "Occurrence"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.10.2",
+      "name": "ItemDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkItemDefinitionSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "Structure",
+        "OccurrenceDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.10.3",
+      "name": "ItemUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkItemUsageSpecialization",
+        "checkItemUsageSubitemSpecialization",
+        "deriveItemUsageItemDefinition"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "itemDefinition",
+          "derived": true,
+          "declaration": "/itemDefinition : Structure [0..*] {subsets occurrenceDefinition, ordered}"
+        }
+      ],
+      "general_classes": [
+        "OccurrenceUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.11.2",
+      "name": "PartDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkPartDefinitionSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "ItemDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.11.3",
+      "name": "PartUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkPartUsageActorSpecialization",
+        "checkPartUsageSpecialization",
+        "checkPartUsageStakeholderSpecialization",
+        "checkPartUsageSubpartSpecialization",
+        "derivePartUsagePartDefinition",
+        "validatePartUsagePartDefinition"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "partDefinition",
+          "derived": true,
+          "declaration": "/partDefinition : PartDefinition [0..*] {subsets itemDefinition, ordered}"
+        }
+      ],
+      "general_classes": [
+        "ItemUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.12.2",
+      "name": "ConjugatedPortDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateConjugatedPortDefinitionConjugatedPortDefinitionIsEmpty",
+        "validateConjugatedPortDefinitionOriginalPortDefinition"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "originalPortDefinition",
+          "derived": true,
+          "declaration": "/originalPortDefinition : PortDefinition {redefines owningNamespace}"
+        },
+        {
+          "name": "ownedPortConjugator",
+          "derived": true,
+          "declaration": "/ownedPortConjugator : PortConjugation {redefines ownedConjugator}"
+        }
+      ],
+      "general_classes": [
+        "PortDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.12.3",
+      "name": "ConjugatedPortTyping",
+      "kind": "metaclass",
+      "named_constraints": [
+        "deriveConjugatedPortTypingPortDefinition"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "conjugatedPortDefinition",
+          "derived": false,
+          "declaration": "conjugatedPortDefinition : ConjugatedPortDefinition {redefines type}"
+        },
+        {
+          "name": "portDefinition",
+          "derived": true,
+          "declaration": "/portDefinition : PortDefinition"
+        }
+      ],
+      "general_classes": [
+        "FeatureTyping"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.12.4",
+      "name": "PortConjugation",
+      "kind": "metaclass",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "conjugatedPortDefinition",
+          "derived": true,
+          "declaration": "/conjugatedPortDefinition : ConjugatedPortDefinition {redefines owningType}"
+        },
+        {
+          "name": "originalPortDefinition",
+          "derived": false,
+          "declaration": "originalPortDefinition : PortDefinition {redefines originalType}"
+        }
+      ],
+      "general_classes": [
+        "Conjugation"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.12.5",
+      "name": "PortDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkPortDefinitionSpecialization",
+        "derivePortDefinitionConjugatedPortDefinition",
+        "validatePortDefinitionConjugatedPortDefinition",
+        "validatePortDefinitionOwnedUsagesNotComposite"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "conjugatedPortDefinition",
+          "derived": true,
+          "declaration": "/conjugatedPortDefinition : ConjugatedPortDefinition [0..1] {subsets ownedMember}"
+        }
+      ],
+      "general_classes": [
+        "Structure",
+        "OccurrenceDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.12.6",
+      "name": "PortUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkPortUsageOwnedPortSpecialization",
+        "checkPortUsageSpecialization",
+        "checkPortUsageSubportSpecialization",
+        "validatePortUsageIsReference",
+        "validatePortUsageNestedUsagesNotComposite"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "portDefinition",
+          "derived": true,
+          "declaration": "/portDefinition : PortDefinition [0..*] {redefines occurrenceDefinition, ordered}"
+        }
+      ],
+      "general_classes": [
+        "OccurrenceUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.13.2",
+      "name": "BindingConnectorAsUsage",
+      "kind": "metaclass",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "ConnectorAsUsage",
+        "BindingConnector"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.13.3",
+      "name": "ConnectionDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkConnectionDefinitionBinarySpecialization",
+        "checkConnectionDefinitionSpecializations",
+        "validateConnectionDefinitionIsSufficient"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "connectionEnd",
+          "derived": true,
+          "declaration": "/connectionEnd : Usage [0..*] {redefines associationEnd, ordered}"
+        },
+        {
+          "name": "isSufficient",
+          "derived": false,
+          "declaration": "isSufficient : Boolean {redefines isSufficient}"
+        }
+      ],
+      "general_classes": [
+        "PartDefinition",
+        "AssociationStructure"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.13.4",
+      "name": "ConnectionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkConnectionUsageBinarySpecialization",
+        "checkConnectionUsageSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "connectionDefinition",
+          "derived": true,
+          "declaration": "/connectionDefinition : AssociationStructure [0..*] {subsets itemDefinition, redefines association, ordered}"
+        }
+      ],
+      "general_classes": [
+        "PartUsage",
+        "ConnectorAsUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.13.5",
+      "name": "ConnectorAsUsage",
+      "kind": "metaclass",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "Connector",
+        "Usage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.13.6",
+      "name": "SuccessionAsUsage",
+      "kind": "metaclass",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "Succession",
+        "ConnectorAsUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.14.2",
+      "name": "InterfaceDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkInterfaceDefinitionBinarySpecialization",
+        "checkInterfaceDefinitionSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "interfaceEnd",
+          "derived": true,
+          "declaration": "/interfaceEnd : PortUsage [0..*] {redefines connectionEnd, ordered}"
+        }
+      ],
+      "general_classes": [
+        "ConnectionDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.14.3",
+      "name": "InterfaceUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkInterfaceUsageBinarySpecialization",
+        "checkInterfaceUsageSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "interfaceDefinition",
+          "derived": true,
+          "declaration": "/interfaceDefinition : InterfaceDefinition [0..*] {redefines connectionDefinition}"
+        }
+      ],
+      "general_classes": [
+        "ConnectionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.15.2",
+      "name": "AllocationDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkAllocationDefinitionSpecialization",
+        "deriveAllocationDefinitionAllocation"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "allocation",
+          "derived": true,
+          "declaration": "/allocation : AllocationUsage [0..*] {subsets usage, ordered}"
+        }
+      ],
+      "general_classes": [
+        "ConnectionDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.15.3",
+      "name": "AllocationUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkAllocationUsageSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "allocationDefinition",
+          "derived": true,
+          "declaration": "/allocationDefinition : AllocationDefinition [0..*] {redefines connectionDefinition, ordered}"
+        }
+      ],
+      "general_classes": [
+        "ConnectionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.16.2",
+      "name": "FlowDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkFlowDefinitionBinarySpecialization",
+        "checkFlowDefinitionSpecialization",
+        "validateFlowDefinitionFlowEnds"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "flowEnd",
+          "derived": true,
+          "declaration": "/flowEnd : Usage [0..*] {redefines associationEnd}"
+        }
+      ],
+      "general_classes": [
+        "ActionDefinition",
+        "Interaction"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.16.3",
+      "name": "FlowUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkFlowUsageFlowSpecialization",
+        "checkFlowUsageSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "flowDefinition",
+          "derived": true,
+          "declaration": "/flowDefinition : Interaction [0..*] {redefines actionDefinition, interaction, ordered}"
+        }
+      ],
+      "general_classes": [
+        "Flow",
+        "ActionUsage",
+        "ConnectorAsUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.16.4",
+      "name": "SuccessionFlowUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkSuccessionFlowUsageSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "FlowUsage",
+        "SuccessionFlow"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.2",
+      "name": "AcceptActionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkAcceptActionUsageReceiverBindingConnector",
+        "checkAcceptActionUsageSpecialization",
+        "checkAcceptActionUsageSubactionSpecialization",
+        "checkAcceptActionUsageTriggerActionSpecialization",
+        "deriveAcceptActionUsagePayloadArgument",
+        "deriveAcceptActionUsagePayloadParameter",
+        "deriveAcceptActionUsageReceiverArgument",
+        "validateAcceptActionUsageParameters"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "payloadArgument",
+          "derived": true,
+          "declaration": "/payloadArgument : Expression [0..1]"
+        },
+        {
+          "name": "payloadParameter",
+          "derived": true,
+          "declaration": "/payloadParameter : ReferenceUsage {subsets nestedReference, parameter}"
+        },
+        {
+          "name": "receiverArgument",
+          "derived": true,
+          "declaration": "/receiverArgument : Expression [0..1]"
+        }
+      ],
+      "general_classes": [
+        "ActionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.3",
+      "name": "ActionDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkActionDefinitionSpecialization",
+        "deriveActionDefinitionAction"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "action",
+          "derived": true,
+          "declaration": "/action : ActionUsage [0..*] {subsets step, usage, ordered}"
+        }
+      ],
+      "general_classes": [
+        "Behavior",
+        "OccurrenceDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.4",
+      "name": "ActionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkActionUsageOwnedActionSpecialization",
+        "checkActionUsageSpecialization",
+        "checkActionUsageStateActionRedefinition",
+        "checkActionUsageSubactionSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "actionDefinition",
+          "derived": true,
+          "declaration": "/actionDefinition : Behavior [0..*] {redefines behavior, occurrenceDefinition, ordered}"
+        }
+      ],
+      "general_classes": [
+        "Step",
+        "OccurrenceUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.5",
+      "name": "AssignmentActionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkAssignmentActionUsageAccessedFeatureRedefinition",
+        "checkAssignmentActionUsageReferentRedefinition",
+        "checkAssignmentActionUsageSpecialization",
+        "checkAssignmentActionUsageStartingAtRedefinition",
+        "checkAssignmentActionUsageSubactionSpecialization",
+        "deriveAssignmentActionUsageReferent",
+        "deriveAssignmentActionUsageValueExpression",
+        "deriveAssignmentUsageTargetArgument",
+        "validateAssignmentActionUsage",
+        "validateAssignmentActionUsageReferent"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "referent",
+          "derived": true,
+          "declaration": "/referent : Feature {subsets member}"
+        },
+        {
+          "name": "targetArgument",
+          "derived": true,
+          "declaration": "/targetArgument : Expression [0..1]"
+        },
+        {
+          "name": "valueExpression",
+          "derived": true,
+          "declaration": "/valueExpression : Expression [0..1]"
+        }
+      ],
+      "general_classes": [
+        "ActionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.6",
+      "name": "ControlNode",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkControlNodeSpecialization",
+        "validateControlNodeIncomingSuccessions",
+        "validateControlNodeIsComposite",
+        "validateControlNodeOutgoingSuccessions",
+        "validateControlNodeOwningType"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "ActionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.7",
+      "name": "DecisionNode",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkDecisionNodeOutgoingSuccessionSpecialization",
+        "checkDecisionNodeSpecialization",
+        "validateDecisionNodeIncomingSuccessions",
+        "validateDecisionNodeOutgoingSuccessions"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "ControlNode"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.8",
+      "name": "ForkNode",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkForkNodeSpecialization",
+        "validateForkNodeIncomingSuccessions"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "ControlNode"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.9",
+      "name": "ForLoopActionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkForLoopActionUsageSpecialization",
+        "checkForLoopActionUsageSubactionSpecialization",
+        "checkForLoopActionUsageVarRedefinition",
+        "deriveForLoopActionUsageLoopVariable",
+        "deriveForLoopActionUsageSeqArgument",
+        "validateForLoopActionUsageLoopVariable",
+        "validateForLoopActionUsageParameters"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "loopVariable",
+          "derived": true,
+          "declaration": "/loopVariable : ReferenceUsage"
+        },
+        {
+          "name": "seqArgument",
+          "derived": true,
+          "declaration": "/seqArgument : Expression"
+        }
+      ],
+      "general_classes": [
+        "LoopActionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.10",
+      "name": "IfActionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkIfActionUsageSpecialization",
+        "checkIfActionUsageSubactionSpecialization",
+        "deriveIfActionUsageElseAction",
+        "deriveIfActionUsageIfArgument",
+        "deriveIfActionUsageThenAction",
+        "validateIfActionUsageParameters"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "elseAction",
+          "derived": true,
+          "declaration": "/elseAction : ActionUsage [0..1]"
+        },
+        {
+          "name": "ifArgument",
+          "derived": true,
+          "declaration": "/ifArgument : Expression"
+        },
+        {
+          "name": "thenAction",
+          "derived": true,
+          "declaration": "/thenAction : ActionUsage"
+        }
+      ],
+      "general_classes": [
+        "ActionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.11",
+      "name": "JoinNode",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkJoinNodeSpecialization",
+        "validateJoinNodeOutgoingSuccessions"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "ControlNode"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.12",
+      "name": "LoopActionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "deriveLoopActionUsageBodyAction"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "bodyAction",
+          "derived": true,
+          "declaration": "/bodyAction : ActionUsage"
+        }
+      ],
+      "general_classes": [
+        "ActionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.13",
+      "name": "MergeNode",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkMergeNodeIncomingSuccessionSpecialization",
+        "checkMergeNodeSpecialization",
+        "validateMergeNodeIncomingSuccessions",
+        "validateMergeNodeOutgoingSuccessions"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "ControlNode"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.14",
+      "name": "PerformActionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkPerformActionUsageSpecialization",
+        "validatePerformActionUsageReference"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "performedAction",
+          "derived": true,
+          "declaration": "/performedAction : ActionUsage {redefines eventOccurrence}"
+        }
+      ],
+      "general_classes": [
+        "ActionUsage",
+        "EventOccurrenceUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.15",
+      "name": "SendActionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkSendActionUsageSpecialization",
+        "checkSendActionUsageSubactionSpecialization",
+        "deriveSendActionUsagePayloadArgument",
+        "deriveSendActionUsageReceiverArgument",
+        "deriveSendActionUsageSenderArgument",
+        "validateSendActionParameters"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "payloadArgument",
+          "derived": true,
+          "declaration": "/payloadArgument : Expression"
+        },
+        {
+          "name": "receiverArgument",
+          "derived": true,
+          "declaration": "/receiverArgument : Expression [0..1]"
+        },
+        {
+          "name": "senderArgument",
+          "derived": true,
+          "declaration": "/senderArgument : Expression [0..1]"
+        }
+      ],
+      "general_classes": [
+        "ActionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.16",
+      "name": "TerminateActionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkTerminateActionUsageSpecialization",
+        "checkTerminateActionUsageSubactionSpecialization",
+        "deriveTerminateActionUsageTerminatedOccurrenceArgument"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "terminatedOccurrenceArgument",
+          "derived": true,
+          "declaration": "/terminatedOccurrenceArgument : Expression [0..1]"
+        }
+      ],
+      "general_classes": [
+        "ActionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.17",
+      "name": "TriggerInvocationExpression",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateTriggerInvocationExpressionAfterArgument",
+        "validateTriggerInvocationExpressionAtArgument",
+        "validateTriggerInvocationExpressionWhenArgument"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "kind",
+          "derived": false,
+          "declaration": "kind : TriggerKind"
+        }
+      ],
+      "general_classes": [
+        "InvocationExpression"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.18",
+      "name": "TriggerKind",
+      "kind": "enumeration",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "Literal",
+        "Values",
+        "Indicates",
+        "TriggerAfter",
+        "Function",
+        "Triggers",
+        "Kernel",
+        "Semantic",
+        "TriggerAt",
+        "TriggerWhen"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.17.19",
+      "name": "WhileLoopActionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkWhileLoopActionUsageSpecialization",
+        "checkWhileLoopActionUsageSubactionSpecialization",
+        "deriveWhileLoopActionUsageUntilArgument",
+        "deriveWhileLoopActionUsageWhileArgument",
+        "validateWhileLoopActionUsage"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "untilArgument",
+          "derived": true,
+          "declaration": "/untilArgument : Expression [0..1]"
+        },
+        {
+          "name": "whileArgument",
+          "derived": true,
+          "declaration": "/whileArgument : Expression"
+        }
+      ],
+      "general_classes": [
+        "LoopActionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.18.2",
+      "name": "ExhibitStateUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkExhibitStateUsageSpecialization",
+        "validateExhibitStateUsageReference"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "exhibitedState",
+          "derived": true,
+          "declaration": "/exhibitedState : StateUsage {redefines performedAction}"
+        }
+      ],
+      "general_classes": [
+        "PerformActionUsage",
+        "StateUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.18.3",
+      "name": "StateSubactionKind",
+      "kind": "enumeration",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "Literal",
+        "Values",
+        "Indicates",
+        "StateSubactionMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.18.4",
+      "name": "StateSubactionMembership",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateStateSubactionMembershipOwningType"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "action",
+          "derived": true,
+          "declaration": "/action : ActionUsage {redefines ownedMemberFeature}"
+        },
+        {
+          "name": "kind",
+          "derived": false,
+          "declaration": "kind : StateSubactionKind"
+        }
+      ],
+      "general_classes": [
+        "FeatureMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.18.5",
+      "name": "StateDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkStateDefinitionSpecialization",
+        "deriveStateDefinitionDoAction",
+        "deriveStateDefinitionEntryAction",
+        "deriveStateDefinitionExitAction",
+        "deriveStateDefinitionState",
+        "validateStateDefinitionParallelSubactions",
+        "validateStateDefinitionStateSubactionKind"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "doAction",
+          "derived": true,
+          "declaration": "/doAction : ActionUsage [0..1]"
+        },
+        {
+          "name": "entryAction",
+          "derived": true,
+          "declaration": "/entryAction : ActionUsage [0..1]"
+        },
+        {
+          "name": "exitAction",
+          "derived": true,
+          "declaration": "/exitAction : ActionUsage [0..1]"
+        },
+        {
+          "name": "isParallel",
+          "derived": false,
+          "declaration": "isParallel : Boolean"
+        },
+        {
+          "name": "state",
+          "derived": true,
+          "declaration": "/state : StateUsage [0..*] {subsets action, ordered}"
+        }
+      ],
+      "general_classes": [
+        "ActionDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.18.6",
+      "name": "StateUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkStateUsageExclusiveStateSpecialization",
+        "checkStateUsageOwnedStateSpecialization",
+        "checkStateUsageSpecialization",
+        "checkStateUsageSubstateSpecialization",
+        "deriveStateUsageDoAction",
+        "deriveStateUsageEntryAction",
+        "deriveStateUsageExitAction",
+        "validateStateUsageParallelSubactions",
+        "validateStateUsageStateSubactionKind"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "doAction",
+          "derived": true,
+          "declaration": "/doAction : ActionUsage [0..1]"
+        },
+        {
+          "name": "entryAction",
+          "derived": true,
+          "declaration": "/entryAction : ActionUsage [0..1]"
+        },
+        {
+          "name": "exitAction",
+          "derived": true,
+          "declaration": "/exitAction : ActionUsage [0..1]"
+        },
+        {
+          "name": "isParallel",
+          "derived": false,
+          "declaration": "isParallel : Boolean"
+        },
+        {
+          "name": "stateDefinition",
+          "derived": true,
+          "declaration": "/stateDefinition : Behavior [0..*] {redefines actionDefinition, ordered}"
+        }
+      ],
+      "general_classes": [
+        "ActionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.18.7",
+      "name": "TransitionFeatureKind",
+      "kind": "enumeration",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "Literal",
+        "Values",
+        "Indicates",
+        "TransitionFeatureMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.18.8",
+      "name": "TransitionFeatureMembership",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateTransitionFeatureMembershipEffectAction",
+        "validateTransitionFeatureMembershipGuardExpression",
+        "validateTransitionFeatureMembershipOwningType",
+        "validateTransitionFeatureMembershipTriggerAction"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "kind",
+          "derived": false,
+          "declaration": "kind : TransitionFeatureKind"
+        },
+        {
+          "name": "transitionFeature",
+          "derived": true,
+          "declaration": "/transitionFeature : Step {redefines ownedMemberFeature}"
+        }
+      ],
+      "general_classes": [
+        "FeatureMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.18.9",
+      "name": "TransitionUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkTransitionUsageActionSpecialization",
+        "checkTransitionUsagePayloadSpecialization",
+        "checkTransitionUsageSourceBindingConnector",
+        "checkTransitionUsageSpecialization",
+        "checkTransitionUsageStateSpecialization",
+        "checkTransitionUsageSuccessionBindingConnector",
+        "checkTransitionUsageSuccessionSourceSpecialization",
+        "checkTransitionUsageTransitionFeatureSpecialization",
+        "deriveTransitionUsageEffectAction",
+        "deriveTransitionUsageGuardExpression",
+        "deriveTransitionUsageSource",
+        "deriveTransitionUsageSuccession",
+        "deriveTransitionUsageTarget",
+        "deriveTransitionUsageTriggerAction",
+        "validateTransitionUsageParameters",
+        "validateTransitionUsageSuccession",
+        "validateTransitionUsageTriggerActions"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "effectAction",
+          "derived": true,
+          "declaration": "/effectAction : ActionUsage [0..*] {subsets feature}"
+        },
+        {
+          "name": "guardExpression",
+          "derived": true,
+          "declaration": "/guardExpression : Expression [0..*] {subsets ownedFeature}"
+        },
+        {
+          "name": "source",
+          "derived": true,
+          "declaration": "/source : ActionUsage"
+        },
+        {
+          "name": "succession",
+          "derived": true,
+          "declaration": "/succession : Succession {subsets ownedMember}"
+        },
+        {
+          "name": "target",
+          "derived": true,
+          "declaration": "/target : ActionUsage"
+        },
+        {
+          "name": "triggerAction",
+          "derived": true,
+          "declaration": "/triggerAction : AcceptActionUsage [0..*] {subsets ownedFeature}"
+        }
+      ],
+      "general_classes": [
+        "ActionUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.19.2",
+      "name": "CalculationDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkCalculationDefinitionSpecialization",
+        "deriveCalculationUsageCalculation"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "calculation",
+          "derived": true,
+          "declaration": "/calculation : CalculationUsage [0..*] {subsets action, expression, ordered}"
+        }
+      ],
+      "general_classes": [
+        "ActionDefinition",
+        "Function"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.19.3",
+      "name": "CalculationUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkCalculationUsageSpecialization",
+        "checkCalculationUsageSubcalculationSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "calculationDefinition",
+          "derived": true,
+          "declaration": "/calculationDefinition : Function [0..1] {redefines function, actionDefinition, ordered}"
+        }
+      ],
+      "general_classes": [
+        "ActionUsage",
+        "Expression"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.20.2",
+      "name": "AssertConstraintUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkAssertConstraintUsageSpecialization",
+        "deriveAssertConstraintUsageAssertedConstraint",
+        "validateAssertConstraintUsageReference"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "assertedConstraint",
+          "derived": true,
+          "declaration": "/assertedConstraint : ConstraintUsage"
+        }
+      ],
+      "general_classes": [
+        "Invariant",
+        "ConstraintUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.20.3",
+      "name": "ConstraintDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkConstraintDefinitionSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "Predicate",
+        "OccurrenceDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.20.4",
+      "name": "ConstraintUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkConstraintUsageCheckedConstraintSpecialization",
+        "checkConstraintUsageRequirementConstraintSpecialization",
+        "checkConstraintUsageSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "constraintDefinition",
+          "derived": true,
+          "declaration": "/constraintDefinition : Predicate [0..1] {redefines predicate}"
+        }
+      ],
+      "general_classes": [
+        "BooleanExpression",
+        "OccurrenceUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.21.2",
+      "name": "ActorMembership",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateActorMembershipOwningType"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "ownedActorParameter",
+          "derived": true,
+          "declaration": "/ownedActorParameter : PartUsage {redefines ownedMemberParameter}"
+        }
+      ],
+      "general_classes": [
+        "ParameterMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.21.3",
+      "name": "ConcernDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkConcernDefinitionSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "RequirementDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.21.4",
+      "name": "ConcernUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkConcernUsageFramedConcernSpecialization",
+        "checkConcernUsageSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "concernDefinition",
+          "derived": true,
+          "declaration": "/concernDefinition : ConcernDefinition [0..1] {redefines requirementDefinition}"
+        }
+      ],
+      "general_classes": [
+        "RequirementUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.21.5",
+      "name": "FramedConcernMembership",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateFramedConcernMembershipConstraintKind"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "kind",
+          "derived": false,
+          "declaration": "kind : RequirementConstraintKind {redefines kind}"
+        },
+        {
+          "name": "ownedConcern",
+          "derived": true,
+          "declaration": "/ownedConcern : ConcernUsage {redefines ownedConstraint}"
+        },
+        {
+          "name": "referencedConcern",
+          "derived": true,
+          "declaration": "/referencedConcern : ConcernUsage {redefines referencedConstraint}"
+        }
+      ],
+      "general_classes": [
+        "RequirementConstraintMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.21.6",
+      "name": "RequirementConstraintKind",
+      "kind": "enumeration",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "Literal",
+        "Values",
+        "Indicates",
+        "ConstraintUsage",
+        "RequirementDefinition",
+        "RequirementUsage",
+        "RequirementUsagerepresents"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.21.7",
+      "name": "RequirementConstraintMembership",
+      "kind": "metaclass",
+      "named_constraints": [
+        "deriveRequirementConstraintMembershipReferencedConstraint",
+        "validateRequirementConstraintMembershipIsComposite",
+        "validateRequirementConstraintMembershipOwningType"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "kind",
+          "derived": false,
+          "declaration": "kind : RequirementConstraintKind"
+        },
+        {
+          "name": "ownedConstraint",
+          "derived": true,
+          "declaration": "/ownedConstraint : ConstraintUsage {redefines ownedMemberFeature}"
+        },
+        {
+          "name": "referencedConstraint",
+          "derived": true,
+          "declaration": "/referencedConstraint : ConstraintUsage"
+        }
+      ],
+      "general_classes": [
+        "FeatureMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.21.8",
+      "name": "RequirementDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkRequirementDefinitionSpecialization",
+        "deriveRequirementDefinitionActorParameter",
+        "deriveRequirementDefinitionAssumedConstraint",
+        "deriveRequirementDefinitionFramedConcern",
+        "deriveRequirementDefinitionRequiredConstraint",
+        "deriveRequirementDefinitionStakeholderParameter",
+        "deriveRequirementDefinitionSubjectParameter",
+        "deriveRequirementDefinitionText",
+        "validateRequirementDefinitionOnlyOneSubject",
+        "validateRequirementDefinitionSubjectParameterPosition"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "actorParameter",
+          "derived": true,
+          "declaration": "/actorParameter : PartUsage [0..*] {subsets parameter, usage, ordered}"
+        },
+        {
+          "name": "assumedConstraint",
+          "derived": true,
+          "declaration": "/assumedConstraint : ConstraintUsage [0..*] {subsets ownedFeature, ordered}"
+        },
+        {
+          "name": "framedConcern",
+          "derived": true,
+          "declaration": "/framedConcern : ConcernUsage [0..*] {subsets requiredConstraint, ordered}"
+        },
+        {
+          "name": "reqId",
+          "derived": false,
+          "declaration": "reqId : String [0..1] {redefines declaredShortName}"
+        },
+        {
+          "name": "requiredConstraint",
+          "derived": true,
+          "declaration": "/requiredConstraint : ConstraintUsage [0..*] {subsets ownedFeature, ordered}"
+        },
+        {
+          "name": "stakeholderParameter",
+          "derived": true,
+          "declaration": "/stakeholderParameter : PartUsage [0..*] {subsets parameter, usage, ordered}"
+        },
+        {
+          "name": "subjectParameter",
+          "derived": true,
+          "declaration": "/subjectParameter : Usage {subsets parameter, usage}"
+        },
+        {
+          "name": "text",
+          "derived": true,
+          "declaration": "/text : String [0..*]"
+        }
+      ],
+      "general_classes": [
+        "ConstraintDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.21.9",
+      "name": "RequirementUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkRequirementUsageObjectiveRedefinition",
+        "checkRequirementUsageRequirementVerificationSpecialization",
+        "checkRequirementUsageSpecialization",
+        "checkRequirementUsageSubrequirementSpecialization",
+        "deriveRequirementUsageActorParameter",
+        "deriveRequirementUsageAssumedConstraint",
+        "deriveRequirementUsageFramedConcern",
+        "deriveRequirementUsageRequiredConstraint",
+        "deriveRequirementUsageStakeholderParameter",
+        "deriveRequirementUsageSubjectParameter",
+        "deriveRequirementUsageText",
+        "validateRequirementUsageOnlyOneSubject",
+        "validateRequirementUsageSubjectParameterPosition"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "actorParameter",
+          "derived": true,
+          "declaration": "/actorParameter : PartUsage [0..*] {subsets parameter, usage, ordered}"
+        },
+        {
+          "name": "assumedConstraint",
+          "derived": true,
+          "declaration": "/assumedConstraint : ConstraintUsage [0..*] {subsets ownedFeature, ordered}"
+        },
+        {
+          "name": "framedConcern",
+          "derived": true,
+          "declaration": "/framedConcern : ConcernUsage [0..*] {subsets requiredConstraint, ordered}"
+        },
+        {
+          "name": "reqId",
+          "derived": false,
+          "declaration": "reqId : String [0..1] {redefines declaredShortName}"
+        },
+        {
+          "name": "requiredConstraint",
+          "derived": true,
+          "declaration": "/requiredConstraint : ConstraintUsage [0..*] {subsets ownedFeature, ordered}"
+        },
+        {
+          "name": "requirementDefinition",
+          "derived": true,
+          "declaration": "/requirementDefinition : RequirementDefinition [0..1] {redefines constraintDefinition}"
+        },
+        {
+          "name": "stakeholderParameter",
+          "derived": true,
+          "declaration": "/stakeholderParameter : PartUsage [0..*] {subsets parameter, usage, ordered}"
+        },
+        {
+          "name": "subjectParameter",
+          "derived": true,
+          "declaration": "/subjectParameter : Usage {subsets parameter, usage}"
+        },
+        {
+          "name": "text",
+          "derived": true,
+          "declaration": "/text : String [0..*]"
+        }
+      ],
+      "general_classes": [
+        "ConstraintUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.21.10",
+      "name": "SatisfyRequirementUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkSatisfyRequirementUsageBindingConnector",
+        "checkSatisfyRequirementUsageSpecialization",
+        "deriveSatisfyRequirementUsageSatisfyingFeature",
+        "validateSatisfyRequirementUsageReference"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "satisfiedRequirement",
+          "derived": true,
+          "declaration": "/satisfiedRequirement : RequirementUsage {redefines assertedConstraint}"
+        },
+        {
+          "name": "satisfyingFeature",
+          "derived": true,
+          "declaration": "/satisfyingFeature : Feature"
+        }
+      ],
+      "general_classes": [
+        "AssertConstraintUsage",
+        "RequirementUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.21.11",
+      "name": "SubjectMembership",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateSubjectMembershipOwningType"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "ownedSubjectParameter",
+          "derived": true,
+          "declaration": "/ownedSubjectParameter : Usage {redefines ownedMemberParameter}"
+        }
+      ],
+      "general_classes": [
+        "ParameterMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.21.12",
+      "name": "StakeholderMembership",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateStakeholderMembershipOwningType"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "ownedStakeholderParameter",
+          "derived": true,
+          "declaration": "/ownedStakeholderParameter : PartUsage {redefines ownedMemberParameter}"
+        }
+      ],
+      "general_classes": [
+        "ParameterMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.22.2",
+      "name": "CaseDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkCaseDefinitionSpecialization",
+        "deriveCaseDefinitionActorParameter",
+        "deriveCaseDefinitionObjectiveRequirement",
+        "deriveCaseDefinitionSubjectParameter",
+        "validateCaseDefinitionOnlyOneObjective",
+        "validateCaseDefinitionOnlyOneSubject",
+        "validateCaseDefinitionSubjectParameterPosition"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "actorParameter",
+          "derived": true,
+          "declaration": "/actorParameter : PartUsage [0..*] {subsets parameter, usage, ordered}"
+        },
+        {
+          "name": "objectiveRequirement",
+          "derived": true,
+          "declaration": "/objectiveRequirement : RequirementUsage [0..1] {subsets usage, ordered}"
+        },
+        {
+          "name": "subjectParameter",
+          "derived": true,
+          "declaration": "/subjectParameter : Usage {subsets parameter, usage}"
+        }
+      ],
+      "general_classes": [
+        "CalculationDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.22.3",
+      "name": "CaseUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkCaseUsageSpecialization",
+        "checkCaseUsageSubcaseSpecialization",
+        "deriveCaseUsageActorParameter",
+        "deriveCaseUsageObjectiveRequirement",
+        "deriveCaseUsageSubjectParameter",
+        "validateCaseUsageOnlyOneObjective",
+        "validateCaseUsageOnlyOneSubject",
+        "validateCaseUsageSubjectParameterPosition"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "actorParameter",
+          "derived": true,
+          "declaration": "/actorParameter : PartUsage [0..*] {subsets parameter, usage, ordered}"
+        },
+        {
+          "name": "caseDefinition",
+          "derived": true,
+          "declaration": "/caseDefinition : CaseDefinition [0..1] {redefines calculationDefinition}"
+        },
+        {
+          "name": "objectiveRequirement",
+          "derived": true,
+          "declaration": "/objectiveRequirement : RequirementUsage [0..1] {subsets usage, ordered}"
+        },
+        {
+          "name": "subjectParameter",
+          "derived": true,
+          "declaration": "/subjectParameter : Usage {subsets parameter, usage}"
+        }
+      ],
+      "general_classes": [
+        "CalculationUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.22.4",
+      "name": "ObjectiveMembership",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateObjectiveMembershipIsComposite",
+        "validateObjectiveMembershipOwningType"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "ownedObjectiveRequirement",
+          "derived": true,
+          "declaration": "/ownedObjectiveRequirement : RequirementUsage {redefines ownedMemberFeature}"
+        }
+      ],
+      "general_classes": [
+        "FeatureMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.23.2",
+      "name": "AnalysisCaseDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkAnalysisCaseDefinitionSpecialization",
+        "deriveAnalysisCaseDefinitionResultExpression"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "resultExpression",
+          "derived": true,
+          "declaration": "/resultExpression : Expression [0..1] {subsets expression, ownedFeature}"
+        }
+      ],
+      "general_classes": [
+        "CaseDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.23.3",
+      "name": "AnalysisCaseUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkAnalysisCaseUsageSpecialization",
+        "checkAnalysisCaseUsageSubAnalysisCaseSpecialization",
+        "deriveAnalysisCaseUsageResultExpression"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "analysisCaseDefinition",
+          "derived": true,
+          "declaration": "/analysisCaseDefinition : AnalysisCaseDefinition [0..1] {redefines caseDefinition}"
+        },
+        {
+          "name": "resultExpression",
+          "derived": true,
+          "declaration": "/resultExpression : Expression [0..1] {subsets ownedFeature}"
+        }
+      ],
+      "general_classes": [
+        "CaseUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.24.2",
+      "name": "RequirementVerificationMembership",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateRequirementVerificationMembershipKind",
+        "validateRequirementVerificationMembershipOwningType"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "kind",
+          "derived": false,
+          "declaration": "kind : RequirementConstraintKind {redefines kind}"
+        },
+        {
+          "name": "ownedRequirement",
+          "derived": true,
+          "declaration": "/ownedRequirement : RequirementUsage {redefines ownedConstraint}"
+        },
+        {
+          "name": "verifiedRequirement",
+          "derived": true,
+          "declaration": "/verifiedRequirement : RequirementUsage {redefines referencedConstraint}"
+        }
+      ],
+      "general_classes": [
+        "RequirementConstraintMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.24.3",
+      "name": "VerificationCaseDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkVerificationCaseSpecialization",
+        "deriveVerificationCaseDefinitionVerifiedRequirement"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "verifiedRequirement",
+          "derived": true,
+          "declaration": "/verifiedRequirement : RequirementUsage [0..*] {ordered}"
+        }
+      ],
+      "general_classes": [
+        "CaseDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.24.4",
+      "name": "VerificationCaseUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkVerificationCaseUsageSpecialization",
+        "checkVerificationCaseUsageSubVerificationCaseSpecialization",
+        "deriveVerificationCaseUsageVerifiedRequirement"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "verificationCaseDefinition",
+          "derived": true,
+          "declaration": "/verificationCaseDefinition : VerificationCaseDefinition [0..1] {subsets caseDefinition}"
+        },
+        {
+          "name": "verifiedRequirement",
+          "derived": true,
+          "declaration": "/verifiedRequirement : RequirementUsage [0..*] {ordered}"
+        }
+      ],
+      "general_classes": [
+        "CaseUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.25.2",
+      "name": "IncludeUseCaseUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkIncludeUseCaseSpecialization",
+        "validateIncludeUseCaseUsageReference"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "useCaseIncluded",
+          "derived": true,
+          "declaration": "/useCaseIncluded : UseCaseUsage {redefines performedAction}"
+        }
+      ],
+      "general_classes": [
+        "PerformActionUsage",
+        "UseCaseUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.25.3",
+      "name": "UseCaseDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkUseCaseDefinitionSpecialization",
+        "deriveUseCaseDefinitionIncludedUseCase"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "includedUseCase",
+          "derived": true,
+          "declaration": "/includedUseCase : UseCaseUsage [0..*] {ordered}"
+        }
+      ],
+      "general_classes": [
+        "CaseDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.25.4",
+      "name": "UseCaseUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkUseCaseUsageSpecialization",
+        "checkUseCaseUsageSubUseCaseSpecialization",
+        "deriveUseCaseUsageIncludedUseCase"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "includedUseCase",
+          "derived": true,
+          "declaration": "/includedUseCase : UseCaseUsage [0..*] {ordered}"
+        },
+        {
+          "name": "useCaseDefinition",
+          "derived": true,
+          "declaration": "/useCaseDefinition : UseCaseDefinition [0..1] {redefines caseDefinition}"
+        }
+      ],
+      "general_classes": [
+        "CaseUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.26.2",
+      "name": "Expose",
+      "kind": "metaclass",
+      "named_constraints": [
+        "validateExposeIsImportAll",
+        "validateExposeOwningNamespace",
+        "validateExposeVisibility"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "isImportAll",
+          "derived": false,
+          "declaration": "isImportAll : Boolean {redefines isImportAll}"
+        },
+        {
+          "name": "visibility",
+          "derived": false,
+          "declaration": "visibility : VisibilityKind {redefines visibility}"
+        }
+      ],
+      "general_classes": [
+        "Import"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.26.3",
+      "name": "MembershipExpose",
+      "kind": "metaclass",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "MembershipImport",
+        "Expose"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.26.4",
+      "name": "NamespaceExpose",
+      "kind": "metaclass",
+      "named_constraints": [],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "NamespaceImport",
+        "Expose"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.26.5",
+      "name": "RenderingDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkRenderingDefinitionSpecialization",
+        "deriveRenderingDefinitionRendering"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "rendering",
+          "derived": true,
+          "declaration": "/rendering : RenderingUsage [0..*] {subsets usage, ordered}"
+        }
+      ],
+      "general_classes": [
+        "PartDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.26.6",
+      "name": "RenderingUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkRenderingUsageRedefinition",
+        "checkRenderingUsageSpecialization",
+        "checkRenderingUsageSubrenderingSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "renderingDefinition",
+          "derived": true,
+          "declaration": "/renderingDefinition : RenderingDefinition [0..1] {redefines partDefinition}"
+        }
+      ],
+      "general_classes": [
+        "PartUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.26.7",
+      "name": "ViewDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkViewDefinitionSpecialization",
+        "deriveViewDefinitionSatisfiedViewpoint",
+        "deriveViewDefinitionView",
+        "deriveViewDefinitionViewCondition",
+        "deriveViewDefinitionViewRendering",
+        "validateViewDefinitionOnlyOneViewRendering"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "satisfiedViewpoint",
+          "derived": true,
+          "declaration": "/satisfiedViewpoint : ViewpointUsage [0..*] {subsets ownedRequirement, ordered}"
+        },
+        {
+          "name": "view",
+          "derived": true,
+          "declaration": "/view : ViewUsage [0..*] {subsets usage, ordered}"
+        },
+        {
+          "name": "viewCondition",
+          "derived": true,
+          "declaration": "/viewCondition : Expression [0..*] {subsets ownedMember, ordered}"
+        },
+        {
+          "name": "viewRendering",
+          "derived": true,
+          "declaration": "/viewRendering : RenderingUsage [0..1]"
+        }
+      ],
+      "general_classes": [
+        "PartDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.26.8",
+      "name": "ViewpointDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkViewpointDefinitionSpecialization",
+        "deriveViewpointDefinitionViewpointStakeholder"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "viewpointStakeholder",
+          "derived": true,
+          "declaration": "/viewpointStakeholder : PartUsage [0..*] {ordered}"
+        }
+      ],
+      "general_classes": [
+        "RequirementDefinition"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.26.9",
+      "name": "ViewpointUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkViewpointUsageSpecialization",
+        "checkViewpointUsageViewpointSatisfactionSpecialization",
+        "deriveViewpointUsageViewpointStakeholder"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "viewpointDefinition",
+          "derived": true,
+          "declaration": "/viewpointDefinition : ViewpointDefinition [0..1] {redefines requirementDefinition}"
+        },
+        {
+          "name": "viewpointStakeholder",
+          "derived": true,
+          "declaration": "/viewpointStakeholder : PartUsage [0..*] {ordered}"
+        }
+      ],
+      "general_classes": [
+        "RequirementUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.26.10",
+      "name": "ViewRenderingMembership",
+      "kind": "metaclass",
+      "named_constraints": [
+        "deriveVewRenderingMembershipReferencedRendering",
+        "validateViewRenderingMembershipOwningType"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "ownedRendering",
+          "derived": true,
+          "declaration": "/ownedRendering : RenderingUsage {redefines ownedMemberFeature}"
+        },
+        {
+          "name": "referencedRendering",
+          "derived": true,
+          "declaration": "/referencedRendering : RenderingUsage"
+        }
+      ],
+      "general_classes": [
+        "FeatureMembership"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.26.11",
+      "name": "ViewUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkViewUsageSpecialization",
+        "checkViewUsageSubviewSpecialization",
+        "deriveViewUsageExposedElement",
+        "deriveViewUsageSatisfiedViewpoint",
+        "deriveViewUsageViewCondition",
+        "deriveViewUsageViewRendering",
+        "validateViewUsageOnlyOneViewRendering"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "exposedElement",
+          "derived": true,
+          "declaration": "/exposedElement : Element [0..*] {subsets member, ordered}"
+        },
+        {
+          "name": "satisfiedViewpoint",
+          "derived": true,
+          "declaration": "/satisfiedViewpoint : ViewpointUsage [0..*] {subsets nestedRequirement, ordered}"
+        },
+        {
+          "name": "viewCondition",
+          "derived": true,
+          "declaration": "/viewCondition : Expression [0..*] {subsets ownedMember, ordered}"
+        },
+        {
+          "name": "viewDefinition",
+          "derived": true,
+          "declaration": "/viewDefinition : ViewDefinition [0..1] {redefines partDefinition}"
+        },
+        {
+          "name": "viewRendering",
+          "derived": true,
+          "declaration": "/viewRendering : RenderingUsage [0..1]"
+        }
+      ],
+      "general_classes": [
+        "PartUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.27.2",
+      "name": "MetadataDefinition",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkMetadataDefinitionSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [],
+      "general_classes": [
+        "ItemDefinition",
+        "Metaclass"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    },
+    {
+      "section": "8.3.27.3",
+      "name": "MetadataUsage",
+      "kind": "metaclass",
+      "named_constraints": [
+        "checkMetadataUsageSpecialization"
+      ],
+      "evidence": "direct notebook source extraction; inheritance and complete constraint bodies not expanded",
+      "review_status": "extracted; requires metamodel verification before implementation",
+      "attributes": [
+        {
+          "name": "metadataDefinition",
+          "derived": true,
+          "declaration": "/metadataDefinition : Metaclass [0..1] {redefines itemDefinition, metaclass}"
+        }
+      ],
+      "general_classes": [
+        "MetadataFeature",
+        "ItemUsage"
+      ],
+      "source_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    }
+  ],
+  "notebook_queries": [
+    {
+      "id": "01-scope",
+      "conversation_id": "8b445914-a3f0-41cd-bcb1-e0d80a0d20e0",
+      "sources_used": [
+        "c83ee3d3-22d7-4c7c-97f5-196a6fe0c27d"
+      ],
+      "answer_sha256": "145b75994a6bfffda8e21ceafb5071b9093f2f6351b9b9a9ff01d51f36963c09",
+      "review_status": "reviewed as generated research; source clauses take precedence",
+      "topic": "Specification scope and revision",
+      "original_question_sha256": "66d94571153d59b00021b47392163529666e32936b0aba0466ef534c28b95615"
+    },
+    {
+      "id": "02-structure",
+      "conversation_id": "1cff7fac-df82-4b84-95d5-efaf54f0371c",
+      "sources_used": [
+        "c83ee3d3-22d7-4c7c-97f5-196a6fe0c27d"
+      ],
+      "answer_sha256": "9432bb29b05582f2d814d89d0a3112c3e05d841985a398620622580f20c5c2ab",
+      "review_status": "reviewed as generated research; source clauses take precedence",
+      "topic": "Structure and foundations",
+      "original_question_sha256": "05762425298cec9f8434bd768e282542585c921dea78a2160f95b40a0519939b"
+    },
+    {
+      "id": "03-behavior",
+      "conversation_id": "9d2df627-a481-47bc-8fa1-2ad4d09cea44",
+      "sources_used": [
+        "c83ee3d3-22d7-4c7c-97f5-196a6fe0c27d"
+      ],
+      "answer_sha256": "c1a40baa4ba03bddb548089fdd658d07efa6c7c328c2ffc1fc188655b4bc4ee3",
+      "review_status": "reviewed as generated research; source clauses take precedence",
+      "topic": "Behavior and occurrence semantics",
+      "original_question_sha256": "02e249d4ad3fb9ce018f11007b0ec3ea176a10a93637822af1628b389dd1ad41"
+    },
+    {
+      "id": "04-requirements",
+      "conversation_id": "26734c16-6472-4bb1-921f-d8e54d7c509d",
+      "sources_used": [
+        "c83ee3d3-22d7-4c7c-97f5-196a6fe0c27d"
+      ],
+      "answer_sha256": "e60541ef4373c207aecce200dc26f3a76328cc867100e2c778b020387e39acac",
+      "review_status": "reviewed as generated research; source clauses take precedence",
+      "topic": "Requirements, cases, views and metadata",
+      "original_question_sha256": "cd55e7cfb8b8c3f8e172527d1e714d30e48e13222eb6b70cbfdff400de99ea81"
+    },
+    {
+      "id": "05-properties",
+      "conversation_id": "acc2e3d2-b908-4c98-b272-f2f766a66d95",
+      "sources_used": [
+        "c83ee3d3-22d7-4c7c-97f5-196a6fe0c27d"
+      ],
+      "answer_sha256": "27f2cd2420d373c80f38e99f7f24abffed9ed78c64a4bb4e5b373a71e3e46ada",
+      "review_status": "reviewed as generated research; source clauses take precedence",
+      "topic": "Cross-cutting properties and relationships",
+      "original_question_sha256": "3d8e93f12c5e69d2e942a4cf9428da1ba21128b47129e1ec37b01773b0c90cc5"
+    },
+    {
+      "id": "06-completeness",
+      "conversation_id": "eb0f5333-262a-4a58-8144-abf7e99798cd",
+      "sources_used": [
+        "c83ee3d3-22d7-4c7c-97f5-196a6fe0c27d"
+      ],
+      "answer_sha256": "cea8e3feec7549276afc94522fc0f3b680f212a32a7f2939b1fafb06a593dc45",
+      "review_status": "reviewed as generated research; source clauses take precedence",
+      "topic": "Metamodel and library coverage",
+      "original_question_sha256": "c55f1f10f32b709f3845d7bca1e37e056181f7c60b146ab5ee6cce36b1370f2d"
+    },
+    {
+      "id": "07-audit",
+      "conversation_id": "c88bb495-148c-4601-89d9-e41015933a01",
+      "sources_used": [
+        "c83ee3d3-22d7-4c7c-97f5-196a6fe0c27d"
+      ],
+      "answer_sha256": "41cdced60daae89dce9a87a3e80665435582e579c43cc40c3a136bd6397e95e3",
+      "review_status": "reviewed as generated research; source clauses take precedence",
+      "topic": "Semantic discrepancies and coverage audit",
+      "original_question_sha256": "4a07829394d8d73bb251126075f4aaf1aa2596df9c74918eeb8d1b6b0142c8d4"
+    }
+  ],
+  "query_provenance_note": "Original query wording is omitted from this language-only inventory because it included project-specific context. Topics summarize the actual queries; original-question and answer hashes retain provenance without rewriting historical questions."
+}

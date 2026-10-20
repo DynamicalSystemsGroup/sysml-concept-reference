@@ -2,7 +2,7 @@
 
 The site combines the interactive concept browser, rendered research notes, downloadable RDF/JSON data and saved SPARQL queries. It is generated from this repository; there is no separately maintained wiki or backend.
 
-The intended address is [rororowyourboat.github.io/sysmlv2_inventory](https://rororowyourboat.github.io/sysmlv2_inventory/). That address is a deployment target, not evidence that publication has completed. Check the repository's [Pages workflow](https://github.com/rororowyourboat/sysmlv2_inventory/actions/workflows/pages.yml) for the actual deployment result.
+The intended address is [dynamicalsystemsgroup.github.io/sysml-concept-reference](https://dynamicalsystemsgroup.github.io/sysml-concept-reference/). That address is a deployment target, not evidence that publication has completed. Check the repository's [Pages workflow](https://github.com/DynamicalSystemsGroup/sysml-concept-reference/actions/workflows/pages.yml) for the actual deployment result.
 
 ## Build and preview locally
 
@@ -14,6 +14,7 @@ use_dsg
 ctxcheck
 git status --short
 uv sync --locked
+uv run --locked python scripts/build_profiles.py
 uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/build_browser.py
 uv run --locked python scripts/build_site.py
@@ -44,9 +45,10 @@ Edit research notes in `docs/`, the homepage in `site/index.md`, and the documen
 Run:
 
 ```bash
+uv run --locked python scripts/build_profiles.py
 uv run --locked python scripts/check_inventory.py
-uv run --locked python -m unittest discover -s tests -v
 uv run --locked python scripts/build_browser.py
+uv run --locked python -m unittest discover -s tests -v
 uv run --locked python scripts/build_site.py
 ```
 
@@ -55,3 +57,7 @@ Commit and push only when explicitly authorized. A successful deployment publish
 ## Hosting choice
 
 GitHub Pages supports the existing interactive HTML browser and publishes the notes and data from a single Git history. A GitHub wiki would add a second repository and would not serve that browser as a website. This setup follows GitHub's [custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+## DSG identity
+
+Shared colors and locally hosted fonts live in `site/brand.css`; layout rules live in `site/style.css`. Official logo assets, original URLs, hashes and font licenses are recorded in `site/assets/provenance.json`. The browser receives the same assets for offline use. Preserve formal notation geometry when applying presentation colors.

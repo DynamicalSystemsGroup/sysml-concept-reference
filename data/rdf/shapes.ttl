@@ -1,4 +1,4 @@
-@prefix inv: <https://github.com/rororowyourboat/sysmlv2_inventory/vocab#> .
+@prefix inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -52,3 +52,59 @@ inv:ApplicationShape a sh:NodeShape ; sh:targetClass inv:MechanismApplication ;
     sh:property [ sh:path dct:description ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
     sh:property [ sh:path inv:evidence ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
     sh:property [ sh:path inv:evidenceStatus ; sh:hasValue inv:EditorialSummary ] .
+
+inv:NormalizedPropertyShape a sh:NodeShape ; sh:targetClass inv:ExtractedPropertyRecord ;
+    sh:property [ sh:path inv:normalizationDetail ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:lowerBound ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path inv:upperBound ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^([0-9]+|\\*)$" ] ;
+    sh:property [ sh:path inv:normalizationSource ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path inv:defaultStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( inv:NoDeclaredDefault inv:DecodedLiteral inv:UnspecifiedLiteralValue inv:UnsupportedExpression ) ] ;
+    sh:or (
+        [ sh:property [ sh:path inv:defaultStatus ; sh:hasValue inv:DecodedLiteral ] ; sh:property [ sh:path inv:declaredDefault ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:Literal ] ]
+        [ sh:property [ sh:path inv:defaultStatus ; sh:in ( inv:NoDeclaredDefault inv:UnspecifiedLiteralValue inv:UnsupportedExpression ) ] ; sh:property [ sh:path inv:declaredDefault ; sh:maxCount 0 ] ]
+    ) .
+
+inv:ResolutionShape a sh:NodeShape ; sh:targetClass inv:RedefinitionResolution ;
+    sh:property [ sh:path inv:forConcept ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:MetaclassRecord ] ;
+    sh:property [ sh:path inv:replacedDeclaration ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:PropertyRecord ] ;
+    sh:property [ sh:path inv:replacementDeclaration ; sh:minCount 1 ; sh:class inv:ExtractedPropertyRecord ] .
+
+inv:EffectivePropertyShape a sh:NodeShape ; sh:targetSubjectsOf inv:effectiveProperty ;
+    sh:property [ sh:path inv:effectiveProperty ; sh:class inv:ExtractedPropertyRecord ] ;
+    sh:property [ sh:path inv:propertyResolutionStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( inv:ExplicitRedefinitionsResolved inv:HasNameConflicts ) ] ;
+    sh:property [ sh:path inv:inheritanceEvidence ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+inv:EvidenceLocationShape a sh:NodeShape ; sh:targetClass inv:EvidenceLocation ;
+    sh:property [ sh:path inv:sourceArtifact ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:SourceArtifact ] ;
+    sh:property [ sh:path inv:sourceLocator ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:pdfPage ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path inv:printedPage ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] .
+
+inv:ProfileShape a sh:NodeShape ; sh:targetClass inv:ConceptProfile ;
+    sh:property [ sh:path inv:concept ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:MetaclassRecord ] ;
+    sh:property [ sh:path inv:profileStatus ; sh:hasValue inv:DraftSourceChecked ] ;
+    sh:property [ sh:path dct:description ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:learningPoint ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:evidence ; sh:minCount 1 ; sh:class inv:EvidenceLocation ] ;
+    sh:property [ sh:path inv:hasExample ; sh:minCount 1 ; sh:class inv:Example ] ;
+    sh:property [ sh:path inv:hasNotation ; sh:minCount 1 ; sh:class inv:Notation ] ;
+    sh:property [ sh:path inv:hasRelationship ; sh:minCount 1 ; sh:class inv:ConceptRelationship ] .
+
+inv:ExampleShape a sh:NodeShape ; sh:targetClass inv:Example ;
+    sh:property [ sh:path inv:code ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:verificationStatus ; sh:hasValue inv:SourceReviewedNotExecuted ] ;
+    sh:property [ sh:path inv:evidence ; sh:minCount 1 ; sh:class inv:EvidenceLocation ] .
+
+inv:RelationshipShape a sh:NodeShape ; sh:targetClass inv:ConceptRelationship ;
+    sh:property [ sh:path inv:fromConcept ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:MetaclassRecord ] ;
+    sh:property [ sh:path inv:toConcept ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:MetaclassRecord ] ;
+    sh:property [ sh:path inv:relationKind ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:condition ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:evidence ; sh:minCount 1 ; sh:class inv:EvidenceLocation ] .
+
+inv:NotationShape a sh:NodeShape ; sh:targetClass inv:Notation ;
+    sh:property [ sh:path inv:concept ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:MetaclassRecord ] ;
+    sh:property [ sh:path inv:context ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:verificationStatus ; sh:hasValue inv:RepresentativeNotationVisuallyChecked ] ;
+    sh:property [ sh:path inv:depictionStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( inv:OriginalRedraw inv:SourceDescriptionOnly ) ] ;
+    sh:property [ sh:path inv:evidence ; sh:minCount 1 ; sh:class inv:EvidenceLocation ] .

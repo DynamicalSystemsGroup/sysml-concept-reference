@@ -1,0 +1,6 @@
+PREFIX inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#>
+PREFIX dct: <http://purl.org/dc/terms/>
+SELECT ?from ?kind ?to ?meaning ?condition ?evidence WHERE {
+  ?relationship a inv:ConceptRelationship ; inv:fromConcept ?from ; inv:toConcept ?to ;
+    inv:relationKind ?kind ; dct:description ?meaning ; inv:condition ?condition ; inv:evidence ?evidence .
+} ORDER BY ?from ?kind

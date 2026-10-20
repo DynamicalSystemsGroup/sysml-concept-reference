@@ -1,0 +1,5 @@
+PREFIX inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#>
+SELECT ?concept ?replaced ?replacement WHERE {
+  ?resolution a inv:RedefinitionResolution ; inv:forConcept ?concept ;
+    inv:replacedDeclaration ?replaced ; inv:replacementDeclaration ?replacement .
+} ORDER BY ?concept ?replaced

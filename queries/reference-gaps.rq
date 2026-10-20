@@ -1,4 +1,4 @@
-PREFIX inv: <https://github.com/rororowyourboat/sysmlv2_inventory/vocab#>
+PREFIX inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?record ?name WHERE {
   ?record inv:coverage inv:ReferenceOnly ; inv:qualifiedName ?name .

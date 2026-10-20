@@ -5,15 +5,20 @@ from pathlib import Path
 
 from pyshacl import validate
 from rdflib import Graph, Namespace, RDF
+from rdflib.namespace import DCTERMS
+
+from property_resolution import resolve_properties
 
 ROOT = Path(__file__).resolve().parents[1]
-INV = Namespace("https://github.com/rororowyourboat/sysmlv2_inventory/vocab#")
+INV = Namespace("https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#")
 
 
-def load_graph():
+def load_graph(include_profiles=True):
     g = Graph()
     for name in ("vocabulary", "metamodel", "mechanisms"):
         g.parse(ROOT / f"data/rdf/{name}.ttl")
+    if include_profiles and (ROOT / "data/rdf/profiles.ttl").exists():
+        g.parse(ROOT / "data/rdf/profiles.ttl")
     return g
 
 
@@ -24,6 +29,22 @@ def check(g):
     for node in g.subjects(RDF.type, INV.ExtractedPropertyRecord):
         for predicate in (INV.xmiAttributes, INV.lowerEncoding, INV.upperEncoding, INV.defaultEncoding):
             json.loads(str(g.value(node, predicate)))
+        normal = json.loads(str(g.value(node, INV.normalizationDetail)))
+        for field, predicate in (("lower", INV.lowerBound), ("upper", INV.upperBound)):
+            term = g.value(node, predicate)
+            expected = normal[field]["value"]
+            actual = term.toPython() if term is not None else None
+            if (str(actual) if field == "upper" and actual is not None else actual) != (str(expected) if field == "upper" and expected is not None else expected):
+                raise ValueError("Normalized bounds disagree with provenance: " + str(node))
+    for concept in g.subjects(INV.isFocus, None):
+        resolution = resolve_properties(g, concept)
+        if set(g.objects(concept, INV.effectiveProperty)) != set(resolution["active"]):
+            raise ValueError("Materialized effective properties are stale")
+    for profile in g.subjects(RDF.type, INV.ConceptProfile):
+        concept = g.value(profile, INV.concept)
+        for prop in g.objects(concept, INV.effectiveProperty):
+            if not g.value(prop, DCTERMS.description):
+                raise ValueError("Profile property lacks a reviewed explanation: " + str(prop))
     return report
 
 
@@ -41,10 +62,13 @@ def main():
     counts = {}
     for path in sorted((ROOT / "queries").glob("*.rq")):
         counts[path.name] = len(list(g.query(path.read_text())))
-    if counts["concepts.rq"] != 15 or counts["source-gaps.rq"] != 0:
+    if counts["concepts.rq"] != json.loads((ROOT / "data/rdf/extraction-report.json").read_text())["focus_metaclasses"] or counts["source-gaps.rq"] != 0:
         raise ValueError(f"Unexpected query results: {counts}")
     if not all(counts[name] > 0 for name in ("part-properties.rq", "mechanisms.rq", "reference-gaps.rq")):
         raise ValueError(f"Expected nonempty query results: {counts}")
+    for name in ("effective-properties.rq", "replaced-properties.rq", "concept-relations.rq", "notation.rq", "examples.rq"):
+        if counts.get(name, 0) == 0:
+            raise ValueError("Expected nonempty profile query: " + name)
     print(json.dumps({"triples": len(g), "query_rows": counts}, indent=2))
 
 

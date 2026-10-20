@@ -1,0 +1,56 @@
+{
+  "publisher": "Dynamical Systems Group",
+  "website": "https://www.dynamicalsystemsgroup.com/",
+  "github": "https://github.com/DynamicalSystemsGroup",
+  "retrieved_on": "2026-10-21",
+  "assets": [
+    {
+      "file": "dsg-wordmark.png",
+      "source": "https://cdn.prod.website-files.com/67c6aceda2774550a3a78659/69fa9d0be104e5c241863f27_dynamical_systems_logo_left_aligned_lockup_-_brass.png",
+      "sha256": "dda37e40aa2e7320dee81981fde6d77de8013ab2cd90cc66d25666b055d42252",
+      "use": "Official wordmark from the DSG website, used at the owner\u2019s request."
+    },
+    {
+      "file": "dsg-logo.png",
+      "source": "https://avatars.githubusercontent.com/u/33696885?v=4",
+      "sha256": "3b09e15578e264d0b3c551c7112993d07ad2c0dc350ecc36fec22b14bd437b64",
+      "use": "Official GitHub organization avatar, used as compact brand mark/favicon."
+    }
+  ],
+  "fonts": [
+    {
+      "family": "IBM Plex Mono",
+      "file": "fonts/ibm-plex-mono.woff2",
+      "source": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1i8q1w.woff2",
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "license_source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/OFL.txt",
+      "license_file": "fonts/ibm-plex-mono-OFL.txt"
+    },
+    {
+      "family": "IBM Plex Sans",
+      "file": "fonts/ibm-plex-sans.woff2",
+      "source": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2",
+      "sha256": "e2291e842cf5af167122a22881a740c7f2dda7716f1e8cd76680264f4a859470",
+      "license_source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsans/OFL.txt",
+      "license_file": "fonts/ibm-plex-sans-OFL.txt"
+    },
+    {
+      "family": "Source Serif 4",
+      "file": "fonts/source-serif-4.woff2",
+      "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kDXr4.woff2",
+      "sha256": "382475f38242c52d42a3e5ff8dc69b5d73f10d0d21e4550b5fe232984688779a",
+      "license_source": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4/OFL.txt",
+      "license_file": "fonts/source-serif-4-OFL.txt"
+    }
+  ],
+  "color_source": "https://cdn.prod.website-files.com/67c6aceda2774550a3a78659/css/dynamicalsystemsgroup.webflow.shared.5c6a37417.min.css",
+  "palette": {
+    "ink": "#11113a",
+    "paper": "#ebe6d6",
+    "paper_deep": "#e0dbc8",
+    "brass": "#d4b478",
+    "brass_deep": "#7f601b",
+    "ink_mid": "#4a5460",
+    "rule": "#c8c0ae"
+  }
+}

@@ -1,0 +1,662 @@
+{
+  "schema_version": 1,
+  "status": "Editorial summaries of pinned XMI; not normative quotations",
+  "properties": [
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Classifiers-Classifier-ownedSubclassification",
+      "description": "The subclassification relationships owned here that identify this classifier as the more specific classifier."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-chainingFeature",
+      "description": "The ordered features whose successive navigation determines this feature\u2019s modeled values."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-crossFeature",
+      "description": "The navigational feature constraining collections reached across the other ends of the same owning type."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-direction",
+      "description": "Describes whether modeled feature values serve as inputs, outputs, or both."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-endOwningType",
+      "description": "The type owning this feature through an end-feature membership."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-featureTarget",
+      "description": "The final feature in this feature\u2019s navigation chain, or this feature when no chain exists."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-featuringType",
+      "description": "The types that every domain instance from which this feature is evaluated must satisfy."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-isComposite",
+      "description": "Makes modeled values dependent on their featuring instance for continued existence and exclusive to that instance across composite features."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-isConstant",
+      "description": "Keeps the modeled value unchanged across snapshots even when the feature is variable."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-isDerived",
+      "description": "Indicates that modeled values of this feature are always computable from other feature values."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-isEnd",
+      "description": "Marks a feature as an end, mapping each domain instance to one value; navigation cardinality can additionally be constrained through its cross feature."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-isOrdered",
+      "description": "Records whether the modeled feature values have a meaningful sequence."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-isPortion",
+      "description": "Indicates that modeled values are spatial or temporal portions of their domain instance and represent that same thing."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-isUnique",
+      "description": "Requires the modeled collection of feature values to contain no repeated values when true."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-isVariable",
+      "description": "Allows the modeled feature value to differ between snapshots of an occurrence owning type."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-ownedCrossSubsetting",
+      "description": "The optional owned cross-subsetting relationship specifying this feature\u2019s cross-navigation constraint."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-ownedFeatureChaining",
+      "description": "The owned relationships specifying the ordered steps used to navigate this feature."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-ownedFeatureInverting",
+      "description": "The owned relationships that give this feature an inverse navigation interpretation."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-ownedRedefinition",
+      "description": "The owned subsetting relationships that replace inherited features with this redefining feature."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-ownedReferenceSubsetting",
+      "description": "The optional owned reference-subsetting relationship identifying the feature referenced by this feature."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-ownedSubsetting",
+      "description": "The owned specializations that constrain this feature to select values from another feature."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-ownedTypeFeaturing",
+      "description": "The owned type-featuring relationships that explicitly identify contexts featuring this feature."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-ownedTyping",
+      "description": "The owned feature-typing relationships that constrain the types of this feature\u2019s modeled values."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-owningFeatureMembership",
+      "description": "The membership that owns this feature as a feature of its owning type."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-owningType",
+      "description": "The type that owns this feature through its owning feature membership."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-type",
+      "description": "The types that every modeled value of this feature must satisfy, including types obtained through specialization and chaining."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-differencingType",
+      "description": "The ordered types defining this type as the first type\u2019s interpretations minus those of subsequent types."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-directedFeature",
+      "description": "The features of this type with an explicit direction."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-endFeature",
+      "description": "The features of this type marked as ends."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-feature",
+      "description": "The features available through this type\u2019s feature memberships, including inherited features."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-featureMembership",
+      "description": "The owned and inherited feature memberships of this type, excluding imported memberships."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-inheritedFeature",
+      "description": "The features obtained through inherited feature memberships."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-inheritedMembership",
+      "description": "The memberships made available to this type by specialization or conjugation."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-input",
+      "description": "The features of this type directed into the type, including bidirectional features."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-intersectingType",
+      "description": "The types whose shared interpretations define this type."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-isAbstract",
+      "description": "Requires every instance of this type to also instantiate a more specialized type."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-isConjugated",
+      "description": "Records whether this type owns a conjugation as its conjugator."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-isSufficient",
+      "description": "Makes satisfying this type\u2019s classification conditions sufficient for classification by the type."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-multiplicity",
+      "description": "The owned multiplicity constraining this type\u2019s modeled cardinality; without one, applicable supertype multiplicities still constrain it."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-output",
+      "description": "The features of this type directed out of the type, including bidirectional features."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-ownedConjugator",
+      "description": "The optional conjugation owned here that treats this type as the original type."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-ownedDifferencing",
+      "description": "The owned difference relationships defining this type as their difference result."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-ownedDisjoining",
+      "description": "The owned disjointness relationships constraining this type against other types."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-ownedEndFeature",
+      "description": "The end features introduced through memberships owned by this type."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-ownedFeature",
+      "description": "The features introduced through feature memberships owned by this type."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-ownedFeatureMembership",
+      "description": "The memberships owned here that introduce owned features of this type."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-ownedIntersecting",
+      "description": "The owned intersection relationships defining this type as their intersection result."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-ownedSpecialization",
+      "description": "The owned specialization relationships in which this type is the more specific type."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-ownedUnioning",
+      "description": "The owned union relationships defining this type as their union result."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-Type-unioningType",
+      "description": "The types whose combined interpretations equal this type\u2019s interpretation."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Kernel-Connectors-Connector-association",
+      "description": "The associations that classify the links identified by this connector."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Kernel-Connectors-Connector-connectorEnd",
+      "description": "The connector\u2019s end features, which redefine association ends and reference the connected features."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Kernel-Connectors-Connector-defaultFeaturingType",
+      "description": "The innermost shared featuring context of the related features that would satisfy the connector\u2019s type-featuring check, if one exists."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Kernel-Connectors-Connector-relatedFeature",
+      "description": "The features connected by this connector, obtained from the features referenced by its ends."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Kernel-Connectors-Connector-sourceFeature",
+      "description": "The first related feature, treated as the connector\u2019s source."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Kernel-Connectors-Connector-targetFeature",
+      "description": "The related features after the first, treated as the connector\u2019s targets."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-aliasIds",
+      "description": "Alternative identifiers for this element, typically supplied by tools."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-declaredName",
+      "description": "The primary name explicitly supplied for this element."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-declaredShortName",
+      "description": "An explicitly supplied compact alternative name whose contextual uniqueness is the modeler\u2019s responsibility."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-documentation",
+      "description": "The documentation elements owned by this element."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-elementId",
+      "description": "The tooling-assigned global identifier intended to remain stable for this element\u2019s lifetime."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-isImpliedIncluded",
+      "description": "Records that all required implied owned relationships are included; false requires that none be included."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-isLibraryElement",
+      "description": "Indicates that this element lies within the ownership tree of a library model."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-name",
+      "description": "The effective name used for namespace lookup, which some element kinds compute rather than declare."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-ownedAnnotation",
+      "description": "The annotation relationships owned here that annotate this element."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-ownedElement",
+      "description": "The elements reached as owned related elements through this element\u2019s owned relationships."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-ownedRelationship",
+      "description": "The relationships owned by this element as their owning related element."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-owner",
+      "description": "The owning related element reached through this element\u2019s owning relationship, which need not be a namespace."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-owningMembership",
+      "description": "The relationship owning this element when that relationship is a membership."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-owningNamespace",
+      "description": "The namespace obtained through this element\u2019s owning membership, when that ownership route exists."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-owningRelationship",
+      "description": "The relationship that directly owns this element as a related element, if one exists."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-qualifiedName",
+      "description": "The ownership-path name in KerML syntax, absent when the named ownership path or disambiguation conditions are not met."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-shortName",
+      "description": "The effective compact name used for namespace lookup, which some element kinds compute rather than declare."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-textualRepresentation",
+      "description": "The textual-representation annotations attached to this element."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Relationship-isImplied",
+      "description": "Identifies a relationship introduced by tooling to satisfy language semantics rather than directly authored by a modeler."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Relationship-ownedRelatedElement",
+      "description": "The participating elements directly owned by this relationship."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Relationship-owningRelatedElement",
+      "description": "The participating element that owns this relationship, if present."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Relationship-relatedElement",
+      "description": "The elements participating in the relationship, collected from its sources and targets."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Relationship-source",
+      "description": "The participating elements treated as the relationship\u2019s origins."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Relationship-target",
+      "description": "The participating elements treated as the relationship\u2019s destinations."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Namespaces-Namespace-importedMembership",
+      "description": "The memberships made available by imports owned by this namespace."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Namespaces-Namespace-member",
+      "description": "The elements available as members through this namespace\u2019s memberships."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Namespaces-Namespace-membership",
+      "description": "The memberships available in this namespace, including owned and imported memberships."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Namespaces-Namespace-ownedImport",
+      "description": "The import relationships owned by this namespace."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Namespaces-Namespace-ownedMember",
+      "description": "The member elements owned through this namespace\u2019s owned memberships."
+    },
+    {
+      "source": "https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Namespaces-Namespace-ownedMembership",
+      "description": "The memberships owned by this namespace."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Connections-ConnectionUsage-connectionDefinition",
+      "description": "The association structures typing this connection usage, including compatible KerML library association structures."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-directedUsage",
+      "description": "The usage features in this context that have an explicit direction."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-isVariation",
+      "description": "Marks a variation point and requires its relevant memberships to be variant memberships."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedAction",
+      "description": "The action usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedAllocation",
+      "description": "The allocation usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedAnalysisCase",
+      "description": "The analysis case usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedAttribute",
+      "description": "The attribute usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedCalculation",
+      "description": "The calculation usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedCase",
+      "description": "The case usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedConcern",
+      "description": "The concern usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedConnection",
+      "description": "The connector-as-usages, including binding, succession and flow usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedConstraint",
+      "description": "The constraint usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedEnumeration",
+      "description": "The enumeration usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedFlow",
+      "description": "The flow usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedInterface",
+      "description": "The interface usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedItem",
+      "description": "The item usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedMetadata",
+      "description": "The metadata usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedOccurrence",
+      "description": "The occurrence usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedPart",
+      "description": "The part usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedPort",
+      "description": "The port usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedReference",
+      "description": "The reference usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedRendering",
+      "description": "The rendering usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedRequirement",
+      "description": "The requirement usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedState",
+      "description": "The state usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedTransition",
+      "description": "The transition usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedUsage",
+      "description": "The usage features owned by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedUseCase",
+      "description": "The use case usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedVerificationCase",
+      "description": "The verification case usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedView",
+      "description": "The view usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-ownedViewpoint",
+      "description": "The viewpoint usages owned as features by this definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-usage",
+      "description": "The usage features available in this context, including usages not owned here."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-variant",
+      "description": "The usages offered as alternatives at this variation point; absent when it is not a variation point."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Definition-variantMembership",
+      "description": "The owned memberships introducing variants, required to be empty outside a variation point."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-definition",
+      "description": "The classifiers typing this usage, including compatible KerML classifiers as well as SysML definitions."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-directedUsage",
+      "description": "The usage features in this context that have an explicit direction."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-isReference",
+      "description": "The derived opposite of isComposite, identifying usage values without composite lifetime dependence."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-isVariation",
+      "description": "Marks a variation point and requires its relevant memberships to be variant memberships."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-mayTimeVary",
+      "description": "The derived replacement for Feature.isVariable indicating snapshot-based featuring; isConstant can still require the same value throughout an occurrence."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedAction",
+      "description": "The action usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedAllocation",
+      "description": "The allocation usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedAnalysisCase",
+      "description": "The analysis case usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedAttribute",
+      "description": "The attribute usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedCalculation",
+      "description": "The calculation usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedCase",
+      "description": "The case usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedConcern",
+      "description": "The concern usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedConnection",
+      "description": "The connector-as-usages, including binding, succession and flow usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedConstraint",
+      "description": "The constraint usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedEnumeration",
+      "description": "The enumeration usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedFlow",
+      "description": "The flow usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedInterface",
+      "description": "The interface usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedItem",
+      "description": "The item usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedMetadata",
+      "description": "The metadata usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedOccurrence",
+      "description": "The occurrence usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedPart",
+      "description": "The part usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedPort",
+      "description": "The port usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedReference",
+      "description": "The reference usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedRendering",
+      "description": "The rendering usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedRequirement",
+      "description": "The requirement usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedState",
+      "description": "The state usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedTransition",
+      "description": "The transition usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedUsage",
+      "description": "The usage features owned by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedUseCase",
+      "description": "The use case usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedVerificationCase",
+      "description": "The verification case usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedView",
+      "description": "The view usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-nestedViewpoint",
+      "description": "The viewpoint usages owned as features by this usage."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-owningDefinition",
+      "description": "The definition that directly owns this usage, when present."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-owningUsage",
+      "description": "The enclosing usage that directly owns this nested usage, when present."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-usage",
+      "description": "The usage features available in this context, including usages not owned here."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-variant",
+      "description": "The usages offered as alternatives at this variation point; absent when it is not a variation point."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-variantMembership",
+      "description": "The owned memberships introducing variants, required to be empty outside a variation point."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Items-ItemUsage-itemDefinition",
+      "description": "The structures typing this item usage, including compatible KerML library structures."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Occurrences-OccurrenceDefinition-isIndividual",
+      "description": "Restricts this occurrence definition to classify at most one modeled thing."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Occurrences-OccurrenceUsage-individualDefinition",
+      "description": "The optional occurrence definition typing this usage that is marked individual."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Occurrences-OccurrenceUsage-isIndividual",
+      "description": "Identifies a usage of the specific individual designated by its individual definition."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Occurrences-OccurrenceUsage-occurrenceDefinition",
+      "description": "The classes typing this occurrence usage, including compatible KerML library classes."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Occurrences-OccurrenceUsage-portionKind",
+      "description": "Distinguishes a snapshot from a time slice of the featuring instance and requires an owning type when specified."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Parts-PartUsage-partDefinition",
+      "description": "The part definitions among this part usage\u2019s item-definition types."
+    },
+    {
+      "source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Ports-PortUsage-portDefinition",
+      "description": "The port definitions typing this port usage; all its occurrence-definition types must be port definitions."
+    }
+  ]
+}

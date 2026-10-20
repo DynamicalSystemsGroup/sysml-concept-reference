@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    {
+      "name": "PartUsage",
+      "slug": "part-usage",
+      "concept_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Parts-PartUsage",
+      "purpose": "Describes a system or system part in a context. A definition describes its kind; multiple usages can share that kind.",
+      "evidence": [
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=90",
+          "locator": "§7.11 Parts",
+          "pdf_page": 90,
+          "printed_page": 58
+        },
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=321",
+          "locator": "§8.3.11.3 PartUsage",
+          "pdf_page": 321,
+          "printed_page": 289
+        }
+      ],
+      "learning_points": [
+        "A referential part remains a PartUsage. It is not converted into the metaclass ReferenceUsage just because its declaration contains ref.",
+        "Owning a part declaration, featuring its values, and making those values composite are separate mechanisms.",
+        "The declared partDefinition property has multiplicity 0..*. Class-level constraints still require at least one applicable PartDefinition typing; declaration cardinality alone is not the whole rule.",
+        "The normalized defaults below describe metamodel fields. The multiplicity and composition of a part in a user model follow contextual SysML rules."
+      ],
+      "example_focus": "wheel is a composite part usage within Assembly. spare is an owned but referential part usage. Both are typed by Wheel; the [0..1] on spare explicitly constrains its modeled values.",
+      "example_evidence": [
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=72",
+          "locator": "§7.6.3 Usages",
+          "pdf_page": 72,
+          "printed_page": 40
+        },
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=93",
+          "locator": "§7.11.2 Part Definitions and Usages",
+          "pdf_page": 93,
+          "printed_page": 61
+        }
+      ],
+      "relationships": [
+        {
+          "target_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Parts-PartDefinition",
+          "kind": "typing",
+          "description": "A part usage has applicable part-definition typing, explicit or supplied through its semantic specialization.",
+          "condition": "Do not restrict every allowed explicit type to PartDefinition; the source also permits qualifying item definitions and kernel structures.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=93",
+              "locator": "§7.11.2",
+              "pdf_page": 93,
+              "printed_page": 61
+            }
+          ]
+        },
+        {
+          "target_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Parts-PartUsage",
+          "kind": "nested declaration",
+          "description": "A part usage can declare nested part usages as features in its context.",
+          "condition": "Permitted examples do not establish that every nesting is valid; membership, featuring and composition constraints still apply.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=73",
+              "locator": "§7.6.3",
+              "pdf_page": 73,
+              "printed_page": 41
+            }
+          ]
+        },
+        {
+          "target_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Ports-PortUsage",
+          "kind": "nested port",
+          "description": "Ports can be declared within a part usage or its defining type.",
+          "condition": "The port typing and context-specific referentiality rules apply independently of the enclosing part.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95",
+              "locator": "§7.12.2–3",
+              "pdf_page": 95,
+              "printed_page": 63
+            }
+          ]
+        }
+      ],
+      "notations": [
+        {
+          "id": "part-node",
+          "title": "Composite and referential part usages",
+          "context": "Usage nodes in structural views",
+          "description": "Rounded rectangle with a part usage label. The referential variant has a dashed outline and the ref prefix. Compartments and side ports are additional variants.",
+          "asset": "part-usage.svg",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241",
+              "locator": "§8.2.3.11 Parts",
+              "pdf_page": 241,
+              "printed_page": 209
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "The examples have been checked against source notation, but no SysML parser or semantic engine was run.",
+        "No exhaustive permission matrix or complete notation grammar is claimed."
+      ],
+      "status": "DraftSourceChecked",
+      "example_file": "data/examples/assembly.sysml",
+      "example_status": "SourceReviewedNotExecuted"
+    },
+    {
+      "name": "PartDefinition",
+      "slug": "part-definition",
+      "concept_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Parts-PartDefinition",
+      "purpose": "Defines a reusable kind of system or system part, including features that usages of that kind can have.",
+      "evidence": [
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=90",
+          "locator": "§7.11.1 Parts Overview",
+          "pdf_page": 90,
+          "printed_page": 58
+        },
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=321",
+          "locator": "§8.3.11.2 PartDefinition",
+          "pdf_page": 321,
+          "printed_page": 289
+        }
+      ],
+      "learning_points": [
+        "A definition is a classifier; a part usage is a feature in context. They retain different metaclass identities.",
+        "Declaring a nested definition introduces a scoped kind. It does not by itself declare a part usage.",
+        "Properties of this metaclass describe the language definition, rather than arbitrary attributes such as a modeled wheel diameter."
+      ],
+      "example_focus": "Wheel, Axle and Assembly are part definitions. Their port and part declarations specify features; assembly : Assembly is a separate usage of the defined kind.",
+      "example_evidence": [
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=93",
+          "locator": "§7.11.2 Part Definitions and Usages",
+          "pdf_page": 93,
+          "printed_page": 61
+        }
+      ],
+      "relationships": [
+        {
+          "target_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Parts-PartUsage",
+          "kind": "usage of a kind",
+          "description": "Part usages can use the kind introduced by a part definition.",
+          "condition": "Typing is distinct from model ownership; many usages can share the same definition.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=93",
+              "locator": "§7.11.2",
+              "pdf_page": 93,
+              "printed_page": 61
+            }
+          ]
+        },
+        {
+          "target_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Ports-PortUsage",
+          "kind": "declared feature",
+          "description": "A part definition can declare port usages as features.",
+          "condition": "Port definitions determine permitted port typing; the enclosing declaration is not a substitute for that type.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95",
+              "locator": "§7.12.2–3",
+              "pdf_page": 95,
+              "printed_page": 63
+            }
+          ]
+        }
+      ],
+      "notations": [
+        {
+          "id": "part-definition-node",
+          "title": "Part definition node",
+          "context": "Definition node in a structural view",
+          "description": "Sharp-corner rectangle with the part def keyword and definition name. Compartment and interconnection contents may extend the basic node.",
+          "asset": "part-definition.svg",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241",
+              "locator": "§8.2.3.11 Parts",
+              "pdf_page": 241,
+              "printed_page": 209
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "Instance-level composition is governed by usages and their context, rather than by the outline of the definition box."
+      ],
+      "status": "DraftSourceChecked",
+      "example_file": "data/examples/assembly.sysml",
+      "example_status": "SourceReviewedNotExecuted"
+    },
+    {
+      "name": "PortUsage",
+      "slug": "port-usage",
+      "concept_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Ports-PortUsage",
+      "purpose": "Describes an interaction point in a structural context, typed by a port definition.",
+      "evidence": [
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95",
+          "locator": "§7.12.2–3 Port Definitions and Usages",
+          "pdf_page": 95,
+          "printed_page": 63
+        },
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=327",
+          "locator": "§8.3.12.6 PortUsage",
+          "pdf_page": 327,
+          "printed_page": 295
+        }
+      ],
+      "learning_points": [
+        "A port usage can appear as a full node or as a small boundary glyph; its semantic identity is not determined by the drawing size.",
+        "Only port definitions can type a port usage. Conjugated typing uses ~ and reverses in/out while preserving inout.",
+        "The source overview and well-formedness constraints need to be read together: nested-port exceptions prevent an unconditional rule that every nested port value must be non-composite.",
+        "A connection referencing a port does not by itself establish a flow or an executable transfer."
+      ],
+      "example_focus": "hub and mount are port usages typed by Mount. The connection refers to them through axle.mount and wheel.hub. The example uses no directional arrows or transfer behavior.",
+      "example_evidence": [
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95",
+          "locator": "§7.12.2–3",
+          "pdf_page": 95,
+          "printed_page": 63
+        },
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=103",
+          "locator": "§7.13.2 binary connection shorthand",
+          "pdf_page": 103,
+          "printed_page": 71
+        }
+      ],
+      "relationships": [
+        {
+          "target_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Parts-PartDefinition",
+          "kind": "feature context",
+          "description": "Port usages can be declared in part definitions.",
+          "condition": "Type featuring, declaration ownership and referentiality remain separate questions.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95",
+              "locator": "§7.12.2–3",
+              "pdf_page": 95,
+              "printed_page": 63
+            }
+          ]
+        },
+        {
+          "target_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Parts-PartUsage",
+          "kind": "feature context",
+          "description": "Port usages can be nested in part usages.",
+          "condition": "Nesting is contextual; a glyph placed on a boundary is not itself evidence of a new ownership rule.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95",
+              "locator": "§7.12.2–3",
+              "pdf_page": 95,
+              "printed_page": 63
+            }
+          ]
+        },
+        {
+          "target_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Connections-ConnectionUsage",
+          "kind": "referenced endpoint",
+          "description": "A connection can reference a port feature as an end target.",
+          "condition": "Preserve end roles and reference-subsetting relationships; do not infer flow semantics from the line.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=103",
+              "locator": "§7.13.2",
+              "pdf_page": 103,
+              "printed_page": 71
+            }
+          ]
+        }
+      ],
+      "notations": [
+        {
+          "id": "port-node-boundary",
+          "title": "Full node and boundary port",
+          "context": "Structural and interconnection views",
+          "description": "The full node is rounded and labeled port; the compact form is a small rounded boundary glyph with an adjacent name/type label. Direction arrows are optional productions and omitted in this illustration.",
+          "asset": "port-usage.svg",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242",
+              "locator": "§8.2.3.12 Ports",
+              "pdf_page": 242,
+              "printed_page": 210
+            },
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243",
+              "locator": "§8.2.3.12 Ports",
+              "pdf_page": 243,
+              "printed_page": 211
+            }
+          ]
+        },
+        {
+          "id": "port-reference-restrictions",
+          "title": "Restricted reference and proxy variants",
+          "context": "Nested ports and part usages within interconnection views",
+          "description": "Dotted-outline reference port productions are restricted to nested ports. The filled-dot proxy option is restricted to a part usage contained within an interconnection view.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=246",
+              "locator": "§8.2.3.12 restriction notes",
+              "pdf_page": 246,
+              "printed_page": 214
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "The pinned XMI overview overgeneralizes referentiality; the profile preserves the nested-port qualification rather than silently applying that overview as an unconditional rule."
+      ],
+      "status": "DraftSourceChecked",
+      "example_file": "data/examples/assembly.sysml",
+      "example_status": "SourceReviewedNotExecuted"
+    },
+    {
+      "name": "ConnectionUsage",
+      "slug": "connection-usage",
+      "concept_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Connections-ConnectionUsage",
+      "purpose": "Represents a structural connection with end features. It combines PartUsage and ConnectorAsUsage semantics and retains its own model-element identity.",
+      "evidence": [
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=100",
+          "locator": "§7.13.2 Connection Definitions and Usages",
+          "pdf_page": 100,
+          "printed_page": 68
+        },
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=330",
+          "locator": "§8.3.13.4 ConnectionUsage",
+          "pdf_page": 330,
+          "printed_page": 298
+        }
+      ],
+      "learning_points": [
+        "A connection is a model element with end roles and references, even when drawn as a simple line.",
+        "Nonabstract connections require at least two ends. Each end is referential with multiplicity 1..1; cross multiplicity is a separate concept.",
+        "Allowed typing includes connection definitions and suitable KerML association structures.",
+        "A structural connection is not interchangeable with a binding, succession or flow."
+      ],
+      "example_focus": "link is a named binary connection. Its ends refer to axle.mount and wheel.hub. The plain solid line is an illustrative connection representation, with no flow direction implied.",
+      "example_evidence": [
+        {
+          "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=103",
+          "locator": "§7.13.2 binary connection shorthand",
+          "pdf_page": 103,
+          "printed_page": 71
+        }
+      ],
+      "relationships": [
+        {
+          "target_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Parts-PartUsage",
+          "kind": "specialization",
+          "description": "ConnectionUsage directly specializes PartUsage as well as ConnectorAsUsage.",
+          "condition": "A connection therefore has inherited part properties, but adds connector end structure and applicable constraints.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=330",
+              "locator": "§8.3.13.4",
+              "pdf_page": 330,
+              "printed_page": 298
+            }
+          ]
+        },
+        {
+          "target_source": "https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-Ports-PortUsage",
+          "kind": "endpoint reference",
+          "description": "The example connects two port usages through qualified feature paths.",
+          "condition": "Retain the connection end declarations and their reference-subsetting semantics, rather than storing only a graphical line.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=103",
+              "locator": "§7.13.2",
+              "pdf_page": 103,
+              "printed_page": 71
+            }
+          ]
+        }
+      ],
+      "notations": [
+        {
+          "id": "connection-edge-node",
+          "title": "Binary edge and connection node",
+          "context": "Structural connection representations",
+          "description": "A connection can use a solid binary line with an optional label, or a rounded full node labeled connection. The example omits the optional direction-indication arrow.",
+          "asset": "connection-usage.svg",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=247",
+              "locator": "§8.2.3.13 Connections",
+              "pdf_page": 247,
+              "printed_page": 215
+            },
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=248",
+              "locator": "§8.2.3.13 Connections",
+              "pdf_page": 248,
+              "printed_page": 216
+            }
+          ]
+        },
+        {
+          "id": "connection-nary",
+          "title": "N-ary connection variant",
+          "context": "Connections with more than two ends",
+          "description": "The grammar also provides a central filled dot with segments to the connected usage nodes. It is an additional representation, not a universal replacement for binary lines.",
+          "evidence": [
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=248",
+              "locator": "§8.2.3.13 Connections",
+              "pdf_page": 248,
+              "printed_page": 216
+            }
+          ]
+        }
+      ],
+      "caveats": [
+        "This profile illustrates selected structural notations and does not implement execution or all association-structure semantics."
+      ],
+      "status": "DraftSourceChecked",
+      "example_file": "data/examples/assembly.sysml",
+      "example_status": "SourceReviewedNotExecuted"
+    }
+  ]
+}

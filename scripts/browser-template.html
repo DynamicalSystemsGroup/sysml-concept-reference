@@ -2,46 +2,113 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KerML / SysML — concept inventory</title>
+<title>SysML Concept Reference</title><link rel="icon" href="assets/brand/dsg-logo.png" type="image/png">
 <style>
-:root{color-scheme:light;--ink:#202923;--muted:#58685d;--line:#d6dfd6;--paper:#f8faf6;--green:#244f39;--wash:#edf2e9}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}a{color:var(--green);text-underline-offset:3px}button,input{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #a66920;outline-offset:3px}header{padding:30px 5vw;border-bottom:1px solid var(--line);background:var(--wash)}header p{margin:0;max-width:850px}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}h1{font:500 clamp(26px,4vw,42px)/1.2 Georgia,serif;margin:8px 0 12px}h2{font:500 32px/1.2 Georgia,serif;margin:4px 0 12px}h3{font-size:18px;margin:28px 0 10px}.layout{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:26px 22px;border-right:1px solid var(--line)}main{padding:32px clamp(20px,4vw,56px);min-width:0}input[type=search]{width:100%;padding:10px;border:1px solid #809484;background:white}label{display:block;font-size:14px;margin:12px 0}nav{display:grid;gap:3px;margin-top:20px}nav button{text-align:left;border:0;background:none;padding:8px 10px;color:var(--ink);border-left:3px solid transparent}nav button[aria-current=true]{background:var(--wash);border-color:var(--green);font-weight:650}.muted,small{color:var(--muted)}small{font-size:13px}.tag{display:inline-block;border:1px solid var(--line);padding:2px 8px;margin:0 5px 5px 0;font-size:12px}.notice{padding:14px 18px;border-left:3px solid #8b6c36;background:#f4f0e5;margin:20px 0}.qualified{overflow-wrap:anywhere;font:12px/1.6 ui-monospace,monospace}.actions{display:flex;flex-wrap:wrap;gap:10px}.link-button{padding:2px 8px;background:var(--wash);border:1px solid var(--line);color:var(--green)}.card{border-top:1px solid var(--line);padding:15px 0}.card p{margin:5px 0 10px}.table-scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;vertical-align:top;padding:12px 10px;border-bottom:1px solid var(--line)}th{background:var(--wash);font-size:12px;color:var(--muted)}td:first-child{min-width:155px;font-weight:600}td:nth-child(2){min-width:160px}code{font:12px/1.5 ui-monospace,monospace;overflow-wrap:anywhere}summary{cursor:pointer;padding:8px 0}details small{display:block;margin:6px 0}.source{overflow-wrap:anywhere}.rule-list{columns:2;padding-left:20px;font-size:13px}.rule-list li{break-inside:avoid;margin-bottom:6px}footer{padding:24px 5vw;border-top:1px solid var(--line);font-size:13px}noscript{display:block;padding:24px}
-@media(max-width:760px){.layout{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line)}nav{grid-template-columns:repeat(2,minmax(0,1fr));max-height:220px;overflow:auto}nav button{overflow-wrap:anywhere}.rule-list{columns:1}main{padding:24px 18px}}
+__BRAND_STYLES__
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--font-body)}a{color:var(--accent);text-underline-offset:3px}button,input,select{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #a66920;outline-offset:3px}header{padding:28px 5vw;border-bottom:1px solid var(--line);background:var(--wash)}header p{margin:0;max-width:850px}.eyebrow{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}h1{font:600 clamp(26px,4vw,42px)/1.2 var(--font-display);margin:8px 0 12px}h2{font:600 34px/1.2 var(--font-display);margin:4px 0 12px}h3{font-size:21px;margin:32px 0 12px}h4{font-size:17px;margin:15px 0 8px}.layout{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:26px 22px;border-right:1px solid var(--line)}main{padding:32px clamp(20px,4vw,56px);min-width:0}input[type=search],select{width:100%;padding:10px;border:1px solid #809484;background:#f7f4ec}label{display:block;font-size:14px;margin:12px 0}nav{display:grid;gap:3px;margin-top:20px}nav button{text-align:left;border:0;background:none;padding:8px 10px;color:var(--ink);border-left:3px solid transparent}nav button[aria-current=true]{background:var(--wash);border-color:var(--accent);font-weight:650}.muted,small{color:var(--muted)}small{font-size:13px;display:block}.tag{display:inline-block;border:1px solid var(--line);padding:2px 8px;margin:0 5px 5px 0;font-size:12px}.notice{padding:14px 18px;border-left:3px solid var(--accent);background:var(--wash);margin:20px 0}.qualified{overflow-wrap:anywhere;font:12px/1.6 var(--font-mono)}.actions{display:flex;flex-wrap:wrap;gap:10px}.link-button{padding:2px 8px;background:var(--wash);border:1px solid var(--line);color:var(--accent)}.card{border-top:1px solid var(--line);padding:15px 0}.card p{margin:5px 0 10px}.evidence{display:flex;flex-wrap:wrap;gap:10px;font-size:13px}.table-scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;vertical-align:top;padding:12px 10px;border-bottom:1px solid var(--line)}th{background:var(--wash);font-size:12px;color:var(--muted)}td:first-child{min-width:240px;max-width:400px}td:nth-child(2){min-width:170px}td:nth-child(3){min-width:170px}code{font:12px/1.5 var(--font-mono);overflow-wrap:anywhere}pre{background:var(--wash);border:1px solid var(--line);padding:18px;overflow:auto}pre code{font-size:14px}summary{cursor:pointer;padding:8px 0}details small{margin:6px 0}.source{overflow-wrap:anywhere}.rule-list{columns:2;padding-left:20px;font-size:13px}.rule-list li{break-inside:avoid;margin-bottom:6px}footer{padding:24px 5vw;border-top:1px solid var(--line);font-size:13px}.notation{display:block;width:100%;max-width:760px;height:auto;border:1px solid var(--line);margin:15px 0}.controls{display:grid;grid-template-columns:minmax(190px,1fr) minmax(220px,2fr);gap:18px}ul{padding-left:22px}li{margin:9px 0}.property-meaning{margin:8px 0}.origin{margin:5px 0}.profile-link{display:block;margin:12px 0}
+@media(max-width:800px){.layout{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line)}nav{grid-template-columns:repeat(2,minmax(0,1fr));max-height:220px;overflow:auto}nav button{overflow-wrap:anywhere}.rule-list{columns:1}main{padding:24px 18px}.controls{grid-template-columns:1fr}}
+header{background:var(--navy);color:var(--paper)}header .eyebrow,header .muted{color:var(--brass)}.brand-lockup{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:25px}.brand-lockup img{width:190px;height:auto;display:block}.brand-links{display:flex;gap:22px;flex-wrap:wrap;font-size:14px}.brand-links a{color:var(--paper)}.brand-links a:hover{color:var(--brass)}h3{font-family:var(--font-display);font-size:25px;font-weight:600}footer .brand-links a{color:var(--accent)}@media(max-width:700px){.brand-lockup{align-items:flex-start;flex-direction:column;gap:14px}.brand-lockup img{width:170px}}
 </style>
 </head>
 <body>
-<header><p class="eyebrow">Language research / first RDF slice</p><h1>KerML / SysML concept inventory</h1><p>Explore ownership, namespace membership, feature context, and composition. Each declaration links to its official source.</p><p id="counts" class="muted"></p></header>
-<div class="layout"><aside aria-label="Concept selection"><label for="search">Find a concept</label><input id="search" type="search" placeholder="Name or meaning"><label><input id="support" type="checkbox"> Include supporting ancestors</label><p id="results" class="muted" role="status"></p><nav id="concepts" aria-label="Concepts"></nav><details><summary>About this catalogue</summary><small>Source declarations come from pinned XMI. Plain-language explanations are editorial. Relationships shown here describe the language metamodel, rather than a user's system model.</small><small>OWL defines catalogue vocabulary only; no SysML semantic inference is performed.</small></details></aside><main id="detail"></main></div>
-<footer id="sources"><strong>Pinned official sources</strong><p>Generated from RDF; open this file directly. No server, remote scripts, fonts or requests are required.</p></footer>
-<noscript>This browser needs JavaScript. The same catalogue is available in data/rdf as Turtle, with SPARQL queries in queries/.</noscript>
+<header><div class="brand-lockup"><a href="https://www.dynamicalsystemsgroup.com/" aria-label="Dynamical Systems Group website"><img src="assets/brand/dsg-wordmark.png" alt="Dynamical Systems Group" width="190" height="49"></a><div class="brand-links"><a href="https://www.dynamicalsystemsgroup.com/">DSG website</a><a href="https://github.com/DynamicalSystemsGroup">DSG on GitHub</a><a href="https://github.com/DynamicalSystemsGroup/sysml-concept-reference">Source</a></div></div><p class="eyebrow">Language research / source-backed concept pages</p><h1>SysML Concept Reference</h1><p>Understand concepts, their properties and relationships, with links to original declarations and notation evidence.</p><p id="counts" class="muted"></p></header>
+<div class="layout">
+<aside aria-label="Concept selection"><label for="search">Find a concept</label><input id="search" type="search" placeholder="Name or meaning"><label><input id="support" type="checkbox"> Include supporting ancestors</label><p id="results" class="muted" role="status"></p><nav id="concepts" aria-label="Concepts"></nav><details><summary>About this catalogue</summary><small>This graph describes language constructs, rather than a user's system model. XMI declarations, editorial explanations, UML normalization and original notation examples remain distinguishable.</small><small>OWL defines catalogue vocabulary only. No SysML parser, OCL evaluator or execution engine is run.</small></details></aside>
+<main id="detail"></main>
+<div hidden>__CONCEPT_ANCHORS__</div>
+</div>
+<footer id="sources"><strong>Pinned official sources</strong><p>The catalogue and source evidence are file-based. The HTML and local notation illustrations work without a server.</p></footer>
+<noscript>This browser needs JavaScript. Standalone concept pages are in docs/concepts, with RDF in data/rdf and SPARQL in queries.</noscript>
 <script type="application/json" id="inventory-data">__INVENTORY_DATA__</script>
 <script>
 'use strict';
 const data=JSON.parse(document.getElementById('inventory-data').textContent);
 const $=id=>document.getElementById(id);
 const items=Object.entries(data.concepts).sort((a,b)=>a[1].name.localeCompare(b[1].name));
-const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
-const link=(name,url)=>{const n=el('a',name);if(url&&url.startsWith('https://')){n.href=url;n.target='_blank';n.rel='noopener noreferrer';}return n;};
+const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
+const external=(name,url)=>{const node=el('a',name);if(url&&url.startsWith('https://')){node.href=url;node.target='_blank';node.rel='noopener noreferrer';}return node;};
+const evidence=entries=>{const box=el('div',undefined,'evidence');for(const [i,e]of entries.entries())box.append(external(e.label||`Evidence ${i+1}`,e.url));return box;};
 const defaultID=items.find(([,c])=>c.name==='PartUsage')[0];
 let current=defaultID;
-function lineage(id,visited=new Set()){if(visited.has(id))return visited;visited.add(id);for(const b of data.concepts[id]?.bases||[])lineage(b,visited);return visited;}
-function choose(id){if(!data.concepts[id])return;current=id;history.replaceState(null,'','#'+encodeURIComponent(id));render();}
-function menu(){const term=$('search').value.toLowerCase();const shown=items.filter(([,c])=>($('support').checked||c.focus)&&`${c.name} ${c.meaning} ${c.language}`.toLowerCase().includes(term));$('concepts').replaceChildren();$('results').textContent=`${shown.length} concepts listed`;
-for(const [id,c]of shown){const b=el('button',c.name);b.type='button';b.setAttribute('aria-current',String(id===current));b.onclick=()=>choose(id);$('concepts').append(b);}}
-function bound(x){if(!x.present)return 'not encoded';if(x.value===null)return `${x.type.split(':').pop()}: value omitted`;return x.value==='-1'&&x.type==='uml:LiteralUnlimitedNatural'?'*':x.value;}
-function render(){menu();const c=data.concepts[current],root=$('detail');root.replaceChildren();root.append(el('p',`${c.language} / ${c.focus?'focus metaclass':'supporting ancestor'}`,'eyebrow'),el('h2',c.name),el('p',c.qualifiedName,'qualified'),el('p',c.meaning),el('span','Meaning: editorial summary','tag'),el('span','Declarations: extracted from XMI','tag'),link('Original XMI declaration',c.source));
-root.append(el('h3','Direct bases'));const bases=el('div',undefined,'actions');for(const id of c.bases){const b=el('button',data.concepts[id]?.name||id,'link-button');b.onclick=()=>choose(id);bases.append(b);}if(!c.bases.length)bases.append(el('p','No direct base declared.'));root.append(bases);
-root.append(el('h3','How the mechanisms apply'));const ancestry=lineage(current);const apps=data.applications.filter(a=>ancestry.has(a.concept));if(!apps.length)root.append(el('p','No explanation has been curated for this ancestry yet.'));
-for(const a of apps){const m=data.mechanisms.find(m=>m.id===a.mechanism),card=el('div',undefined,'card');card.append(el('strong',m.name),el('small',` — ${a.status}; explanation attached to ${data.concepts[a.concept].name}`),el('p',a.explanation));for(const [i,s]of a.sources.entries()){card.append(link(`Evidence ${i+1}`,s),document.createTextNode(' '));}root.append(card);}
-root.append(el('h3','Property declarations'));const note=el('p','Ancestor declarations retain their declaring class. Redefined declarations remain visible; this is not a computed effective property schema.','muted');root.append(note);
-const toggle=el('label');const input=el('input');input.type='checkbox';toggle.append(input,document.createTextNode(' Include ancestor declarations'));root.append(toggle);const box=el('div');root.append(box);
-function properties(){box.replaceChildren();const owners=input.checked?[...ancestry]:[current];let count=0;for(const owner of owners){const cls=data.concepts[owner];if(!cls)continue;const props=cls.properties;count+=props.length;box.append(el('h3',`${cls.name} — ${props.length} declared`));if(!props.length){box.append(el('p','No directly owned attributes in this XMI declaration.'));continue;}const wrap=el('div',undefined,'table-scroll'),table=el('table'),head=el('tr');for(const h of ['Property','Value type','Explicit XMI details'])head.append(el('th',h));const thead=el('thead');thead.append(head);table.append(thead);const body=el('tbody');for(const p of props){const row=el('tr'),name=el('td'),type=el('td'),details=el('td');name.append(link(p.name,p.source));type.append(link(p.type.name,p.type.source));const flags=Object.entries(p.attributes).filter(([k])=>k!=='name').map(([k,v])=>`${k}=${v}`);details.append(el('code',flags.join('; ')||'No explicit qualifier attributes.'));const more=el('details');more.append(el('summary','Bounds, defaults and relationships'),el('small',`Lower: ${bound(p.lower)}; upper: ${bound(p.upper)}; default: ${bound(p.default)}.`));for(const [kind,refs]of [['Subsets',p.subsets],['Redefines',p.redefines]]){for(const ref of refs){const r=el('small',`${kind}: `);r.append(link(ref.name,ref.source));more.append(r);}}details.append(more);row.append(name,type,details);body.append(row);}table.append(body);wrap.append(table);box.append(wrap);}box.prepend(el('p',`${count} declarations shown. Omitted UML defaults are not expanded; “not encoded” does not mean absent or prohibited.`,'muted'));}input.onchange=properties;properties();
-const rules=el('details');rules.append(el('summary',`${c.rules.length} directly declared constraint names — bodies not extracted or executed`));const ul=el('ul',undefined,'rule-list');for(const r of c.rules){const li=el('li');li.append(link(r.name.split('::').pop(),r.source));ul.append(li);}rules.append(ul);root.append(rules);
-const notation=el('div',undefined,'notice');notation.append(el('strong','Graphical notation: not yet verified'),el('p','Shape, compartments, edge styles and nesting rules are tracked as a coverage gap. They cannot be established from these XMI declarations.'),link('SysML graphical notation — §8.2.3','https://www.omg.org/spec/SysML/2.0/Language/PDF'));root.append(notation);}
-$('counts').textContent=`${data.counts.focus_metaclasses} focus concepts · ${data.counts.detailed_metaclasses} including ancestors · ${data.counts.declared_properties} property declarations`;
-for(const s of data.sources){const p=el('p',undefined,'source');p.append(link(`${s.language} ${s.version} XMI`,s.url),el('small',` ${s.omg_file_id}`),el('br'),el('code',`SHA-256 ${s.sha256}`));$('sources').append(p);}
+function lineage(id,seen=new Set()){if(seen.has(id))return seen;seen.add(id);for(const base of data.concepts[id]?.bases||[])lineage(base,seen);return seen;}
+function conceptButton(id){const node=el('button',data.concepts[id]?.name||id,'link-button');node.type='button';node.onclick=()=>choose(id);return node;}
+function choose(id){if(!data.concepts[id])return;current=id;if(!data.concepts[id].focus)$('support').checked=true;history.pushState(null,'','#'+encodeURIComponent(id));render();}
+function menu(){
+    const term=$('search').value.toLowerCase();
+    const shown=items.filter(([,c])=>($('support').checked||c.focus)&&`${c.name} ${c.meaning} ${c.language}`.toLowerCase().includes(term));
+    $('concepts').replaceChildren();$('results').textContent=`${shown.length} concepts listed`;
+    for(const [id,c]of shown){const node=el('button',c.name);node.type='button';node.setAttribute('aria-current',String(id===current));node.onclick=()=>choose(id);$('concepts').append(node);}
+}
+function descriptionList(points){const ul=el('ul');for(const point of points)ul.append(el('li',point));return ul;}
+function renderProfile(root,profile){
+    root.append(el('span','Draft profile · source-checked','tag'),el('span','Editorial explanation','tag'),evidence(profile.evidence));
+    root.append(el('h3','What to understand'),descriptionList(profile.learningPoints));
+    for(const example of profile.examples){
+        root.append(el('h3','Connected example'),el('p',example.explanation));
+        const pre=el('pre');pre.append(el('code',example.code));root.append(pre,el('p','Source-reviewed documentation example. Not parser-validated or executed.','muted'),evidence(example.evidence));
+    }
+    root.append(el('h3','Relationships and composition'));
+    for(const relation of profile.relationships){const card=el('div',undefined,'card');card.append(el('strong',relation.kind+' → '),conceptButton(relation.target),el('p',relation.meaning),el('small','Condition: '+relation.condition),evidence(relation.evidence));root.append(card);}
+    root.append(el('h3','Graphical notation'),el('p','Representative variants checked against rendered official pages. Illustrations are original redraws; this is not the complete notation grammar.','muted'));
+    for(const notation of profile.notations){
+        const card=el('section',undefined,'card');card.append(el('h4',notation.name),el('small','Context: '+notation.context),el('p',notation.meaning));
+        if(notation.asset){const img=el('img');img.src=notation.asset;img.alt=notation.name;img.loading='lazy';img.className='notation';card.append(img);}
+        card.append(evidence(notation.evidence));root.append(card);
+    }
+    if(profile.caveats.length){const box=el('div',undefined,'notice');box.append(el('strong','Interpretation limits'),descriptionList(profile.caveats));root.append(box);}
+    const page=el('a','Open the standalone concept page','profile-link');page.href=location.protocol==='file:'?profile.profilePage:profile.profilePage.replace(/\.md$/,'.html');root.append(page);
+}
+function defaultText(n){
+    const d=n.default;if(d.status==='NoDeclaredDefault')return 'No declared default';
+    if(d.status!=='DecodedLiteral')return d.status;
+    return JSON.stringify(d.value)+' ('+d.type.split(':').pop()+')';
+}
+function renderProperties(root,c){
+    root.append(el('h3','Property reference'),el('p','Bounds and declared defaults below describe metamodel fields. They are not the multiplicity or runtime values of a usage in a user model. Derived values still need their derivation rules.','notice'));
+    const controls=el('div',undefined,'controls'),modeLabel=el('label','Property view'),mode=el('select');mode.id='property-view';
+    for(const [value,text]of [['effective','Effective declarations'],['properties','Declared here'],['allDeclarations','All ancestor declarations'],['replaced','Replaced declarations']]){const option=el('option',text);option.value=value;mode.append(option);}
+    modeLabel.append(mode);const searchLabel=el('label','Search properties'),search=el('input');search.type='search';search.id='property-search';search.placeholder='Name, meaning or declaring class';searchLabel.append(search);controls.append(modeLabel,searchLabel);root.append(controls);
+    const status=el('p',undefined,'muted');status.setAttribute('role','status');const output=el('div',undefined,'table-scroll');root.append(status,output);
+    if(Object.keys(c.conflicts).length)root.append(el('p','Unresolved same-name declarations: '+Object.keys(c.conflicts).join(', '),'notice'));
+    function update(){
+        const term=search.value.toLowerCase();let ids=mode.value==='replaced'?Object.keys(c.replaced):c[mode.value];
+        ids=ids.filter(id=>{const p=data.properties[id];return `${p.name} ${p.meaning||''} ${data.concepts[p.owner]?.name||''}`.toLowerCase().includes(term);}).sort((a,b)=>data.properties[a].name.localeCompare(data.properties[b].name)||a.localeCompare(b));
+        status.textContent=`${ids.length} declarations shown. ${c.effective.length} active; ${Object.keys(c.replaced).length} replaced. Origins and alternative inheritance paths are retained.`;
+        output.replaceChildren();if(!ids.length){output.append(el('p','No declarations match this view.'));return;}
+        const table=el('table'),thead=el('thead'),heading=el('tr');for(const name of ['Property and meaning','Type and origin','Metamodel bounds / default','Qualifiers and evidence'])heading.append(el('th',name));thead.append(heading);table.append(thead);const body=el('tbody');
+        for(const id of ids){
+            const p=data.properties[id],n=p.normalization,row=el('tr'),name=el('td'),type=el('td'),values=el('td'),details=el('td');
+            name.append(external(p.name,p.source),el('p',p.meaning||'Explanation not yet reviewed.','property-meaning'));
+            if(c.replaced[id])name.append(el('span','Replaced in this context','tag'));
+            if(data.concepts[p.type.id])type.append(conceptButton(p.type.id));else type.append(external(p.type.name,p.type.source));
+            const origin=el('div',undefined,'origin');origin.append(el('small','Declared on'),conceptButton(p.owner));type.append(origin);
+            values.append(el('strong',`[${n.lower.value??'?'}..${n.upper.value??'?'}]`),el('small','Declared default: '+defaultText(n)));
+            const qualifier=el('details');qualifier.append(el('summary','Qualifiers and source rules'));
+            for(const [key,item]of Object.entries(n.qualifiers)){const line=el('small',`${key} = ${item.value} · ${item.basis} `);line.append(external('UML rule',item.evidence));qualifier.append(line);}
+            for(const key of ['lower','upper']){const item=n[key],line=el('small',`${key} bound: ${item.basis} `);line.append(external('UML rule',item.evidence));qualifier.append(line);}
+            for(const [kind,refs]of [['Subsets',p.subsets],['Redefines',p.redefines]])for(const ref of refs){const line=el('small',kind+': ');line.append(external(ref.qualifiedName||ref.name,ref.source));qualifier.append(line);}
+            for(const replacement of c.replaced[id]||[]){const line=el('small','Replaced by: ');line.append(external(data.properties[replacement].qualifiedName,data.properties[replacement].source));qualifier.append(line);}
+            for(const path of c.paths[p.owner]||[])qualifier.append(el('small','Path: '+path.map(id=>data.concepts[id]?.name||id).join(' → ')));
+            const raw=el('details');raw.append(el('summary','Raw XMI encoding'));const pre=el('pre');pre.append(el('code',JSON.stringify(p.raw,null,2)));raw.append(pre);qualifier.append(raw);details.append(qualifier);row.append(name,type,values,details);body.append(row);
+        }
+        table.append(body);output.append(table);
+    }
+    mode.onchange=update;search.oninput=update;update();
+}
+function render(){
+    menu();const c=data.concepts[current],profile=data.profiles[current],root=$('detail');root.replaceChildren();
+    root.append(el('p',`${c.language} / ${c.focus?'focus metaclass':'supporting ancestor'}`,'eyebrow'),el('h2',c.name),el('p',c.qualifiedName,'qualified'),el('p',profile?.purpose||c.meaning),external('Original XMI declaration',c.source));
+    if(profile)renderProfile(root,profile);else root.append(el('p','A full concept profile and notation examples have not yet been drafted for this entry.','muted'));
+    root.append(el('h3','Direct bases'));const bases=el('div',undefined,'actions');for(const id of c.bases)bases.append(conceptButton(id));if(!c.bases.length)bases.append(el('p','No direct base declared.'));root.append(bases);
+    const ancestry=lineage(current),apps=data.applications.filter(a=>ancestry.has(a.concept));
+    if(apps.length){const mechanismDetails=el('details');mechanismDetails.append(el('summary','Underlying mechanisms from this ancestry'));for(const a of apps){const m=data.mechanisms.find(m=>m.id===a.mechanism),card=el('div',undefined,'card');card.append(el('strong',m.name),el('small',`${a.status}; explanation attached to ${data.concepts[a.concept].name}`),el('p',a.explanation));for(const [i,url]of a.sources.entries())card.append(external(`Evidence ${i+1}`,url),document.createTextNode(' '));mechanismDetails.append(card);}root.append(mechanismDetails);}
+    renderProperties(root,c);
+    const rules=el('details');rules.append(el('summary',`${c.rules.length} directly declared constraint names — bodies not extracted or executed`));const ul=el('ul',undefined,'rule-list');for(const rule of c.rules){const li=el('li');li.append(external(rule.name,rule.source));ul.append(li);}rules.append(ul);root.append(rules);
+}
+$('counts').textContent=`${Object.keys(data.profiles).length} source-checked draft profiles · ${data.counts.focus_metaclasses} focus concepts · ${data.counts.declared_properties} property declarations`;
+for(const source of data.sources){const p=el('p',undefined,'source');p.append(external(`${source.language} ${source.version} — ${source.id||'abstract syntax'}`,source.url),el('small',source.omg_file_id),el('code',`SHA-256 ${source.sha256}`));$('sources').append(p);}
 $('search').oninput=menu;$('support').onchange=menu;
-try{const requested=decodeURIComponent(location.hash.slice(1));if(data.concepts[requested])current=requested;}catch{}
-render();
+function fromHash(){try{const id=decodeURIComponent(location.hash.slice(1));if(data.concepts[id])current=id;}catch{}render();}
+window.addEventListener('popstate',fromHash);window.addEventListener('hashchange',fromHash);fromHash();
 </script>
 </body></html>

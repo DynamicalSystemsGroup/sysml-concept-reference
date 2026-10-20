@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-labelledby="title desc">
+<title id="title">Boundary port and full port node</title><desc id="desc">On the left, a small rounded port straddles the boundary of a wheel part usage. On the right, a rounded full node contains the keyword port and hub : Mount.</desc>
+<metadata>Original educational redraw based on OMG SysML 2.0 formal/2026-03-02; https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243. Not an official figure or parser-validation result.</metadata>
+<style>text{font-family:system-ui,sans-serif;fill:#11113a;font-size:17px}.caption{font-size:13px;fill:#4a5460}.node{fill:#fff;stroke:#11113a;stroke-width:2}.label{text-anchor:middle}</style>
+<rect width="720" height="240" fill="#ebe6d6"/>
+<text class="caption" x="40" y="35">Boundary glyph</text><text class="caption" x="470" y="35">Full-node alternative</text>
+<rect class="node" x="35" y="65" width="280" height="125" rx="14"/><text class="label" x="175" y="108">«part»</text><text class="label" x="175" y="140">wheel : Wheel</text>
+<rect class="node" x="303" y="115" width="24" height="24" rx="4"/><text class="caption" x="335" y="105">hub : Mount</text>
+<rect class="node" x="465" y="65" width="220" height="125" rx="14"/><text class="label" x="575" y="108">«port»</text><text class="label" x="575" y="143">hub : Mount</text>
+<a href="https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243"><text class="caption" x="22" y="228">Original illustrative redraw · Official notation source</text></a>
+</svg>

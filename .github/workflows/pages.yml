@@ -28,12 +28,14 @@ jobs:
           enable-cache: true
       - name: Install locked development tools
         run: uv sync --locked
+      - name: Build source-backed profiles
+        run: uv run --locked python scripts/build_profiles.py
       - name: Validate RDF and SPARQL queries
         run: uv run --locked python scripts/check_inventory.py
-      - name: Run catalogue and site tests
-        run: uv run --locked python -m unittest discover -s tests -v
       - name: Build concept browser
         run: uv run --locked python scripts/build_browser.py
+      - name: Run catalogue and site tests
+        run: uv run --locked python -m unittest discover -s tests -v
       - name: Build documentation and verify published links
         run: uv run --locked python scripts/build_site.py
       - name: Upload Pages artifact

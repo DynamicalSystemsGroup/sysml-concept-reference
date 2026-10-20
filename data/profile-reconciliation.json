@@ -1,0 +1,49 @@
+{
+  "scope": "Four selected class declarations; not a complete PDF or seed reconciliation",
+  "concepts": [
+    {
+      "concept": "PartUsage",
+      "seed_section": "8.3.11.3",
+      "status": "SelectedFieldsMatch",
+      "checked": [
+        "direct bases",
+        "declared property names/types/bounds/derivation/ordering/subsets/redefinitions",
+        "constraint names"
+      ],
+      "differences": []
+    },
+    {
+      "concept": "PartDefinition",
+      "seed_section": "8.3.11.2",
+      "status": "SelectedFieldsMatch",
+      "checked": [
+        "direct bases",
+        "declared property names/types/bounds/derivation/ordering/subsets/redefinitions",
+        "constraint names"
+      ],
+      "differences": []
+    },
+    {
+      "concept": "PortUsage",
+      "seed_section": "8.3.12.6",
+      "status": "SelectedFieldsMatch",
+      "checked": [
+        "direct bases",
+        "declared property names/types/bounds/derivation/ordering/subsets/redefinitions",
+        "constraint names"
+      ],
+      "differences": []
+    },
+    {
+      "concept": "ConnectionUsage",
+      "seed_section": "8.3.13.4",
+      "status": "SelectedFieldsMatch",
+      "checked": [
+        "direct bases",
+        "declared property names/types/bounds/derivation/ordering/subsets/redefinitions",
+        "constraint names"
+      ],
+      "differences": []
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+PREFIX inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?concept ?variant ?context ?status ?evidence ?pdfPage ?sourceHash WHERE {
+  ?notation a inv:Notation ; inv:concept ?concept ; rdfs:label ?variant ;
+    inv:context ?context ; inv:verificationStatus ?status ; inv:evidence ?evidence .
+  ?evidence inv:pdfPage ?pdfPage ; inv:sourceArtifact/inv:sha256 ?sourceHash .
+} ORDER BY ?concept ?variant ?pdfPage

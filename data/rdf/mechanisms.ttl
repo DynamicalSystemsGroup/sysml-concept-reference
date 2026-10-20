@@ -1,8 +1,8 @@
-@prefix inv: <https://github.com/rororowyourboat/sysmlv2_inventory/vocab#> .
-@prefix m: <https://github.com/rororowyourboat/sysmlv2_inventory/id/mechanism/> .
-@prefix a: <https://github.com/rororowyourboat/sysmlv2_inventory/id/application/> .
-@prefix k: <https://github.com/rororowyourboat/sysmlv2_inventory/id/KerML/20250201/> .
-@prefix s: <https://github.com/rororowyourboat/sysmlv2_inventory/id/SysML/20250201/> .
+@prefix inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#> .
+@prefix m: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/mechanism/> .
+@prefix a: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/application/> .
+@prefix k: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/KerML/20250201/> .
+@prefix s: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 

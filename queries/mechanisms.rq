@@ -1,4 +1,4 @@
-PREFIX inv: <https://github.com/rororowyourboat/sysmlv2_inventory/vocab#>
+PREFIX inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dct: <http://purl.org/dc/terms/>
 SELECT ?concept ?mechanism ?applicability ?explanation ?evidence WHERE {

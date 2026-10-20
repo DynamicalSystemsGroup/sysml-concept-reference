@@ -4,13 +4,11 @@ The catalogue describes **language constructs**, rather than a user's SysML mode
 
 ## What is covered
 
-The focus is 15 metaclasses: KerML `Element`, `Relationship`, `Namespace`, `Membership`, `OwningMembership`, `Type`, `Classifier`, `FeatureMembership`, `Feature`, `TypeFeaturing`; SysML `Definition`, `Usage`, `ReferenceUsage`, `PartDefinition`, `PartUsage`.
+The selected slice contains 17 focus metaclasses and eight supporting ancestors: 25 class declarations, 180 directly owned properties and 218 constraint names. See the generated [extraction report](../data/rdf/extraction-report.json) for exact scope.
 
-Their complete superclass ancestry adds six support metaclasses: `Class`, `Structure`, `ItemDefinition`, `ItemUsage`, `OccurrenceDefinition`, `OccurrenceUsage`. For these 21 declarations, the extractor captures 172 directly owned attributes and 200 directly owned constraint names. These are counts for this selected slice, not the whole metamodel. See the generated [extraction report](../data/rdf/extraction-report.json).
+Four source-checked draft profiles cover PartUsage, PartDefinition, PortUsage and ConnectionUsage. Their effective property sets contain 113, 82, 111 and 121 declarations respectively. Identity-based inheritance deduplicates diamonds, excludes private inherited members, retains explicit redefinition history and reports independent same-name conflicts. Subsetting does not silently remove a declaration.
 
-Four editorial mechanism records explain model ownership, namespace membership, feature context, and composition/reference. Ten qualified application records link explanations and restrictions to specific source locations. These are curated explanations, not a complete table of permitted concept combinations. Absence of an application record means unreviewed, not prohibited. The browser also shows explanations attached to ancestors, identifying their origin; inheritance does not establish every context-specific permission.
-
-Graphical shape, compartments, edge notation and nesting remain **not yet verified**. A single universal shape per metaclass would be an unsafe assumption. The browser links to SysML §8.2.3 as the next source to inspect. No notation has been invented.
+Four editorial mechanism records distinguish model ownership, namespace membership, feature context and composition/reference. Qualified relationships include conditions and source evidence; absence means unreviewed, not prohibited. The profiles add 164 property meanings, a connected source-reviewed example and representative graphical notation checked against exact official PDF pages. Original SVG redraws are illustrative, not a complete graphical grammar. See the [profile contract](concept-page-contract.md).
 
 ## Files and representation
 
@@ -30,7 +28,7 @@ The vocabulary uses OWL classes and properties to describe catalogue records. Th
 
 IRIs under this repository's GitHub URL identify research records and vocabulary terms. They are not OMG identifiers or promises of individually hosted pages. Source-artifact IRIs include the byte hash, and source declarations link directly to the official XMI URL with its `xmi:id` fragment. Source locators remain usable even if a browser downloads rather than displays an XMI link. Plain-language descriptions are marked `EditorialSummary`; structural records are marked `Extracted`.
 
-Referenced declarations outside the selected class scope are retained as `ReferenceOnly` records with names and source locations. Association-owned ends can appear this way. Those records are not fully extracted declarations, and the browser does not pretend to provide full details for them. External UML Boolean/String references are explicitly marked unverified; their definitions have not been downloaded.
+Referenced declarations outside the selected class scope are retained as `ReferenceOnly` records with names and source locations. Association-owned ends can appear this way. Those records are not fully extracted declarations, and the browser does not pretend to provide full details for them. External UML Boolean/String identities are checked against the pinned OMG UML PrimitiveTypes artifact. Supporting UML metamodel and specification evidence is recorded in the source manifest.
 
 ## Reproduce and explore
 
@@ -52,6 +50,7 @@ Fetch missing official XMI into ignored `sandbox/official-sources/`, verify the 
 ```bash
 uv sync --locked
 uv run --locked python scripts/build_inventory.py --fetch
+uv run --locked python scripts/build_profiles.py
 uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/build_browser.py
 uv run --locked python -m unittest discover -s tests -v
@@ -65,7 +64,9 @@ Execute an individual saved query:
 uv run --locked python scripts/check_inventory.py --query queries/part-properties.rq
 ```
 
-Edit the query's `VALUES ?concept` to inspect a different concept. `part-properties.rq` returns directly declared and ancestor declarations **including redefined ones**. It is not an effective-property calculation. The browser offers the same distinction through its ancestor checkbox. It preserves the declaring class rather than copying a property onto each descendant.
+Edit the query's `VALUES ?concept` to inspect a different concept. `part-properties.rq` retains all ancestor declarations, including replaced ones. `effective-properties.rq` selects active declarations; `replaced-properties.rq` exposes replacement history. The browser offers effective, declared, ancestor and replaced views with declaration origins and inheritance paths.
+
+Catalogue IRIs now use `https://github.com/DynamicalSystemsGroup/sysml-concept-reference/`. The [namespace migration](../data/namespace-migration.json) records the exact prefix replacement; saved queries using the former prefix must be updated. This is a research identifier migration, not an assertion of OMG identity or OWL equivalence. The seed retains its historical research repository provenance.
 
 ## Evidence limits and next work
 
@@ -73,8 +74,8 @@ All selected generalizations and extracted property type, association, subsettin
 
 The SysML XMI's top-level package URI contains `https://ww.omg.org/...`, while its official retrieval URL uses `www.omg.org`. The manifest preserves that observed spelling. Do not use that typo to construct download URLs or silently rewrite provenance.
 
-Bounds and defaults preserve their XMI representation as JSON literals: `present`, literal `type`, and explicit `value` where available. Missing nodes and omitted literal values have different encodings. UML defaults are **not expanded**. Explicit qualifier attributes are retained; absence of a qualifier must not be interpreted as false. `Feature::isComposite` is a language property declaration; an XMI property's `aggregation` describes the metamodel declaration and must not be conflated with it.
+Bounds and defaults retain raw XMI encodings beside UML-normalized values and evidence. Absent bound nodes normalize to 1; present numeric literals with omitted values normalize to 0; unlimited upper bounds retain `*`. An absent default node means no declared default. Unsupported expressions remain unsupported: the selected slice includes a `Membership.visibility` InstanceValue outside the four profiles. Qualifier normalization is separate from raw explicit attributes. `Feature::isComposite` must not be confused with an XMI property's `aggregation`.
 
-Not yet implemented: complete metamodel extraction; computed effective properties with diamond/redefinition handling; constraint bodies, operations or evaluation; standard libraries; syntax-to-semantics mappings; graphical notation; reconciliation against every seed record; model validation or execution. The next bounded extension is to normalize bounds/defaults against pinned UML definitions and audit notation for `PartUsage`, while preserving source encodings and context restrictions.
+Not yet implemented: complete metamodel extraction; operations and constraint evaluation; standard libraries; complete syntax/notation mappings; reconciliation of every seed record; model validation or execution. The four-profile reconciliation checks selected structural fields only. SHACL validates catalogue integrity, not SysML conformance. OWL describes catalogue vocabulary rather than executable SysML semantics.
 
-Tests exercise missing provenance, dangling types, invalid applicability, declaration-origin retention, source hash mismatch, unresolved references, ambiguous focus selection and all curated evidence IDs. Source-dependent tests explicitly skip if originals are missing. No test result establishes language conformance.
+Tests cover provenance, normalization, identity-based inheritance, missing evidence, stale effective sets, reconciliation discrepancies, browser interactions and published links. Source-dependent tests explicitly skip if originals are missing. The Node browser smoke check executes the generated application against a DOM test double; it is not a visual layout test.

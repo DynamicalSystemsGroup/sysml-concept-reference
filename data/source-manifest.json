@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "retrieved_on": "2026-10-20",
   "scope": "Candidate XMI baseline for the focused RDF slice; not a complete language baseline",
   "artifacts": [
@@ -28,6 +28,56 @@
       "bytes": 1135635,
       "embedded_package_uri": "https://ww.omg.org/spec/SysML/20250201",
       "license_reference": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    }
+  ],
+  "supporting_artifacts": [
+    {
+      "id": "UMLMetamodel",
+      "language": "UML",
+      "version": "2.5.1",
+      "file": "UML.xmi",
+      "url": "https://www.omg.org/spec/UML/20161101/UML.xmi",
+      "omg_file_id": "ptc/18-01-01",
+      "bytes": 1901856,
+      "sha256": "e8166c91f51b8a0c015a90101b83d2249d03252e9f9a500a6511654347804f21",
+      "retrieved_on": "2026-10-21",
+      "publisher": "Object Management Group"
+    },
+    {
+      "id": "UMLPrimitiveTypes",
+      "language": "UML",
+      "version": "2.5.1",
+      "file": "UML-PrimitiveTypes.xmi",
+      "url": "https://www.omg.org/spec/UML/20161101/PrimitiveTypes.xmi",
+      "omg_file_id": "ptc/18-01-02",
+      "bytes": 2880,
+      "sha256": "62d12217fcd26037fc917709e2a896600af574efd6412c110e2a711395a69849",
+      "retrieved_on": "2026-10-21",
+      "publisher": "Object Management Group"
+    },
+    {
+      "id": "UMLSpecification",
+      "language": "UML",
+      "version": "2.5.1",
+      "file": "UML-2.5.1.pdf",
+      "url": "https://www.omg.org/spec/UML/2.5.1/PDF",
+      "omg_file_id": "formal/17-12-05",
+      "bytes": 18069510,
+      "sha256": "416b57e1933780eb48bd60fe513e031da220c28a521bdd334a366bebc78a463e",
+      "retrieved_on": "2026-10-21",
+      "publisher": "Object Management Group"
+    },
+    {
+      "id": "SysMLLanguage",
+      "language": "SysML",
+      "version": "2.0",
+      "file": "SysML-Language.pdf",
+      "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF",
+      "omg_file_id": "formal/2026-03-02",
+      "bytes": 3804140,
+      "sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a",
+      "retrieved_on": "2026-10-21",
+      "publisher": "Object Management Group"
     }
   ]
 }

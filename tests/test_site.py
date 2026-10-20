@@ -12,12 +12,15 @@ from build_site import build, check_links
 class SiteTests(unittest.TestCase):
     def test_site_includes_browser_notes_and_exact_downloads(self):
         with tempfile.TemporaryDirectory() as temp:
-            output = Path(temp) / "sysmlv2_inventory"
+            output = Path(temp) / "sysml-concept-reference"
             pages, links = build(output)
             self.assertGreaterEqual(pages, 10)
             self.assertGreater(links, 100)
             for path in ("index.html", "docs/concept-browser.html", "docs/rdf-inventory.html",
-                         "data/index.html", "queries/index.html", "assets/style.css"):
+                         "data/index.html", "queries/index.html", "assets/style.css",
+                         "assets/brand/dsg-wordmark.png", "assets/brand/fonts/ibm-plex-sans.woff2",
+                         "docs/concepts/part-usage.html", "docs/concepts/port-usage.html",
+                         "docs/assets/notation/connection-usage.svg", "data/rdf/profiles.ttl"):
                 self.assertTrue((output / path).is_file(), path)
             self.assertEqual((output / "data/rdf/metamodel.ttl").read_bytes(), (ROOT / "data/rdf/metamodel.ttl").read_bytes())
             self.assertFalse((output / "sandbox").exists())

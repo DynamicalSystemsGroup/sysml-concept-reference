@@ -1,0 +1,488 @@
+# Generated RDF; rebuild with scripts/build_inventory.py or scripts/build_profiles.py. Do not edit.
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix id: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/> .
+@prefix inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wgs: <https://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Connections-ConnectionUsage>
+    inv:hasProfile <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/connection-usage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartDefinition>
+    inv:hasProfile <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-definition> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartUsage>
+    inv:hasProfile <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-usage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Ports-PortUsage>
+    inv:hasProfile <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/port-usage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/example/connection-usage>
+    dct:description "link is a named binary connection. Its ends refer to axle.mount and wheel.hub. The plain solid line is an illustrative connection representation, with no flow direction implied." ;
+    rdf:type inv:Example ;
+    inv:code """// Original documentation example. Source-reviewed; not parser-validated.
+package AssemblyExample {
+    port def Mount;
+
+    part def Wheel {
+        port hub : Mount;
+    }
+
+    part def Axle {
+        port mount : Mount;
+    }
+
+    part def Assembly {
+        part wheel : Wheel;
+        part axle : Axle;
+        ref part spare : Wheel[0..1];
+        connection link connect axle.mount to wheel.hub;
+    }
+
+    part assembly : Assembly;
+}
+""" ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=103> ;
+    inv:verificationStatus inv:SourceReviewedNotExecuted .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/example/part-definition>
+    dct:description "Wheel, Axle and Assembly are part definitions. Their port and part declarations specify features; assembly : Assembly is a separate usage of the defined kind." ;
+    rdf:type inv:Example ;
+    inv:code """// Original documentation example. Source-reviewed; not parser-validated.
+package AssemblyExample {
+    port def Mount;
+
+    part def Wheel {
+        port hub : Mount;
+    }
+
+    part def Axle {
+        port mount : Mount;
+    }
+
+    part def Assembly {
+        part wheel : Wheel;
+        part axle : Axle;
+        ref part spare : Wheel[0..1];
+        connection link connect axle.mount to wheel.hub;
+    }
+
+    part assembly : Assembly;
+}
+""" ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=93> ;
+    inv:verificationStatus inv:SourceReviewedNotExecuted .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/example/part-usage>
+    dct:description "wheel is a composite part usage within Assembly. spare is an owned but referential part usage. Both are typed by Wheel; the [0..1] on spare explicitly constrains its modeled values." ;
+    rdf:type inv:Example ;
+    inv:code """// Original documentation example. Source-reviewed; not parser-validated.
+package AssemblyExample {
+    port def Mount;
+
+    part def Wheel {
+        port hub : Mount;
+    }
+
+    part def Axle {
+        port mount : Mount;
+    }
+
+    part def Assembly {
+        part wheel : Wheel;
+        part axle : Axle;
+        ref part spare : Wheel[0..1];
+        connection link connect axle.mount to wheel.hub;
+    }
+
+    part assembly : Assembly;
+}
+""" ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=72>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=93> ;
+    inv:verificationStatus inv:SourceReviewedNotExecuted .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/example/port-usage>
+    dct:description "hub and mount are port usages typed by Mount. The connection refers to them through axle.mount and wheel.hub. The example uses no directional arrows or transfer behavior." ;
+    rdf:type inv:Example ;
+    inv:code """// Original documentation example. Source-reviewed; not parser-validated.
+package AssemblyExample {
+    port def Mount;
+
+    part def Wheel {
+        port hub : Mount;
+    }
+
+    part def Axle {
+        port mount : Mount;
+    }
+
+    part def Assembly {
+        part wheel : Wheel;
+        part axle : Axle;
+        ref part spare : Wheel[0..1];
+        connection link connect axle.mount to wheel.hub;
+    }
+
+    part assembly : Assembly;
+}
+""" ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=103>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95> ;
+    inv:verificationStatus inv:SourceReviewedNotExecuted .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/connection-edge-node>
+    dct:description "A connection can use a solid binary line with an optional label, or a rounded full node labeled connection. The example omits the optional direction-indication arrow." ;
+    rdf:type inv:Notation ;
+    rdfs:label "Binary edge and connection node" ;
+    inv:asset "assets/notation/connection-usage.svg" ;
+    inv:concept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Connections-ConnectionUsage> ;
+    inv:context "Structural connection representations" ;
+    inv:depictionStatus inv:OriginalRedraw ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=247>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=248> ;
+    inv:verificationStatus inv:RepresentativeNotationVisuallyChecked .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/connection-nary>
+    dct:description "The grammar also provides a central filled dot with segments to the connected usage nodes. It is an additional representation, not a universal replacement for binary lines." ;
+    rdf:type inv:Notation ;
+    rdfs:label "N-ary connection variant" ;
+    inv:concept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Connections-ConnectionUsage> ;
+    inv:context "Connections with more than two ends" ;
+    inv:depictionStatus inv:SourceDescriptionOnly ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=248> ;
+    inv:verificationStatus inv:RepresentativeNotationVisuallyChecked .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/part-definition-node>
+    dct:description "Sharp-corner rectangle with the part def keyword and definition name. Compartment and interconnection contents may extend the basic node." ;
+    rdf:type inv:Notation ;
+    rdfs:label "Part definition node" ;
+    inv:asset "assets/notation/part-definition.svg" ;
+    inv:concept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartDefinition> ;
+    inv:context "Definition node in a structural view" ;
+    inv:depictionStatus inv:OriginalRedraw ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    inv:verificationStatus inv:RepresentativeNotationVisuallyChecked .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/part-node>
+    dct:description "Rounded rectangle with a part usage label. The referential variant has a dashed outline and the ref prefix. Compartments and side ports are additional variants." ;
+    rdf:type inv:Notation ;
+    rdfs:label "Composite and referential part usages" ;
+    inv:asset "assets/notation/part-usage.svg" ;
+    inv:concept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartUsage> ;
+    inv:context "Usage nodes in structural views" ;
+    inv:depictionStatus inv:OriginalRedraw ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    inv:verificationStatus inv:RepresentativeNotationVisuallyChecked .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/port-node-boundary>
+    dct:description "The full node is rounded and labeled port; the compact form is a small rounded boundary glyph with an adjacent name/type label. Direction arrows are optional productions and omitted in this illustration." ;
+    rdf:type inv:Notation ;
+    rdfs:label "Full node and boundary port" ;
+    inv:asset "assets/notation/port-usage.svg" ;
+    inv:concept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Ports-PortUsage> ;
+    inv:context "Structural and interconnection views" ;
+    inv:depictionStatus inv:OriginalRedraw ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    inv:verificationStatus inv:RepresentativeNotationVisuallyChecked .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/port-reference-restrictions>
+    dct:description "Dotted-outline reference port productions are restricted to nested ports. The filled-dot proxy option is restricted to a part usage contained within an interconnection view." ;
+    rdf:type inv:Notation ;
+    rdfs:label "Restricted reference and proxy variants" ;
+    inv:concept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Ports-PortUsage> ;
+    inv:context "Nested ports and part usages within interconnection views" ;
+    inv:depictionStatus inv:SourceDescriptionOnly ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=246> ;
+    inv:verificationStatus inv:RepresentativeNotationVisuallyChecked .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/connection-usage>
+    dct:description "Represents a structural connection with end features. It combines PartUsage and ConnectorAsUsage semantics and retains its own model-element identity." ;
+    rdf:type inv:ConceptProfile ;
+    inv:caveat "This profile illustrates selected structural notations and does not implement execution or all association-structure semantics." ;
+    inv:concept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Connections-ConnectionUsage> ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=100>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=330> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:hasExample <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/example/connection-usage> ;
+    inv:hasNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/connection-edge-node>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/connection-nary> ;
+    inv:hasRelationship <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/connection-usage/relationship/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/connection-usage/relationship/2> ;
+    inv:learningPoint "A connection is a model element with end roles and references, even when drawn as a simple line.", "A structural connection is not interchangeable with a binding, succession or flow.", "Allowed typing includes connection definitions and suitable KerML association structures.", "Nonabstract connections require at least two ends. Each end is referential with multiplicity 1..1; cross multiplicity is a separate concept." ;
+    inv:profilePage "concepts/connection-usage.md" ;
+    inv:profileStatus inv:DraftSourceChecked .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/connection-usage/relationship/1>
+    dct:description "ConnectionUsage directly specializes PartUsage as well as ConnectorAsUsage." ;
+    rdf:type inv:ConceptRelationship ;
+    inv:condition "A connection therefore has inherited part properties, but adds connector end structure and applicable constraints." ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=330> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:fromConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Connections-ConnectionUsage> ;
+    inv:relationKind "specialization" ;
+    inv:toConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartUsage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/connection-usage/relationship/2>
+    dct:description "The example connects two port usages through qualified feature paths." ;
+    rdf:type inv:ConceptRelationship ;
+    inv:condition "Retain the connection end declarations and their reference-subsetting semantics, rather than storing only a graphical line." ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=103> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:fromConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Connections-ConnectionUsage> ;
+    inv:relationKind "endpoint reference" ;
+    inv:toConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Ports-PortUsage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-definition>
+    dct:description "Defines a reusable kind of system or system part, including features that usages of that kind can have." ;
+    rdf:type inv:ConceptProfile ;
+    inv:caveat "Instance-level composition is governed by usages and their context, rather than by the outline of the definition box." ;
+    inv:concept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartDefinition> ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=321>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=90> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:hasExample <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/example/part-definition> ;
+    inv:hasNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/part-definition-node> ;
+    inv:hasRelationship <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-definition/relationship/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-definition/relationship/2> ;
+    inv:learningPoint "A definition is a classifier; a part usage is a feature in context. They retain different metaclass identities.", "Declaring a nested definition introduces a scoped kind. It does not by itself declare a part usage.", "Properties of this metaclass describe the language definition, rather than arbitrary attributes such as a modeled wheel diameter." ;
+    inv:profilePage "concepts/part-definition.md" ;
+    inv:profileStatus inv:DraftSourceChecked .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-definition/relationship/1>
+    dct:description "Part usages can use the kind introduced by a part definition." ;
+    rdf:type inv:ConceptRelationship ;
+    inv:condition "Typing is distinct from model ownership; many usages can share the same definition." ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=93> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:fromConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartDefinition> ;
+    inv:relationKind "usage of a kind" ;
+    inv:toConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartUsage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-definition/relationship/2>
+    dct:description "A part definition can declare port usages as features." ;
+    rdf:type inv:ConceptRelationship ;
+    inv:condition "Port definitions determine permitted port typing; the enclosing declaration is not a substitute for that type." ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:fromConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartDefinition> ;
+    inv:relationKind "declared feature" ;
+    inv:toConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Ports-PortUsage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-usage>
+    dct:description "Describes a system or system part in a context. A definition describes its kind; multiple usages can share that kind." ;
+    rdf:type inv:ConceptProfile ;
+    inv:caveat "No exhaustive permission matrix or complete notation grammar is claimed.", "The examples have been checked against source notation, but no SysML parser or semantic engine was run." ;
+    inv:concept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartUsage> ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=321>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=90> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:hasExample <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/example/part-usage> ;
+    inv:hasNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/part-node> ;
+    inv:hasRelationship <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-usage/relationship/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-usage/relationship/2>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-usage/relationship/3> ;
+    inv:learningPoint "A referential part remains a PartUsage. It is not converted into the metaclass ReferenceUsage just because its declaration contains ref.", "Owning a part declaration, featuring its values, and making those values composite are separate mechanisms.", "The declared partDefinition property has multiplicity 0..*. Class-level constraints still require at least one applicable PartDefinition typing; declaration cardinality alone is not the whole rule.", "The normalized defaults below describe metamodel fields. The multiplicity and composition of a part in a user model follow contextual SysML rules." ;
+    inv:profilePage "concepts/part-usage.md" ;
+    inv:profileStatus inv:DraftSourceChecked .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-usage/relationship/1>
+    dct:description "A part usage has applicable part-definition typing, explicit or supplied through its semantic specialization." ;
+    rdf:type inv:ConceptRelationship ;
+    inv:condition "Do not restrict every allowed explicit type to PartDefinition; the source also permits qualifying item definitions and kernel structures." ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=93> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:fromConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartUsage> ;
+    inv:relationKind "typing" ;
+    inv:toConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartDefinition> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-usage/relationship/2>
+    dct:description "A part usage can declare nested part usages as features in its context." ;
+    rdf:type inv:ConceptRelationship ;
+    inv:condition "Permitted examples do not establish that every nesting is valid; membership, featuring and composition constraints still apply." ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=73> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:fromConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartUsage> ;
+    inv:relationKind "nested declaration" ;
+    inv:toConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartUsage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/part-usage/relationship/3>
+    dct:description "Ports can be declared within a part usage or its defining type." ;
+    rdf:type inv:ConceptRelationship ;
+    inv:condition "The port typing and context-specific referentiality rules apply independently of the enclosing part." ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:fromConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartUsage> ;
+    inv:relationKind "nested port" ;
+    inv:toConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Ports-PortUsage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/port-usage>
+    dct:description "Describes an interaction point in a structural context, typed by a port definition." ;
+    rdf:type inv:ConceptProfile ;
+    inv:caveat "The pinned XMI overview overgeneralizes referentiality; the profile preserves the nested-port qualification rather than silently applying that overview as an unconditional rule." ;
+    inv:concept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Ports-PortUsage> ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=327>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:hasExample <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/example/port-usage> ;
+    inv:hasNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/port-node-boundary>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/port-reference-restrictions> ;
+    inv:hasRelationship <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/port-usage/relationship/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/port-usage/relationship/2>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/port-usage/relationship/3> ;
+    inv:learningPoint "A connection referencing a port does not by itself establish a flow or an executable transfer.", "A port usage can appear as a full node or as a small boundary glyph; its semantic identity is not determined by the drawing size.", "Only port definitions can type a port usage. Conjugated typing uses ~ and reverses in/out while preserving inout.", "The source overview and well-formedness constraints need to be read together: nested-port exceptions prevent an unconditional rule that every nested port value must be non-composite." ;
+    inv:profilePage "concepts/port-usage.md" ;
+    inv:profileStatus inv:DraftSourceChecked .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/port-usage/relationship/1>
+    dct:description "Port usages can be declared in part definitions." ;
+    rdf:type inv:ConceptRelationship ;
+    inv:condition "Type featuring, declaration ownership and referentiality remain separate questions." ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:fromConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Ports-PortUsage> ;
+    inv:relationKind "feature context" ;
+    inv:toConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartDefinition> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/port-usage/relationship/2>
+    dct:description "Port usages can be nested in part usages." ;
+    rdf:type inv:ConceptRelationship ;
+    inv:condition "Nesting is contextual; a glyph placed on a boundary is not itself evidence of a new ownership rule." ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:fromConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Ports-PortUsage> ;
+    inv:relationKind "feature context" ;
+    inv:toConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Parts-PartUsage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/profile/port-usage/relationship/3>
+    dct:description "A connection can reference a port feature as an end target." ;
+    rdf:type inv:ConceptRelationship ;
+    inv:condition "Preserve end roles and reference-subsetting relationships; do not infer flow semantics from the line." ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=103> ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:fromConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Ports-PortUsage> ;
+    inv:relationKind "referenced endpoint" ;
+    inv:toConcept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Connections-ConnectionUsage> .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=100>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "100"^^xsd:integer ;
+    inv:printedPage "68"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§7.13.2 Connection Definitions and Usages" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=103>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "103"^^xsd:integer ;
+    inv:printedPage "71"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§7.13.2 binary connection shorthand", "§7.13.2" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "241"^^xsd:integer ;
+    inv:printedPage "209"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§8.2.3.11 Parts" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:printedPage "210"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§8.2.3.12 Ports" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "243"^^xsd:integer ;
+    inv:printedPage "211"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§8.2.3.12 Ports" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=246>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "246"^^xsd:integer ;
+    inv:printedPage "214"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§8.2.3.12 restriction notes" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=247>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "247"^^xsd:integer ;
+    inv:printedPage "215"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§8.2.3.13 Connections" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=248>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "248"^^xsd:integer ;
+    inv:printedPage "216"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§8.2.3.13 Connections" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=321>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "321"^^xsd:integer ;
+    inv:printedPage "289"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§8.3.11.2 PartDefinition", "§8.3.11.3 PartUsage" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=327>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "327"^^xsd:integer ;
+    inv:printedPage "295"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§8.3.12.6 PortUsage" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=330>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "330"^^xsd:integer ;
+    inv:printedPage "298"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§8.3.13.4 ConnectionUsage", "§8.3.13.4" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=72>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "72"^^xsd:integer ;
+    inv:printedPage "40"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§7.6.3 Usages" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=73>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "73"^^xsd:integer ;
+    inv:printedPage "41"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§7.6.3" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=90>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "90"^^xsd:integer ;
+    inv:printedPage "58"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§7.11 Parts", "§7.11.1 Parts Overview" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=93>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "93"^^xsd:integer ;
+    inv:printedPage "61"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§7.11.2 Part Definitions and Usages", "§7.11.2" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=95>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "95"^^xsd:integer ;
+    inv:printedPage "63"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§7.12.2–3 Port Definitions and Usages", "§7.12.2–3" .

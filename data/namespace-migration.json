@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "reason": "Repository moved to DynamicalSystemsGroup/sysml-concept-reference and local directory renamed.",
+  "old_repository": "https://github.com/rororowyourboat/sysmlv2_inventory",
+  "new_repository": "https://github.com/DynamicalSystemsGroup/sysml-concept-reference",
+  "old_iri_prefix": "https://github.com/rororowyourboat/sysmlv2_inventory/",
+  "new_iri_prefix": "https://github.com/DynamicalSystemsGroup/sysml-concept-reference/",
+  "mapping": "Replace the exact old project prefix with the new project prefix; retain the suffix.",
+  "scope": "Project catalogue record and vocabulary IRIs only. Official OMG source IRIs and source hashes are unchanged.",
+  "semantics": "Identifier migration; no owl:sameAs or standards equivalence is asserted."
+}

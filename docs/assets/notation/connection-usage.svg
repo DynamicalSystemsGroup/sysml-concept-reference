@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 365" role="img" aria-labelledby="title desc">
+<title id="title">Binary connection and full connection node</title><desc id="desc">Two part usages have boundary ports joined by a plain solid line labeled link. A separate rounded connection node illustrates the full-node alternative. Neither form implies flow direction.</desc>
+<metadata>Original educational redraw based on OMG SysML 2.0 formal/2026-03-02; https://www.omg.org/spec/SysML/2.0/Language/PDF#page=247. Not an official figure or parser-validation result.</metadata>
+<style>text{font-family:system-ui,sans-serif;fill:#11113a;font-size:17px}.caption{font-size:13px;fill:#4a5460}.node{fill:#fff;stroke:#11113a;stroke-width:2}.label{text-anchor:middle}</style>
+<rect width="720" height="365" fill="#ebe6d6"/>
+<text class="caption" x="22" y="25">Binary connection edge</text>
+<rect class="node" x="22" y="60" width="220" height="110" rx="14"/><text class="label" x="132" y="100">«part»</text><text class="label" x="132" y="134">axle : Axle</text>
+<rect class="node" x="478" y="60" width="220" height="110" rx="14"/><text class="label" x="588" y="100">«part»</text><text class="label" x="588" y="134">wheel : Wheel</text>
+<rect class="node" x="230" y="103" width="24" height="24" rx="4"/><rect class="node" x="466" y="103" width="24" height="24" rx="4"/>
+<path d="M254 115 H466" fill="none" stroke="#11113a" stroke-width="2"/><text class="label" x="360" y="98">link</text>
+<text class="caption" x="250" y="154">mount : Mount</text><text class="caption" x="392" y="154">hub : Mount</text>
+<text class="caption" x="22" y="215">Full-node alternative</text><rect class="node" x="230" y="230" width="260" height="95" rx="14"/><text class="label" x="360" y="270">«connection»</text><text class="label" x="360" y="300">link</text>
+<a href="https://www.omg.org/spec/SysML/2.0/Language/PDF#page=247"><text class="caption" x="22" y="353">Original illustrative redraw · Official notation source</text></a>
+</svg>

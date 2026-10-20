@@ -65,7 +65,12 @@ class SourceTests(unittest.TestCase):
         g = load_graph()
         for url in g.objects(None, INV.evidence):
             base, fragment = str(url).split("#", 1)
-            self.assertIn((base, fragment), self.extractor.nodes)
+            if base in self.extractor.sources:
+                self.assertIn((base, fragment), self.extractor.nodes)
+            else:
+                self.assertTrue(fragment.startswith("page="))
+                self.assertIn(base, {a["url"] for a in self.manifest["supporting_artifacts"]})
+                self.assertEqual(int(fragment[5:]), int(g.value(url, INV.pdfPage)))
 
     def test_changed_source_is_rejected_without_overwriting(self):
         with tempfile.TemporaryDirectory() as temp:

@@ -1,8 +1,8 @@
-# SysML v2 inventory
+# SysML Concept Reference
 
 Public research toward a source-backed inventory of the SysML v2 language: entities, relationships, properties, constraints, syntax, libraries and behavioral semantics.
 
-The research home is [rororowyourboat/sysmlv2_inventory](https://github.com/rororowyourboat/sysmlv2_inventory). This project inventories language definitions and semantics independently of particular implementations.
+The research home is [DynamicalSystemsGroup/sysml-concept-reference](https://github.com/DynamicalSystemsGroup/sysml-concept-reference). This project inventories language definitions and semantics independently of particular implementations.
 
 ## Current evidence
 
@@ -20,15 +20,13 @@ It contains **98 named entries** from §§8.3.6–8.3.27: 93 metaclasses, 5 enum
 | [Official machine-readable sources](docs/official-machine-readable-specs.md) | Normative artifact URLs, source roles, extraction approach and verification limits |
 | [Research roadmap](docs/roadmap.md) | Work needed to inventory the complete language and its dependencies |
 
-A focused RDF slice now derives **15 focus metaclasses plus six ancestors, 172 directly declared properties and 200 constraint names** from two hash-pinned official XMI files. Four mechanisms distinguish ownership, membership, featuring and composition/reference. SHACL validates catalogue integrity; SPARQL traverses ancestry while retaining declaration origins. This is separate from the PDF-derived seed, and graphical notation remains unverified.
+The focused RDF slice derives **17 focus metaclasses plus eight ancestors, 180 declared properties and 218 constraint names** from hash-pinned official XMI. Four source-checked draft profiles cover [PartUsage](docs/concepts/part-usage.md), [PartDefinition](docs/concepts/part-definition.md), [PortUsage](docs/concepts/port-usage.md) and [ConnectionUsage](docs/concepts/connection-usage.md). They include 164 property explanations, effective inherited properties, qualified relationships, connected examples and representative graphical notation with precise official source links.
 
-## Next milestone
-
-Normalize multiplicities and defaults against pinned UML definitions, audit graphical notation for a representative concept, and extend extraction and reconciliation toward the complete metamodel, including effective inherited properties. Standard libraries, syntax and behavior require separate coverage audits. See the roadmap for acceptance criteria.
+UML normalization preserves raw encodings and distinguishes missing defaults from literal values. Explicit redefinitions retain their history. Examples remain source-reviewed and have not been executed by a SysML engine. See the [page contract](docs/concept-page-contract.md) and [roadmap](docs/roadmap.md) for boundaries and next work.
 
 ## Working with the research
 
-The GitHub Pages setup publishes the concept browser, rendered research notes, data downloads and SPARQL queries from this repository. Build a local preview with `uv run --locked python scripts/build_site.py`; the [publishing guide](docs/publishing.md) covers deployment. Site address: [rororowyourboat.github.io/sysmlv2_inventory](https://rororowyourboat.github.io/sysmlv2_inventory/). The [Pages workflow](https://github.com/rororowyourboat/sysmlv2_inventory/actions/workflows/pages.yml) records deployment status.
+The GitHub Pages setup publishes the concept browser, rendered research notes, data downloads and SPARQL queries from this repository. Build a local preview with `uv run --locked python scripts/build_site.py`; the [publishing guide](docs/publishing.md) covers deployment. Site address: [dynamicalsystemsgroup.github.io/sysml-concept-reference](https://dynamicalsystemsgroup.github.io/sysml-concept-reference/). The [Pages workflow](https://github.com/DynamicalSystemsGroup/sysml-concept-reference/actions/workflows/pages.yml) records deployment status.
 
 No runtime, backend or dependencies are required to read the Markdown, JSON, Turtle or generated HTML files. Open the HTML locally to use its search and property browser. Python and locked `uv` development tools are needed only to rebuild and validate the RDF slice; see the [RDF guide](docs/rdf-inventory.md). The existing `nlm` CLI was used for notebook research; access to that notebook is not necessarily public. Query topics and source references are documented so the research can be revisited without publishing notebook credentials or changing its sharing settings.
 
@@ -36,4 +34,6 @@ Keep source facts, generated answers, interpretations, implementation choices an
 
 Use ignored `sandbox/` for downloaded sources and working evidence. Do not commit credentials, authentication state, raw notebook session files or unpublished working material. Reviewed source-derived records belong in `data/`; explanatory findings and methodology belong in `docs/`.
 
-The seed JSON parses and its counts, unique names/sections, source-backed declaration strings and local documentation links were checked during the original research. After copying, JSON structure/counts and repository documentation links were checked again. The RDF slice also passes SHACL checks and nine catalogue/source-integrity tests; these are not SysML conformance tests. The generated HTML has not received a visual browser check in this environment.
+Validation covers extraction provenance, normalization, inheritance, profiles, RDF integrity, generated browser behavior and published links. Source-dependent tests skip when originals are unavailable. These checks do not establish SysML conformance.
+
+The site uses the official [Dynamical Systems Group](https://www.dynamicalsystemsgroup.com/) identity: navy, paper and brass, with locally hosted open-source typography. Asset sources and licenses are recorded in [brand provenance](site/assets/provenance.json).

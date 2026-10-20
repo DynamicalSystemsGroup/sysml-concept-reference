@@ -1,4 +1,4 @@
-@prefix inv: <https://github.com/rororowyourboat/sysmlv2_inventory/vocab#> .
+@prefix inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -72,3 +72,63 @@ inv:NotYetVerified rdfs:label "Not yet verified" .
 inv:NotImplemented rdfs:label "Not implemented" .
 inv:Applies rdfs:label "Applies" .
 inv:Restricted rdfs:label "Applies with restrictions" .
+
+# Concept-page contract and source-backed interpretation records.
+inv:ConceptProfile a owl:Class .
+inv:ConceptRelationship a owl:Class .
+inv:Notation a owl:Class .
+inv:Example a owl:Class .
+inv:EvidenceLocation a owl:Class .
+inv:RedefinitionResolution a owl:Class .
+inv:hasProfile a owl:ObjectProperty .
+inv:hasRelationship a owl:ObjectProperty .
+inv:hasNotation a owl:ObjectProperty .
+inv:hasExample a owl:ObjectProperty .
+inv:fromConcept a owl:ObjectProperty .
+inv:toConcept a owl:ObjectProperty .
+inv:effectiveProperty a owl:ObjectProperty ; rdfs:comment "Declaration selected by the explicit-inheritance/redefinition view; no derived-value evaluation implied." .
+inv:excludedPrivateProperty a owl:ObjectProperty .
+inv:forConcept a owl:ObjectProperty .
+inv:replacedDeclaration a owl:ObjectProperty .
+inv:replacementDeclaration a owl:ObjectProperty .
+inv:normalizationSource a owl:ObjectProperty .
+inv:inheritanceEvidence a owl:ObjectProperty .
+inv:verificationStatus a owl:ObjectProperty .
+inv:depictionStatus a owl:ObjectProperty .
+inv:profileStatus a owl:ObjectProperty .
+inv:propertyResolutionStatus a owl:ObjectProperty .
+inv:defaultStatus a owl:ObjectProperty .
+inv:normalizationDetail a owl:DatatypeProperty .
+inv:lowerBound a owl:DatatypeProperty .
+inv:upperBound a owl:DatatypeProperty .
+inv:declaredDefault a owl:DatatypeProperty ; rdfs:comment "Decoded default literal exactly as declared; not the value of a derived field or a contextual usage default." .
+inv:normalizedIsDerived a owl:DatatypeProperty .
+inv:normalizedIsDerivedUnion a owl:DatatypeProperty .
+inv:normalizedIsReadOnly a owl:DatatypeProperty .
+inv:normalizedIsOrdered a owl:DatatypeProperty .
+inv:normalizedIsUnique a owl:DatatypeProperty .
+inv:normalizedAggregation a owl:DatatypeProperty .
+inv:profilePage a owl:DatatypeProperty .
+inv:learningPoint a owl:DatatypeProperty .
+inv:caveat a owl:DatatypeProperty .
+inv:code a owl:DatatypeProperty .
+inv:condition a owl:DatatypeProperty .
+inv:relationKind a owl:DatatypeProperty .
+inv:context a owl:DatatypeProperty .
+inv:asset a owl:DatatypeProperty .
+inv:pdfPage a owl:DatatypeProperty .
+inv:printedPage a owl:DatatypeProperty .
+inv:propertyNameConflict a owl:DatatypeProperty .
+
+inv:ExternalIdentityVerified rdfs:label "External type identity checked against pinned primitive-type artifact" .
+inv:NoDeclaredDefault rdfs:label "No default specification declared" .
+inv:DecodedLiteral rdfs:label "Declared literal decoded, preserving its literal kind" .
+inv:UnspecifiedLiteralValue rdfs:label "Literal value absent; no default supplied" .
+inv:UnsupportedExpression rdfs:label "Expression retained but not evaluated" .
+inv:HasNameConflicts rdfs:label "Competing same-name declarations require review" .
+inv:ExplicitRedefinitionsResolved rdfs:label "Explicit inheritance and redefinition identities resolved" .
+inv:DraftSourceChecked rdfs:label "Draft profile with checked source evidence" .
+inv:SourceReviewedNotExecuted rdfs:label "Source-reviewed example; no parser or execution check" .
+inv:RepresentativeNotationVisuallyChecked rdfs:label "Representative notation checked against rendered official pages" .
+inv:OriginalRedraw rdfs:label "Original illustrative redraw, not an official figure" .
+inv:SourceDescriptionOnly rdfs:label "Description of an additional source variant" .

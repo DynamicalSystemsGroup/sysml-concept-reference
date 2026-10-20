@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-labelledby="title desc">
+<title id="title">Part definition node</title><desc id="desc">A sharp rectangle containing the keyword part def and the name Wheel.</desc>
+<metadata>Original educational redraw based on OMG SysML 2.0 formal/2026-03-02; https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241. Not an official figure or parser-validation result.</metadata>
+<style>text{font-family:system-ui,sans-serif;fill:#11113a;font-size:17px}.caption{font-size:13px;fill:#4a5460}.node{fill:#fff;stroke:#11113a;stroke-width:2}.label{text-anchor:middle}</style>
+<rect width="720" height="240" fill="#ebe6d6"/>
+<rect class="node" x="150" y="55" width="420" height="125"/>
+<text class="label" x="360" y="100">«part def»</text><text class="label" x="360" y="135">Wheel</text>
+<a href="https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241"><text class="caption" x="22" y="228">Original illustrative redraw · Official notation source</text></a>
+</svg>

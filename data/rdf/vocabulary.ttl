@@ -1,0 +1,74 @@
+@prefix inv: <https://github.com/rororowyourboat/sysmlv2_inventory/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+inv: a owl:Ontology ;
+    dct:title "Language concept inventory vocabulary" ;
+    dct:description "Research vocabulary for descriptions of language constructs. Metaclass records are individuals of MetaclassRecord, not OWL classes for SysML model elements. No equivalence to OMG semantics is asserted." .
+
+inv:Record a owl:Class ; rdfs:label "Inventory record" .
+inv:MetaclassRecord a owl:Class ; rdfs:subClassOf inv:Record .
+inv:PropertyRecord a owl:Class ; rdfs:subClassOf inv:Record .
+inv:ExtractedPropertyRecord a owl:Class ; rdfs:subClassOf inv:PropertyRecord .
+inv:ConstraintRecord a owl:Class ; rdfs:subClassOf inv:Record .
+inv:EnumerationRecord a owl:Class ; rdfs:subClassOf inv:Record .
+inv:AssociationRecord a owl:Class ; rdfs:subClassOf inv:Record .
+inv:SourceElementRecord a owl:Class ; rdfs:subClassOf inv:Record .
+inv:SourceArtifact a owl:Class .
+inv:ExternalTypeReference a owl:Class .
+inv:Mechanism a owl:Class .
+inv:MechanismApplication a owl:Class .
+
+inv:specializes a owl:ObjectProperty ; rdfs:label "Declared direct generalization" ;
+    rdfs:comment "A relationship between metaclass records. Deliberately not rdfs:subClassOf or transitive: query its paths when needed." .
+inv:declaresProperty a owl:ObjectProperty .
+inv:declaresConstraint a owl:ObjectProperty .
+inv:declaredOn a owl:ObjectProperty .
+inv:valueType a owl:ObjectProperty .
+inv:association a owl:ObjectProperty .
+inv:subsets a owl:ObjectProperty .
+inv:redefines a owl:ObjectProperty .
+inv:sourceArtifact a owl:ObjectProperty .
+inv:concept a owl:ObjectProperty .
+inv:mechanism a owl:ObjectProperty .
+inv:evidence a owl:ObjectProperty ; rdfs:comment "Specific source locations supporting an editorial explanation; not an execution or conformance claim." .
+inv:applicability a owl:ObjectProperty .
+inv:evidenceStatus a owl:ObjectProperty .
+inv:coverage a owl:ObjectProperty .
+inv:notationStatus a owl:ObjectProperty .
+inv:executionStatus a owl:ObjectProperty .
+inv:descriptionStatus a owl:ObjectProperty .
+
+inv:qualifiedName a owl:DatatypeProperty .
+inv:language a owl:DatatypeProperty .
+inv:version a owl:DatatypeProperty .
+inv:sha256 a owl:DatatypeProperty .
+inv:sourceLocator a owl:DatatypeProperty .
+inv:omgFileId a owl:DatatypeProperty .
+inv:embeddedPackageURI a owl:DatatypeProperty .
+inv:retrievedOn a owl:DatatypeProperty .
+inv:isFocus a owl:DatatypeProperty .
+inv:isDerived a owl:DatatypeProperty .
+inv:isReadOnly a owl:DatatypeProperty .
+inv:isOrdered a owl:DatatypeProperty .
+inv:isUnique a owl:DatatypeProperty .
+inv:isDerivedUnion a owl:DatatypeProperty .
+inv:aggregation a owl:DatatypeProperty .
+inv:xmiAttributes a owl:DatatypeProperty ; rdfs:comment "JSON object containing explicit XMI attributes; omitted UML defaults are not expanded." .
+inv:lowerEncoding a owl:DatatypeProperty .
+inv:upperEncoding a owl:DatatypeProperty .
+inv:defaultEncoding a owl:DatatypeProperty .
+
+inv:Extracted rdfs:label "Extracted from pinned XMI" .
+inv:EditorialSummary rdfs:label "Editorial explanation with source evidence" .
+inv:DeclaredPropertiesExtracted rdfs:label "Direct attributes extracted; other coverage partial" .
+inv:ExtractedDeclaration rdfs:label "Extracted property declaration" .
+inv:ReferenceOnly rdfs:label "Reference only; details not extracted" .
+inv:NameOnly rdfs:label "Name and source only" .
+inv:ExternalUnverified rdfs:label "External UML type reference; definition not acquired" .
+inv:NotYetVerified rdfs:label "Not yet verified" .
+inv:NotImplemented rdfs:label "Not implemented" .
+inv:Applies rdfs:label "Applies" .
+inv:Restricted rdfs:label "Applies with restrictions" .

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "retrieved_on": "2026-10-20",
+  "scope": "Candidate XMI baseline for the focused RDF slice; not a complete language baseline",
+  "artifacts": [
+    {
+      "language": "KerML",
+      "version": "1.0",
+      "publisher": "Object Management Group",
+      "url": "https://www.omg.org/spec/KerML/20250201/KerML.xmi",
+      "release_page": "https://www.omg.org/spec/KerML/1.0",
+      "omg_file_id": "ptc/25-04-04",
+      "pdf": "https://www.omg.org/spec/KerML/1.0/PDF",
+      "sha256": "45b18775afe2b2fcdc70e24f37c6d2f344defcc3f38a02075a193354e2d7b466",
+      "bytes": 962254,
+      "embedded_package_uri": "https://www.omg.org/spec/KerML/20250201",
+      "license_reference": "https://www.omg.org/spec/KerML/1.0/PDF"
+    },
+    {
+      "language": "SysML",
+      "version": "2.0",
+      "publisher": "Object Management Group",
+      "url": "https://www.omg.org/spec/SysML/20250201/SysML.xmi",
+      "release_page": "https://www.omg.org/spec/SysML/2.0",
+      "omg_file_id": "ptc/25-02-15",
+      "pdf": "https://www.omg.org/spec/SysML/2.0/Language/PDF",
+      "sha256": "caa65d54f56798bf7582d173f7567e1eea37a49c45984f8bd7df145011cf8c6f",
+      "bytes": 1135635,
+      "embedded_package_uri": "https://ww.omg.org/spec/SysML/20250201",
+      "license_reference": "https://www.omg.org/spec/SysML/2.0/Language/PDF"
+    }
+  ]
+}

@@ -23,7 +23,7 @@ The [seed catalogue](../data/language-inventory.json) indexes dedicated SysML ab
 | 7. Audit completeness | Reconcile artifacts, specification sections, extraction counts and representative models | Coverage report listing matched, absent, unsupported, ambiguous and disputed entries; no unexplained omissions |
 | 8. Publish traceability | Connect metamodel, syntax, libraries and semantic rules | Each record links to its authoritative source and related records; coverage gaps remain explicit |
 
-The next bounded milestone is steps 1–3. No sources have yet been selected as the pinned machine-readable baseline, and no extraction toolchain or parser has been chosen.
+Steps 1–3 now have a [focused RDF implementation](rdf-inventory.md): the two official XMI files are hash-pinned, and selected metaclasses, declared properties and constraint names are extracted with source locators. Selected references resolve across the pair, except explicitly unverified UML primitive types. SPARQL traverses ancestry without flattening declaration origins. The complete language/library baseline, UML default expansion, effective inherited-property calculation and seed reconciliation remain open. [Source research](official-machine-readable-specs.md) lists the additional candidate artifacts.
 
 ## Record design
 

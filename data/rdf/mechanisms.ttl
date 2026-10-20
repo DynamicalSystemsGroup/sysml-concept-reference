@@ -1,0 +1,78 @@
+@prefix inv: <https://github.com/rororowyourboat/sysmlv2_inventory/vocab#> .
+@prefix m: <https://github.com/rororowyourboat/sysmlv2_inventory/id/mechanism/> .
+@prefix a: <https://github.com/rororowyourboat/sysmlv2_inventory/id/application/> .
+@prefix k: <https://github.com/rororowyourboat/sysmlv2_inventory/id/KerML/20250201/> .
+@prefix s: <https://github.com/rororowyourboat/sysmlv2_inventory/id/SysML/20250201/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+m:ownership a inv:Mechanism ; rdfs:label "Model ownership" ;
+    dct:description "Tracks ownership of declarations in the model. Keep it separate from composition of modeled values." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-owner> .
+m:membership a inv:Mechanism ; rdfs:label "Namespace membership" ;
+    dct:description "Makes an element a member of a namespace. Ownership is a further distinction represented by owning membership." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Namespaces-Membership> .
+m:featuring a inv:Mechanism ; rdfs:label "Feature context" ;
+    dct:description "Identifies the type context from which a feature relates to its values. Owning the declaration and providing its featuring context are distinct." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-TypeFeaturing> .
+m:composition a inv:Mechanism ; rdfs:label "Composition and reference" ;
+    dct:description "Distinguishes composite values from referential usages. This concerns the modeled system, rather than just where a declaration is stored." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-isComposite>,
+        <https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-isReference> .
+
+a:element-ownership a inv:MechanismApplication ;
+    inv:concept k:Root-Elements-Element ; inv:mechanism m:ownership ; inv:applicability inv:Restricted ;
+    dct:description "Element exposes owner and ownedElement, derived through ownership relationships. An element can be unowned; do not assume every element has a containing namespace." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-owner>,
+        <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Elements-Element-ownedElement> .
+a:namespace-membership a inv:MechanismApplication ;
+    inv:concept k:Root-Namespaces-Namespace ; inv:mechanism m:membership ; inv:applicability inv:Applies ;
+    dct:description "Namespace provides member and membership properties. An available member need not be owned by that namespace." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Namespaces-Namespace-member>,
+        <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Namespaces-Namespace-membership> .
+a:membership-member a inv:MechanismApplication ;
+    inv:concept k:Root-Namespaces-Membership ; inv:mechanism m:membership ; inv:applicability inv:Applies ;
+    dct:description "Membership identifies its memberElement and membershipOwningNamespace; this record alone does not establish ownership of the member." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Namespaces-Membership> .
+a:owning-membership a inv:MechanismApplication ;
+    inv:concept k:Root-Namespaces-OwningMembership ; inv:mechanism m:ownership ; inv:applicability inv:Applies ;
+    dct:description "OwningMembership specializes Membership and identifies its ownedMemberElement. It owns the declaration; this does not make the declared feature composite." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Root-Namespaces-OwningMembership> .
+a:feature-membership-ownership a inv:MechanismApplication ;
+    inv:concept k:Core-Types-FeatureMembership ; inv:mechanism m:ownership ; inv:applicability inv:Restricted ;
+    dct:description "FeatureMembership specializes OwningMembership, narrowing the member to a Feature and the owning context to a Type." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-FeatureMembership> .
+a:feature-membership-context a inv:MechanismApplication ;
+    inv:concept k:Core-Types-FeatureMembership ; inv:mechanism m:featuring ; inv:applicability inv:Restricted ;
+    dct:description "For a non-variable feature, membership implies featuring by the owning type. For a variable feature, the source describes featuring by snapshots and restrictions on the owning type. Do not erase this condition." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Types-FeatureMembership> .
+a:type-featuring a inv:MechanismApplication ;
+    inv:concept k:Core-Features-TypeFeaturing ; inv:mechanism m:featuring ; inv:applicability inv:Applies ;
+    dct:description "TypeFeaturing relates featureOfType to featuringType. Those roles describe context, rather than a namespace-owning membership." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-TypeFeaturing> .
+a:feature-composition a inv:MechanismApplication ;
+    inv:concept k:Core-Features-Feature ; inv:mechanism m:composition ; inv:applicability inv:Restricted ;
+    dct:description "Feature declares isComposite. Its instance-level meaning must be interpreted with the feature's type and applicable constraints; it does not express model declaration ownership." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/KerML/20250201/KerML.xmi#Core-Features-Feature-isComposite> .
+a:usage-reference a inv:MechanismApplication ;
+    inv:concept s:Systems-DefinitionAndUsage-Usage ; inv:mechanism m:composition ; inv:applicability inv:Restricted ;
+    dct:description "Usage declares derived isReference as the complement of isComposite. Referentiality does not mean that the usage declaration is unowned." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-Usage-isReference> .
+a:reference-usage a inv:MechanismApplication ;
+    inv:concept s:Systems-DefinitionAndUsage-ReferenceUsage ; inv:mechanism m:composition ; inv:applicability inv:Restricted ;
+    dct:description "ReferenceUsage redefines isReference and constrains it to true. It can still participate in model ownership and membership." ;
+    inv:evidenceStatus inv:EditorialSummary ;
+    inv:evidence <https://www.omg.org/spec/SysML/20250201/SysML.xmi#Systems-DefinitionAndUsage-ReferenceUsage> .

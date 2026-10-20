@@ -1,0 +1,10 @@
+PREFIX inv: <https://github.com/rororowyourboat/sysmlv2_inventory/vocab#>
+PREFIX id: <https://github.com/rororowyourboat/sysmlv2_inventory/id/SysML/20250201/>
+PREFIX dct: <http://purl.org/dc/terms/>
+# Ancestor declarations, including redefined ones: this is NOT an effective property schema.
+SELECT DISTINCT ?owner ?property ?type ?redefines ?source WHERE {
+  VALUES ?concept { id:Systems-Parts-PartUsage }
+  ?concept inv:specializes* ?owner .
+  ?property inv:declaredOn ?owner ; inv:valueType ?type ; dct:source ?source .
+  OPTIONAL { ?property inv:redefines ?redefines }
+} ORDER BY ?owner ?property

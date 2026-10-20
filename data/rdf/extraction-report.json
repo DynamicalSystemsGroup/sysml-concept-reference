@@ -1,0 +1,19 @@
+{
+  "focus_metaclasses": 15,
+  "detailed_metaclasses": 21,
+  "declared_properties": 172,
+  "constraint_names": 200,
+  "source_reference_records": 578,
+  "external_type_references": [
+    "https://www.omg.org/spec/UML/20161101/PrimitiveTypes.xmi#Boolean",
+    "https://www.omg.org/spec/UML/20161101/PrimitiveTypes.xmi#String"
+  ],
+  "scope": "Focus metaclasses plus all ancestors; declared properties, not a computed effective schema",
+  "limitations": [
+    "UML defaults not expanded",
+    "Reference-only records not fully inventoried",
+    "Constraint bodies and operations not extracted",
+    "Notation not yet verified",
+    "No library, full metamodel, or SysML conformance claim"
+  ]
+}

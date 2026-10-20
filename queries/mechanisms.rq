@@ -1,0 +1,8 @@
+PREFIX inv: <https://github.com/rororowyourboat/sysmlv2_inventory/vocab#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+SELECT ?concept ?mechanism ?applicability ?explanation ?evidence WHERE {
+  ?application a inv:MechanismApplication ; inv:concept ?concept ; inv:mechanism ?m ;
+    inv:applicability ?applicability ; dct:description ?explanation ; inv:evidence ?evidence .
+  ?m rdfs:label ?mechanism .
+} ORDER BY ?mechanism ?concept

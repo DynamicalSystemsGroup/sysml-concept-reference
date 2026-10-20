@@ -1,0 +1,54 @@
+@prefix inv: <https://github.com/rororowyourboat/sysmlv2_inventory/vocab#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+inv:RecordShape a sh:NodeShape ; sh:targetClass inv:Record ;
+    sh:nodeKind sh:IRI ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:qualifiedName ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path dct:source ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path inv:sourceArtifact ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:SourceArtifact ] ;
+    sh:property [ sh:path inv:sourceLocator ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:coverage ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ( inv:DeclaredPropertiesExtracted inv:ExtractedDeclaration inv:ReferenceOnly inv:NameOnly ) ] ;
+    sh:property [ sh:path inv:evidenceStatus ; sh:hasValue inv:Extracted ] .
+
+inv:ArtifactShape a sh:NodeShape ; sh:targetClass inv:SourceArtifact ;
+    sh:property [ sh:path dct:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path inv:sha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9a-f]{64}$" ] ;
+    sh:property [ sh:path inv:retrievedOn ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ] .
+
+inv:DetailedMetaclassShape a sh:NodeShape ; sh:targetSubjectsOf inv:isFocus ;
+    sh:class inv:MetaclassRecord ;
+    sh:property [ sh:path inv:isFocus ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path dct:description ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:descriptionStatus ; sh:hasValue inv:EditorialSummary ] ;
+    sh:property [ sh:path inv:notationStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( inv:NotYetVerified ) ] ;
+    sh:property [ sh:path inv:specializes ; sh:class inv:MetaclassRecord ] ;
+    sh:property [ sh:path inv:declaresProperty ; sh:class inv:ExtractedPropertyRecord ] .
+
+inv:PropertyShape a sh:NodeShape ; sh:targetClass inv:ExtractedPropertyRecord ;
+    sh:property [ sh:path inv:declaredOn ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:MetaclassRecord ] ;
+    sh:property [ sh:path inv:valueType ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+        sh:or ( [ sh:class inv:Record ] [ sh:class inv:ExternalTypeReference ] ) ] ;
+    sh:property [ sh:path inv:subsets ; sh:class inv:PropertyRecord ] ;
+    sh:property [ sh:path inv:redefines ; sh:class inv:PropertyRecord ] ;
+    sh:property [ sh:path inv:lowerEncoding ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:upperEncoding ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:defaultEncoding ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+inv:MechanismShape a sh:NodeShape ; sh:targetClass inv:Mechanism ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path dct:description ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:evidence ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path inv:evidenceStatus ; sh:hasValue inv:EditorialSummary ] .
+
+inv:ApplicationShape a sh:NodeShape ; sh:targetClass inv:MechanismApplication ;
+    sh:property [ sh:path inv:concept ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:MetaclassRecord ] ;
+    sh:property [ sh:path inv:mechanism ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:Mechanism ] ;
+    sh:property [ sh:path inv:applicability ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( inv:Applies inv:Restricted ) ] ;
+    sh:property [ sh:path dct:description ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:evidence ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path inv:evidenceStatus ; sh:hasValue inv:EditorialSummary ] .

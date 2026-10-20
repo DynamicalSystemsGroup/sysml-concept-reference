@@ -47,8 +47,10 @@ class NotationTests(unittest.TestCase):
         self.assertEqual(sum(int(r.indexedCells) for r in rows),192)
         self.assertEqual(sum(int(r.mappedProductions) for r in rows),23)
         self.assertEqual(sum(int(r.mappedCells) for r in rows),7)
+        self.assertEqual(sum(int(r.auditedProductions) for r in rows),38)
+        self.assertEqual(sum(int(r.auditedCells) for r in rows),12)
         self.assertEqual(len(list(g.query((ROOT/'queries/notation-gaps.rq').read_text()))),801)
-        self.assertEqual(report['counts']['fully_audited_production_occurrences'],0)
+        self.assertEqual(report['counts']['fully_audited_production_occurrences'],38)
 
     def test_unknown_source_and_exhaustive_claims_are_rejected(self):
         bad=deepcopy(self.reviews);bad['notations'][0]['production_ids']=['invented']

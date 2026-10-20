@@ -1,0 +1,11 @@
+PREFIX inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?sourceUnit ?alternative ?renderingStatus ?geometry ?condition ?deferredReason
+       (GROUP_CONCAT(DISTINCT STR(?asset); separator=" ") AS ?assets)
+WHERE {
+  ?review a inv:SourceUnitAudit ; inv:auditsUnit ?sourceUnit ; inv:hasAlternative ?alternative .
+  ?alternative inv:renderingStatus ?renderingStatus ; inv:geometry ?geometry ; inv:condition ?condition .
+  OPTIONAL { ?alternative inv:deferredReason ?deferredReason }
+  OPTIONAL { ?alternative inv:representedByAsset ?asset }
+} GROUP BY ?sourceUnit ?alternative ?renderingStatus ?geometry ?condition ?deferredReason
+ORDER BY ?sourceUnit ?alternative

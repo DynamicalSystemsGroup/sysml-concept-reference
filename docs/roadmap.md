@@ -48,3 +48,9 @@ Keep reviewed research and reproducible extraction inputs/configuration public w
 ## Graphical coverage baseline
 
 The [notation dashboard](notation-coverage.md) and [source register](notation-register.md) now index all 27 §8.2.3 subsections and all 26 Clause 7 tables: 639 production occurrences and 192 labeled source cells. Six representative records are reconciled to this baseline; shared conventions and the next review batches are recorded. This completes the source-register baseline, not the subsequent full graphical-alternative audit or illustration programme.
+
+## Parts-and-ports milestone
+
+The [connected reference](parts-and-ports.md) explains the existing AssemblyExample and links the four extracted profiles. The [source audit](parts-ports-notation-audit.md) covers all 12 Table 9/10 cells and 38 local production occurrences, retaining source issues and per-alternative rendering deferrals. Its 106 local alternative records are not unique symbols. The SVG library adds minimal PortDefinition, selected two-row parts/ports compartments, six direction-bearing glyphs and an original four-boundary composition. PortDefinition still lacks a full extracted-property profile; nested/reference/proxy layouts, generic row formatting and behavior compartments remain explicit follow-on work. No model execution or whole-language conformance is claimed.
+
+Local milestone verification: all 45 tests passed; SHACL catalogue validation and all saved SPARQL queries passed. The site builds 30 HTML pages, including 29 shared-frame pages checked at 1440, 390 and 320px. Browser checks exercised all 20 component previews, safe literal row edits/copy, fallback behavior, static downloads and the original renderer API. These are catalogue/rendering checks, not SysML model execution.

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Boundary port with vertical both arrows">
+  <title>Boundary port with vertical both arrows</title>
+  <desc>Rounded boundary glyph containing the vertical both direction indication. Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.</desc>
+  <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.12/pdv/1", "8.2.3.12/port-t/1", "8.2.3.12/port-b/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+  <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+    <rect x="2" y="2" width="20" height="20" rx="3" vector-effect="non-scaling-stroke" />
+    <path d="M12 6V18M8 11L12 6L16 11M8 13L12 18L16 13" fill="none" vector-effect="non-scaling-stroke" />
+  </g>
+</svg>

@@ -32,7 +32,7 @@ Same-name declarations are not automatically the same property. Unresolved compe
 
 ## Graphical and example evidence
 
-Representative variants have been checked against rendered official pages; graphical grammar declarations are now indexed in the [source register](notation-register.md), while complete graphical alternatives remain unaudited. A concept may have several valid representations. Visual nesting is not converted automatically into a semantic ownership or composition statement.
+Representative variants have been checked against rendered official pages; graphical grammar declarations are now indexed in the [source register](notation-register.md), with a bounded [parts-and-ports source audit](parts-ports-notation-audit.md) recording local alternatives and explicit rendering/dependency deferrals. The rest of the graphical grammar remains outside that audit. A concept may have several valid representations. Visual nesting is not converted automatically into a semantic ownership or composition statement.
 
 Illustrations in `docs/assets/notation/` are original vector redraws based on the cited syntax. They are not copied official figures. The shared [assembly example](../data/examples/assembly.sysml) is source-reviewed but has not been run through a SysML parser or semantic engine.
 

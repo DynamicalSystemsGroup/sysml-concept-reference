@@ -162,3 +162,22 @@ inv:illustratedForms a owl:DatatypeProperty .
 inv:SVGShapeAsset a owl:Class .
 inv:realizesProduction a owl:ObjectProperty .
 inv:relatedNotation a owl:ObjectProperty .
+
+# Bounded local-alternative audits; rendering remains a separate disposition.
+inv:NotationAuditBatch a owl:Class .
+inv:SourceUnitAudit a owl:Class .
+inv:NotationAlternative a owl:Class .
+inv:hasUnitAudit a owl:ObjectProperty .
+inv:auditsUnit a owl:ObjectProperty .
+inv:hasAlternative a owl:ObjectProperty .
+inv:representedByAsset a owl:ObjectProperty .
+inv:reviewStatus a owl:ObjectProperty .
+inv:renderingStatus a owl:ObjectProperty .
+inv:deferredReason a owl:DatatypeProperty .
+inv:representationScope a owl:DatatypeProperty .
+inv:dependencyNote a owl:DatatypeProperty .
+inv:sourceIssue a owl:DatatypeProperty .
+inv:LocalAlternativesAudited rdfs:label "Local displayed alternatives reviewed; imported dependencies and rendering may be deferred" .
+inv:RepresentativeAsset rdfs:label "Representative asset within its stated scope" .
+inv:PartialRendering rdfs:label "Partial asset support with an explicit remaining rendering deferral" .
+inv:DeferredRendering rdfs:label "Rendering explicitly deferred" .

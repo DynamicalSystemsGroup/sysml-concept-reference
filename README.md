@@ -12,6 +12,7 @@ It contains **98 named entries** from §§8.3.6–8.3.27: 93 metaclasses, 5 enum
 
 | Resource | Contents |
 |---|---|
+| [Parts and ports reference](docs/parts-and-ports.md) | Connected explanations, scoped reusable components and source-audited rendering gaps |
 | [GitHub Pages publishing](docs/publishing.md) | Site build, preview, deployment workflow and update instructions |
 | [Concept browser](docs/concept-browser.html) | Offline browsing of the first RDF slice: meanings, properties, ancestry, mechanisms and source links |
 | [Reusable SVG library](docs/svg-shapes.html) | Standalone components, symbol sprite, manifest, renderer helper and downloadable bundle |

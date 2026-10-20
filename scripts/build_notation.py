@@ -18,6 +18,7 @@ from rdflib import Graph, Literal, RDF, RDFS, URIRef
 from rdflib.namespace import DCTERMS, XSD
 
 from build_inventory import ROOT, ID, INV, write_turtle
+from parts_ports_audit import load_audit, audit_counts, add_audit_rdf, render_audit, unit_kind
 
 INDEX = ROOT / 'data/notation-source-index.json'
 REVIEWS = ROOT / 'data/notation-reviews.json'
@@ -210,6 +211,7 @@ def validate_reviews(index,reviews,profiles):
 
 def coverage(index,reviews,existing):
     cells={r['id']:r for r in index['table_cells']}
+    audit=load_audit(index);audited={u['id'] for u in audit['units']};ac=audit_counts(audit)
     mapped_productions={p for n in reviews['notations'] for p in n['production_ids']}
     mapped_cells={r for n in reviews['notations'] for r in n['table_cell_ids']}
     return {'scope':index['method']['scope'], 'counts':{
@@ -225,13 +227,16 @@ def coverage(index,reviews,existing):
         'mapped_production_occurrences':len(mapped_productions), 'mapped_table_cells':len(mapped_cells),
         'unmapped_production_occurrences':len(index['productions'])-len(mapped_productions),
         'unmapped_table_cells':len(cells)-len(mapped_cells),
-        'fully_audited_production_occurrences':0, 'fully_audited_table_cells':0,
+        'fully_audited_production_occurrences':ac['audited_production_occurrences'], 'fully_audited_table_cells':ac['audited_source_cells'],
+        'audited_alternative_records':ac['alternative_records'], 'deferred_alternative_records':ac['deferred_records'], 'partially_rendered_alternative_records':ac['partially_rendered_records'],
         'shared_rules_described':len(reviews['shared_rules'])},
         'families':[{'section':s['id'], 'title':s['title'],
                      'production_occurrences':sum(p['section']==s['id'] for p in index['productions']),
                      'table_cells':sum(r['section']==s['id'] for r in cells.values()),
                      'mapped_production_occurrences':sum(p['section']==s['id'] and p['id'] in mapped_productions for p in index['productions']),
-                     'mapped_table_cells':sum(r['section']==s['id'] and r['id'] in mapped_cells for r in cells.values())}
+                     'mapped_table_cells':sum(r['section']==s['id'] and r['id'] in mapped_cells for r in cells.values()),
+                     'audited_production_occurrences':sum(p['section']==s['id'] and p['id'] in audited for p in index['productions']),
+                     'audited_table_cells':sum(r['section']==s['id'] and r['id'] in audited for r in cells.values())}
                     for s in index['sections']],
         'limits':['Indexing is not a visual rule audit; mapped does not mean fully covered.',
                   'Text extraction cannot enumerate two-dimensional alternatives, adornments or all imported dependencies.',
@@ -284,6 +289,7 @@ def build_rdf(index,reviews,existing):
         for page in r['evidence_pages']:g.add((n,DCTERMS.source,URIRef(PDF_URL+f'#page={page}')))
         g.add((n,INV.sourceArtifact,artifact))
         for p in r.get('production_ids',[]):g.add((n,INV.supportingProduction,ID['graphical-production/'+p]))
+    add_audit_rdf(g,index,load_audit(index))
     write_turtle(g,ROOT/'data/rdf/notation-register.ttl')
 
 
@@ -303,12 +309,12 @@ def render(index,reviews,existing,report):
            '| Diagram-example cells | 6 | Table 25, including two distinct matrix examples |',
            f"| Production occurrences | {c['production_occurrences']} | Every declaration occurrence, including helpers and distributed partial rules |",
            f"| Explicit partial markers | {c['explicit_partial_occurrences']} | Literal `=¦`; five spaced-bar forms and 19 reversed `¦=` forms are flagged for review |",'',
-           '**Indexed → described → illustrated → source-checked** applies to a declared variant scope. Source-cell and production mappings are counted separately; a small redraw does not complete all alternatives, compartments or nesting rules in its source. Full source-unit audit counts are currently zero. A description can be source-checked without a local illustration.','',
+           '**Indexed → described → illustrated → source-checked** applies to a declared variant scope. Source-cell and production mappings are counted separately; a small redraw does not complete all alternatives, compartments or nesting rules in its source. The bounded [parts-and-ports audit](parts-ports-notation-audit.md) records all local alternatives and explicit rendering/dependency deferrals for 12 source cells and 38 production occurrences. Audited does not mean fully rendered, dependency-complete or model-valid. A description can be source-checked without a local illustration.','',
            'The source-cell count retains distinct labeled cells and repeated labels. It excludes column headers and makes no inferred continuation joins. It is not a count of unique symbols, logical variants, or remaining drawings. See the [counting method](research/notation-coverage-method.md) and [machine-readable extraction index](../data/notation-source-index.json).','',
            '## Coverage by family','',
-           '| Family | Grammar occurrences | Labeled source cells | Mapped grammar | Mapped cells |','|---|---:|---:|---:|---:|']
+           '| Family | Grammar occurrences | Labeled source cells | Mapped grammar | Mapped cells | Audited grammar | Audited cells |','|---|---:|---:|---:|---:|---:|---:|']
     for f in report['families']:
-        lines.append(f"| [{f['section']} {f['title'].replace(' Graphical Notation','')}](notation-register.md#{f['section'].replace('.','')}) | {f['production_occurrences']} | {f['table_cells']} | {f['mapped_production_occurrences']} | {f['mapped_table_cells']} |")
+        lines.append(f"| [{f['section']} {f['title'].replace(' Graphical Notation','')}](notation-register.md#{f['section'].replace('.','')}) | {f['production_occurrences']} | {f['table_cells']} | {f['mapped_production_occurrences']} | {f['mapped_table_cells']} | {f['audited_production_occurrences']} | {f['audited_table_cells']} |")
     lines+=['','## Reviewed representative records','']
     for r in reviews['notations']:
         n=existing[r['id']]
@@ -339,6 +345,9 @@ def render(index,reviews,existing,report):
     register=['# Graphical notation source register','',
               'Names and locations extracted from the hash-pinned official PDF. No graphical right-hand sides are reconstructed from text. Index status is separate from visual review. Repeated labels and productions are intentionally preserved.','',
               '[Coverage dashboard and counting policy](notation-coverage.md) · [JSON source index](../data/notation-source-index.json)','']
+    audit_units={u['id']:u for u in load_audit(index)['units']}
+    def audit_link(id):
+        return '[Audited; rendering scope separate](parts-ports-notation-audit.md)' if id in audit_units else 'Not audited'
     mapped_p=defaultdict(list);mapped_c=defaultdict(list)
     for n in reviews['notations']:
         for p in n['production_ids']:mapped_p[p].append(n['id'])
@@ -348,16 +357,16 @@ def render(index,reviews,existing,report):
         for t in index['tables']:
             if t['section']!=s['id']:continue
             register+=['### Table '+str(t['number'])+': '+t['title'],'',f"Role: {t['role']}. Caption: {link(t['pdf_page'])}.",'',
-                       '| Source cell | Label | Location | Representative mapping |','|---|---|---|---|']
+                       '| Source cell | Label | Location | Representative mapping | Source audit |','|---|---|---|---|---|']
             for r in index['table_cells']:
                 if r['table']==t['number']:
-                    register.append(f"| `{r['id']}` | {r['label'].replace('|','/')} | {link(r['pdf_page'])} | {', '.join(mapped_c[r['id']]) or 'Unmapped'} |")
+                    register.append(f"| `{r['id']}` | {r['label'].replace('|','/')} | {link(r['pdf_page'])} | {', '.join(mapped_c[r['id']]) or 'Unmapped'} | {audit_link(r['id'])} |")
             register.append('')
-        register+=['### Grammar occurrences','', '| Source occurrence | Operator | Location | Representative mapping |','|---|---|---|---|']
+        register+=['### Grammar occurrences','', '| Source occurrence | Operator | Location | Representative mapping | Source audit |','|---|---|---|---|---|']
         for p in index['productions']:
             if p['section']==s['id']:
                 op='`=¦` (partial)' if p['operator']=='=|' else ('`¦=` (source operator review)' if p['operator']=='|=' else ('`= ¦` (spacing review)' if p['spaced_bar_after_equals'] else '`=`'))
-                register.append(f"| `{p['id']}` | {op} | {link(p['pdf_page'])} | {', '.join(mapped_p[p['id']]) or 'Unmapped'} |")
+                register.append(f"| `{p['id']}` | {op} | {link(p['pdf_page'])} | {', '.join(mapped_p[p['id']]) or 'Unmapped'} | {audit_link(p['id'])} |")
         register.append('')
     register+=['Operator display uses ¦ for the vertical bar to keep the Markdown table readable; JSON and RDF retain the exact operator.','']
     (ROOT/'docs/notation-register.md').write_text('\n'.join(register))
@@ -375,6 +384,7 @@ def main():
     report=coverage(index,reviews,existing)
     (ROOT/'data/notation-coverage.json').write_text(json.dumps(report,indent=2)+'\n')
     build_rdf(index,reviews,existing);render(index,reviews,existing,report)
+    render_audit(load_audit(index))
     print(json.dumps(report['counts'],indent=2))
 
 

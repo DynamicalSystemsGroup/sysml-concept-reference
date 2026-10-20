@@ -28,7 +28,7 @@ class ShapeLibraryTests(unittest.TestCase):
         cls.index=json.loads((ROOT/'data/notation-source-index.json').read_text())
 
     def test_svg_metadata_hashes_geometry_and_scope_are_consistent(self):
-        self.assertEqual(len(self.catalog['shapes']),9)
+        self.assertEqual(len(self.catalog['shapes']),20)
         symbols=ET.parse(ROOT/'shapes/shapes.svg').getroot()
         for shape in self.catalog['shapes']:
             path=ROOT/'shapes'/shape['file'];raw=path.read_bytes();svg=ET.fromstring(raw)
@@ -62,7 +62,7 @@ class ShapeLibraryTests(unittest.TestCase):
 
     def test_bundle_has_exact_files_and_preserves_license(self):
         expected={'LICENSE','README.md','catalog.json','shapes.svg','renderer.mjs',
-                  'examples/composition.svg','examples/renderer.html'}
+                  'examples/composition.svg','examples/parts-ports.svg','examples/renderer.html'}
         expected.update(s['file'] for s in self.catalog['shapes'])
         with ZipFile(ROOT/'shapes/catalog.zip') as bundle:
             self.assertEqual(set(bundle.namelist()),expected)
@@ -77,7 +77,7 @@ class ShapeLibraryTests(unittest.TestCase):
             for name in ('renderer.mjs','README.md','LICENSE','catalog.zip','catalog.json','svg/port-glyph.svg'):
                 self.assertEqual((output/'shapes'/name).read_bytes(),(ROOT/'shapes'/name).read_bytes())
             gallery=(output/'docs/svg-shapes.html').read_text()
-            self.assertEqual(gallery.count('class="shape-card"'),9)
+            self.assertEqual(gallery.count('class="shape-card"'),20)
             self.assertIn('href="../shapes/catalog.zip"',gallery)
             self.assertIn('href="svg-shapes-guide.html"',gallery)
             self.assertTrue((output/'docs/svg-shapes-guide.html').is_file())
@@ -89,9 +89,15 @@ class ShapeLibraryTests(unittest.TestCase):
         config=json.loads((ROOT/'data/svg-shapes.json').read_text())
         config['shapes'][0]['id']='../bad'
         with self.assertRaisesRegex(ValueError,'SVG ID'):validate_definitions(config,self.index)
+        config=json.loads((ROOT/'data/svg-shapes.json').read_text())
+        next(s for s in config['shapes'] if s['id']=='part-definition-parts')['rows'].append('unsupported third row')
+        with self.assertRaisesRegex(ValueError,'exactly two literal rows'):validate_definitions(config,self.index)
+        config=json.loads((ROOT/'data/svg-shapes.json').read_text())
+        next(s for s in config['shapes'] if s['id']=='port-arrow-up')['direction_indicator']='diagonal'
+        with self.assertRaisesRegex(ValueError,'direction indicator'):validate_definitions(config,self.index)
         graph=load_graph()
-        self.assertEqual(len(set(graph.subjects(RDF.type,INV.SVGShapeAsset))),9)
-        self.assertEqual(len(list(graph.query((ROOT/'queries/svg-shapes.rq').read_text()))),9)
+        self.assertEqual(len(set(graph.subjects(RDF.type,INV.SVGShapeAsset))),20)
+        self.assertEqual(len(list(graph.query((ROOT/'queries/svg-shapes.rq').read_text()))),20)
 
     @unittest.skipUnless(shutil.which('node'),'Node unavailable')
     def test_renderer_anchor_math_includes_letterboxing_and_rejects_bad_sizes(self):

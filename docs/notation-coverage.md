@@ -20,41 +20,41 @@ Unmapped work queue: **185 labeled source cells** and **616 production occurrenc
 | Production occurrences | 639 | Every declaration occurrence, including helpers and distributed partial rules |
 | Explicit partial markers | 97 | Literal `=¦`; five spaced-bar forms and 19 reversed `¦=` forms are flagged for review |
 
-**Indexed → described → illustrated → source-checked** applies to a declared variant scope. Source-cell and production mappings are counted separately; a small redraw does not complete all alternatives, compartments or nesting rules in its source. Full source-unit audit counts are currently zero. A description can be source-checked without a local illustration.
+**Indexed → described → illustrated → source-checked** applies to a declared variant scope. Source-cell and production mappings are counted separately; a small redraw does not complete all alternatives, compartments or nesting rules in its source. The bounded [parts-and-ports audit](parts-ports-notation-audit.md) records all local alternatives and explicit rendering/dependency deferrals for 12 source cells and 38 production occurrences. Audited does not mean fully rendered, dependency-complete or model-valid. A description can be source-checked without a local illustration.
 
 The source-cell count retains distinct labeled cells and repeated labels. It excludes column headers and makes no inferred continuation joins. It is not a count of unique symbols, logical variants, or remaining drawings. See the [counting method](research/notation-coverage-method.md) and [machine-readable extraction index](../data/notation-source-index.json).
 
 ## Coverage by family
 
-| Family | Grammar occurrences | Labeled source cells | Mapped grammar | Mapped cells |
-|---|---:|---:|---:|---:|
-| [8.2.3.1 Graphical Notation Overview](notation-register.md#8231) | 0 | 0 | 0 | 0 |
-| [8.2.3.2 Elements and Relationships](notation-register.md#8232) | 9 | 0 | 0 | 0 |
-| [8.2.3.3 Dependencies](notation-register.md#8233) | 9 | 2 | 0 | 0 |
-| [8.2.3.4 Annotations](notation-register.md#8234) | 12 | 10 | 0 | 0 |
-| [8.2.3.5 Namespaces and Packages](notation-register.md#8235) | 25 | 12 | 0 | 0 |
-| [8.2.3.6 Definition and Usage](notation-register.md#8236) | 31 | 24 | 0 | 0 |
-| [8.2.3.7 Attributes](notation-register.md#8237) | 10 | 3 | 0 | 0 |
-| [8.2.3.8 Enumerations](notation-register.md#8238) | 9 | 3 | 0 | 0 |
-| [8.2.3.9 Occurrences](notation-register.md#8239) | 50 | 10 | 0 | 0 |
-| [8.2.3.10 Items](notation-register.md#82310) | 12 | 3 | 0 | 0 |
-| [8.2.3.11 Parts](notation-register.md#82311) | 18 | 8 | 5 | 3 |
-| [8.2.3.12 Ports](notation-register.md#82312) | 20 | 4 | 9 | 1 |
-| [8.2.3.13 Connections](notation-register.md#82313) | 39 | 13 | 9 | 3 |
-| [8.2.3.14 Interfaces](notation-register.md#82314) | 17 | 6 | 0 | 0 |
-| [8.2.3.15 Allocations](notation-register.md#82315) | 14 | 5 | 0 | 0 |
-| [8.2.3.16 Flows](notation-register.md#82316) | 30 | 5 | 0 | 0 |
-| [8.2.3.17 Actions](notation-register.md#82317) | 72 | 26 | 0 | 0 |
-| [8.2.3.18 States](notation-register.md#82318) | 46 | 11 | 0 | 0 |
-| [8.2.3.19 Calculations](notation-register.md#82319) | 14 | 2 | 0 | 0 |
-| [8.2.3.20 Constraints](notation-register.md#82320) | 26 | 5 | 0 | 0 |
-| [8.2.3.21 Requirements](notation-register.md#82321) | 68 | 8 | 0 | 0 |
-| [8.2.3.22 Cases](notation-register.md#82322) | 4 | 0 | 0 | 0 |
-| [8.2.3.23 Analysis Cases](notation-register.md#82323) | 12 | 3 | 0 | 0 |
-| [8.2.3.24 Verification Cases](notation-register.md#82324) | 23 | 7 | 0 | 0 |
-| [8.2.3.25 Use Cases](notation-register.md#82325) | 22 | 4 | 0 | 0 |
-| [8.2.3.26 Views and Viewpoints](notation-register.md#82326) | 39 | 13 | 0 | 0 |
-| [8.2.3.27 Metadata](notation-register.md#82327) | 8 | 5 | 0 | 0 |
+| Family | Grammar occurrences | Labeled source cells | Mapped grammar | Mapped cells | Audited grammar | Audited cells |
+|---|---:|---:|---:|---:|---:|---:|
+| [8.2.3.1 Graphical Notation Overview](notation-register.md#8231) | 0 | 0 | 0 | 0 | 0 | 0 |
+| [8.2.3.2 Elements and Relationships](notation-register.md#8232) | 9 | 0 | 0 | 0 | 0 | 0 |
+| [8.2.3.3 Dependencies](notation-register.md#8233) | 9 | 2 | 0 | 0 | 0 | 0 |
+| [8.2.3.4 Annotations](notation-register.md#8234) | 12 | 10 | 0 | 0 | 0 | 0 |
+| [8.2.3.5 Namespaces and Packages](notation-register.md#8235) | 25 | 12 | 0 | 0 | 0 | 0 |
+| [8.2.3.6 Definition and Usage](notation-register.md#8236) | 31 | 24 | 0 | 0 | 0 | 0 |
+| [8.2.3.7 Attributes](notation-register.md#8237) | 10 | 3 | 0 | 0 | 0 | 0 |
+| [8.2.3.8 Enumerations](notation-register.md#8238) | 9 | 3 | 0 | 0 | 0 | 0 |
+| [8.2.3.9 Occurrences](notation-register.md#8239) | 50 | 10 | 0 | 0 | 0 | 0 |
+| [8.2.3.10 Items](notation-register.md#82310) | 12 | 3 | 0 | 0 | 0 | 0 |
+| [8.2.3.11 Parts](notation-register.md#82311) | 18 | 8 | 5 | 3 | 18 | 8 |
+| [8.2.3.12 Ports](notation-register.md#82312) | 20 | 4 | 9 | 1 | 20 | 4 |
+| [8.2.3.13 Connections](notation-register.md#82313) | 39 | 13 | 9 | 3 | 0 | 0 |
+| [8.2.3.14 Interfaces](notation-register.md#82314) | 17 | 6 | 0 | 0 | 0 | 0 |
+| [8.2.3.15 Allocations](notation-register.md#82315) | 14 | 5 | 0 | 0 | 0 | 0 |
+| [8.2.3.16 Flows](notation-register.md#82316) | 30 | 5 | 0 | 0 | 0 | 0 |
+| [8.2.3.17 Actions](notation-register.md#82317) | 72 | 26 | 0 | 0 | 0 | 0 |
+| [8.2.3.18 States](notation-register.md#82318) | 46 | 11 | 0 | 0 | 0 | 0 |
+| [8.2.3.19 Calculations](notation-register.md#82319) | 14 | 2 | 0 | 0 | 0 | 0 |
+| [8.2.3.20 Constraints](notation-register.md#82320) | 26 | 5 | 0 | 0 | 0 | 0 |
+| [8.2.3.21 Requirements](notation-register.md#82321) | 68 | 8 | 0 | 0 | 0 | 0 |
+| [8.2.3.22 Cases](notation-register.md#82322) | 4 | 0 | 0 | 0 | 0 | 0 |
+| [8.2.3.23 Analysis Cases](notation-register.md#82323) | 12 | 3 | 0 | 0 | 0 | 0 |
+| [8.2.3.24 Verification Cases](notation-register.md#82324) | 23 | 7 | 0 | 0 | 0 | 0 |
+| [8.2.3.25 Use Cases](notation-register.md#82325) | 22 | 4 | 0 | 0 | 0 | 0 |
+| [8.2.3.26 Views and Viewpoints](notation-register.md#82326) | 39 | 13 | 0 | 0 | 0 | 0 |
+| [8.2.3.27 Metadata](notation-register.md#82327) | 8 | 5 | 0 | 0 | 0 | 0 |
 
 ## Reviewed representative records
 
@@ -102,16 +102,16 @@ Source production mappings: `8.2.3.11/part-def/1`, `8.2.3.11/part-def-name-compa
 
 ### Full node and boundary port
 
-The full node is rounded and labeled port; the compact form is a small rounded boundary glyph with an adjacent name/type label. Direction arrows are optional productions and omitted in this illustration.
+The full node is rounded and labeled port. The compact outline in this older illustration is a geometry primitive only: displayed boundary alternatives include horizontal or vertical direction indicators, plus side-specific labels. Their selection and layout are separate renderer responsibilities.
 
-Illustrated forms: Full port usage node and a single compact boundary-port example.
+Illustrated forms: Full port usage node and compact outline primitive; new direction glyphs and a four-side composition are separately listed in the SVG library.
 
 ![Full node and boundary port](assets/notation/port-usage.svg)
 
 | Property | Recorded rule |
 |---|---|
 | Geometry | Full rounded usage node or small rounded boundary glyph. The boundary redraw illustrates one attachment position. |
-| Line style | Solid node and boundary glyph in the redraw; directional arrows are omitted. |
+| Line style | Solid full node. The old compact outline omits direction geometry and is only an outline primitive; displayed boundary alternatives include pdh/pdv indicators. |
 | Labels | The full form uses the port-name-compartment. Boundary labels use QualifiedName with an optional colon and QualifiedName. |
 | Compartments | Full nodes can have a compartment stack and nested ports. Neither is exhausted by the illustration. |
 | Attachments | The grammar gives separate left, right, top and bottom boundary productions with position-specific labels. |
@@ -131,11 +131,11 @@ Illustrated forms: Source description only; no local redraw.
 |---|---|
 | Geometry | Reference port outlines and proxy-dot alternatives are described from the source; there is no local redraw. |
 | Line style | The source note restricts dotted-line port productions to nested ports; no general rule for all ports is asserted. |
-| Labels | Reference forms reuse port-label; proxy-v and proxy-h use proxy-label. The imported proxy-label dependency remains to be resolved. |
+| Labels | Reference forms reuse port-label. Proxy forms reuse proxy-label, resolved in §8.2.3.9 (PDF 239) as an optional leading dot followed by FeatureChainMember. |
 | Compartments | The nested-port context is part of the applicability restriction, not evidence that arbitrary diagram nesting implies ownership. |
 | Attachments | Horizontal and vertical proxy productions correspond to side attachment alternatives. |
 | Applicability | Dotted reference ports are possible only for nested ports. A proxy option is valid only on a part usage contained within an interconnection view. |
-| Alternatives | Reference versus proxy forms are grouped for restriction tracking and must be split before claiming exhaustive visual coverage. |
+| Alternatives | Reference, elongated nested and proxy layouts remain deferred. The selected audit retains the port/port-usage spelling mismatch and keeps these cases separate. |
 | Represents | SysML PortUsage and restricted proxy connection points |
 
 Source production mappings: `8.2.3.12/port-l/1`, `8.2.3.12/port-r/1`, `8.2.3.12/port-t/1`, `8.2.3.12/port-b/1`, `8.2.3.12/proxy-v/1`, `8.2.3.12/proxy-h/1`.

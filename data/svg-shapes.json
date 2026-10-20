@@ -1,71 +1,424 @@
 {
   "schema_version": 1,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "Apache-2.0",
   "copyright": "Copyright 2026 Dynamical Systems Group",
   "scope": "Original reusable SVG components for selected source-checked SysML notation. A component is not a complete graphical grammar or a conformance result.",
   "shapes": [
     {
-      "id": "part-definition", "name": "Part definition", "family": "Parts", "kind": "node", "template": "definition",
-      "keyword": "«part def»", "label": "Wheel", "notation_record": "part-definition-node",
-      "production_ids": ["8.2.3.11/part-def/1", "8.2.3.11/part-def-name-compartment/1"], "evidence_pages": [240, 241],
+      "id": "part-definition",
+      "name": "Part definition",
+      "family": "Parts",
+      "kind": "node",
+      "template": "definition",
+      "keyword": "«part def»",
+      "label": "Wheel",
+      "notation_record": "part-definition-node",
+      "production_ids": [
+        "8.2.3.11/part-def/1",
+        "8.2.3.11/part-def-name-compartment/1"
+      ],
+      "evidence_pages": [
+        240,
+        241
+      ],
       "description": "Minimal sharp-corner part definition node with an editable name label.",
       "limits": "No compartments, boundary ports, aliases or additional prefixes. The host renderer supplies these when required."
     },
     {
-      "id": "part-usage", "name": "Composite part usage", "family": "Parts", "kind": "node", "template": "usage",
-      "keyword": "«part»", "label": "wheel : Wheel", "notation_record": "part-node",
-      "production_ids": ["8.2.3.11/part/1", "8.2.3.11/part-name-compartment/1"], "evidence_pages": [241],
+      "id": "part-usage",
+      "name": "Composite part usage",
+      "family": "Parts",
+      "kind": "node",
+      "template": "usage",
+      "keyword": "«part»",
+      "label": "wheel : Wheel",
+      "notation_record": "part-node",
+      "production_ids": [
+        "8.2.3.11/part/1",
+        "8.2.3.11/part-name-compartment/1"
+      ],
+      "evidence_pages": [
+        241
+      ],
       "description": "Minimal solid rounded part usage node with an editable name/type label.",
       "limits": "Represents the composite example. Prefix combinations, compartments and port attachments are not included."
     },
     {
-      "id": "part-reference", "name": "Referential part usage", "family": "Parts", "kind": "node", "template": "reference",
-      "keyword": "«ref part»", "label": "spare : Wheel[0..1]", "notation_record": "part-node",
-      "production_ids": ["8.2.3.11/part-ref/1", "8.2.3.11/part-name-compartment/1"], "evidence_pages": [241],
+      "id": "part-reference",
+      "name": "Referential part usage",
+      "family": "Parts",
+      "kind": "node",
+      "template": "reference",
+      "keyword": "«ref part»",
+      "label": "spare : Wheel[0..1]",
+      "notation_record": "part-node",
+      "production_ids": [
+        "8.2.3.11/part-ref/1",
+        "8.2.3.11/part-name-compartment/1"
+      ],
+      "evidence_pages": [
+        241
+      ],
       "description": "Dashed rounded referential part usage node, retaining its ref part keyword.",
       "limits": "This remains a PartUsage. The displayed multiplicity is an example, not a default or a validation result."
     },
     {
-      "id": "port-usage", "name": "Full port usage", "family": "Ports", "kind": "node", "template": "usage",
-      "keyword": "«port»", "label": "hub : Mount", "notation_record": "port-node-boundary",
-      "production_ids": ["8.2.3.12/port-usage/1", "8.2.3.12/port-name-compartment/1"], "evidence_pages": [242, 243],
+      "id": "port-usage",
+      "name": "Full port usage",
+      "family": "Ports",
+      "kind": "node",
+      "template": "usage",
+      "keyword": "«port»",
+      "label": "hub : Mount",
+      "notation_record": "port-node-boundary",
+      "production_ids": [
+        "8.2.3.12/port-usage/1",
+        "8.2.3.12/port-name-compartment/1"
+      ],
+      "evidence_pages": [
+        242,
+        243
+      ],
       "description": "Minimal full port usage node with an editable name/type label.",
       "limits": "This is the full node form. Nested ports, direction glyphs and reference/proxy alternatives are omitted."
     },
     {
-      "id": "port-glyph", "name": "Boundary port glyph", "family": "Ports", "kind": "glyph", "template": "port-glyph",
+      "id": "port-glyph",
+      "name": "Boundary port outline primitive",
+      "family": "Ports",
+      "kind": "glyph",
+      "template": "port-glyph",
       "notation_record": "port-node-boundary",
-      "production_ids": ["8.2.3.12/port-l/1", "8.2.3.12/port-r/1", "8.2.3.12/port-t/1", "8.2.3.12/port-b/1"], "evidence_pages": [244, 245],
-      "description": "Small rounded undirected boundary port glyph, supplied as a component without a label or host node.",
-      "limits": "Glyph only. Place it on the appropriate boundary and supply the position-specific port label. It does not include arrows, dotted references, nested ports or proxy dots."
+      "production_ids": [
+        "8.2.3.12/port-l/1",
+        "8.2.3.12/port-r/1",
+        "8.2.3.12/port-t/1",
+        "8.2.3.12/port-b/1"
+      ],
+      "evidence_pages": [
+        244,
+        245
+      ],
+      "description": "Rounded outline primitive without a direction indicator; compose it as geometry rather than a complete boundary-port alternative.",
+      "limits": "Outline only. The displayed boundary grammar includes pdh/pdv arrows and position-specific labels; the host supplies direction, placement and context. Nested/reference/proxy forms are not implemented."
     },
     {
-      "id": "connection-usage", "name": "Full connection usage", "family": "Connections", "kind": "node", "template": "usage",
-      "keyword": "«connection»", "label": "link", "notation_record": "connection-edge-node",
-      "production_ids": ["8.2.3.13/connection/1", "8.2.3.13/connection-name-compartment/1"], "evidence_pages": [246, 247],
+      "id": "connection-usage",
+      "name": "Full connection usage",
+      "family": "Connections",
+      "kind": "node",
+      "template": "usage",
+      "keyword": "«connection»",
+      "label": "link",
+      "notation_record": "connection-edge-node",
+      "production_ids": [
+        "8.2.3.13/connection/1",
+        "8.2.3.13/connection-name-compartment/1"
+      ],
+      "evidence_pages": [
+        246,
+        247
+      ],
       "description": "Minimal full connection usage node.",
       "limits": "No compartments or elaboration links. The host renderer determines how the modeled connection is related to its endpoints."
     },
     {
-      "id": "connection-binary", "name": "Binary connection edge", "family": "Connections", "kind": "edge", "template": "binary",
-      "label": "link", "notation_record": "connection-edge-node",
-      "production_ids": ["8.2.3.13/connection-graphical/1", "8.2.3.13/connection-label/1"], "evidence_pages": [247, 248],
+      "id": "connection-binary",
+      "name": "Binary connection edge",
+      "family": "Connections",
+      "kind": "edge",
+      "template": "binary",
+      "label": "link",
+      "notation_record": "connection-edge-node",
+      "production_ids": [
+        "8.2.3.13/connection-graphical/1",
+        "8.2.3.13/connection-label/1"
+      ],
+      "evidence_pages": [
+        247,
+        248
+      ],
       "description": "Solid undirected binary connection line with an editable optional label.",
       "limits": "Attach start/end anchors to valid connection ends. Direction indication, roles, multiplicities and adornments are omitted. This line does not imply flow direction."
     },
     {
-      "id": "connection-nary", "name": "Three-ended connection", "family": "Connections", "kind": "edge", "template": "nary",
-      "label": "link", "notation_record": "connection-nary",
-      "production_ids": ["8.2.3.13/n-ary-connection/1", "8.2.3.13/n-ary-connection-dot/1", "8.2.3.13/n-ary-segment/1"], "evidence_pages": [248],
+      "id": "connection-nary",
+      "name": "Three-ended connection",
+      "family": "Connections",
+      "kind": "edge",
+      "template": "nary",
+      "label": "link",
+      "notation_record": "connection-nary",
+      "production_ids": [
+        "8.2.3.13/n-ary-connection/1",
+        "8.2.3.13/n-ary-connection-dot/1",
+        "8.2.3.13/n-ary-segment/1"
+      ],
+      "evidence_pages": [
+        248
+      ],
       "description": "Representative three-ended usage connection with a filled central dot and solid segments.",
       "limits": "A fixed layout with three endpoint anchors. The host renderer must reroute or add segments for other layouts/end counts. Role labels and multiplicities are omitted."
     },
     {
-      "id": "binding-connection", "name": "Binding connection", "family": "Connections", "kind": "edge", "template": "binding",
-      "production_ids": ["8.2.3.13/binding-connection/1"], "evidence_pages": [249],
+      "id": "binding-connection",
+      "name": "Binding connection",
+      "family": "Connections",
+      "kind": "edge",
+      "template": "binding",
+      "production_ids": [
+        "8.2.3.13/binding-connection/1"
+      ],
+      "evidence_pages": [
+        249
+      ],
       "description": "Solid binding line with the required equals sign.",
       "limits": "Endpoint usage nodes must have compatible types. The equals sign is fixed; the component does not validate endpoint compatibility."
+    },
+    {
+      "id": "port-definition",
+      "name": "Port definition",
+      "family": "Ports",
+      "kind": "node",
+      "template": "definition",
+      "keyword": "«port def»",
+      "label": "Interface",
+      "production_ids": [
+        "8.2.3.12/port-def/1",
+        "8.2.3.12/port-def-name-compartment/1"
+      ],
+      "evidence_pages": [
+        242,
+        243
+      ],
+      "description": "Minimal sharp-corner port definition node with an editable definition name.",
+      "limits": "No prefix combinations, aliases, compartments or boundary ports. This is geometry, not a metamodel-property profile or model check."
+    },
+    {
+      "id": "part-definition-parts",
+      "name": "Part definition with parts compartment",
+      "family": "Parts",
+      "kind": "node",
+      "template": "definition-compartments",
+      "keyword": "«part def»",
+      "label": "Assembly",
+      "compartment": "parts",
+      "rows": [
+        "wheel : Wheel",
+        "ref spare : Wheel[0..1]"
+      ],
+      "production_ids": [
+        "8.2.3.11/part-def/1",
+        "8.2.3.11/parts-compartment/1",
+        "8.2.3.11/parts-compartment-contents/1"
+      ],
+      "evidence_pages": [
+        90,
+        92,
+        241,
+        242
+      ],
+      "description": "A separated parts compartment with two editable literal rows and an elision marker.",
+      "limits": "Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative."
+    },
+    {
+      "id": "part-usage-parts",
+      "name": "Part usage with parts compartment",
+      "family": "Parts",
+      "kind": "node",
+      "template": "usage-compartments",
+      "keyword": "«part»",
+      "label": "system : System",
+      "compartment": "parts",
+      "rows": [
+        "part1 : Component",
+        "part2 : Component"
+      ],
+      "production_ids": [
+        "8.2.3.11/part/1",
+        "8.2.3.11/parts-compartment/1",
+        "8.2.3.11/parts-compartment-contents/1"
+      ],
+      "evidence_pages": [
+        91,
+        92,
+        241,
+        242
+      ],
+      "description": "A separated parts compartment with two editable literal rows and an elision marker.",
+      "limits": "Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative."
+    },
+    {
+      "id": "port-definition-ports",
+      "name": "Port definition with ports compartment",
+      "family": "Ports",
+      "kind": "node",
+      "template": "definition-compartments",
+      "keyword": "«port def»",
+      "label": "Interface",
+      "compartment": "ports",
+      "rows": [
+        "inner1 : SubInterface",
+        "inner2 : SubInterface"
+      ],
+      "production_ids": [
+        "8.2.3.12/port-def/1",
+        "8.2.3.12/ports-compartment/1",
+        "8.2.3.12/ports-compartment-contents/1"
+      ],
+      "evidence_pages": [
+        94,
+        242,
+        243
+      ],
+      "description": "A separated ports compartment with two editable literal rows and an elision marker.",
+      "limits": "Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative."
+    },
+    {
+      "id": "port-usage-ports",
+      "name": "Port usage with ports compartment",
+      "family": "Ports",
+      "kind": "node",
+      "template": "usage-compartments",
+      "keyword": "«port»",
+      "label": "outer : Interface",
+      "compartment": "ports",
+      "rows": [
+        "inner1 : SubInterface",
+        "inner2 : SubInterface"
+      ],
+      "production_ids": [
+        "8.2.3.12/port-usage/1",
+        "8.2.3.12/ports-compartment/1",
+        "8.2.3.12/ports-compartment-contents/1"
+      ],
+      "evidence_pages": [
+        94,
+        243
+      ],
+      "description": "A separated ports compartment with two editable literal rows and an elision marker.",
+      "limits": "Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative."
+    },
+    {
+      "id": "port-arrow-right",
+      "name": "Boundary port with right arrow",
+      "family": "Ports",
+      "kind": "glyph",
+      "template": "port-direction",
+      "direction_indicator": "right",
+      "production_ids": [
+        "8.2.3.12/pdh/1",
+        "8.2.3.12/port-l/1",
+        "8.2.3.12/port-r/1"
+      ],
+      "evidence_pages": [
+        243,
+        244,
+        245
+      ],
+      "description": "Rounded boundary glyph containing the right direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option."
+    },
+    {
+      "id": "port-arrow-left",
+      "name": "Boundary port with left arrow",
+      "family": "Ports",
+      "kind": "glyph",
+      "template": "port-direction",
+      "direction_indicator": "left",
+      "production_ids": [
+        "8.2.3.12/pdh/1",
+        "8.2.3.12/port-l/1",
+        "8.2.3.12/port-r/1"
+      ],
+      "evidence_pages": [
+        243,
+        244,
+        245
+      ],
+      "description": "Rounded boundary glyph containing the left direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option."
+    },
+    {
+      "id": "port-arrow-horizontal-both",
+      "name": "Boundary port with horizontal both arrows",
+      "family": "Ports",
+      "kind": "glyph",
+      "template": "port-direction",
+      "direction_indicator": "horizontal-both",
+      "production_ids": [
+        "8.2.3.12/pdh/1",
+        "8.2.3.12/port-l/1",
+        "8.2.3.12/port-r/1"
+      ],
+      "evidence_pages": [
+        243,
+        244,
+        245
+      ],
+      "description": "Rounded boundary glyph containing the horizontal both direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option."
+    },
+    {
+      "id": "port-arrow-up",
+      "name": "Boundary port with up arrow",
+      "family": "Ports",
+      "kind": "glyph",
+      "template": "port-direction",
+      "direction_indicator": "up",
+      "production_ids": [
+        "8.2.3.12/pdv/1",
+        "8.2.3.12/port-t/1",
+        "8.2.3.12/port-b/1"
+      ],
+      "evidence_pages": [
+        243,
+        244,
+        245
+      ],
+      "description": "Rounded boundary glyph containing the up direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option."
+    },
+    {
+      "id": "port-arrow-down",
+      "name": "Boundary port with down arrow",
+      "family": "Ports",
+      "kind": "glyph",
+      "template": "port-direction",
+      "direction_indicator": "down",
+      "production_ids": [
+        "8.2.3.12/pdv/1",
+        "8.2.3.12/port-t/1",
+        "8.2.3.12/port-b/1"
+      ],
+      "evidence_pages": [
+        243,
+        244,
+        245
+      ],
+      "description": "Rounded boundary glyph containing the down direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option."
+    },
+    {
+      "id": "port-arrow-vertical-both",
+      "name": "Boundary port with vertical both arrows",
+      "family": "Ports",
+      "kind": "glyph",
+      "template": "port-direction",
+      "direction_indicator": "vertical-both",
+      "production_ids": [
+        "8.2.3.12/pdv/1",
+        "8.2.3.12/port-t/1",
+        "8.2.3.12/port-b/1"
+      ],
+      "evidence_pages": [
+        243,
+        244,
+        245
+      ],
+      "description": "Rounded boundary glyph containing the vertical both direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option."
     }
   ]
 }

@@ -1,0 +1,2223 @@
+{
+  "schema_version": 1,
+  "title": "Parts and ports: selected source-unit audit",
+  "source": {
+    "id": "SysMLLanguage",
+    "language": "SysML",
+    "version": "2.0",
+    "file": "SysML-Language.pdf",
+    "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF",
+    "omg_file_id": "formal/2026-03-02",
+    "bytes": 3804140,
+    "sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a",
+    "retrieved_on": "2026-10-21",
+    "publisher": "Object Management Group"
+  },
+  "scope": "All eight Table 9 cells, four Table 10 cells and the 18 parts / 20 ports graphical-production occurrences. Every selected local alternative has a representative asset, a partial match with explicit limits, or a documented deferral. This is not whole-language coverage or renderer conformance.",
+  "method": "Visually inspected pinned source pages alongside text extraction. LocalAlternativesAudited means that the explicit forms in the selected source unit, imported dependencies and source issues have been recorded and assigned a rendering disposition. It does not mean all dependency productions, model combinations or rendering cases are implemented. Source-cell and production counts stay separate.",
+  "units": [
+    {
+      "id": "table-10/cell-1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        94
+      ],
+      "printed_pages": [
+        62
+      ],
+      "dependencies": [
+        "Table examples demonstrate alternatives; not an exhaustive prefix-combination grammar."
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "minimal-port-definition",
+          "geometry": "Sharp-corner rectangular node",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Port definition keyword and name",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "port-definition-with-compartments",
+          "geometry": "Sharp-corner rectangle with compartment stack",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Definition header plus compartment headings",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition-ports"
+          ],
+          "deferred_reason": "Only a two-row ports compartment is supplied; generalized compartments and nested boundary layout remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "table-10/cell-2",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        94
+      ],
+      "printed_pages": [
+        62
+      ],
+      "dependencies": [
+        "Table examples demonstrate alternatives; not an exhaustive prefix-combination grammar."
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "minimal-full-port-usage",
+          "geometry": "Rounded rectangular node",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "«port» and editable name/type",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-usage"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the minimal geometry and example label described here; each asset retains its own limitations."
+        },
+        {
+          "id": "full-port-with-compartments",
+          "geometry": "Rounded host and compartment stack",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Header and compartment labels",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-usage-ports"
+          ],
+          "deferred_reason": "Only a two-row ports compartment is supplied; generalized compartments and nested boundary layout remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "table-10/cell-3",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        94
+      ],
+      "printed_pages": [
+        62
+      ],
+      "dependencies": [
+        "7.12.3",
+        "Table examples demonstrate alternatives; not an exhaustive prefix-combination grammar."
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "ports-compartment-prefix",
+          "geometry": "Text list",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Inherited member prefix ^",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": []
+        },
+        {
+          "id": "ports-compartment-cardinality",
+          "geometry": "Text list",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Multiplicity, ordered and nonunique",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": []
+        },
+        {
+          "id": "ports-compartment-redefinition",
+          "geometry": "Text list",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "redefines and :>> forms, including target-only :>> entry",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": []
+        },
+        {
+          "id": "ports-compartment-subsetting",
+          "geometry": "Text list",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "subsets and :> forms",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": []
+        },
+        {
+          "id": "ports-compartment-value",
+          "geometry": "Text list",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Equals/value example",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": []
+        },
+        {
+          "id": "ports-compartment-reference",
+          "geometry": "Text list",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "ref prefix",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": []
+        },
+        {
+          "id": "ports-compartment-name-only",
+          "geometry": "Text list",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Untyped name",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": []
+        },
+        {
+          "id": "ports-compartment-conjugation",
+          "geometry": "Text list",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Type prefixed with ~",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "7.12.3"
+          ]
+        },
+        {
+          "id": "ports-compartment-elision",
+          "geometry": "Text list",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Trailing ellipsis",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition-ports",
+            "port-usage-ports"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the literal trailing elision marker in the selected ports compartment."
+        }
+      ]
+    },
+    {
+      "id": "table-10/cell-4",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        94
+      ],
+      "printed_pages": [
+        62
+      ],
+      "dependencies": [
+        "8.2.3.11/directed-features-compartment/1",
+        "Table examples demonstrate alternatives; not an exhaustive prefix-combination grammar."
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "directed-attributes-in-out-inout",
+          "geometry": "Text compartment with horizontal divider",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Italic directed features heading and in/out/inout attribute rows",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "8.2.3.11/directed-features-compartment/1"
+          ]
+        },
+        {
+          "id": "directed-items-in-out-inout",
+          "geometry": "Same compartment",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "in/out/inout item rows and optional ellipsis",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "8.2.3.11/directed-features-compartment/1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "table-9/cell-1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        90
+      ],
+      "printed_pages": [
+        58
+      ],
+      "dependencies": [
+        "compartment-stack",
+        "part-def"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "minimal-definition",
+          "geometry": "sharp rectangle",
+          "line_style": "solid",
+          "labels": "part def keyword and definition name",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-definition"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the minimal geometry and example label described here; each asset retains its own limitations."
+        },
+        {
+          "id": "definition-with-compartments",
+          "geometry": "sharp rectangle with horizontal separator, compartment stack and lower-left ellipsis",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-definition-parts"
+          ],
+          "deferred_reason": "Only the named parts compartment is supplied; arbitrary compartment stacks, boundary ports and interconnection contents remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "table-9/cell-2",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        91
+      ],
+      "printed_pages": [
+        59
+      ],
+      "dependencies": [
+        "compartment-stack",
+        "part"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "minimal-usage",
+          "geometry": "rounded rectangle",
+          "line_style": "solid",
+          "labels": "part keyword and usage : definition",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-usage"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the minimal geometry and example label described here; each asset retains its own limitations."
+        },
+        {
+          "id": "usage-with-compartments",
+          "geometry": "rounded rectangle with horizontal separator and lower-left ellipsis",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-usage-parts"
+          ],
+          "deferred_reason": "Only a two-row parts compartment is supplied; other compartments, nesting and boundary composition remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "table-9/cell-3",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        91
+      ],
+      "printed_pages": [
+        59
+      ],
+      "dependencies": [
+        "8.2.3.12/port-l/1",
+        "8.2.3.12/port-r/1",
+        "port-name-compartment"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "nested-boundary-ports",
+          "geometry": "rounded part boundary, elongated rounded p0 port containing three smaller boundary ports; two independent right-edge ports",
+          "line_style": "solid",
+          "labels": "p0 label rotated; child labels outside left; undirected labels inside right",
+          "context": "p0 contains p1/p2/p3; p4/p5 are siblings",
+          "represented_by": [],
+          "deferred_reason": "Requires nested-port composition and directed port glyph variants.",
+          "dependencies": []
+        },
+        {
+          "id": "incoming-child-port",
+          "geometry": "small rounded square with right-pointing arrow",
+          "line_style": "solid",
+          "labels": "p1 : PortDef1",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-right"
+          ],
+          "deferred_reason": "Arrow-bearing child geometry only; elongated containing port, nested placement and direction-selection semantics remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "outgoing-child-port",
+          "geometry": "small rounded square with left-pointing arrow",
+          "line_style": "solid",
+          "labels": "p2 : PortDef2",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-left"
+          ],
+          "deferred_reason": "Arrow-bearing child geometry only; elongated containing port, nested placement and direction-selection semantics remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "bidirectional-ports",
+          "geometry": "elongated p0 and small p3 glyph contain opposed arrows",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-horizontal-both"
+          ],
+          "deferred_reason": "Arrow-bearing child geometry only; elongated containing port, nested placement and direction-selection semantics remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "undirected-right-port",
+          "geometry": "small rounded square on right boundary",
+          "line_style": "solid",
+          "labels": "p4 / p5 name and type",
+          "context": "Primitive glyph only; host composition and labels deferred",
+          "represented_by": [
+            "port-glyph"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the undirected outline shown by the representative table; the separate boundary grammar includes pdh/pdv, so this is not a full boundary-production implementation."
+        }
+      ]
+    },
+    {
+      "id": "table-9/cell-4",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        91
+      ],
+      "printed_pages": [
+        59
+      ],
+      "dependencies": [
+        "binding",
+        "connection-graphical",
+        "interconnection-view",
+        "part",
+        "port-l",
+        "port-r"
+      ],
+      "source_issues": [
+        "Drawing locates p5 on part3; last textual binding identifies part2.p5. No silent correction."
+      ],
+      "alternatives": [
+        {
+          "id": "nested-interconnection",
+          "geometry": "outer rounded part; two rounded internal parts; boundary ports and three linking segments",
+          "line_style": "solid",
+          "labels": "part/name/type; port labels",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Composed interconnection example absent; primitive assets do not represent the complete source alternative.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "table-9/cell-5",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        91
+      ],
+      "printed_pages": [
+        59
+      ],
+      "dependencies": [
+        "8.2.3.17",
+        "composite-feature-membership",
+        "reference-subsetting"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "owned-performance",
+          "geometry": "part above perform-action rounded node with hollow diamond at owning part end",
+          "line_style": "solid",
+          "labels": "perform action keyword",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Perform action node and membership edge absent.",
+          "dependencies": []
+        },
+        {
+          "id": "external-performance",
+          "geometry": "part above separately declared action; directed solid line labelled perform",
+          "line_style": "solid",
+          "labels": "action keyword; perform relationship keyword",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Perform relationship asset absent.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "table-9/cell-6",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        92
+      ],
+      "printed_pages": [
+        60
+      ],
+      "dependencies": [
+        "8.2.3.17",
+        "composite-feature-membership",
+        "reference-subsetting"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "explicit-reference-subsetting-performance",
+          "geometry": "hollow-diamond ownership edge from part to perform-action node; solid reference-subsetting edge to separately declared action with open triangle and adjacent dotted adornment",
+          "line_style": "solid",
+          "labels": "distinct action1 and action3 names/types",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Action membership and reference-subsetting assets absent.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "table-9/cell-7",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        92
+      ],
+      "printed_pages": [
+        60
+      ],
+      "dependencies": [
+        "8.2.3.17",
+        "succession",
+        "Caption says flows; textual then denotes succession. Do not claim item-flow notation."
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "action-flow-compartment",
+          "geometry": "rounded part with separated italic action-flow compartment; two rounded perform nodes joined downward by dashed open-arrow succession",
+          "line_style": "solid nodes; dashed succession",
+          "labels": "perform action keywords",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Action-flow compartment and succession assets absent.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "table-9/cell-8",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        92
+      ],
+      "printed_pages": [
+        60
+      ],
+      "dependencies": [
+        "OccurrenceUsagePrefix",
+        "UsageDeclaration",
+        "ValuePart",
+        "el-prefix",
+        "parts-compartment",
+        "usage-cp"
+      ],
+      "source_issues": [
+        "Imported usage-cp prints usageDeclaration, whereas the textual grammar declares UsageDeclaration; no silent normalization."
+      ],
+      "alternatives": [
+        {
+          "id": "inherited-entry",
+          "geometry": "text row in sharp rectangular compartment with italic parts header",
+          "line_style": "solid",
+          "labels": "caret before name",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Parts textual compartment and semantic label formatter absent.",
+          "dependencies": []
+        },
+        {
+          "id": "ordered-nonunique-multiplicity",
+          "geometry": "text row in sharp rectangular compartment with italic parts header",
+          "line_style": "solid",
+          "labels": "range multiplicity followed by ordered and nonunique",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Parts textual compartment and semantic label formatter absent.",
+          "dependencies": []
+        },
+        {
+          "id": "redefinition-keyword",
+          "geometry": "text row in sharp rectangular compartment with italic parts header",
+          "line_style": "solid",
+          "labels": "name/type followed by redefines target",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Parts textual compartment and semantic label formatter absent.",
+          "dependencies": []
+        },
+        {
+          "id": "redefinition-symbol",
+          "geometry": "text row in sharp rectangular compartment with italic parts header",
+          "line_style": "solid",
+          "labels": "name/type followed by :>> target",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Parts textual compartment and semantic label formatter absent.",
+          "dependencies": []
+        },
+        {
+          "id": "anonymous-redefinition",
+          "geometry": "text row in sharp rectangular compartment with italic parts header",
+          "line_style": "solid",
+          "labels": ":>> target without new name/type",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Parts textual compartment and semantic label formatter absent.",
+          "dependencies": []
+        },
+        {
+          "id": "subsetting-keyword",
+          "geometry": "text row in sharp rectangular compartment with italic parts header",
+          "line_style": "solid",
+          "labels": "name/type and multiplicity followed by subsets target",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Parts textual compartment and semantic label formatter absent.",
+          "dependencies": []
+        },
+        {
+          "id": "subsetting-symbol",
+          "geometry": "text row in sharp rectangular compartment with italic parts header",
+          "line_style": "solid",
+          "labels": "name/type and multiplicity followed by :> target",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Parts textual compartment and semantic label formatter absent.",
+          "dependencies": []
+        },
+        {
+          "id": "value-binding",
+          "geometry": "text row in sharp rectangular compartment with italic parts header",
+          "line_style": "solid",
+          "labels": "name = referenced value",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Parts textual compartment and semantic label formatter absent.",
+          "dependencies": []
+        },
+        {
+          "id": "referential-entry",
+          "geometry": "text row in sharp rectangular compartment with italic parts header",
+          "line_style": "solid",
+          "labels": "ref before usage name/type",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-definition-parts"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "The example row explicitly shows ref spare : Wheel[0..1]; other declaration text is caller-supplied."
+        },
+        {
+          "id": "name-only-entry",
+          "geometry": "text row in sharp rectangular compartment with italic parts header",
+          "line_style": "solid",
+          "labels": "name without displayed type",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Parts textual compartment and semantic label formatter absent.",
+          "dependencies": []
+        },
+        {
+          "id": "omitted-members",
+          "geometry": "text row in sharp rectangular compartment with italic parts header",
+          "line_style": "solid",
+          "labels": "ellipsis below listed members",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-definition-parts",
+            "part-usage-parts"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the literal trailing elision marker in the selected parts compartment."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/compartment/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        241
+      ],
+      "printed_pages": [
+        209
+      ],
+      "dependencies": [
+        "directed-features-compartment",
+        "interconnection-compartment",
+        "parts-compartment"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "parts-compartment-choice",
+          "geometry": "one of three contributed compartment alternatives",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-definition-parts",
+            "part-usage-parts"
+          ],
+          "deferred_reason": "Two literal rows and an elision marker only; arbitrary member selection, row counts, prefix/alias/value formatting and semantic checks remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "directed-features-choice",
+          "geometry": "directed features compartment",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "No complete renderer for this imported grammar; explicitly deferred.",
+          "dependencies": []
+        },
+        {
+          "id": "interconnection-choice",
+          "geometry": "interconnection compartment",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "No complete renderer for this imported grammar; explicitly deferred.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/definition-node/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        240
+      ],
+      "printed_pages": [
+        208
+      ],
+      "dependencies": [
+        "part-def"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "part-definition-alternative",
+          "geometry": "partial production contributes part-def",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Only minimal silhouette represented",
+          "represented_by": [
+            "part-definition"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the minimal geometry and example label described here; each asset retains its own limitations."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/directed-features-compartment-contents/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "directed-features-compartment-element"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "directed-feature-rows",
+          "geometry": "zero or more directed rows followed by optional ellipsis",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "No row formatter.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/directed-features-compartment-element/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "Definition-Body-Item",
+        "FeatureDirection",
+        "el-prefix"
+      ],
+      "source_issues": [
+        "el-prefix is mandatory here unlike optional parts-row prefix.",
+        "Definition-Body-Item is printed; textual syntax defines DefinitionBodyItem. Do not silently equate."
+      ],
+      "alternatives": [
+        {
+          "id": "directed-feature-row",
+          "geometry": "textual row of el-prefix, FeatureDirection and zero or more body items",
+          "line_style": "solid",
+          "labels": "in/out/inout imported direction",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Defer exact row formatting pending source ambiguity.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/directed-features-compartment/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "directed-features-compartment-contents"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "named-directed-features-compartment",
+          "geometry": "horizontal separator; italic directed features title; contents",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Directed-features compartment asset absent.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/general-view/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "interconnection-view"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "interconnection-general-view",
+          "geometry": "partial production makes interconnection-view a general-view alternative",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "No standalone view implementation.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/interconnection-compartment/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "interconnection-view"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "named-interconnection-compartment",
+          "geometry": "horizontal separator with italic interconnection title and graphical contents",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Compartment asset absent.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/interconnection-element/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        240
+      ],
+      "printed_pages": [
+        208
+      ],
+      "dependencies": [
+        "part",
+        "part-ref"
+      ],
+      "source_issues": [
+        "Source prints = followed by spaced |; preserve operator and flag."
+      ],
+      "alternatives": [
+        {
+          "id": "part-in-interconnection",
+          "geometry": "part or part-ref as interconnection element",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "No complete renderer for this imported grammar; explicitly deferred.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/interconnection-view/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "dependencies-and-annotations-element",
+        "ellipsis-at-lower-left-corner",
+        "interconnection-element"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "interconnection-elements",
+          "geometry": "zero or more interconnection elements and dependencies/annotations with optional lower-left ellipsis",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "No complete composition engine; selected primitives only.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/part-def-name-compartment/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        241
+      ],
+      "printed_pages": [
+        209
+      ],
+      "dependencies": [
+        "DefinitionPrefix",
+        "definition-name-with-alias"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "definition-name",
+          "geometry": "keyword line followed by definition declaration and optional alias",
+          "line_style": "solid",
+          "labels": "DefinitionPrefix plus part def; definition-name-with-alias",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-definition"
+          ],
+          "deferred_reason": "Only empty-prefix, no-alias name example represented.",
+          "dependencies": [],
+          "representation_scope": "Only the minimal geometry and example label described here; each asset retains its own limitations."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/part-def/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        240,
+        241
+      ],
+      "printed_pages": [
+        208,
+        209
+      ],
+      "dependencies": [
+        "compartment-stack",
+        "interconnection-view",
+        "part-def-name-compartment",
+        "port-b",
+        "port-l",
+        "port-r",
+        "port-t"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "definition-envelope",
+          "geometry": "sharp rectangle with top/bottom/left/right repeated boundary ports, name region, interconnection view and compartment stack",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-definition-parts"
+          ],
+          "deferred_reason": "Only the named parts compartment is supplied; arbitrary compartment stacks, boundary ports and interconnection contents remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/part-name-compartment/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        241
+      ],
+      "printed_pages": [
+        209
+      ],
+      "dependencies": [
+        "OccurrenceUsagePrefix",
+        "usage-name-with-alias"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "usage-name",
+          "geometry": "prefix+part keyword line and name/type declaration with optional alias",
+          "line_style": "solid",
+          "labels": "OccurrenceUsagePrefix and usage-name-with-alias",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-usage",
+            "part-reference"
+          ],
+          "deferred_reason": "Only basic composite/ref labels; other prefixes/aliases deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the minimal geometry and example label described here; each asset retains its own limitations."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/part-ref/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        241
+      ],
+      "printed_pages": [
+        209
+      ],
+      "dependencies": [
+        "compartment-stack",
+        "interconnection-view",
+        "part-name-compartment",
+        "port-b",
+        "port-l",
+        "port-r",
+        "port-t"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "referential-part-envelope",
+          "geometry": "dashed rounded rectangle with repeated ports on four sides, name, interconnection view and compartments",
+          "line_style": "dashed",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-reference"
+          ],
+          "deferred_reason": "Only the minimal referential envelope is supplied; internal views and compartments remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/part/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        241
+      ],
+      "printed_pages": [
+        209
+      ],
+      "dependencies": [
+        "compartment-stack",
+        "interconnection-view",
+        "part-name-compartment",
+        "port-b",
+        "port-l",
+        "port-r",
+        "port-t"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "composite-part-envelope",
+          "geometry": "solid rounded rectangle with four-side repeated ports, name region, interconnection view and compartment stack",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-usage-parts"
+          ],
+          "deferred_reason": "Only a two-row parts compartment is supplied; other compartments, nesting and boundary composition remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/parts-compartment-contents/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "parts-compartment-element"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "parts-rows",
+          "geometry": "zero or more rows followed by optional ellipsis",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-definition-parts",
+            "part-usage-parts"
+          ],
+          "deferred_reason": "Two literal rows and an elision marker only; arbitrary member selection, row counts, prefix/alias/value formatting and semantic checks remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/parts-compartment-element/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "OccurrenceUsagePrefix",
+        "el-prefix",
+        "usage-cp"
+      ],
+      "source_issues": [
+        "Imported usage-cp prints usageDeclaration, whereas the textual grammar declares UsageDeclaration; no silent normalization."
+      ],
+      "alternatives": [
+        {
+          "id": "parts-row",
+          "geometry": "optional el-prefix (^ or /; slash meaning not established by this review) then occurrence usage prefix and declaration/value",
+          "line_style": "solid",
+          "labels": "caret or slash optional; imported prefixes/declaration/value",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-definition-parts",
+            "part-usage-parts"
+          ],
+          "deferred_reason": "Two literal rows and an elision marker only; arbitrary member selection, row counts, prefix/alias/value formatting and semantic checks remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/parts-compartment/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "parts-compartment-contents"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "named-parts-compartment",
+          "geometry": "horizontal separator with italic parts title, then contents",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "part-definition-parts",
+            "part-usage-parts"
+          ],
+          "deferred_reason": "Two literal rows and an elision marker only; arbitrary member selection, row counts, prefix/alias/value formatting and semantic checks remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.11/usage-node/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        241
+      ],
+      "printed_pages": [
+        209
+      ],
+      "dependencies": [
+        "part"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "part-usage-alternative",
+          "geometry": "partial production contributes part",
+          "line_style": "solid",
+          "labels": "Labels and member selection follow the imported productions; generalized formatting is deferred.",
+          "context": "Minimal example only",
+          "represented_by": [
+            "part-usage"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the minimal geometry and example label described here; each asset retains its own limitations."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/compartment/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        243
+      ],
+      "printed_pages": [
+        211
+      ],
+      "dependencies": [
+        "8.2.3.12/ports-compartment/1"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "ports-compartment-extension",
+          "geometry": "Adds ports-compartment to compartment",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Inherited from ports-compartment",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition-ports",
+            "port-usage-ports"
+          ],
+          "deferred_reason": "Two literal example rows only; empty/arbitrary-length lists, formatted declarations, nesting and model semantics remain deferred.",
+          "dependencies": [
+            "8.2.3.12/ports-compartment/1"
+          ],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/definition-node/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "8.2.3.12/port-def/1"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "port-definition-node-extension",
+          "geometry": "Adds port-def to definition-node",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Inherited from port-def",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition"
+          ],
+          "deferred_reason": null,
+          "dependencies": [
+            "8.2.3.12/port-def/1"
+          ],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/interconnection-element/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        243
+      ],
+      "printed_pages": [
+        211
+      ],
+      "dependencies": [
+        "port",
+        "port-def"
+      ],
+      "source_issues": [
+        "Source uses port rather than declared port-usage; resolution not assumed."
+      ],
+      "alternatives": [
+        {
+          "id": "port-interconnection-extension",
+          "geometry": "Adds port-def and source-spelled port to interconnection-element",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Dependent node labels",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Preserve source-spelled port; no silent substitution with port-usage.",
+          "dependencies": [
+            "port-def",
+            "port"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/pdh/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        243
+      ],
+      "printed_pages": [
+        211
+      ],
+      "dependencies": [],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "horizontal-bidirectional",
+          "geometry": "Horizontal double-headed open arrow",
+          "line_style": "Solid open arrowhead strokes.",
+          "labels": "No text",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-horizontal-both"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features."
+        },
+        {
+          "id": "horizontal-rightward",
+          "geometry": "Horizontal right-pointing open arrow",
+          "line_style": "Solid open arrowhead strokes.",
+          "labels": "No text",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-right"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features."
+        },
+        {
+          "id": "horizontal-leftward",
+          "geometry": "Horizontal left-pointing open arrow",
+          "line_style": "Solid open arrowhead strokes.",
+          "labels": "No text",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-left"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/pdv/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        243
+      ],
+      "printed_pages": [
+        211
+      ],
+      "dependencies": [],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "vertical-bidirectional",
+          "geometry": "Vertical double-headed open arrow",
+          "line_style": "Solid open arrowhead strokes.",
+          "labels": "No text",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-vertical-both"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features."
+        },
+        {
+          "id": "vertical-upward",
+          "geometry": "Vertical up-pointing open arrow",
+          "line_style": "Solid open arrowhead strokes.",
+          "labels": "No text",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-up"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features."
+        },
+        {
+          "id": "vertical-downward",
+          "geometry": "Vertical down-pointing open arrow",
+          "line_style": "Solid open arrowhead strokes.",
+          "labels": "No text",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-down"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/port-b/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        245
+      ],
+      "printed_pages": [
+        213
+      ],
+      "dependencies": [
+        "pdv",
+        "port-b",
+        "port-label",
+        "proxy-h"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "boundary-b-solid",
+          "geometry": "Small rounded glyph straddling host boundary with pdv",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "outside lower-right; nested form horizontal label inside, nested ports on bottom",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-up",
+            "port-arrow-down",
+            "port-arrow-vertical-both"
+          ],
+          "deferred_reason": "Glyphs are supplied; complete side-specific host boundary, label placement and model-context validation remain host responsibilities. The original four-side composition illustrates placement separately.",
+          "dependencies": [
+            "pdv",
+            "port-label"
+          ],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "boundary-b-reference",
+          "geometry": "Dotted/dashed rounded glyph straddling host boundary with pdv",
+          "line_style": "Broken outline (source note calls this dotted); host boundary and direction indication remain solid.",
+          "labels": "outside lower-right; nested form horizontal label inside, nested ports on bottom",
+          "context": "Only nested ports; source note PDF 246",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "pdv",
+            "port-label"
+          ]
+        },
+        {
+          "id": "boundary-b-nested",
+          "geometry": "Elongated rounded glyph straddling host boundary; repeated nested ports on same side; pdv",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "outside lower-right; nested form horizontal label inside, nested ports on bottom",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "pdv",
+            "port-label",
+            "port-b"
+          ]
+        },
+        {
+          "id": "boundary-b-proxy",
+          "geometry": "Delegates to proxy-h",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Side-dependent proxy label",
+          "context": "Only on part usage within interconnection view",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "proxy-h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/port-def-name-compartment/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "DefinitionPrefix",
+        "definition-name-with-alias"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "minimal-definition-name",
+          "geometry": "Header in sharp-corner host",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "«port def» and editable definition name",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "prefixed-aliased-definition-name",
+          "geometry": "Same header area",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "DefinitionPrefix and definition-name-with-alias",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "DefinitionPrefix",
+            "definition-name-with-alias"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/port-def/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "port-b",
+        "port-l",
+        "port-r",
+        "port-t"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "minimal-port-definition",
+          "geometry": "Sharp-corner rectangular node",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Port definition keyword and name",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "port-definition-with-compartments",
+          "geometry": "Sharp-corner rectangle with compartment stack",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Definition header plus compartment headings",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition-ports"
+          ],
+          "deferred_reason": "Only a two-row ports compartment is supplied; generalized compartments and nested boundary layout remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "port-definition-with-boundary-ports",
+          "geometry": "Sharp-corner host with zero or more ports on all four sides",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Side-specific boundary port labels",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "port-l",
+            "port-r",
+            "port-t",
+            "port-b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/port-l/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        243,
+        244
+      ],
+      "printed_pages": [
+        211,
+        212
+      ],
+      "dependencies": [
+        "pdh",
+        "port-l",
+        "port-label",
+        "proxy-v"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "boundary-l-solid",
+          "geometry": "Small rounded glyph straddling host boundary with pdh",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "outside upper-left; nested form vertical label inside, nested ports on left",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-left",
+            "port-arrow-right",
+            "port-arrow-horizontal-both"
+          ],
+          "deferred_reason": "Glyphs are supplied; complete side-specific host boundary, label placement and model-context validation remain host responsibilities. The original four-side composition illustrates placement separately.",
+          "dependencies": [
+            "pdh",
+            "port-label"
+          ],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "boundary-l-reference",
+          "geometry": "Dotted/dashed rounded glyph straddling host boundary with pdh",
+          "line_style": "Broken outline (source note calls this dotted); host boundary and direction indication remain solid.",
+          "labels": "outside upper-left; nested form vertical label inside, nested ports on left",
+          "context": "Only nested ports; source note PDF 246",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "pdh",
+            "port-label"
+          ]
+        },
+        {
+          "id": "boundary-l-nested",
+          "geometry": "Elongated rounded glyph straddling host boundary; repeated nested ports on same side; pdh",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "outside upper-left; nested form vertical label inside, nested ports on left",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "pdh",
+            "port-label",
+            "port-l"
+          ]
+        },
+        {
+          "id": "boundary-l-proxy",
+          "geometry": "Delegates to proxy-v",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Side-dependent proxy label",
+          "context": "Only on part usage within interconnection view",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "proxy-v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/port-label/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        246
+      ],
+      "printed_pages": [
+        214
+      ],
+      "dependencies": [],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "boundary-qualified-name",
+          "geometry": "External or internal label according to side production",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "QualifiedName",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": []
+        },
+        {
+          "id": "boundary-qualified-name-and-type",
+          "geometry": "External or internal label according to side production",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "QualifiedName : QualifiedName",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/port-name-compartment/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        243
+      ],
+      "printed_pages": [
+        211
+      ],
+      "dependencies": [
+        "OccurrenceUsagePrefix",
+        "usage-name-with-alias"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "minimal-usage-header",
+          "geometry": "Rounded host header",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "«port» and name/type",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-usage"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the minimal geometry and example label described here; each asset retains its own limitations."
+        },
+        {
+          "id": "prefixed-aliased-usage-header",
+          "geometry": "Rounded host header",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "OccurrenceUsagePrefix and usage-name-with-alias",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "OccurrenceUsagePrefix",
+            "usage-name-with-alias"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/port-r/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        244,
+        245
+      ],
+      "printed_pages": [
+        212,
+        213
+      ],
+      "dependencies": [
+        "pdh",
+        "port-label",
+        "port-r",
+        "proxy-v"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "boundary-r-solid",
+          "geometry": "Small rounded glyph straddling host boundary with pdh",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "outside upper-right; nested form vertical label inside, nested ports on right",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-left",
+            "port-arrow-right",
+            "port-arrow-horizontal-both"
+          ],
+          "deferred_reason": "Glyphs are supplied; complete side-specific host boundary, label placement and model-context validation remain host responsibilities. The original four-side composition illustrates placement separately.",
+          "dependencies": [
+            "pdh",
+            "port-label"
+          ],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "boundary-r-reference",
+          "geometry": "Dotted/dashed rounded glyph straddling host boundary with pdh",
+          "line_style": "Broken outline (source note calls this dotted); host boundary and direction indication remain solid.",
+          "labels": "outside upper-right; nested form vertical label inside, nested ports on right",
+          "context": "Only nested ports; source note PDF 246",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "pdh",
+            "port-label"
+          ]
+        },
+        {
+          "id": "boundary-r-nested",
+          "geometry": "Elongated rounded glyph straddling host boundary; repeated nested ports on same side; pdh",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "outside upper-right; nested form vertical label inside, nested ports on right",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "pdh",
+            "port-label",
+            "port-r"
+          ]
+        },
+        {
+          "id": "boundary-r-proxy",
+          "geometry": "Delegates to proxy-v",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Side-dependent proxy label",
+          "context": "Only on part usage within interconnection view",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "proxy-v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/port-t/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        245
+      ],
+      "printed_pages": [
+        213
+      ],
+      "dependencies": [
+        "pdv",
+        "port-label",
+        "port-t",
+        "proxy-h"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "boundary-t-solid",
+          "geometry": "Small rounded glyph straddling host boundary with pdv",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "outside upper-left; nested form horizontal label inside, nested ports on top",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-arrow-up",
+            "port-arrow-down",
+            "port-arrow-vertical-both"
+          ],
+          "deferred_reason": "Glyphs are supplied; complete side-specific host boundary, label placement and model-context validation remain host responsibilities. The original four-side composition illustrates placement separately.",
+          "dependencies": [
+            "pdv",
+            "port-label"
+          ],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "boundary-t-reference",
+          "geometry": "Dotted/dashed rounded glyph straddling host boundary with pdv",
+          "line_style": "Broken outline (source note calls this dotted); host boundary and direction indication remain solid.",
+          "labels": "outside upper-left; nested form horizontal label inside, nested ports on top",
+          "context": "Only nested ports; source note PDF 246",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "pdv",
+            "port-label"
+          ]
+        },
+        {
+          "id": "boundary-t-nested",
+          "geometry": "Elongated rounded glyph straddling host boundary; repeated nested ports on same side; pdv",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "outside upper-left; nested form horizontal label inside, nested ports on top",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "pdv",
+            "port-label",
+            "port-t"
+          ]
+        },
+        {
+          "id": "boundary-t-proxy",
+          "geometry": "Delegates to proxy-h",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Side-dependent proxy label",
+          "context": "Only on part usage within interconnection view",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "proxy-h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/port-usage/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242,
+        243
+      ],
+      "printed_pages": [
+        210,
+        211
+      ],
+      "dependencies": [
+        "port-b",
+        "port-l",
+        "port-r",
+        "port-t"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "minimal-full-port-usage",
+          "geometry": "Rounded rectangular node",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "«port» and editable name/type",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-usage"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the minimal geometry and example label described here; each asset retains its own limitations."
+        },
+        {
+          "id": "full-port-with-compartments",
+          "geometry": "Rounded host and compartment stack",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Header and compartment labels",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-usage-ports"
+          ],
+          "deferred_reason": "Only a two-row ports compartment is supplied; generalized compartments and nested boundary layout remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "full-port-with-nested-ports",
+          "geometry": "Rounded host with repeated ports on any side",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Side-specific labels",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "port-l",
+            "port-r",
+            "port-t",
+            "port-b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/ports-compartment-contents/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        243
+      ],
+      "printed_pages": [
+        211
+      ],
+      "dependencies": [],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "ports-list-empty-or-repeated",
+          "geometry": "Zero or more rows",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "ports-compartment-element repeated",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition-ports",
+            "port-usage-ports"
+          ],
+          "deferred_reason": "Two literal example rows only; empty/arbitrary-length lists, formatted declarations, nesting and model semantics remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        },
+        {
+          "id": "ports-list-ellipsis",
+          "geometry": "List with optional trailing ellipsis",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "…",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition-ports",
+            "port-usage-ports"
+          ],
+          "deferred_reason": null,
+          "dependencies": [],
+          "representation_scope": "Only the literal trailing elision marker in the selected ports compartment."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/ports-compartment-element/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        243
+      ],
+      "printed_pages": [
+        211
+      ],
+      "dependencies": [
+        "OccurrenceUsagePrefix",
+        "el-prefix",
+        "usage-cp"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "ports-list-entry",
+          "geometry": "Text row",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Optional el-prefix, OccurrenceUsagePrefix, usage-cp",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition-ports",
+            "port-usage-ports"
+          ],
+          "deferred_reason": "Two literal example rows only; empty/arbitrary-length lists, formatted declarations, nesting and model semantics remain deferred.",
+          "dependencies": [
+            "el-prefix",
+            "OccurrenceUsagePrefix",
+            "usage-cp"
+          ],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/ports-compartment/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        243
+      ],
+      "printed_pages": [
+        211
+      ],
+      "dependencies": [],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "ports-compartment",
+          "geometry": "Compartment divider and contents region",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Italic ports heading and list contents",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-definition-ports",
+            "port-usage-ports"
+          ],
+          "deferred_reason": "Two literal example rows only; empty/arbitrary-length lists, formatted declarations, nesting and model semantics remain deferred.",
+          "dependencies": [],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/proxy-h/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        246
+      ],
+      "printed_pages": [
+        214
+      ],
+      "dependencies": [
+        "8.2.3.9/proxy-label/1"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "horizontal-proxy-label-right",
+          "geometry": "Filled dot crossed by horizontal host boundary",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "proxy-label to right",
+          "context": "Only on a part usage within an interconnection view",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "8.2.3.9/proxy-label/1"
+          ]
+        },
+        {
+          "id": "horizontal-proxy-label-left",
+          "geometry": "Filled dot crossed by horizontal host boundary",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "proxy-label to left",
+          "context": "Only on a part usage within an interconnection view",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "8.2.3.9/proxy-label/1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/proxy-v/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        246
+      ],
+      "printed_pages": [
+        214
+      ],
+      "dependencies": [
+        "8.2.3.9/proxy-label/1"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "vertical-proxy-label-right",
+          "geometry": "Filled dot crossed by vertical host boundary",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "proxy-label to right",
+          "context": "Only on a part usage within an interconnection view",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "8.2.3.9/proxy-label/1"
+          ]
+        },
+        {
+          "id": "vertical-proxy-label-left",
+          "geometry": "Filled dot crossed by vertical host boundary",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "proxy-label to left",
+          "context": "Only on a part usage within an interconnection view",
+          "represented_by": [],
+          "deferred_reason": "Requires layout, label parsing or context handling not provided by existing components.",
+          "dependencies": [
+            "8.2.3.9/proxy-label/1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8.2.3.12/usage-node/1",
+      "review_status": "LocalAlternativesAudited",
+      "source_pages": [
+        242
+      ],
+      "printed_pages": [
+        210
+      ],
+      "dependencies": [
+        "8.2.3.12/port-usage/1"
+      ],
+      "source_issues": [],
+      "alternatives": [
+        {
+          "id": "port-usage-node-extension",
+          "geometry": "Adds port-usage to usage-node",
+          "line_style": "Solid unless stated otherwise",
+          "labels": "Inherited from port-usage",
+          "context": "Within the containing part/port production and its declared modeling context; no model validity is inferred.",
+          "represented_by": [
+            "port-usage"
+          ],
+          "deferred_reason": null,
+          "dependencies": [
+            "8.2.3.12/port-usage/1"
+          ],
+          "representation_scope": "Only the named component geometry and shown example text; no model or generalized grammar validation."
+        }
+      ]
+    }
+  ]
+}

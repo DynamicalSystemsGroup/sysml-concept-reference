@@ -286,7 +286,7 @@
           "id": "port-node-boundary",
           "title": "Full node and boundary port",
           "context": "Structural and interconnection views",
-          "description": "The full node is rounded and labeled port; the compact form is a small rounded boundary glyph with an adjacent name/type label. Direction arrows are optional productions and omitted in this illustration.",
+          "description": "The full node is rounded and labeled port. The compact outline in this older illustration is a geometry primitive only: displayed boundary alternatives include horizontal or vertical direction indicators, plus side-specific labels. Their selection and layout are separate renderer responsibilities.",
           "asset": "port-usage.svg",
           "evidence": [
             {
@@ -300,6 +300,12 @@
               "locator": "§8.2.3.12 Ports",
               "pdf_page": 243,
               "printed_page": 211
+            },
+            {
+              "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244",
+              "locator": "§8.2.3.12 boundary-port alternatives",
+              "pdf_page": 244,
+              "printed_page": 212
             }
           ]
         },

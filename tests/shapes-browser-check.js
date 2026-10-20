@@ -3,8 +3,8 @@ async page => {
   const errors=[];page.on('pageerror',error=>errors.push(error.message));
   const assert=(condition,message)=>{if(!condition)throw new Error(message)};
   await page.goto(base+'/docs/svg-shapes.html');
-  assert(await page.locator('.shape-card').count()===9,'Expected nine cards');
-  await page.locator('#shape-search').fill('boundary');
+  assert(await page.locator('.shape-card').count()===20,'Expected twenty cards');
+  await page.locator('#shape-search').fill('outline primitive');
   assert(await page.locator('.shape-card:visible').count()===1,'Search did not filter to glyph');
   await page.locator('#shape-search').fill('');
   await page.locator('#shape-family').selectOption('Connections');
@@ -56,11 +56,11 @@ async page => {
   const staticContext=await page.context().browser().newContext({javaScriptEnabled:false});
   try{
     const staticPage=await staticContext.newPage();await staticPage.goto(base+'/docs/svg-shapes.html');
-    assert(await staticPage.locator('.shape-card').count()===9,'Static cards missing');
-    assert(await staticPage.getByRole('link',{name:'Download SVG',exact:true}).count()===9,'Static downloads missing');
+    assert(await staticPage.locator('.shape-card').count()===20,'Static cards missing');
+    assert(await staticPage.getByRole('link',{name:'Download SVG',exact:true}).count()===20,'Static downloads missing');
     assert(await staticPage.locator('.shape-filters').isHidden(),'Inactive static filters visible');
     assert(await staticPage.locator('[data-copy]:visible').count()===0,'Inactive static copy buttons visible');
   }finally{await staticContext.close()}
   assert(errors.length===0,errors.join('\n'));
-  return {galleryCards:9,connectionFilter:4,copyHandler:'passed',composition:'passed',safeLabels:'passed',theme:'passed',cloneIds:'passed',invalidOptions:'passed'};
+  return {galleryCards:20,connectionFilter:4,copyHandler:'passed',composition:'passed',safeLabels:'passed',theme:'passed',cloneIds:'passed',invalidOptions:'passed'};
 }

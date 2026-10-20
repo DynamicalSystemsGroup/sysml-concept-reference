@@ -5,17 +5,21 @@ SELECT ?section ?family (COUNT(DISTINCT ?production) AS ?indexedProductions)
        (COUNT(DISTINCT ?cell) AS ?indexedCells)
        (COUNT(DISTINCT ?mappedProduction) AS ?mappedProductions)
        (COUNT(DISTINCT ?mappedCell) AS ?mappedCells)
+       (COUNT(DISTINCT ?auditedProduction) AS ?auditedProductions)
+       (COUNT(DISTINCT ?auditedCell) AS ?auditedCells)
 WHERE {
   ?section a inv:NotationSection ; rdfs:label ?family .
   OPTIONAL {
     {
       ?production a inv:GraphicalProductionOccurrence ; inv:inNotationSection ?section .
+      OPTIONAL { ?audit inv:auditsUnit ?production ; inv:reviewStatus inv:LocalAlternativesAudited . BIND(?production AS ?auditedProduction) }
       OPTIONAL {
         ?notation a inv:Notation ; inv:supportingProduction ?production .
         BIND(?production AS ?mappedProduction)
       }
     } UNION {
       ?cell a inv:NotationSourceCell ; inv:inNotationSection ?section .
+      OPTIONAL { ?audit2 inv:auditsUnit ?cell ; inv:reviewStatus inv:LocalAlternativesAudited . BIND(?cell AS ?auditedCell) }
       OPTIONAL {
         ?notation2 a inv:Notation ; inv:supportingSourceCell ?cell .
         BIND(?cell AS ?mappedCell)

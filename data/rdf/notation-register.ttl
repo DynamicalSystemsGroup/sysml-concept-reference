@@ -7060,6 +7060,1731 @@
     inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
     inv:spacedBarAfterEquals "false"^^xsd:boolean .
 
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/compartment/1/directed-features-choice>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "directed-features-choice" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "No complete renderer for this imported grammar; explicitly deferred." ;
+    inv:geometry "directed features compartment" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/compartment/1/interconnection-choice>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "interconnection-choice" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "No complete renderer for this imported grammar; explicitly deferred." ;
+    inv:geometry "interconnection compartment" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/compartment/1/parts-compartment-choice>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "parts-compartment-choice" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Two literal rows and an elision marker only; arbitrary member selection, row counts, prefix/alias/value formatting and semantic checks remain deferred." ;
+    inv:geometry "one of three contributed compartment alternatives" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition-parts>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-usage-parts> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/definition-node/1/part-definition-alternative>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "part-definition-alternative" ;
+    inv:condition "Only minimal silhouette represented" ;
+    inv:geometry "partial production contributes part-def" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the minimal geometry and example label described here; each asset retains its own limitations." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/directed-features-compartment-contents/1/directed-feature-rows>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "directed-feature-rows" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "No row formatter." ;
+    inv:geometry "zero or more directed rows followed by optional ellipsis" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/directed-features-compartment-element/1/directed-feature-row>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "directed-feature-row" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Defer exact row formatting pending source ambiguity." ;
+    inv:geometry "textual row of el-prefix, FeatureDirection and zero or more body items" ;
+    inv:labelRule "in/out/inout imported direction" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/directed-features-compartment/1/named-directed-features-compartment>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "named-directed-features-compartment" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Directed-features compartment asset absent." ;
+    inv:geometry "horizontal separator; italic directed features title; contents" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/general-view/1/interconnection-general-view>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "interconnection-general-view" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "No standalone view implementation." ;
+    inv:geometry "partial production makes interconnection-view a general-view alternative" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/interconnection-compartment/1/named-interconnection-compartment>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "named-interconnection-compartment" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Compartment asset absent." ;
+    inv:geometry "horizontal separator with italic interconnection title and graphical contents" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/interconnection-element/1/part-in-interconnection>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "part-in-interconnection" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "No complete renderer for this imported grammar; explicitly deferred." ;
+    inv:geometry "part or part-ref as interconnection element" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/interconnection-view/1/interconnection-elements>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "interconnection-elements" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "No complete composition engine; selected primitives only." ;
+    inv:geometry "zero or more interconnection elements and dependencies/annotations with optional lower-left ellipsis" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/part-def-name-compartment/1/definition-name>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "definition-name" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Only empty-prefix, no-alias name example represented." ;
+    inv:geometry "keyword line followed by definition declaration and optional alias" ;
+    inv:labelRule "DefinitionPrefix plus part def; definition-name-with-alias" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the minimal geometry and example label described here; each asset retains its own limitations." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/part-def/1/definition-envelope>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "definition-envelope" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Only the named parts compartment is supplied; arbitrary compartment stacks, boundary ports and interconnection contents remain deferred." ;
+    inv:geometry "sharp rectangle with top/bottom/left/right repeated boundary ports, name region, interconnection view and compartment stack" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition-parts> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/part-name-compartment/1/usage-name>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "usage-name" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Only basic composite/ref labels; other prefixes/aliases deferred." ;
+    inv:geometry "prefix+part keyword line and name/type declaration with optional alias" ;
+    inv:labelRule "OccurrenceUsagePrefix and usage-name-with-alias" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the minimal geometry and example label described here; each asset retains its own limitations." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-reference>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-usage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/part-ref/1/referential-part-envelope>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "referential-part-envelope" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Only the minimal referential envelope is supplied; internal views and compartments remain deferred." ;
+    inv:geometry "dashed rounded rectangle with repeated ports on four sides, name, interconnection view and compartments" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "dashed" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-reference> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/part/1/composite-part-envelope>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "composite-part-envelope" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Only a two-row parts compartment is supplied; other compartments, nesting and boundary composition remain deferred." ;
+    inv:geometry "solid rounded rectangle with four-side repeated ports, name region, interconnection view and compartment stack" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-usage-parts> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/parts-compartment-contents/1/parts-rows>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "parts-rows" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Two literal rows and an elision marker only; arbitrary member selection, row counts, prefix/alias/value formatting and semantic checks remain deferred." ;
+    inv:geometry "zero or more rows followed by optional ellipsis" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition-parts>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-usage-parts> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/parts-compartment-element/1/parts-row>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "parts-row" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Two literal rows and an elision marker only; arbitrary member selection, row counts, prefix/alias/value formatting and semantic checks remain deferred." ;
+    inv:geometry "optional el-prefix (^ or /; slash meaning not established by this review) then occurrence usage prefix and declaration/value" ;
+    inv:labelRule "caret or slash optional; imported prefixes/declaration/value" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition-parts>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-usage-parts> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/parts-compartment/1/named-parts-compartment>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "named-parts-compartment" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Two literal rows and an elision marker only; arbitrary member selection, row counts, prefix/alias/value formatting and semantic checks remain deferred." ;
+    inv:geometry "horizontal separator with italic parts title, then contents" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition-parts>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-usage-parts> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/usage-node/1/part-usage-alternative>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "part-usage-alternative" ;
+    inv:condition "Minimal example only" ;
+    inv:geometry "partial production contributes part" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the minimal geometry and example label described here; each asset retains its own limitations." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-usage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/compartment/1/ports-compartment-extension>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-compartment-extension" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Two literal example rows only; empty/arbitrary-length lists, formatted declarations, nesting and model semantics remain deferred." ;
+    inv:dependencyNote "8.2.3.12/ports-compartment/1" ;
+    inv:geometry "Adds ports-compartment to compartment" ;
+    inv:labelRule "Inherited from ports-compartment" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition-ports>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage-ports> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/definition-node/1/port-definition-node-extension>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "port-definition-node-extension" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:dependencyNote "8.2.3.12/port-def/1" ;
+    inv:geometry "Adds port-def to definition-node" ;
+    inv:labelRule "Inherited from port-def" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/interconnection-element/1/port-interconnection-extension>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "port-interconnection-extension" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Preserve source-spelled port; no silent substitution with port-usage." ;
+    inv:dependencyNote "port", "port-def" ;
+    inv:geometry "Adds port-def and source-spelled port to interconnection-element" ;
+    inv:labelRule "Dependent node labels" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdh/1/horizontal-bidirectional>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "horizontal-bidirectional" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Horizontal double-headed open arrow" ;
+    inv:labelRule "No text" ;
+    inv:lineStyle "Solid open arrowhead strokes." ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-horizontal-both> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdh/1/horizontal-leftward>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "horizontal-leftward" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Horizontal left-pointing open arrow" ;
+    inv:labelRule "No text" ;
+    inv:lineStyle "Solid open arrowhead strokes." ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-left> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdh/1/horizontal-rightward>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "horizontal-rightward" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Horizontal right-pointing open arrow" ;
+    inv:labelRule "No text" ;
+    inv:lineStyle "Solid open arrowhead strokes." ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-right> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdv/1/vertical-bidirectional>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "vertical-bidirectional" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Vertical double-headed open arrow" ;
+    inv:labelRule "No text" ;
+    inv:lineStyle "Solid open arrowhead strokes." ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-vertical-both> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdv/1/vertical-downward>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "vertical-downward" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Vertical down-pointing open arrow" ;
+    inv:labelRule "No text" ;
+    inv:lineStyle "Solid open arrowhead strokes." ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-down> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdv/1/vertical-upward>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "vertical-upward" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Vertical up-pointing open arrow" ;
+    inv:labelRule "No text" ;
+    inv:lineStyle "Solid open arrowhead strokes." ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Direction indicator geometry embedded in a boundary glyph; no direction is inferred from model features." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-up> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-b/1/boundary-b-nested>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-b-nested" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "pdv", "port-b", "port-label" ;
+    inv:geometry "Elongated rounded glyph straddling host boundary; repeated nested ports on same side; pdv" ;
+    inv:labelRule "outside lower-right; nested form horizontal label inside, nested ports on bottom" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-b/1/boundary-b-proxy>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-b-proxy" ;
+    inv:condition "Only on part usage within interconnection view" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "proxy-h" ;
+    inv:geometry "Delegates to proxy-h" ;
+    inv:labelRule "Side-dependent proxy label" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-b/1/boundary-b-reference>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-b-reference" ;
+    inv:condition "Only nested ports; source note PDF 246" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "pdv", "port-label" ;
+    inv:geometry "Dotted/dashed rounded glyph straddling host boundary with pdv" ;
+    inv:labelRule "outside lower-right; nested form horizontal label inside, nested ports on bottom" ;
+    inv:lineStyle "Broken outline (source note calls this dotted); host boundary and direction indication remain solid." ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-b/1/boundary-b-solid>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-b-solid" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Glyphs are supplied; complete side-specific host boundary, label placement and model-context validation remain host responsibilities. The original four-side composition illustrates placement separately." ;
+    inv:dependencyNote "pdv", "port-label" ;
+    inv:geometry "Small rounded glyph straddling host boundary with pdv" ;
+    inv:labelRule "outside lower-right; nested form horizontal label inside, nested ports on bottom" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-down>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-up>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-vertical-both> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-def-name-compartment/1/minimal-definition-name>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "minimal-definition-name" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Header in sharp-corner host" ;
+    inv:labelRule "«port def» and editable definition name" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-def-name-compartment/1/prefixed-aliased-definition-name>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "prefixed-aliased-definition-name" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "DefinitionPrefix", "definition-name-with-alias" ;
+    inv:geometry "Same header area" ;
+    inv:labelRule "DefinitionPrefix and definition-name-with-alias" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-def/1/minimal-port-definition>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "minimal-port-definition" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Sharp-corner rectangular node" ;
+    inv:labelRule "Port definition keyword and name" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-def/1/port-definition-with-boundary-ports>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "port-definition-with-boundary-ports" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "port-b", "port-l", "port-r", "port-t" ;
+    inv:geometry "Sharp-corner host with zero or more ports on all four sides" ;
+    inv:labelRule "Side-specific boundary port labels" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-def/1/port-definition-with-compartments>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "port-definition-with-compartments" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Only a two-row ports compartment is supplied; generalized compartments and nested boundary layout remain deferred." ;
+    inv:geometry "Sharp-corner rectangle with compartment stack" ;
+    inv:labelRule "Definition header plus compartment headings" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition-ports> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-l/1/boundary-l-nested>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-l-nested" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "pdh", "port-l", "port-label" ;
+    inv:geometry "Elongated rounded glyph straddling host boundary; repeated nested ports on same side; pdh" ;
+    inv:labelRule "outside upper-left; nested form vertical label inside, nested ports on left" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-l/1/boundary-l-proxy>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-l-proxy" ;
+    inv:condition "Only on part usage within interconnection view" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "proxy-v" ;
+    inv:geometry "Delegates to proxy-v" ;
+    inv:labelRule "Side-dependent proxy label" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-l/1/boundary-l-reference>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-l-reference" ;
+    inv:condition "Only nested ports; source note PDF 246" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "pdh", "port-label" ;
+    inv:geometry "Dotted/dashed rounded glyph straddling host boundary with pdh" ;
+    inv:labelRule "outside upper-left; nested form vertical label inside, nested ports on left" ;
+    inv:lineStyle "Broken outline (source note calls this dotted); host boundary and direction indication remain solid." ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-l/1/boundary-l-solid>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-l-solid" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Glyphs are supplied; complete side-specific host boundary, label placement and model-context validation remain host responsibilities. The original four-side composition illustrates placement separately." ;
+    inv:dependencyNote "pdh", "port-label" ;
+    inv:geometry "Small rounded glyph straddling host boundary with pdh" ;
+    inv:labelRule "outside upper-left; nested form vertical label inside, nested ports on left" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-horizontal-both>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-left>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-right> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-label/1/boundary-qualified-name>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-qualified-name" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:geometry "External or internal label according to side production" ;
+    inv:labelRule "QualifiedName" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-label/1/boundary-qualified-name-and-type>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-qualified-name-and-type" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:geometry "External or internal label according to side production" ;
+    inv:labelRule "QualifiedName : QualifiedName" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-name-compartment/1/minimal-usage-header>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "minimal-usage-header" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Rounded host header" ;
+    inv:labelRule "«port» and name/type" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the minimal geometry and example label described here; each asset retains its own limitations." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-name-compartment/1/prefixed-aliased-usage-header>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "prefixed-aliased-usage-header" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "OccurrenceUsagePrefix", "usage-name-with-alias" ;
+    inv:geometry "Rounded host header" ;
+    inv:labelRule "OccurrenceUsagePrefix and usage-name-with-alias" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-r/1/boundary-r-nested>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-r-nested" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "pdh", "port-label", "port-r" ;
+    inv:geometry "Elongated rounded glyph straddling host boundary; repeated nested ports on same side; pdh" ;
+    inv:labelRule "outside upper-right; nested form vertical label inside, nested ports on right" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-r/1/boundary-r-proxy>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-r-proxy" ;
+    inv:condition "Only on part usage within interconnection view" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "proxy-v" ;
+    inv:geometry "Delegates to proxy-v" ;
+    inv:labelRule "Side-dependent proxy label" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-r/1/boundary-r-reference>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-r-reference" ;
+    inv:condition "Only nested ports; source note PDF 246" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "pdh", "port-label" ;
+    inv:geometry "Dotted/dashed rounded glyph straddling host boundary with pdh" ;
+    inv:labelRule "outside upper-right; nested form vertical label inside, nested ports on right" ;
+    inv:lineStyle "Broken outline (source note calls this dotted); host boundary and direction indication remain solid." ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-r/1/boundary-r-solid>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-r-solid" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Glyphs are supplied; complete side-specific host boundary, label placement and model-context validation remain host responsibilities. The original four-side composition illustrates placement separately." ;
+    inv:dependencyNote "pdh", "port-label" ;
+    inv:geometry "Small rounded glyph straddling host boundary with pdh" ;
+    inv:labelRule "outside upper-right; nested form vertical label inside, nested ports on right" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-horizontal-both>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-left>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-right> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-t/1/boundary-t-nested>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-t-nested" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "pdv", "port-label", "port-t" ;
+    inv:geometry "Elongated rounded glyph straddling host boundary; repeated nested ports on same side; pdv" ;
+    inv:labelRule "outside upper-left; nested form horizontal label inside, nested ports on top" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-t/1/boundary-t-proxy>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-t-proxy" ;
+    inv:condition "Only on part usage within interconnection view" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "proxy-h" ;
+    inv:geometry "Delegates to proxy-h" ;
+    inv:labelRule "Side-dependent proxy label" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-t/1/boundary-t-reference>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-t-reference" ;
+    inv:condition "Only nested ports; source note PDF 246" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "pdv", "port-label" ;
+    inv:geometry "Dotted/dashed rounded glyph straddling host boundary with pdv" ;
+    inv:labelRule "outside upper-left; nested form horizontal label inside, nested ports on top" ;
+    inv:lineStyle "Broken outline (source note calls this dotted); host boundary and direction indication remain solid." ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-t/1/boundary-t-solid>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "boundary-t-solid" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Glyphs are supplied; complete side-specific host boundary, label placement and model-context validation remain host responsibilities. The original four-side composition illustrates placement separately." ;
+    inv:dependencyNote "pdv", "port-label" ;
+    inv:geometry "Small rounded glyph straddling host boundary with pdv" ;
+    inv:labelRule "outside upper-left; nested form horizontal label inside, nested ports on top" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-down>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-up>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-vertical-both> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-usage/1/full-port-with-compartments>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "full-port-with-compartments" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Only a two-row ports compartment is supplied; generalized compartments and nested boundary layout remain deferred." ;
+    inv:geometry "Rounded host and compartment stack" ;
+    inv:labelRule "Header and compartment labels" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage-ports> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-usage/1/full-port-with-nested-ports>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "full-port-with-nested-ports" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "port-b", "port-l", "port-r", "port-t" ;
+    inv:geometry "Rounded host with repeated ports on any side" ;
+    inv:labelRule "Side-specific labels" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-usage/1/minimal-full-port-usage>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "minimal-full-port-usage" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Rounded rectangular node" ;
+    inv:labelRule "«port» and editable name/type" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the minimal geometry and example label described here; each asset retains its own limitations." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/ports-compartment-contents/1/ports-list-ellipsis>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-list-ellipsis" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "List with optional trailing ellipsis" ;
+    inv:labelRule "…" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the literal trailing elision marker in the selected ports compartment." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition-ports>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage-ports> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/ports-compartment-contents/1/ports-list-empty-or-repeated>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-list-empty-or-repeated" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Two literal example rows only; empty/arbitrary-length lists, formatted declarations, nesting and model semantics remain deferred." ;
+    inv:geometry "Zero or more rows" ;
+    inv:labelRule "ports-compartment-element repeated" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition-ports>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage-ports> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/ports-compartment-element/1/ports-list-entry>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-list-entry" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Two literal example rows only; empty/arbitrary-length lists, formatted declarations, nesting and model semantics remain deferred." ;
+    inv:dependencyNote "OccurrenceUsagePrefix", "el-prefix", "usage-cp" ;
+    inv:geometry "Text row" ;
+    inv:labelRule "Optional el-prefix, OccurrenceUsagePrefix, usage-cp" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition-ports>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage-ports> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/ports-compartment/1/ports-compartment>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-compartment" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Two literal example rows only; empty/arbitrary-length lists, formatted declarations, nesting and model semantics remain deferred." ;
+    inv:geometry "Compartment divider and contents region" ;
+    inv:labelRule "Italic ports heading and list contents" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition-ports>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage-ports> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/proxy-h/1/horizontal-proxy-label-left>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "horizontal-proxy-label-left" ;
+    inv:condition "Only on a part usage within an interconnection view" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "8.2.3.9/proxy-label/1" ;
+    inv:geometry "Filled dot crossed by horizontal host boundary" ;
+    inv:labelRule "proxy-label to left" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/proxy-h/1/horizontal-proxy-label-right>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "horizontal-proxy-label-right" ;
+    inv:condition "Only on a part usage within an interconnection view" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "8.2.3.9/proxy-label/1" ;
+    inv:geometry "Filled dot crossed by horizontal host boundary" ;
+    inv:labelRule "proxy-label to right" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/proxy-v/1/vertical-proxy-label-left>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "vertical-proxy-label-left" ;
+    inv:condition "Only on a part usage within an interconnection view" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "8.2.3.9/proxy-label/1" ;
+    inv:geometry "Filled dot crossed by vertical host boundary" ;
+    inv:labelRule "proxy-label to left" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/proxy-v/1/vertical-proxy-label-right>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "vertical-proxy-label-right" ;
+    inv:condition "Only on a part usage within an interconnection view" ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "8.2.3.9/proxy-label/1" ;
+    inv:geometry "Filled dot crossed by vertical host boundary" ;
+    inv:labelRule "proxy-label to right" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/usage-node/1/port-usage-node-extension>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "port-usage-node-extension" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:dependencyNote "8.2.3.12/port-usage/1" ;
+    inv:geometry "Adds port-usage to usage-node" ;
+    inv:labelRule "Inherited from port-usage" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-1/minimal-port-definition>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "minimal-port-definition" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Sharp-corner rectangular node" ;
+    inv:labelRule "Port definition keyword and name" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-1/port-definition-with-compartments>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "port-definition-with-compartments" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Only a two-row ports compartment is supplied; generalized compartments and nested boundary layout remain deferred." ;
+    inv:geometry "Sharp-corner rectangle with compartment stack" ;
+    inv:labelRule "Definition header plus compartment headings" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition-ports> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-2/full-port-with-compartments>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "full-port-with-compartments" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Only a two-row ports compartment is supplied; generalized compartments and nested boundary layout remain deferred." ;
+    inv:geometry "Rounded host and compartment stack" ;
+    inv:labelRule "Header and compartment labels" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage-ports> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-2/minimal-full-port-usage>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "minimal-full-port-usage" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Rounded rectangular node" ;
+    inv:labelRule "«port» and editable name/type" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the minimal geometry and example label described here; each asset retains its own limitations." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-cardinality>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-compartment-cardinality" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:geometry "Text list" ;
+    inv:labelRule "Multiplicity, ordered and nonunique" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-conjugation>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-compartment-conjugation" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "7.12.3" ;
+    inv:geometry "Text list" ;
+    inv:labelRule "Type prefixed with ~" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-elision>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-compartment-elision" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "Text list" ;
+    inv:labelRule "Trailing ellipsis" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the literal trailing elision marker in the selected ports compartment." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-definition-ports>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage-ports> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-name-only>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-compartment-name-only" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:geometry "Text list" ;
+    inv:labelRule "Untyped name" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-prefix>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-compartment-prefix" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:geometry "Text list" ;
+    inv:labelRule "Inherited member prefix ^" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-redefinition>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-compartment-redefinition" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:geometry "Text list" ;
+    inv:labelRule "redefines and :>> forms, including target-only :>> entry" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-reference>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-compartment-reference" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:geometry "Text list" ;
+    inv:labelRule "ref prefix" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-subsetting>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-compartment-subsetting" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:geometry "Text list" ;
+    inv:labelRule "subsets and :> forms" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-value>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ports-compartment-value" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:geometry "Text list" ;
+    inv:labelRule "Equals/value example" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-4/directed-attributes-in-out-inout>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "directed-attributes-in-out-inout" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "8.2.3.11/directed-features-compartment/1" ;
+    inv:geometry "Text compartment with horizontal divider" ;
+    inv:labelRule "Italic directed features heading and in/out/inout attribute rows" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-4/directed-items-in-out-inout>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "directed-items-in-out-inout" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Requires layout, label parsing or context handling not provided by existing components." ;
+    inv:dependencyNote "8.2.3.11/directed-features-compartment/1" ;
+    inv:geometry "Same compartment" ;
+    inv:labelRule "in/out/inout item rows and optional ellipsis" ;
+    inv:lineStyle "Solid unless stated otherwise" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-1/definition-with-compartments>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "definition-with-compartments" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Only the named parts compartment is supplied; arbitrary compartment stacks, boundary ports and interconnection contents remain deferred." ;
+    inv:geometry "sharp rectangle with horizontal separator, compartment stack and lower-left ellipsis" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition-parts> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-1/minimal-definition>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "minimal-definition" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "sharp rectangle" ;
+    inv:labelRule "part def keyword and definition name" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the minimal geometry and example label described here; each asset retains its own limitations." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-2/minimal-usage>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "minimal-usage" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "rounded rectangle" ;
+    inv:labelRule "part keyword and usage : definition" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the minimal geometry and example label described here; each asset retains its own limitations." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-usage> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-2/usage-with-compartments>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "usage-with-compartments" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Only a two-row parts compartment is supplied; other compartments, nesting and boundary composition remain deferred." ;
+    inv:geometry "rounded rectangle with horizontal separator and lower-left ellipsis" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-usage-parts> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-3/bidirectional-ports>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "bidirectional-ports" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Arrow-bearing child geometry only; elongated containing port, nested placement and direction-selection semantics remain deferred." ;
+    inv:geometry "elongated p0 and small p3 glyph contain opposed arrows" ;
+    inv:labelRule "Labels and member selection follow the imported productions; generalized formatting is deferred." ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-horizontal-both> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-3/incoming-child-port>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "incoming-child-port" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Arrow-bearing child geometry only; elongated containing port, nested placement and direction-selection semantics remain deferred." ;
+    inv:geometry "small rounded square with right-pointing arrow" ;
+    inv:labelRule "p1 : PortDef1" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-right> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-3/nested-boundary-ports>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "nested-boundary-ports" ;
+    inv:condition "p0 contains p1/p2/p3; p4/p5 are siblings" ;
+    inv:deferredReason "Requires nested-port composition and directed port glyph variants." ;
+    inv:geometry "rounded part boundary, elongated rounded p0 port containing three smaller boundary ports; two independent right-edge ports" ;
+    inv:labelRule "p0 label rotated; child labels outside left; undirected labels inside right" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-3/outgoing-child-port>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "outgoing-child-port" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Arrow-bearing child geometry only; elongated containing port, nested placement and direction-selection semantics remain deferred." ;
+    inv:geometry "small rounded square with left-pointing arrow" ;
+    inv:labelRule "p2 : PortDef2" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:PartialRendering ;
+    inv:representationScope "Only the named component geometry and shown example text; no model or generalized grammar validation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-arrow-left> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-3/undirected-right-port>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "undirected-right-port" ;
+    inv:condition "Primitive glyph only; host composition and labels deferred" ;
+    inv:geometry "small rounded square on right boundary" ;
+    inv:labelRule "p4 / p5 name and type" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the undirected outline shown by the representative table; the separate boundary grammar includes pdh/pdv, so this is not a full boundary-production implementation." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-glyph> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-4/nested-interconnection>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "nested-interconnection" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Composed interconnection example absent; primitive assets do not represent the complete source alternative." ;
+    inv:geometry "outer rounded part; two rounded internal parts; boundary ports and three linking segments" ;
+    inv:labelRule "part/name/type; port labels" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-5/external-performance>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "external-performance" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Perform relationship asset absent." ;
+    inv:geometry "part above separately declared action; directed solid line labelled perform" ;
+    inv:labelRule "action keyword; perform relationship keyword" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-5/owned-performance>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "owned-performance" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Perform action node and membership edge absent." ;
+    inv:geometry "part above perform-action rounded node with hollow diamond at owning part end" ;
+    inv:labelRule "perform action keyword" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-6/explicit-reference-subsetting-performance>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "explicit-reference-subsetting-performance" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Action membership and reference-subsetting assets absent." ;
+    inv:geometry "hollow-diamond ownership edge from part to perform-action node; solid reference-subsetting edge to separately declared action with open triangle and adjacent dotted adornment" ;
+    inv:labelRule "distinct action1 and action3 names/types" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-7/action-flow-compartment>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "action-flow-compartment" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Action-flow compartment and succession assets absent." ;
+    inv:geometry "rounded part with separated italic action-flow compartment; two rounded perform nodes joined downward by dashed open-arrow succession" ;
+    inv:labelRule "perform action keywords" ;
+    inv:lineStyle "solid nodes; dashed succession" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/anonymous-redefinition>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "anonymous-redefinition" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Parts textual compartment and semantic label formatter absent." ;
+    inv:geometry "text row in sharp rectangular compartment with italic parts header" ;
+    inv:labelRule ":>> target without new name/type" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/inherited-entry>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "inherited-entry" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Parts textual compartment and semantic label formatter absent." ;
+    inv:geometry "text row in sharp rectangular compartment with italic parts header" ;
+    inv:labelRule "caret before name" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/name-only-entry>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "name-only-entry" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Parts textual compartment and semantic label formatter absent." ;
+    inv:geometry "text row in sharp rectangular compartment with italic parts header" ;
+    inv:labelRule "name without displayed type" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/omitted-members>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "omitted-members" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "text row in sharp rectangular compartment with italic parts header" ;
+    inv:labelRule "ellipsis below listed members" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "Only the literal trailing elision marker in the selected parts compartment." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition-parts>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-usage-parts> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/ordered-nonunique-multiplicity>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "ordered-nonunique-multiplicity" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Parts textual compartment and semantic label formatter absent." ;
+    inv:geometry "text row in sharp rectangular compartment with italic parts header" ;
+    inv:labelRule "range multiplicity followed by ordered and nonunique" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/redefinition-keyword>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "redefinition-keyword" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Parts textual compartment and semantic label formatter absent." ;
+    inv:geometry "text row in sharp rectangular compartment with italic parts header" ;
+    inv:labelRule "name/type followed by redefines target" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/redefinition-symbol>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "redefinition-symbol" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Parts textual compartment and semantic label formatter absent." ;
+    inv:geometry "text row in sharp rectangular compartment with italic parts header" ;
+    inv:labelRule "name/type followed by :>> target" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/referential-entry>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "referential-entry" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:geometry "text row in sharp rectangular compartment with italic parts header" ;
+    inv:labelRule "ref before usage name/type" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:RepresentativeAsset ;
+    inv:representationScope "The example row explicitly shows ref spare : Wheel[0..1]; other declaration text is caller-supplied." ;
+    inv:representedByAsset <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition-parts> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/subsetting-keyword>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "subsetting-keyword" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Parts textual compartment and semantic label formatter absent." ;
+    inv:geometry "text row in sharp rectangular compartment with italic parts header" ;
+    inv:labelRule "name/type and multiplicity followed by subsets target" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/subsetting-symbol>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "subsetting-symbol" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Parts textual compartment and semantic label formatter absent." ;
+    inv:geometry "text row in sharp rectangular compartment with italic parts header" ;
+    inv:labelRule "name/type and multiplicity followed by :> target" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/value-binding>
+    rdf:type inv:NotationAlternative ;
+    rdfs:label "value-binding" ;
+    inv:condition "Within the containing part/port production and its declared modeling context; no model validity is inferred." ;
+    inv:deferredReason "Parts textual compartment and semantic label formatter absent." ;
+    inv:geometry "text row in sharp rectangular compartment with italic parts header" ;
+    inv:labelRule "name = referenced value" ;
+    inv:lineStyle "solid" ;
+    inv:renderingStatus inv:DeferredRendering .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports>
+    dct:description "Visually inspected pinned source pages alongside text extraction. LocalAlternativesAudited means that the explicit forms in the selected source unit, imported dependencies and source issues have been recorded and assigned a rendering disposition. It does not mean all dependency productions, model combinations or rendering cases are implemented. Source-cell and production counts stay separate." ;
+    rdf:type inv:NotationAuditBatch ;
+    rdfs:label "Parts and ports: selected source-unit audit" ;
+    inv:hasUnitAudit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/definition-node/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/directed-features-compartment-contents/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/directed-features-compartment-element/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/directed-features-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/general-view/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/interconnection-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/interconnection-element/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/interconnection-view/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/part-def-name-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/part-def/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/part-name-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/part-ref/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/part/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/parts-compartment-contents/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/parts-compartment-element/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/parts-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/usage-node/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/definition-node/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/interconnection-element/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/pdh/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/pdv/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-b/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-def-name-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-def/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-l/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-label/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-name-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-r/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-t/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-usage/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/ports-compartment-contents/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/ports-compartment-element/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/ports-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/proxy-h/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/proxy-v/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/usage-node/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-10/cell-1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-10/cell-2>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-10/cell-3>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-10/cell-4>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-2>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-3>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-4>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-5>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-6>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-7>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-8> ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/compartment/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/compartment/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/compartment/1> ;
+    inv:dependencyNote "directed-features-compartment", "interconnection-compartment", "parts-compartment" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/compartment/1/directed-features-choice>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/compartment/1/interconnection-choice>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/compartment/1/parts-compartment-choice> ;
+    inv:pdfPage "241"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/definition-node/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=240> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/definition-node/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/definition-node/1> ;
+    inv:dependencyNote "part-def" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/definition-node/1/part-definition-alternative> ;
+    inv:pdfPage "240"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/directed-features-compartment-contents/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/directed-features-compartment-contents/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/directed-features-compartment-contents/1> ;
+    inv:dependencyNote "directed-features-compartment-element" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/directed-features-compartment-contents/1/directed-feature-rows> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/directed-features-compartment-element/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/directed-features-compartment-element/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/directed-features-compartment-element/1> ;
+    inv:dependencyNote "Definition-Body-Item", "FeatureDirection", "el-prefix" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/directed-features-compartment-element/1/directed-feature-row> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceIssue "Definition-Body-Item is printed; textual syntax defines DefinitionBodyItem. Do not silently equate.", "el-prefix is mandatory here unlike optional parts-row prefix." .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/directed-features-compartment/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/directed-features-compartment/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/directed-features-compartment/1> ;
+    inv:dependencyNote "directed-features-compartment-contents" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/directed-features-compartment/1/named-directed-features-compartment> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/general-view/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/general-view/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/general-view/1> ;
+    inv:dependencyNote "interconnection-view" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/general-view/1/interconnection-general-view> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/interconnection-compartment/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/interconnection-compartment/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/interconnection-compartment/1> ;
+    inv:dependencyNote "interconnection-view" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/interconnection-compartment/1/named-interconnection-compartment> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/interconnection-element/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=240> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/interconnection-element/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/interconnection-element/1> ;
+    inv:dependencyNote "part", "part-ref" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/interconnection-element/1/part-in-interconnection> ;
+    inv:pdfPage "240"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceIssue "Source prints = followed by spaced |; preserve operator and flag." .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/interconnection-view/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/interconnection-view/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/interconnection-view/1> ;
+    inv:dependencyNote "dependencies-and-annotations-element", "ellipsis-at-lower-left-corner", "interconnection-element" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/interconnection-view/1/interconnection-elements> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/part-def-name-compartment/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/part-def-name-compartment/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/part-def-name-compartment/1> ;
+    inv:dependencyNote "DefinitionPrefix", "definition-name-with-alias" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/part-def-name-compartment/1/definition-name> ;
+    inv:pdfPage "241"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/part-def/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=240>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/part-def/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/part-def/1> ;
+    inv:dependencyNote "compartment-stack", "interconnection-view", "part-def-name-compartment", "port-b", "port-l", "port-r", "port-t" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/part-def/1/definition-envelope> ;
+    inv:pdfPage "240"^^xsd:integer, "241"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/part-name-compartment/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/part-name-compartment/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/part-name-compartment/1> ;
+    inv:dependencyNote "OccurrenceUsagePrefix", "usage-name-with-alias" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/part-name-compartment/1/usage-name> ;
+    inv:pdfPage "241"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/part-ref/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/part-ref/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/part-ref/1> ;
+    inv:dependencyNote "compartment-stack", "interconnection-view", "part-name-compartment", "port-b", "port-l", "port-r", "port-t" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/part-ref/1/referential-part-envelope> ;
+    inv:pdfPage "241"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/part/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/part/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/part/1> ;
+    inv:dependencyNote "compartment-stack", "interconnection-view", "part-name-compartment", "port-b", "port-l", "port-r", "port-t" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/part/1/composite-part-envelope> ;
+    inv:pdfPage "241"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/parts-compartment-contents/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/parts-compartment-contents/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/parts-compartment-contents/1> ;
+    inv:dependencyNote "parts-compartment-element" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/parts-compartment-contents/1/parts-rows> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/parts-compartment-element/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/parts-compartment-element/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/parts-compartment-element/1> ;
+    inv:dependencyNote "OccurrenceUsagePrefix", "el-prefix", "usage-cp" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/parts-compartment-element/1/parts-row> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceIssue "Imported usage-cp prints usageDeclaration, whereas the textual grammar declares UsageDeclaration; no silent normalization." .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/parts-compartment/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/parts-compartment/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/parts-compartment/1> ;
+    inv:dependencyNote "parts-compartment-contents" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/parts-compartment/1/named-parts-compartment> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.11/usage-node/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.11/usage-node/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/usage-node/1> ;
+    inv:dependencyNote "part" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.11/usage-node/1/part-usage-alternative> ;
+    inv:pdfPage "241"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/compartment/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/compartment/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/compartment/1> ;
+    inv:dependencyNote "8.2.3.12/ports-compartment/1" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/compartment/1/ports-compartment-extension> ;
+    inv:pdfPage "243"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/definition-node/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/definition-node/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/definition-node/1> ;
+    inv:dependencyNote "8.2.3.12/port-def/1" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/definition-node/1/port-definition-node-extension> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/interconnection-element/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/interconnection-element/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/interconnection-element/1> ;
+    inv:dependencyNote "port", "port-def" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/interconnection-element/1/port-interconnection-extension> ;
+    inv:pdfPage "243"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceIssue "Source uses port rather than declared port-usage; resolution not assumed." .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/pdh/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/pdh/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/pdh/1> ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdh/1/horizontal-bidirectional>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdh/1/horizontal-leftward>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdh/1/horizontal-rightward> ;
+    inv:pdfPage "243"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/pdv/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/pdv/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/pdv/1> ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdv/1/vertical-bidirectional>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdv/1/vertical-downward>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/pdv/1/vertical-upward> ;
+    inv:pdfPage "243"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-b/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/port-b/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-b/1> ;
+    inv:dependencyNote "pdv", "port-b", "port-label", "proxy-h" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-b/1/boundary-b-nested>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-b/1/boundary-b-proxy>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-b/1/boundary-b-reference>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-b/1/boundary-b-solid> ;
+    inv:pdfPage "245"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-def-name-compartment/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/port-def-name-compartment/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-def-name-compartment/1> ;
+    inv:dependencyNote "DefinitionPrefix", "definition-name-with-alias" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-def-name-compartment/1/minimal-definition-name>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-def-name-compartment/1/prefixed-aliased-definition-name> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-def/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/port-def/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-def/1> ;
+    inv:dependencyNote "port-b", "port-l", "port-r", "port-t" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-def/1/minimal-port-definition>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-def/1/port-definition-with-boundary-ports>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-def/1/port-definition-with-compartments> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-l/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/port-l/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-l/1> ;
+    inv:dependencyNote "pdh", "port-l", "port-label", "proxy-v" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-l/1/boundary-l-nested>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-l/1/boundary-l-proxy>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-l/1/boundary-l-reference>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-l/1/boundary-l-solid> ;
+    inv:pdfPage "243"^^xsd:integer, "244"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-label/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=246> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/port-label/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-label/1> ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-label/1/boundary-qualified-name-and-type>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-label/1/boundary-qualified-name> ;
+    inv:pdfPage "246"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-name-compartment/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/port-name-compartment/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-name-compartment/1> ;
+    inv:dependencyNote "OccurrenceUsagePrefix", "usage-name-with-alias" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-name-compartment/1/minimal-usage-header>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-name-compartment/1/prefixed-aliased-usage-header> ;
+    inv:pdfPage "243"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-r/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/port-r/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-r/1> ;
+    inv:dependencyNote "pdh", "port-label", "port-r", "proxy-v" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-r/1/boundary-r-nested>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-r/1/boundary-r-proxy>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-r/1/boundary-r-reference>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-r/1/boundary-r-solid> ;
+    inv:pdfPage "244"^^xsd:integer, "245"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-t/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/port-t/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-t/1> ;
+    inv:dependencyNote "pdv", "port-label", "port-t", "proxy-h" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-t/1/boundary-t-nested>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-t/1/boundary-t-proxy>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-t/1/boundary-t-reference>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-t/1/boundary-t-solid> ;
+    inv:pdfPage "245"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/port-usage/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/port-usage/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-usage/1> ;
+    inv:dependencyNote "port-b", "port-l", "port-r", "port-t" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-usage/1/full-port-with-compartments>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-usage/1/full-port-with-nested-ports>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/port-usage/1/minimal-full-port-usage> ;
+    inv:pdfPage "242"^^xsd:integer, "243"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/ports-compartment-contents/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/ports-compartment-contents/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/ports-compartment-contents/1> ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/ports-compartment-contents/1/ports-list-ellipsis>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/ports-compartment-contents/1/ports-list-empty-or-repeated> ;
+    inv:pdfPage "243"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/ports-compartment-element/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/ports-compartment-element/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/ports-compartment-element/1> ;
+    inv:dependencyNote "OccurrenceUsagePrefix", "el-prefix", "usage-cp" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/ports-compartment-element/1/ports-list-entry> ;
+    inv:pdfPage "243"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/ports-compartment/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/ports-compartment/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/ports-compartment/1> ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/ports-compartment/1/ports-compartment> ;
+    inv:pdfPage "243"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/proxy-h/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=246> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/proxy-h/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/proxy-h/1> ;
+    inv:dependencyNote "8.2.3.9/proxy-label/1" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/proxy-h/1/horizontal-proxy-label-left>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/proxy-h/1/horizontal-proxy-label-right> ;
+    inv:pdfPage "246"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/proxy-v/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=246> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/proxy-v/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/proxy-v/1> ;
+    inv:dependencyNote "8.2.3.9/proxy-label/1" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/proxy-v/1/vertical-proxy-label-left>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/proxy-v/1/vertical-proxy-label-right> ;
+    inv:pdfPage "246"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/8.2.3.12/usage-node/1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "8.2.3.12/usage-node/1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/usage-node/1> ;
+    inv:dependencyNote "8.2.3.12/port-usage/1" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/8.2.3.12/usage-node/1/port-usage-node-extension> ;
+    inv:pdfPage "242"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-10/cell-1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=94> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-10/cell-1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-10/cell-1> ;
+    inv:dependencyNote "Table examples demonstrate alternatives; not an exhaustive prefix-combination grammar." ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-1/minimal-port-definition>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-1/port-definition-with-compartments> ;
+    inv:pdfPage "94"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-10/cell-2>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=94> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-10/cell-2" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-10/cell-2> ;
+    inv:dependencyNote "Table examples demonstrate alternatives; not an exhaustive prefix-combination grammar." ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-2/full-port-with-compartments>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-2/minimal-full-port-usage> ;
+    inv:pdfPage "94"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-10/cell-3>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=94> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-10/cell-3" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-10/cell-3> ;
+    inv:dependencyNote "7.12.3", "Table examples demonstrate alternatives; not an exhaustive prefix-combination grammar." ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-cardinality>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-conjugation>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-elision>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-name-only>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-prefix>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-redefinition>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-reference>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-subsetting>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-3/ports-compartment-value> ;
+    inv:pdfPage "94"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-10/cell-4>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=94> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-10/cell-4" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-10/cell-4> ;
+    inv:dependencyNote "8.2.3.11/directed-features-compartment/1", "Table examples demonstrate alternatives; not an exhaustive prefix-combination grammar." ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-4/directed-attributes-in-out-inout>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-10/cell-4/directed-items-in-out-inout> ;
+    inv:pdfPage "94"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-1>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=90> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-9/cell-1" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-9/cell-1> ;
+    inv:dependencyNote "compartment-stack", "part-def" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-1/definition-with-compartments>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-1/minimal-definition> ;
+    inv:pdfPage "90"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-2>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=91> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-9/cell-2" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-9/cell-2> ;
+    inv:dependencyNote "compartment-stack", "part" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-2/minimal-usage>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-2/usage-with-compartments> ;
+    inv:pdfPage "91"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-3>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=91> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-9/cell-3" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-9/cell-3> ;
+    inv:dependencyNote "8.2.3.12/port-l/1", "8.2.3.12/port-r/1", "port-name-compartment" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-3/bidirectional-ports>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-3/incoming-child-port>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-3/nested-boundary-ports>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-3/outgoing-child-port>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-3/undirected-right-port> ;
+    inv:pdfPage "91"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-4>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=91> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-9/cell-4" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-9/cell-4> ;
+    inv:dependencyNote "binding", "connection-graphical", "interconnection-view", "part", "port-l", "port-r" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-4/nested-interconnection> ;
+    inv:pdfPage "91"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceIssue "Drawing locates p5 on part3; last textual binding identifies part2.p5. No silent correction." .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-5>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=91> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-9/cell-5" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-9/cell-5> ;
+    inv:dependencyNote "8.2.3.17", "composite-feature-membership", "reference-subsetting" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-5/external-performance>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-5/owned-performance> ;
+    inv:pdfPage "91"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-6>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=92> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-9/cell-6" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-9/cell-6> ;
+    inv:dependencyNote "8.2.3.17", "composite-feature-membership", "reference-subsetting" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-6/explicit-reference-subsetting-performance> ;
+    inv:pdfPage "92"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-7>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=92> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-9/cell-7" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-9/cell-7> ;
+    inv:dependencyNote "8.2.3.17", "Caption says flows; textual then denotes succession. Do not claim item-flow notation.", "succession" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-7/action-flow-compartment> ;
+    inv:pdfPage "92"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-audit/parts-ports/table-9/cell-8>
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=92> ;
+    rdf:type inv:SourceUnitAudit ;
+    rdfs:label "table-9/cell-8" ;
+    inv:auditsUnit <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-9/cell-8> ;
+    inv:dependencyNote "OccurrenceUsagePrefix", "UsageDeclaration", "ValuePart", "el-prefix", "parts-compartment", "usage-cp" ;
+    inv:hasAlternative <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/anonymous-redefinition>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/inherited-entry>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/name-only-entry>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/omitted-members>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/ordered-nonunique-multiplicity>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/redefinition-keyword>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/redefinition-symbol>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/referential-entry>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/subsetting-keyword>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/subsetting-symbol>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-alternative/table-9/cell-8/value-binding> ;
+    inv:pdfPage "92"^^xsd:integer ;
+    inv:reviewStatus inv:LocalAlternativesAudited ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceIssue "Imported usage-cp prints usageDeclaration, whereas the textual grammar declares UsageDeclaration; no silent normalization." .
+
 <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-rule/compartments-are-views>
     dct:description "A node may have compartments. Each compartment is a view of selected members, rendered textually or graphically as specified by its grammar. Record selection and rendering separately." ;
     dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=225> ;
@@ -9742,22 +11467,22 @@
     inv:condition "Use boundary position and optional direction indications according to the corresponding port production; one drawn position does not cover all four." ;
     inv:coverageClaim inv:RepresentativeOnly ;
     inv:geometry "Full rounded usage node or small rounded boundary glyph. The boundary redraw illustrates one attachment position." ;
-    inv:illustratedForms "Full port usage node and a single compact boundary-port example." ;
+    inv:illustratedForms "Full port usage node and compact outline primitive; new direction glyphs and a four-side composition are separately listed in the SVG library." ;
     inv:labelRule "The full form uses the port-name-compartment. Boundary labels use QualifiedName with an optional colon and QualifiedName." ;
-    inv:lineStyle "Solid node and boundary glyph in the redraw; directional arrows are omitted." ;
+    inv:lineStyle "Solid full node. The old compact outline omits direction geometry and is only an outline primitive; displayed boundary alternatives include pdh/pdv indicators." ;
     inv:representedKinds "SysML PortUsage" ;
     inv:supportingProduction <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-b/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-l/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-label/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-name-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-r/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-t/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-usage/1> ;
     inv:supportingSourceCell <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-10/cell-2>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation-source/table-9/cell-3> .
 
 <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/port-reference-restrictions>
-    inv:alternativeRule "Reference versus proxy forms are grouped for restriction tracking and must be split before claiming exhaustive visual coverage." ;
+    inv:alternativeRule "Reference, elongated nested and proxy layouts remain deferred. The selected audit retains the port/port-usage spelling mismatch and keeps these cases separate." ;
     inv:attachmentRule "Horizontal and vertical proxy productions correspond to side attachment alternatives." ;
     inv:compartmentRule "The nested-port context is part of the applicability restriction, not evidence that arbitrary diagram nesting implies ownership." ;
     inv:condition "Dotted reference ports are possible only for nested ports. A proxy option is valid only on a part usage contained within an interconnection view." ;
     inv:coverageClaim inv:RepresentativeOnly ;
     inv:geometry "Reference port outlines and proxy-dot alternatives are described from the source; there is no local redraw." ;
     inv:illustratedForms "No local redraw" ;
-    inv:labelRule "Reference forms reuse port-label; proxy-v and proxy-h use proxy-label. The imported proxy-label dependency remains to be resolved." ;
+    inv:labelRule "Reference forms reuse port-label. Proxy forms reuse proxy-label, resolved in §8.2.3.9 (PDF 239) as an optional leading dot followed by FeatureChainMember." ;
     inv:lineStyle "The source note restricts dotted-line port productions to nested ports; no general rule for all ports is asserted." ;
     inv:representedKinds "SysML PortUsage and restricted proxy connection points" ;
     inv:supportingProduction <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-b/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-l/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-r/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-t/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/proxy-h/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/proxy-v/1> .

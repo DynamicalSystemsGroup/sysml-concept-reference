@@ -82,7 +82,7 @@ def build(output: Path) -> tuple[int, int]:
     import json
     shape_catalog = json.loads((ROOT / "shapes/catalog.json").read_text())
     shape_files = ["README.md", "LICENSE", "catalog.json", "catalog.zip", "shapes.svg", "renderer.mjs",
-                   "examples/composition.svg", "examples/renderer.html"]
+                   "examples/composition.svg", "examples/parts-ports.svg", "examples/renderer.html"]
     shape_files += [shape["file"] for shape in shape_catalog["shapes"]]
     for name in shape_files:
         path = (ROOT / "shapes" / name).resolve()
@@ -91,7 +91,7 @@ def build(output: Path) -> tuple[int, int]:
         mapping[path] = path.relative_to(ROOT).as_posix()
     downloads = [ROOT / "data/language-inventory.json", ROOT / "data/source-manifest.json",
                  ROOT / "data/notation-source-index.json", ROOT / "data/notation-reviews.json", ROOT / "data/notation-coverage.json",
-                 ROOT / "data/svg-shapes.json",
+                 ROOT / "data/svg-shapes.json", ROOT / "data/parts-ports-audit.json",
                  ROOT / "data/namespace-migration.json", ROOT / "data/concept-profiles.json", ROOT / "data/property-explanations.json", ROOT / "data/profile-reconciliation.json",
                  ROOT / "data/examples/assembly.sysml",
                  *sorted((ROOT / "data/rdf").glob("*.ttl")), ROOT / "data/rdf/extraction-report.json",

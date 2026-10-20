@@ -77,11 +77,11 @@ These are representative, source-checked variants, not an exhaustive notation gr
 
 Context: Structural and interconnection views.
 
-The full node is rounded and labeled port; the compact form is a small rounded boundary glyph with an adjacent name/type label. Direction arrows are optional productions and omitted in this illustration.
+The full node is rounded and labeled port. The compact outline in this older illustration is a geometry primitive only: displayed boundary alternatives include horizontal or vertical direction indicators, plus side-specific labels. Their selection and layout are separate renderer responsibilities.
 
 ![Full node and boundary port](../assets/notation/port-usage.svg)
 
-[§8.2.3.12 Ports, printed 210 / PDF 242](https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242); [§8.2.3.12 Ports, printed 211 / PDF 243](https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243)
+[§8.2.3.12 Ports, printed 210 / PDF 242](https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242); [§8.2.3.12 Ports, printed 211 / PDF 243](https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243); [§8.2.3.12 boundary-port alternatives, printed 212 / PDF 244](https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244)
 
 ### Restricted reference and proxy variants
 

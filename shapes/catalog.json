@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "Apache-2.0",
   "copyright": "Copyright 2026 Dynamical Systems Group",
   "scope": "Original reusable SVG components for selected source-checked SysML notation. A component is not a complete graphical grammar or a conformance result.",
@@ -51,7 +51,7 @@
         ],
         "east": [
           232,
-          70
+          70.0
         ],
         "south": [
           120,
@@ -59,7 +59,7 @@
         ],
         "west": [
           8,
-          70
+          70.0
         ]
       },
       "labelSlots": {
@@ -99,7 +99,7 @@
         ],
         "east": [
           232,
-          70
+          70.0
         ],
         "south": [
           120,
@@ -107,7 +107,7 @@
         ],
         "west": [
           8,
-          70
+          70.0
         ]
       },
       "labelSlots": {
@@ -146,7 +146,7 @@
         ],
         "east": [
           232,
-          70
+          70.0
         ],
         "south": [
           120,
@@ -154,7 +154,7 @@
         ],
         "west": [
           8,
-          70
+          70.0
         ]
       },
       "labelSlots": {
@@ -193,7 +193,7 @@
         ],
         "east": [
           232,
-          70
+          70.0
         ],
         "south": [
           120,
@@ -201,7 +201,7 @@
         ],
         "west": [
           8,
-          70
+          70.0
         ]
       },
       "labelSlots": {
@@ -216,7 +216,7 @@
     },
     {
       "id": "port-glyph",
-      "name": "Boundary port glyph",
+      "name": "Boundary port outline primitive",
       "family": "Ports",
       "kind": "glyph",
       "notation_record": "port-node-boundary",
@@ -226,8 +226,8 @@
         "8.2.3.12/port-t/1",
         "8.2.3.12/port-b/1"
       ],
-      "description": "Small rounded undirected boundary port glyph, supplied as a component without a label or host node.",
-      "limits": "Glyph only. Place it on the appropriate boundary and supply the position-specific port label. It does not include arrows, dotted references, nested ports or proxy dots.",
+      "description": "Rounded outline primitive without a direction indicator; compose it as geometry rather than a complete boundary-port alternative.",
+      "limits": "Outline only. The displayed boundary grammar includes pdh/pdv arrows and position-specific labels; the host supplies direction, placement and context. Nested/reference/proxy forms are not implemented.",
       "file": "svg/port-glyph.svg",
       "symbolId": "sysml-port-glyph",
       "viewBox": [
@@ -264,7 +264,7 @@
         "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"
       ],
       "verification": "RepresentativeSourceChecked",
-      "sha256": "58830cb31317281506dbc5d2ddc39784150e91e894f3f65f6aa68302da87f8ad"
+      "sha256": "86d924db9659bc025b5df1d38f1c0495916efbde27b4c1a9b3fc1c270a05faa5"
     },
     {
       "id": "connection-usage",
@@ -293,7 +293,7 @@
         ],
         "east": [
           232,
-          70
+          70.0
         ],
         "south": [
           120,
@@ -301,7 +301,7 @@
         ],
         "west": [
           8,
-          70
+          70.0
         ]
       },
       "labelSlots": {
@@ -436,6 +436,590 @@
       ],
       "verification": "RepresentativeSourceChecked",
       "sha256": "e8fe805bc03e2958e27525e57cbe98391d0ba5f757aef22be9000c7c1350c99c"
+    },
+    {
+      "id": "port-definition",
+      "name": "Port definition",
+      "family": "Ports",
+      "kind": "node",
+      "production_ids": [
+        "8.2.3.12/port-def/1",
+        "8.2.3.12/port-def-name-compartment/1"
+      ],
+      "description": "Minimal sharp-corner port definition node with an editable definition name.",
+      "limits": "No prefix combinations, aliases, compartments or boundary ports. This is geometry, not a metamodel-property profile or model check.",
+      "file": "svg/port-definition.svg",
+      "symbolId": "sysml-port-definition",
+      "viewBox": [
+        0,
+        0,
+        240,
+        140
+      ],
+      "anchors": {
+        "north": [
+          120,
+          8
+        ],
+        "east": [
+          232,
+          70.0
+        ],
+        "south": [
+          120,
+          132
+        ],
+        "west": [
+          8,
+          70.0
+        ]
+      },
+      "labelSlots": {
+        "label": "Interface"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "c64561a917909757d21effdced8b234de21e1e8db338ae92456c19758ad96886"
+    },
+    {
+      "id": "part-definition-parts",
+      "name": "Part definition with parts compartment",
+      "family": "Parts",
+      "kind": "node",
+      "compartment": "parts",
+      "rows": [
+        "wheel : Wheel",
+        "ref spare : Wheel[0..1]"
+      ],
+      "production_ids": [
+        "8.2.3.11/part-def/1",
+        "8.2.3.11/parts-compartment/1",
+        "8.2.3.11/parts-compartment-contents/1"
+      ],
+      "description": "A separated parts compartment with two editable literal rows and an elision marker.",
+      "limits": "Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative.",
+      "file": "svg/part-definition-parts.svg",
+      "symbolId": "sysml-part-definition-parts",
+      "viewBox": [
+        0,
+        0,
+        240,
+        220
+      ],
+      "anchors": {
+        "north": [
+          120,
+          8
+        ],
+        "east": [
+          232,
+          110.0
+        ],
+        "south": [
+          120,
+          212
+        ],
+        "west": [
+          8,
+          110.0
+        ]
+      },
+      "labelSlots": {
+        "row1": "wheel : Wheel",
+        "row2": "ref spare : Wheel[0..1]",
+        "label": "Assembly"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=90",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=92",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "ba6418c5c7c72104a1f9c038c87367198aa870b401e36b9cb42f992899a97e16"
+    },
+    {
+      "id": "part-usage-parts",
+      "name": "Part usage with parts compartment",
+      "family": "Parts",
+      "kind": "node",
+      "compartment": "parts",
+      "rows": [
+        "part1 : Component",
+        "part2 : Component"
+      ],
+      "production_ids": [
+        "8.2.3.11/part/1",
+        "8.2.3.11/parts-compartment/1",
+        "8.2.3.11/parts-compartment-contents/1"
+      ],
+      "description": "A separated parts compartment with two editable literal rows and an elision marker.",
+      "limits": "Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative.",
+      "file": "svg/part-usage-parts.svg",
+      "symbolId": "sysml-part-usage-parts",
+      "viewBox": [
+        0,
+        0,
+        240,
+        220
+      ],
+      "anchors": {
+        "north": [
+          120,
+          8
+        ],
+        "east": [
+          232,
+          110.0
+        ],
+        "south": [
+          120,
+          212
+        ],
+        "west": [
+          8,
+          110.0
+        ]
+      },
+      "labelSlots": {
+        "row1": "part1 : Component",
+        "row2": "part2 : Component",
+        "label": "system : System"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=91",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=92",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "3cbf0d0f886993e4f187dd8bd96def14c008a9397dbdfdf207acb161b68d6f90"
+    },
+    {
+      "id": "port-definition-ports",
+      "name": "Port definition with ports compartment",
+      "family": "Ports",
+      "kind": "node",
+      "compartment": "ports",
+      "rows": [
+        "inner1 : SubInterface",
+        "inner2 : SubInterface"
+      ],
+      "production_ids": [
+        "8.2.3.12/port-def/1",
+        "8.2.3.12/ports-compartment/1",
+        "8.2.3.12/ports-compartment-contents/1"
+      ],
+      "description": "A separated ports compartment with two editable literal rows and an elision marker.",
+      "limits": "Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative.",
+      "file": "svg/port-definition-ports.svg",
+      "symbolId": "sysml-port-definition-ports",
+      "viewBox": [
+        0,
+        0,
+        240,
+        220
+      ],
+      "anchors": {
+        "north": [
+          120,
+          8
+        ],
+        "east": [
+          232,
+          110.0
+        ],
+        "south": [
+          120,
+          212
+        ],
+        "west": [
+          8,
+          110.0
+        ]
+      },
+      "labelSlots": {
+        "row1": "inner1 : SubInterface",
+        "row2": "inner2 : SubInterface",
+        "label": "Interface"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=94",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "2bfbd792d4ae7f36562136d37be25f95cd262bbf792b9395579484b2a4787e96"
+    },
+    {
+      "id": "port-usage-ports",
+      "name": "Port usage with ports compartment",
+      "family": "Ports",
+      "kind": "node",
+      "compartment": "ports",
+      "rows": [
+        "inner1 : SubInterface",
+        "inner2 : SubInterface"
+      ],
+      "production_ids": [
+        "8.2.3.12/port-usage/1",
+        "8.2.3.12/ports-compartment/1",
+        "8.2.3.12/ports-compartment-contents/1"
+      ],
+      "description": "A separated ports compartment with two editable literal rows and an elision marker.",
+      "limits": "Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative.",
+      "file": "svg/port-usage-ports.svg",
+      "symbolId": "sysml-port-usage-ports",
+      "viewBox": [
+        0,
+        0,
+        240,
+        220
+      ],
+      "anchors": {
+        "north": [
+          120,
+          8
+        ],
+        "east": [
+          232,
+          110.0
+        ],
+        "south": [
+          120,
+          212
+        ],
+        "west": [
+          8,
+          110.0
+        ]
+      },
+      "labelSlots": {
+        "row1": "inner1 : SubInterface",
+        "row2": "inner2 : SubInterface",
+        "label": "outer : Interface"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=94",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "c025b75565f4ded0fd974769cff3ac9767b331efdc9ec6cf8c9fcb500e53e4f9"
+    },
+    {
+      "id": "port-arrow-right",
+      "name": "Boundary port with right arrow",
+      "family": "Ports",
+      "kind": "glyph",
+      "direction_indicator": "right",
+      "production_ids": [
+        "8.2.3.12/pdh/1",
+        "8.2.3.12/port-l/1",
+        "8.2.3.12/port-r/1"
+      ],
+      "description": "Rounded boundary glyph containing the right direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.",
+      "file": "svg/port-arrow-right.svg",
+      "symbolId": "sysml-port-arrow-right",
+      "viewBox": [
+        0,
+        0,
+        24,
+        24
+      ],
+      "anchors": {
+        "center": [
+          12,
+          12
+        ],
+        "north": [
+          12,
+          2
+        ],
+        "east": [
+          22,
+          12
+        ],
+        "south": [
+          12,
+          22
+        ],
+        "west": [
+          2,
+          12
+        ]
+      },
+      "labelSlots": {},
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "3543bf4c5a7fac5cfa74187912bcde46424c32bce313de837cf66047232b1b85"
+    },
+    {
+      "id": "port-arrow-left",
+      "name": "Boundary port with left arrow",
+      "family": "Ports",
+      "kind": "glyph",
+      "direction_indicator": "left",
+      "production_ids": [
+        "8.2.3.12/pdh/1",
+        "8.2.3.12/port-l/1",
+        "8.2.3.12/port-r/1"
+      ],
+      "description": "Rounded boundary glyph containing the left direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.",
+      "file": "svg/port-arrow-left.svg",
+      "symbolId": "sysml-port-arrow-left",
+      "viewBox": [
+        0,
+        0,
+        24,
+        24
+      ],
+      "anchors": {
+        "center": [
+          12,
+          12
+        ],
+        "north": [
+          12,
+          2
+        ],
+        "east": [
+          22,
+          12
+        ],
+        "south": [
+          12,
+          22
+        ],
+        "west": [
+          2,
+          12
+        ]
+      },
+      "labelSlots": {},
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "c221f36bf4e9883594333551f05274f97e6c68817dd99c583258180df4a73052"
+    },
+    {
+      "id": "port-arrow-horizontal-both",
+      "name": "Boundary port with horizontal both arrows",
+      "family": "Ports",
+      "kind": "glyph",
+      "direction_indicator": "horizontal-both",
+      "production_ids": [
+        "8.2.3.12/pdh/1",
+        "8.2.3.12/port-l/1",
+        "8.2.3.12/port-r/1"
+      ],
+      "description": "Rounded boundary glyph containing the horizontal both direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.",
+      "file": "svg/port-arrow-horizontal-both.svg",
+      "symbolId": "sysml-port-arrow-horizontal-both",
+      "viewBox": [
+        0,
+        0,
+        24,
+        24
+      ],
+      "anchors": {
+        "center": [
+          12,
+          12
+        ],
+        "north": [
+          12,
+          2
+        ],
+        "east": [
+          22,
+          12
+        ],
+        "south": [
+          12,
+          22
+        ],
+        "west": [
+          2,
+          12
+        ]
+      },
+      "labelSlots": {},
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "7c19513ac37df2de1af12f24c985bddd5076bd9dad80fa84e501960901fbe95e"
+    },
+    {
+      "id": "port-arrow-up",
+      "name": "Boundary port with up arrow",
+      "family": "Ports",
+      "kind": "glyph",
+      "direction_indicator": "up",
+      "production_ids": [
+        "8.2.3.12/pdv/1",
+        "8.2.3.12/port-t/1",
+        "8.2.3.12/port-b/1"
+      ],
+      "description": "Rounded boundary glyph containing the up direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.",
+      "file": "svg/port-arrow-up.svg",
+      "symbolId": "sysml-port-arrow-up",
+      "viewBox": [
+        0,
+        0,
+        24,
+        24
+      ],
+      "anchors": {
+        "center": [
+          12,
+          12
+        ],
+        "north": [
+          12,
+          2
+        ],
+        "east": [
+          22,
+          12
+        ],
+        "south": [
+          12,
+          22
+        ],
+        "west": [
+          2,
+          12
+        ]
+      },
+      "labelSlots": {},
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "31ece78d845b4661820700629bcce4167693fac6ac126f107f63e44f84bd99c9"
+    },
+    {
+      "id": "port-arrow-down",
+      "name": "Boundary port with down arrow",
+      "family": "Ports",
+      "kind": "glyph",
+      "direction_indicator": "down",
+      "production_ids": [
+        "8.2.3.12/pdv/1",
+        "8.2.3.12/port-t/1",
+        "8.2.3.12/port-b/1"
+      ],
+      "description": "Rounded boundary glyph containing the down direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.",
+      "file": "svg/port-arrow-down.svg",
+      "symbolId": "sysml-port-arrow-down",
+      "viewBox": [
+        0,
+        0,
+        24,
+        24
+      ],
+      "anchors": {
+        "center": [
+          12,
+          12
+        ],
+        "north": [
+          12,
+          2
+        ],
+        "east": [
+          22,
+          12
+        ],
+        "south": [
+          12,
+          22
+        ],
+        "west": [
+          2,
+          12
+        ]
+      },
+      "labelSlots": {},
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "882043ad8552d37f1697c0153bacdf17b71454abebea8f20ab8497e7d980f8fe"
+    },
+    {
+      "id": "port-arrow-vertical-both",
+      "name": "Boundary port with vertical both arrows",
+      "family": "Ports",
+      "kind": "glyph",
+      "direction_indicator": "vertical-both",
+      "production_ids": [
+        "8.2.3.12/pdv/1",
+        "8.2.3.12/port-t/1",
+        "8.2.3.12/port-b/1"
+      ],
+      "description": "Rounded boundary glyph containing the vertical both direction indication.",
+      "limits": "Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.",
+      "file": "svg/port-arrow-vertical-both.svg",
+      "symbolId": "sysml-port-arrow-vertical-both",
+      "viewBox": [
+        0,
+        0,
+        24,
+        24
+      ],
+      "anchors": {
+        "center": [
+          12,
+          12
+        ],
+        "north": [
+          12,
+          2
+        ],
+        "east": [
+          22,
+          12
+        ],
+        "south": [
+          12,
+          22
+        ],
+        "west": [
+          2,
+          12
+        ]
+      },
+      "labelSlots": {},
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "861780ceb323310a775f54ddcad5fc154426abe22c7627b41a34c3cf97320832"
     }
   ]
 }

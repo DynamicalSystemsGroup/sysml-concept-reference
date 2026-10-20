@@ -176,3 +176,30 @@ inv:SVGShapeAssetShape a sh:NodeShape ;
     sh:property [ sh:path inv:sourceArtifact ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:SourceArtifact ] ;
     sh:property [ sh:path inv:realizesProduction ; sh:minCount 1 ; sh:class inv:GraphicalProductionOccurrence ] ;
     sh:property [ sh:path inv:relatedNotation ; sh:class inv:Notation ] .
+
+inv:SourceUnitAuditShape a sh:NodeShape ; sh:targetClass inv:SourceUnitAudit ;
+    sh:property [ sh:path inv:auditsUnit ; sh:minCount 1 ; sh:maxCount 1 ; sh:or ( [ sh:class inv:NotationSourceCell ] [ sh:class inv:GraphicalProductionOccurrence ] ) ] ;
+    sh:property [ sh:path inv:reviewStatus ; sh:hasValue inv:LocalAlternativesAudited ; sh:maxCount 1 ] ;
+    sh:property [ sh:path inv:sourceArtifact ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:SourceArtifact ] ;
+    sh:property [ sh:path dct:source ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path inv:hasAlternative ; sh:minCount 1 ; sh:class inv:NotationAlternative ] .
+
+inv:NotationAlternativeShape a sh:NodeShape ; sh:targetClass inv:NotationAlternative ;
+    sh:property [ sh:path inv:geometry ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:lineStyle ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:labelRule ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:condition ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:renderingStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in (inv:RepresentativeAsset inv:PartialRendering inv:DeferredRendering) ] ;
+    sh:or (
+      [ sh:property [ sh:path inv:renderingStatus ; sh:hasValue inv:DeferredRendering ] ;
+        sh:property [ sh:path inv:deferredReason ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+        sh:property [ sh:path inv:representedByAsset ; sh:maxCount 0 ] ]
+      [ sh:property [ sh:path inv:renderingStatus ; sh:hasValue inv:RepresentativeAsset ] ;
+        sh:property [ sh:path inv:representedByAsset ; sh:minCount 1 ; sh:class inv:SVGShapeAsset ] ;
+        sh:property [ sh:path inv:representationScope ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+        sh:property [ sh:path inv:deferredReason ; sh:maxCount 0 ] ]
+      [ sh:property [ sh:path inv:renderingStatus ; sh:hasValue inv:PartialRendering ] ;
+        sh:property [ sh:path inv:representedByAsset ; sh:minCount 1 ; sh:class inv:SVGShapeAsset ] ;
+        sh:property [ sh:path inv:representationScope ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+        sh:property [ sh:path inv:deferredReason ; sh:minCount 1 ; sh:datatype xsd:string ] ]
+    ) .

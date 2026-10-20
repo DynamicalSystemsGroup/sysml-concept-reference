@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" width="240" height="220" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Part usage with parts compartment">
+  <title>Part usage with parts compartment</title>
+  <desc>A separated parts compartment with two editable literal rows and an elision marker. Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative.</desc>
+  <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=91", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=92", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.11/part/1", "8.2.3.11/parts-compartment/1", "8.2.3.11/parts-compartment-contents/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+  <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+    <rect x="8" y="8" width="224" height="204" vector-effect="non-scaling-stroke" rx="14" />
+    <path d="M8 82H232" fill="none" vector-effect="non-scaling-stroke" />
+  </g>
+  <g data-layer="labels" fill="#11113a" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle" style="fill:var(--sysml-text,#11113a);font-family:var(--sysml-font,system-ui,sans-serif);font-size:16px;text-anchor:middle">
+    <text x="120" y="35">«part»</text>
+    <text x="120" y="62" data-slot="label">system : System</text>
+    <text x="120" y="105" font-style="italic" font-size="14">parts</text>
+    <text x="22" y="137" text-anchor="start" font-size="14" data-slot="row1">part1 : Component</text>
+    <text x="22" y="164" text-anchor="start" font-size="14" data-slot="row2">part2 : Component</text>
+    <text x="22" y="196" text-anchor="start">…</text>
+  </g>
+</svg>

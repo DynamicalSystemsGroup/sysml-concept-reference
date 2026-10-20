@@ -4,6 +4,8 @@ Look up SysML concepts, their properties and relationships, or borrow graphical 
 
 ## Start with the foundations
 
+Use [Understand parts and ports](../docs/parts-and-ports.md) to connect definitions, usages, ownership, composition and notation through one assembly example, then follow the detailed profiles.
+
 The first slice separates four mechanisms that can otherwise look like “containment”: **model ownership**, **namespace membership**, **feature context**, and **composition versus reference**.
 
 Browse 17 focus concepts and eight supporting ancestors. Inspect 180 property declarations, normalized bounds and defaults, effective inheritance and original source links.
@@ -16,7 +18,7 @@ If you are building a renderer or modeling interface, use the [SVG shape library
 
 ## Track graphical notation coverage
 
-The [notation dashboard](../docs/notation-coverage.md) indexes 192 labeled source cells and 639 graphical grammar production occurrences. It links our six grouped notation records to their sources and tracks illustration scope separately from indexing. These are source-unit counts, not unique-symbol counts.
+The [notation dashboard](../docs/notation-coverage.md) indexes 192 labeled source cells and 639 graphical grammar production occurrences. It links our six grouped notation records to their sources and tracks illustration scope separately from indexing. These are source-unit counts, not unique-symbol counts. The [parts-and-ports audit](../docs/parts-ports-notation-audit.md) records each selected alternative and its rendering support or explicit deferral.
 
 ## Read the evidence
 

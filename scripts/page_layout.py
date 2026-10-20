@@ -9,7 +9,7 @@ import re
 ROOT=Path(__file__).resolve().parents[1]
 REPO='https://github.com/DynamicalSystemsGroup/sysml-concept-reference'
 NAV_GROUPS=[
-    ('Explore', [('Home','index.html'),('Concept browser','docs/concept-browser.html'),('SVG shape library','docs/svg-shapes.html'),('Notation coverage','docs/notation-coverage.html')]),
+    ('Explore', [('Home','index.html'),('Concept browser','docs/concept-browser.html'),('Parts and ports','docs/parts-and-ports.html'),('SVG shape library','docs/svg-shapes.html'),('Notation coverage','docs/notation-coverage.html')]),
     ('Concept profiles',[('Part usage','docs/concepts/part-usage.html'),('Part definition','docs/concepts/part-definition.html'),('Port usage','docs/concepts/port-usage.html'),('Connection usage','docs/concepts/connection-usage.html')]),
     ('Research and data',[('Notation source register','docs/notation-register.html'),('RDF inventory','docs/rdf-inventory.html'),('Official sources','docs/official-machine-readable-specs.html'),('Language research','docs/language-research.html'),('Data downloads','data/index.html'),('SPARQL queries','queries/index.html')]),
     ('Project',[('Concept-page contract','docs/concept-page-contract.html'),('Roadmap','docs/roadmap.html'),('Publishing','docs/publishing.html')])]
@@ -84,7 +84,7 @@ def page_facts(current):
         return [('Focus concepts',report['focus_metaclasses']),('Draft profiles',len(json.loads((ROOT/'data/concept-profiles.json').read_text())['profiles'])),('Reusable SVGs',len(json.loads((ROOT/'data/svg-shapes.json').read_text())['shapes']))], 'Representative source checks cover a selected slice. Full language coverage and model conformance remain outside this catalogue.'
     if current=='docs/notation-coverage.html':
         c=json.loads((ROOT/'data/notation-coverage.json').read_text())['counts']
-        return [('Indexed source cells',c['labeled_table_cells']),('Grammar occurrences',c['production_occurrences']),('Mapped source cells',c['mapped_table_cells']),('Full source-unit audits',c['fully_audited_table_cells'])], 'These are separate source-unit counts. Mapping and indexing do not establish exhaustive notation coverage.'
+        return [('Indexed source cells',c['labeled_table_cells']),('Grammar occurrences',c['production_occurrences']),('Mapped source cells',c['mapped_table_cells']),('Source cells audited',c['fully_audited_table_cells'])], 'Source-unit audits record local alternatives and rendering deferrals. Indexing, representative mapping and rendered support are separate counts.'
     if current=='docs/rdf-inventory.html':
         return [('Focus concepts',report['focus_metaclasses']),('Declared properties',report['declared_properties']),('Validation scope','Catalogue integrity')], 'SHACL checks catalogue records; it does not validate a user’s SysML model.'
     if current.startswith('docs/concepts/'):

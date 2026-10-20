@@ -199,14 +199,14 @@ package AssemblyExample {
     inv:verificationStatus inv:RepresentativeNotationVisuallyChecked .
 
 <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/port-node-boundary>
-    dct:description "The full node is rounded and labeled port; the compact form is a small rounded boundary glyph with an adjacent name/type label. Direction arrows are optional productions and omitted in this illustration." ;
+    dct:description "The full node is rounded and labeled port. The compact outline in this older illustration is a geometry primitive only: displayed boundary alternatives include horizontal or vertical direction indicators, plus side-specific labels. Their selection and layout are separate renderer responsibilities." ;
     rdf:type inv:Notation ;
     rdfs:label "Full node and boundary port" ;
     inv:asset "assets/notation/port-usage.svg" ;
     inv:concept <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/SysML/20250201/Systems-Ports-PortUsage> ;
     inv:context "Structural and interconnection views" ;
     inv:depictionStatus inv:OriginalRedraw ;
-    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    inv:evidence <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244> ;
     inv:verificationStatus inv:RepresentativeNotationVisuallyChecked .
 
 <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/port-reference-restrictions>
@@ -409,6 +409,13 @@ package AssemblyExample {
     inv:printedPage "211"^^xsd:integer ;
     inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
     inv:sourceLocator "§8.2.3.12 Ports" .
+
+<https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244>
+    rdf:type inv:EvidenceLocation ;
+    inv:pdfPage "244"^^xsd:integer ;
+    inv:printedPage "212"^^xsd:integer ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> ;
+    inv:sourceLocator "§8.2.3.12 boundary-port alternatives" .
 
 <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=246>
     rdf:type inv:EvidenceLocation ;

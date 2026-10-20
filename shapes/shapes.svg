@@ -48,8 +48,8 @@
     </g>
   </symbol>
   <symbol id="sysml-port-glyph" viewBox="0 0 24 24">
-    <title>Boundary port glyph</title>
-    <desc>Small rounded undirected boundary port glyph, supplied as a component without a label or host node. Glyph only. Place it on the appropriate boundary and supply the position-specific port label. It does not include arrows, dotted references, nested ports or proxy dots.</desc>
+    <title>Boundary port outline primitive</title>
+    <desc>Rounded outline primitive without a direction indicator; compose it as geometry rather than a complete boundary-port alternative. Outline only. The displayed boundary grammar includes pdh/pdv arrows and position-specific labels; the host supplies direction, placement and context. Nested/reference/proxy forms are not implemented.</desc>
     <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.12/port-l/1", "8.2.3.12/port-r/1", "8.2.3.12/port-t/1", "8.2.3.12/port-b/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
     <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
       <rect x="2" y="2" width="20" height="20" rx="3" vector-effect="non-scaling-stroke" />
@@ -99,6 +99,140 @@
     </g>
     <g data-layer="labels" fill="#11113a" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle" style="fill:var(--sysml-text,#11113a);font-family:var(--sysml-font,system-ui,sans-serif);font-size:16px;text-anchor:middle">
       <text x="140" y="24">=</text>
+    </g>
+  </symbol>
+  <symbol id="sysml-port-definition" viewBox="0 0 240 140">
+    <title>Port definition</title>
+    <desc>Minimal sharp-corner port definition node with an editable definition name. No prefix combinations, aliases, compartments or boundary ports. This is geometry, not a metamodel-property profile or model check.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.12/port-def/1", "8.2.3.12/port-def-name-compartment/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="8" y="8" width="224" height="124" vector-effect="non-scaling-stroke" />
+    </g>
+    <g data-layer="labels" fill="#11113a" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle" style="fill:var(--sysml-text,#11113a);font-family:var(--sysml-font,system-ui,sans-serif);font-size:16px;text-anchor:middle">
+      <text x="120" y="58">«port def»</text>
+      <text x="120" y="94" data-slot="label">Interface</text>
+    </g>
+  </symbol>
+  <symbol id="sysml-part-definition-parts" viewBox="0 0 240 220">
+    <title>Part definition with parts compartment</title>
+    <desc>A separated parts compartment with two editable literal rows and an elision marker. Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=90", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=92", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.11/part-def/1", "8.2.3.11/parts-compartment/1", "8.2.3.11/parts-compartment-contents/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="8" y="8" width="224" height="204" vector-effect="non-scaling-stroke" />
+      <path d="M8 82H232" fill="none" vector-effect="non-scaling-stroke" />
+    </g>
+    <g data-layer="labels" fill="#11113a" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle" style="fill:var(--sysml-text,#11113a);font-family:var(--sysml-font,system-ui,sans-serif);font-size:16px;text-anchor:middle">
+      <text x="120" y="35">«part def»</text>
+      <text x="120" y="62" data-slot="label">Assembly</text>
+      <text x="120" y="105" font-style="italic" font-size="14">parts</text>
+      <text x="22" y="137" text-anchor="start" font-size="14" data-slot="row1">wheel : Wheel</text>
+      <text x="22" y="164" text-anchor="start" font-size="14" data-slot="row2">ref spare : Wheel[0..1]</text>
+      <text x="22" y="196" text-anchor="start">…</text>
+    </g>
+  </symbol>
+  <symbol id="sysml-part-usage-parts" viewBox="0 0 240 220">
+    <title>Part usage with parts compartment</title>
+    <desc>A separated parts compartment with two editable literal rows and an elision marker. Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=91", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=92", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.11/part/1", "8.2.3.11/parts-compartment/1", "8.2.3.11/parts-compartment-contents/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="8" y="8" width="224" height="204" vector-effect="non-scaling-stroke" rx="14" />
+      <path d="M8 82H232" fill="none" vector-effect="non-scaling-stroke" />
+    </g>
+    <g data-layer="labels" fill="#11113a" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle" style="fill:var(--sysml-text,#11113a);font-family:var(--sysml-font,system-ui,sans-serif);font-size:16px;text-anchor:middle">
+      <text x="120" y="35">«part»</text>
+      <text x="120" y="62" data-slot="label">system : System</text>
+      <text x="120" y="105" font-style="italic" font-size="14">parts</text>
+      <text x="22" y="137" text-anchor="start" font-size="14" data-slot="row1">part1 : Component</text>
+      <text x="22" y="164" text-anchor="start" font-size="14" data-slot="row2">part2 : Component</text>
+      <text x="22" y="196" text-anchor="start">…</text>
+    </g>
+  </symbol>
+  <symbol id="sysml-port-definition-ports" viewBox="0 0 240 220">
+    <title>Port definition with ports compartment</title>
+    <desc>A separated ports compartment with two editable literal rows and an elision marker. Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=94", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.12/port-def/1", "8.2.3.12/ports-compartment/1", "8.2.3.12/ports-compartment-contents/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="8" y="8" width="224" height="204" vector-effect="non-scaling-stroke" />
+      <path d="M8 82H232" fill="none" vector-effect="non-scaling-stroke" />
+    </g>
+    <g data-layer="labels" fill="#11113a" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle" style="fill:var(--sysml-text,#11113a);font-family:var(--sysml-font,system-ui,sans-serif);font-size:16px;text-anchor:middle">
+      <text x="120" y="35">«port def»</text>
+      <text x="120" y="62" data-slot="label">Interface</text>
+      <text x="120" y="105" font-style="italic" font-size="14">ports</text>
+      <text x="22" y="137" text-anchor="start" font-size="14" data-slot="row1">inner1 : SubInterface</text>
+      <text x="22" y="164" text-anchor="start" font-size="14" data-slot="row2">inner2 : SubInterface</text>
+      <text x="22" y="196" text-anchor="start">…</text>
+    </g>
+  </symbol>
+  <symbol id="sysml-port-usage-ports" viewBox="0 0 240 220">
+    <title>Port usage with ports compartment</title>
+    <desc>A separated ports compartment with two editable literal rows and an elision marker. Fixed two-row layout, one selected compartment, no automatic parsing, wrapping or row generation. Names, prefixes and inherited/conjugated declarations remain the caller’s responsibility; this does not render every compartment-stack alternative.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=94", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.12/port-usage/1", "8.2.3.12/ports-compartment/1", "8.2.3.12/ports-compartment-contents/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="8" y="8" width="224" height="204" vector-effect="non-scaling-stroke" rx="14" />
+      <path d="M8 82H232" fill="none" vector-effect="non-scaling-stroke" />
+    </g>
+    <g data-layer="labels" fill="#11113a" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle" style="fill:var(--sysml-text,#11113a);font-family:var(--sysml-font,system-ui,sans-serif);font-size:16px;text-anchor:middle">
+      <text x="120" y="35">«port»</text>
+      <text x="120" y="62" data-slot="label">outer : Interface</text>
+      <text x="120" y="105" font-style="italic" font-size="14">ports</text>
+      <text x="22" y="137" text-anchor="start" font-size="14" data-slot="row1">inner1 : SubInterface</text>
+      <text x="22" y="164" text-anchor="start" font-size="14" data-slot="row2">inner2 : SubInterface</text>
+      <text x="22" y="196" text-anchor="start">…</text>
+    </g>
+  </symbol>
+  <symbol id="sysml-port-arrow-right" viewBox="0 0 24 24">
+    <title>Boundary port with right arrow</title>
+    <desc>Rounded boundary glyph containing the right direction indication. Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.12/pdh/1", "8.2.3.12/port-l/1", "8.2.3.12/port-r/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="2" y="2" width="20" height="20" rx="3" vector-effect="non-scaling-stroke" />
+      <path d="M6 12H18M13 8L18 12L13 16" fill="none" vector-effect="non-scaling-stroke" />
+    </g>
+  </symbol>
+  <symbol id="sysml-port-arrow-left" viewBox="0 0 24 24">
+    <title>Boundary port with left arrow</title>
+    <desc>Rounded boundary glyph containing the left direction indication. Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.12/pdh/1", "8.2.3.12/port-l/1", "8.2.3.12/port-r/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="2" y="2" width="20" height="20" rx="3" vector-effect="non-scaling-stroke" />
+      <path d="M18 12H6M11 8L6 12L11 16" fill="none" vector-effect="non-scaling-stroke" />
+    </g>
+  </symbol>
+  <symbol id="sysml-port-arrow-horizontal-both" viewBox="0 0 24 24">
+    <title>Boundary port with horizontal both arrows</title>
+    <desc>Rounded boundary glyph containing the horizontal both direction indication. Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.12/pdh/1", "8.2.3.12/port-l/1", "8.2.3.12/port-r/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="2" y="2" width="20" height="20" rx="3" vector-effect="non-scaling-stroke" />
+      <path d="M6 12H18M11 8L6 12L11 16M13 8L18 12L13 16" fill="none" vector-effect="non-scaling-stroke" />
+    </g>
+  </symbol>
+  <symbol id="sysml-port-arrow-up" viewBox="0 0 24 24">
+    <title>Boundary port with up arrow</title>
+    <desc>Rounded boundary glyph containing the up direction indication. Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.12/pdv/1", "8.2.3.12/port-t/1", "8.2.3.12/port-b/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="2" y="2" width="20" height="20" rx="3" vector-effect="non-scaling-stroke" />
+      <path d="M12 18V6M8 11L12 6L16 11" fill="none" vector-effect="non-scaling-stroke" />
+    </g>
+  </symbol>
+  <symbol id="sysml-port-arrow-down" viewBox="0 0 24 24">
+    <title>Boundary port with down arrow</title>
+    <desc>Rounded boundary glyph containing the down direction indication. Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.12/pdv/1", "8.2.3.12/port-t/1", "8.2.3.12/port-b/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="2" y="2" width="20" height="20" rx="3" vector-effect="non-scaling-stroke" />
+      <path d="M12 6V18M8 13L12 18L16 13" fill="none" vector-effect="non-scaling-stroke" />
+    </g>
+  </symbol>
+  <symbol id="sysml-port-arrow-vertical-both" viewBox="0 0 24 24">
+    <title>Boundary port with vertical both arrows</title>
+    <desc>Rounded boundary glyph containing the vertical both direction indication. Glyph component only. Center it on a matching host boundary and supply the side-specific label. Arrow choice is caller-supplied; no feature-direction inference, nested-port layout, broken reference outline or proxy option.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.12/pdv/1", "8.2.3.12/port-t/1", "8.2.3.12/port-b/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="2" y="2" width="20" height="20" rx="3" vector-effect="non-scaling-stroke" />
+      <path d="M12 6V18M8 11L12 6L16 11M8 13L12 18L16 13" fill="none" vector-effect="non-scaling-stroke" />
     </g>
   </symbol>
 </svg>

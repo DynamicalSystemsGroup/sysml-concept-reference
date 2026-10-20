@@ -18,8 +18,11 @@
     "mapped_table_cells": 7,
     "unmapped_production_occurrences": 616,
     "unmapped_table_cells": 185,
-    "fully_audited_production_occurrences": 0,
-    "fully_audited_table_cells": 0,
+    "fully_audited_production_occurrences": 38,
+    "fully_audited_table_cells": 12,
+    "audited_alternative_records": 106,
+    "deferred_alternative_records": 57,
+    "partially_rendered_alternative_records": 26,
     "shared_rules_described": 10
   },
   "families": [
@@ -29,7 +32,9 @@
       "production_occurrences": 0,
       "table_cells": 0,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.2",
@@ -37,7 +42,9 @@
       "production_occurrences": 9,
       "table_cells": 0,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.3",
@@ -45,7 +52,9 @@
       "production_occurrences": 9,
       "table_cells": 2,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.4",
@@ -53,7 +62,9 @@
       "production_occurrences": 12,
       "table_cells": 10,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.5",
@@ -61,7 +72,9 @@
       "production_occurrences": 25,
       "table_cells": 12,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.6",
@@ -69,7 +82,9 @@
       "production_occurrences": 31,
       "table_cells": 24,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.7",
@@ -77,7 +92,9 @@
       "production_occurrences": 10,
       "table_cells": 3,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.8",
@@ -85,7 +102,9 @@
       "production_occurrences": 9,
       "table_cells": 3,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.9",
@@ -93,7 +112,9 @@
       "production_occurrences": 50,
       "table_cells": 10,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.10",
@@ -101,7 +122,9 @@
       "production_occurrences": 12,
       "table_cells": 3,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.11",
@@ -109,7 +132,9 @@
       "production_occurrences": 18,
       "table_cells": 8,
       "mapped_production_occurrences": 5,
-      "mapped_table_cells": 3
+      "mapped_table_cells": 3,
+      "audited_production_occurrences": 18,
+      "audited_table_cells": 8
     },
     {
       "section": "8.2.3.12",
@@ -117,7 +142,9 @@
       "production_occurrences": 20,
       "table_cells": 4,
       "mapped_production_occurrences": 9,
-      "mapped_table_cells": 1
+      "mapped_table_cells": 1,
+      "audited_production_occurrences": 20,
+      "audited_table_cells": 4
     },
     {
       "section": "8.2.3.13",
@@ -125,7 +152,9 @@
       "production_occurrences": 39,
       "table_cells": 13,
       "mapped_production_occurrences": 9,
-      "mapped_table_cells": 3
+      "mapped_table_cells": 3,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.14",
@@ -133,7 +162,9 @@
       "production_occurrences": 17,
       "table_cells": 6,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.15",
@@ -141,7 +172,9 @@
       "production_occurrences": 14,
       "table_cells": 5,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.16",
@@ -149,7 +182,9 @@
       "production_occurrences": 30,
       "table_cells": 5,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.17",
@@ -157,7 +192,9 @@
       "production_occurrences": 72,
       "table_cells": 26,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.18",
@@ -165,7 +202,9 @@
       "production_occurrences": 46,
       "table_cells": 11,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.19",
@@ -173,7 +212,9 @@
       "production_occurrences": 14,
       "table_cells": 2,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.20",
@@ -181,7 +222,9 @@
       "production_occurrences": 26,
       "table_cells": 5,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.21",
@@ -189,7 +232,9 @@
       "production_occurrences": 68,
       "table_cells": 8,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.22",
@@ -197,7 +242,9 @@
       "production_occurrences": 4,
       "table_cells": 0,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.23",
@@ -205,7 +252,9 @@
       "production_occurrences": 12,
       "table_cells": 3,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.24",
@@ -213,7 +262,9 @@
       "production_occurrences": 23,
       "table_cells": 7,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.25",
@@ -221,7 +272,9 @@
       "production_occurrences": 22,
       "table_cells": 4,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.26",
@@ -229,7 +282,9 @@
       "production_occurrences": 39,
       "table_cells": 13,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     },
     {
       "section": "8.2.3.27",
@@ -237,7 +292,9 @@
       "production_occurrences": 8,
       "table_cells": 5,
       "mapped_production_occurrences": 0,
-      "mapped_table_cells": 0
+      "mapped_table_cells": 0,
+      "audited_production_occurrences": 0,
+      "audited_table_cells": 0
     }
   ],
   "limits": [

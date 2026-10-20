@@ -43,9 +43,10 @@ async function renderPreview(){
     const dark=document.querySelector('#preview-dark').checked;
     const theme=dark?{stroke:'#ebe6d6',text:'#ebe6d6',fill:'#11113a'}:{};
     const labels=Object.hasOwn(selected.labelSlots,'label')?{label:document.querySelector('#preview-label').value}:{};
+    for(const input of document.querySelectorAll('[data-preview-slot]'))labels[input.dataset.previewSlot]=input.value;
     const svg=await createShape(selected.id,{labels,theme,title:selected.name});if(token!==revision)return;
     svg.classList.add('inspector-svg');preview.replaceChildren(svg);preview.dataset.kind=selected.kind;preview.classList.toggle('preview-dark',dark);currentSvg=svg;
-    document.querySelector('#preview-label').disabled=!Object.hasOwn(selected.labelSlots,'label');document.querySelector('#preview-dark').disabled=false;copy.disabled=false;
+    document.querySelector('#preview-label').disabled=!Object.hasOwn(selected.labelSlots,'label');document.querySelector('#preview-dark').disabled=false;for(const input of document.querySelectorAll('[data-preview-slot]'))input.disabled=false;copy.disabled=false;
     const vb=selected.viewBox,overflow=[...svg.querySelectorAll('[data-slot]')].some(node=>{const box=node.getBBox();return box.x<vb[0]||box.x+box.width>vb[0]+vb[2]});
     status.textContent=overflow?'This label exceeds the supplied geometry. Your renderer will need a larger node or text layout.':'Editable preview. Labels and colors do not validate the modeled concept.';
   }catch(error){
@@ -58,6 +59,10 @@ function selectShape(id,{scroll=false,writeHash=false}={}){
   text('inspector-title',shape.name);text('inspector-id',shape.id);text('inspector-kind',shape.family+' / '+shape.kind);text('inspector-description',shape.description);text('inspector-limits',shape.limits);text('inspector-viewbox',shape.viewBox.join(' '));
   const download=document.querySelector('#inspector-download');download.href='../shapes/'+shape.file;download.download=shape.id+'.svg';
   const input=document.querySelector('#preview-label');input.value=shape.labelSlots.label??'';input.disabled=true;document.querySelector('#preview-dark').disabled=true;
+  const extra=document.querySelector('#preview-extra-labels');extra.replaceChildren();
+  for(const [slot,value] of Object.entries(shape.labelSlots)){
+    if(slot==='label')continue;const label=document.createElement('label'),field=document.createElement('input');label.textContent=slot.startsWith('row')?'Compartment row '+slot.slice(3):'Preview '+slot;field.type='text';field.value=value;field.maxLength=80;field.disabled=true;field.dataset.previewSlot=slot;field.id='preview-'+slot;label.htmlFor=field.id;field.addEventListener('input',renderPreview);label.append(field);extra.append(label);
+  }
   const image=document.createElement('img');image.src='../shapes/'+shape.file;image.alt=shape.name;preview.replaceChildren(image);preview.dataset.kind=shape.kind;preview.classList.remove('preview-dark');
   text('preview-status','Loading editable preview…');anchorList(shape);
   const sources=document.querySelector('#inspector-sources');sources.replaceChildren();

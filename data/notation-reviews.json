@@ -59,14 +59,14 @@
         "table-9/cell-3"
       ],
       "geometry": "Full rounded usage node or small rounded boundary glyph. The boundary redraw illustrates one attachment position.",
-      "line_style": "Solid node and boundary glyph in the redraw; directional arrows are omitted.",
+      "line_style": "Solid full node. The old compact outline omits direction geometry and is only an outline primitive; displayed boundary alternatives include pdh/pdv indicators.",
       "labels": "The full form uses the port-name-compartment. Boundary labels use QualifiedName with an optional colon and QualifiedName.",
       "compartments": "Full nodes can have a compartment stack and nested ports. Neither is exhausted by the illustration.",
       "attachments": "The grammar gives separate left, right, top and bottom boundary productions with position-specific labels.",
       "applicability": "Use boundary position and optional direction indications according to the corresponding port production; one drawn position does not cover all four.",
       "alternatives": "All four orientations, direction glyphs, nesting and proxy alternatives require distinct checks. No direction is inferred from the undirected glyph.",
       "represents": "SysML PortUsage",
-      "illustrated_forms": "Full port usage node and a single compact boundary-port example.",
+      "illustrated_forms": "Full port usage node and compact outline primitive; new direction glyphs and a four-side composition are separately listed in the SVG library.",
       "coverage_claim": "RepresentativeOnly"
     },
     {
@@ -82,11 +82,11 @@
       "table_cell_ids": [],
       "geometry": "Reference port outlines and proxy-dot alternatives are described from the source; there is no local redraw.",
       "line_style": "The source note restricts dotted-line port productions to nested ports; no general rule for all ports is asserted.",
-      "labels": "Reference forms reuse port-label; proxy-v and proxy-h use proxy-label. The imported proxy-label dependency remains to be resolved.",
+      "labels": "Reference forms reuse port-label. Proxy forms reuse proxy-label, resolved in §8.2.3.9 (PDF 239) as an optional leading dot followed by FeatureChainMember.",
       "compartments": "The nested-port context is part of the applicability restriction, not evidence that arbitrary diagram nesting implies ownership.",
       "attachments": "Horizontal and vertical proxy productions correspond to side attachment alternatives.",
       "applicability": "Dotted reference ports are possible only for nested ports. A proxy option is valid only on a part usage contained within an interconnection view.",
-      "alternatives": "Reference versus proxy forms are grouped for restriction tracking and must be split before claiming exhaustive visual coverage.",
+      "alternatives": "Reference, elongated nested and proxy layouts remain deferred. The selected audit retains the port/port-usage spelling mismatch and keeps these cases separate.",
       "represents": "SysML PortUsage and restricted proxy connection points",
       "coverage_claim": "RepresentativeOnly"
     },

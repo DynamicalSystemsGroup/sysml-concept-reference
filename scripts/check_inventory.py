@@ -21,6 +21,8 @@ def load_graph(include_profiles=True):
         g.parse(ROOT / "data/rdf/profiles.ttl")
         if (ROOT / "data/rdf/notation-register.ttl").exists():
             g.parse(ROOT / "data/rdf/notation-register.ttl")
+            if (ROOT / "data/rdf/svg-shapes.ttl").exists():
+                g.parse(ROOT / "data/rdf/svg-shapes.ttl")
     return g
 
 

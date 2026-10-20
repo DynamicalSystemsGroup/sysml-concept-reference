@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "copyright": "Copyright 2026 Dynamical Systems Group",
+  "scope": "Original reusable SVG components for selected source-checked SysML notation. A component is not a complete graphical grammar or a conformance result.",
+  "shapes": [
+    {
+      "id": "part-definition", "name": "Part definition", "family": "Parts", "kind": "node", "template": "definition",
+      "keyword": "«part def»", "label": "Wheel", "notation_record": "part-definition-node",
+      "production_ids": ["8.2.3.11/part-def/1", "8.2.3.11/part-def-name-compartment/1"], "evidence_pages": [240, 241],
+      "description": "Minimal sharp-corner part definition node with an editable name label.",
+      "limits": "No compartments, boundary ports, aliases or additional prefixes. The host renderer supplies these when required."
+    },
+    {
+      "id": "part-usage", "name": "Composite part usage", "family": "Parts", "kind": "node", "template": "usage",
+      "keyword": "«part»", "label": "wheel : Wheel", "notation_record": "part-node",
+      "production_ids": ["8.2.3.11/part/1", "8.2.3.11/part-name-compartment/1"], "evidence_pages": [241],
+      "description": "Minimal solid rounded part usage node with an editable name/type label.",
+      "limits": "Represents the composite example. Prefix combinations, compartments and port attachments are not included."
+    },
+    {
+      "id": "part-reference", "name": "Referential part usage", "family": "Parts", "kind": "node", "template": "reference",
+      "keyword": "«ref part»", "label": "spare : Wheel[0..1]", "notation_record": "part-node",
+      "production_ids": ["8.2.3.11/part-ref/1", "8.2.3.11/part-name-compartment/1"], "evidence_pages": [241],
+      "description": "Dashed rounded referential part usage node, retaining its ref part keyword.",
+      "limits": "This remains a PartUsage. The displayed multiplicity is an example, not a default or a validation result."
+    },
+    {
+      "id": "port-usage", "name": "Full port usage", "family": "Ports", "kind": "node", "template": "usage",
+      "keyword": "«port»", "label": "hub : Mount", "notation_record": "port-node-boundary",
+      "production_ids": ["8.2.3.12/port-usage/1", "8.2.3.12/port-name-compartment/1"], "evidence_pages": [242, 243],
+      "description": "Minimal full port usage node with an editable name/type label.",
+      "limits": "This is the full node form. Nested ports, direction glyphs and reference/proxy alternatives are omitted."
+    },
+    {
+      "id": "port-glyph", "name": "Boundary port glyph", "family": "Ports", "kind": "glyph", "template": "port-glyph",
+      "notation_record": "port-node-boundary",
+      "production_ids": ["8.2.3.12/port-l/1", "8.2.3.12/port-r/1", "8.2.3.12/port-t/1", "8.2.3.12/port-b/1"], "evidence_pages": [244, 245],
+      "description": "Small rounded undirected boundary port glyph, supplied as a component without a label or host node.",
+      "limits": "Glyph only. Place it on the appropriate boundary and supply the position-specific port label. It does not include arrows, dotted references, nested ports or proxy dots."
+    },
+    {
+      "id": "connection-usage", "name": "Full connection usage", "family": "Connections", "kind": "node", "template": "usage",
+      "keyword": "«connection»", "label": "link", "notation_record": "connection-edge-node",
+      "production_ids": ["8.2.3.13/connection/1", "8.2.3.13/connection-name-compartment/1"], "evidence_pages": [246, 247],
+      "description": "Minimal full connection usage node.",
+      "limits": "No compartments or elaboration links. The host renderer determines how the modeled connection is related to its endpoints."
+    },
+    {
+      "id": "connection-binary", "name": "Binary connection edge", "family": "Connections", "kind": "edge", "template": "binary",
+      "label": "link", "notation_record": "connection-edge-node",
+      "production_ids": ["8.2.3.13/connection-graphical/1", "8.2.3.13/connection-label/1"], "evidence_pages": [247, 248],
+      "description": "Solid undirected binary connection line with an editable optional label.",
+      "limits": "Attach start/end anchors to valid connection ends. Direction indication, roles, multiplicities and adornments are omitted. This line does not imply flow direction."
+    },
+    {
+      "id": "connection-nary", "name": "Three-ended connection", "family": "Connections", "kind": "edge", "template": "nary",
+      "label": "link", "notation_record": "connection-nary",
+      "production_ids": ["8.2.3.13/n-ary-connection/1", "8.2.3.13/n-ary-connection-dot/1", "8.2.3.13/n-ary-segment/1"], "evidence_pages": [248],
+      "description": "Representative three-ended usage connection with a filled central dot and solid segments.",
+      "limits": "A fixed layout with three endpoint anchors. The host renderer must reroute or add segments for other layouts/end counts. Role labels and multiplicities are omitted."
+    },
+    {
+      "id": "binding-connection", "name": "Binding connection", "family": "Connections", "kind": "edge", "template": "binding",
+      "production_ids": ["8.2.3.13/binding-connection/1"], "evidence_pages": [249],
+      "description": "Solid binding line with the required equals sign.",
+      "limits": "Endpoint usage nodes must have compatible types. The equals sign is fixed; the component does not validate endpoint compatibility."
+    }
+  ]
+}

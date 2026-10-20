@@ -16,6 +16,7 @@ git status --short
 uv sync --locked
 uv run --locked python scripts/build_profiles.py
 uv run --locked python scripts/build_notation.py
+uv run --locked python scripts/build_shapes.py
 uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/build_browser.py
 uv run --locked python scripts/build_site.py
@@ -48,6 +49,7 @@ Run:
 ```bash
 uv run --locked python scripts/build_profiles.py
 uv run --locked python scripts/build_notation.py
+uv run --locked python scripts/build_shapes.py
 uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/build_browser.py
 uv run --locked python -m unittest discover -s tests -v

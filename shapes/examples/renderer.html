@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SVG renderer example</title><link rel="icon" href="data:,"><style>body{margin:30px;font:16px/1.6 system-ui,sans-serif;color:#11113a}svg{max-width:100%;height:auto}#drawing{display:block;width:100%;max-width:1000px;height:auto}button{font:inherit;padding:8px 14px}pre{white-space:pre-wrap}#status{color:#4a5460}</style></head>
+<body><h1>Compose reusable shapes</h1><p>Two part usages joined by a binary connection. Shapes have editable text and independent theme variables.</p>
+<button id="theme" type="button">Use brass</button><p id="status" role="status">Loading shapes…</p>
+<svg id="drawing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" role="img" aria-label="Axle and wheel part usages joined by a connection"></svg>
+<p><a href="../README.md">Usage guide</a> · <a href="../catalog.json">Shape manifest</a></p>
+<script type="module">
+import {createShape, loadCatalog, anchorPositions} from '../renderer.mjs';
+const drawing=document.querySelector('#drawing'), status=document.querySelector('#status');
+let brass=false;
+async function render(){
+  const theme=brass?{stroke:'#7f601b',text:'#11113a',fill:'#ebe6d6'}:{};
+  const [left,right,edge]=await Promise.all([
+    createShape('part-usage',{labels:{label:'axle : Axle'},theme,title:'Axle part usage'}),
+    createShape('part-usage',{labels:{label:'wheel : Wheel'},theme,title:'Wheel part usage'}),
+    createShape('connection-binary',{labels:{label:'link'},theme,title:'Binary connection'})
+  ]);
+  left.setAttribute('x',20);left.setAttribute('y',50);
+  right.setAttribute('x',500);right.setAttribute('y',50);
+  edge.setAttribute('x',240);edge.setAttribute('y',84);
+  drawing.replaceChildren(edge,left,right);
+  const shape=(await loadCatalog()).shapes.find(shape=>shape.id==='part-usage');
+  const anchors=anchorPositions(shape,{x:20,y:50});
+  status.textContent=`Left part east attachment: (${anchors.east.x}, ${anchors.east.y}). No SysML model validation is performed.`;
+}
+document.querySelector('#theme').addEventListener('click',()=>{brass=!brass;render().catch(error=>status.textContent=error.message)});
+render().catch(error=>status.textContent=error.message);
+</script></body></html>

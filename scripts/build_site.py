@@ -17,6 +17,7 @@ REPO = "https://github.com/DynamicalSystemsGroup/sysml-concept-reference"
 NAV = [
     ("Home", "index.html"),
     ("Concept browser", "docs/concept-browser.html"),
+    ("SVG shape library", "docs/svg-shapes.html"),
     ("Notation coverage", "docs/notation-coverage.html"),
     ("Notation source register", "docs/notation-register.html"),
     ("Concept-page contract", "docs/concept-page-contract.html"),
@@ -118,8 +119,21 @@ def build(output: Path) -> tuple[int, int]:
     browser = ROOT / "docs/concept-browser.html"
     mapping[browser] = "docs/concept-browser.html"
     mapping[ROOT / "LICENSE"] = "LICENSE"
+    mapping[ROOT / "docs/svg-shapes.html"] = "docs/svg-shapes.html"
+    # Publish only the declared library files, never arbitrary working files.
+    import json
+    shape_catalog = json.loads((ROOT / "shapes/catalog.json").read_text())
+    shape_files = ["README.md", "LICENSE", "catalog.json", "catalog.zip", "shapes.svg", "renderer.mjs",
+                   "examples/composition.svg", "examples/renderer.html"]
+    shape_files += [shape["file"] for shape in shape_catalog["shapes"]]
+    for name in shape_files:
+        path = (ROOT / "shapes" / name).resolve()
+        if not path.is_relative_to(ROOT / "shapes"):
+            raise ValueError("Shape download escapes the library directory")
+        mapping[path] = path.relative_to(ROOT).as_posix()
     downloads = [ROOT / "data/language-inventory.json", ROOT / "data/source-manifest.json",
                  ROOT / "data/notation-source-index.json", ROOT / "data/notation-reviews.json", ROOT / "data/notation-coverage.json",
+                 ROOT / "data/svg-shapes.json",
                  ROOT / "data/namespace-migration.json", ROOT / "data/concept-profiles.json", ROOT / "data/property-explanations.json", ROOT / "data/profile-reconciliation.json",
                  ROOT / "data/examples/assembly.sysml",
                  *sorted((ROOT / "data/rdf").glob("*.ttl")), ROOT / "data/rdf/extraction-report.json",
@@ -164,7 +178,7 @@ def build(output: Path) -> tuple[int, int]:
             raise ValueError(f"Refusing to publish a symbolic link: {source}")
         target = output / destination
         target.parent.mkdir(parents=True, exist_ok=True)
-        if source.suffix != ".md":
+        if source.suffix != ".md" or source.is_relative_to(ROOT / "shapes"):
             if source == browser:
                 html = source.read_text().replace('href="notation-coverage.md"', 'href="notation-coverage.html"')
                 navbar = '<nav class="browser-nav" aria-label="Research site"><strong>SysML Concept Reference</strong><a href="../index.html">Home</a><a href="rdf-inventory.html">Research guide</a><a href="../data/index.html">Download data</a></nav>'

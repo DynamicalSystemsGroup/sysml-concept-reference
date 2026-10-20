@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" width="240" height="140" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Full connection usage">
+  <title>Full connection usage</title>
+  <desc>Minimal full connection usage node. No compartments or elaboration links. The host renderer determines how the modeled connection is related to its endpoints.</desc>
+  <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=246", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=247"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.13/connection/1", "8.2.3.13/connection-name-compartment/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+  <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+    <rect x="8" y="8" width="224" height="124" vector-effect="non-scaling-stroke" rx="14" />
+  </g>
+  <g data-layer="labels" fill="#11113a" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle" style="fill:var(--sysml-text,#11113a);font-family:var(--sysml-font,system-ui,sans-serif);font-size:16px;text-anchor:middle">
+    <text x="120" y="58">«connection»</text>
+    <text x="120" y="94" data-slot="label">link</text>
+  </g>
+</svg>

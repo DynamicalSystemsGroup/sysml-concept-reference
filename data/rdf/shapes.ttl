@@ -164,3 +164,15 @@ inv:SharedNotationRuleShape a sh:NodeShape ;
     sh:property [ sh:path dct:source ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
     sh:property [ sh:path inv:sourceArtifact ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:SourceArtifact ] ;
     sh:property [ sh:path inv:supportingProduction ; sh:class inv:GraphicalProductionOccurrence ] .
+
+inv:SVGShapeAssetShape a sh:NodeShape ;
+    sh:targetClass inv:SVGShapeAsset ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:asset ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:sha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[a-f0-9]{64}$" ] ;
+    sh:property [ sh:path dct:source ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path dct:license ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path inv:caveat ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:sourceArtifact ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:SourceArtifact ] ;
+    sh:property [ sh:path inv:realizesProduction ; sh:minCount 1 ; sh:class inv:GraphicalProductionOccurrence ] ;
+    sh:property [ sh:path inv:relatedNotation ; sh:class inv:Notation ] .

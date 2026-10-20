@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "copyright": "Copyright 2026 Dynamical Systems Group",
+  "scope": "Original reusable SVG components for selected source-checked SysML notation. A component is not a complete graphical grammar or a conformance result.",
+  "source": {
+    "id": "SysMLLanguage",
+    "language": "SysML",
+    "version": "2.0",
+    "file": "SysML-Language.pdf",
+    "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF",
+    "omg_file_id": "formal/2026-03-02",
+    "bytes": 3804140,
+    "sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a",
+    "retrieved_on": "2026-10-21",
+    "publisher": "Object Management Group"
+  },
+  "theme_variables": {
+    "--sysml-stroke": "#11113a",
+    "--sysml-fill": "#fff",
+    "--sysml-text": "#11113a",
+    "--sysml-stroke-width": "2",
+    "--sysml-font": "system-ui,sans-serif"
+  },
+  "shapes": [
+    {
+      "id": "part-definition",
+      "name": "Part definition",
+      "family": "Parts",
+      "kind": "node",
+      "notation_record": "part-definition-node",
+      "production_ids": [
+        "8.2.3.11/part-def/1",
+        "8.2.3.11/part-def-name-compartment/1"
+      ],
+      "description": "Minimal sharp-corner part definition node with an editable name label.",
+      "limits": "No compartments, boundary ports, aliases or additional prefixes. The host renderer supplies these when required.",
+      "file": "svg/part-definition.svg",
+      "symbolId": "sysml-part-definition",
+      "viewBox": [
+        0,
+        0,
+        240,
+        140
+      ],
+      "anchors": {
+        "north": [
+          120,
+          8
+        ],
+        "east": [
+          232,
+          70
+        ],
+        "south": [
+          120,
+          132
+        ],
+        "west": [
+          8,
+          70
+        ]
+      },
+      "labelSlots": {
+        "label": "Wheel"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=240",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "17e648a053e102e27e38e3e4a04fefc768a267d30280697d0269fbac87604843"
+    },
+    {
+      "id": "part-usage",
+      "name": "Composite part usage",
+      "family": "Parts",
+      "kind": "node",
+      "notation_record": "part-node",
+      "production_ids": [
+        "8.2.3.11/part/1",
+        "8.2.3.11/part-name-compartment/1"
+      ],
+      "description": "Minimal solid rounded part usage node with an editable name/type label.",
+      "limits": "Represents the composite example. Prefix combinations, compartments and port attachments are not included.",
+      "file": "svg/part-usage.svg",
+      "symbolId": "sysml-part-usage",
+      "viewBox": [
+        0,
+        0,
+        240,
+        140
+      ],
+      "anchors": {
+        "north": [
+          120,
+          8
+        ],
+        "east": [
+          232,
+          70
+        ],
+        "south": [
+          120,
+          132
+        ],
+        "west": [
+          8,
+          70
+        ]
+      },
+      "labelSlots": {
+        "label": "wheel : Wheel"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "4ce90bea6c9c4379b5c04b08f1fbf152cf6a3cb875d3aa4f0143dbd4f6e86755"
+    },
+    {
+      "id": "part-reference",
+      "name": "Referential part usage",
+      "family": "Parts",
+      "kind": "node",
+      "notation_record": "part-node",
+      "production_ids": [
+        "8.2.3.11/part-ref/1",
+        "8.2.3.11/part-name-compartment/1"
+      ],
+      "description": "Dashed rounded referential part usage node, retaining its ref part keyword.",
+      "limits": "This remains a PartUsage. The displayed multiplicity is an example, not a default or a validation result.",
+      "file": "svg/part-reference.svg",
+      "symbolId": "sysml-part-reference",
+      "viewBox": [
+        0,
+        0,
+        240,
+        140
+      ],
+      "anchors": {
+        "north": [
+          120,
+          8
+        ],
+        "east": [
+          232,
+          70
+        ],
+        "south": [
+          120,
+          132
+        ],
+        "west": [
+          8,
+          70
+        ]
+      },
+      "labelSlots": {
+        "label": "spare : Wheel[0..1]"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "0c64878a41c8d3d479af2985a2929fe57cc72fa657e6c3eed48acc49788a5e5e"
+    },
+    {
+      "id": "port-usage",
+      "name": "Full port usage",
+      "family": "Ports",
+      "kind": "node",
+      "notation_record": "port-node-boundary",
+      "production_ids": [
+        "8.2.3.12/port-usage/1",
+        "8.2.3.12/port-name-compartment/1"
+      ],
+      "description": "Minimal full port usage node with an editable name/type label.",
+      "limits": "This is the full node form. Nested ports, direction glyphs and reference/proxy alternatives are omitted.",
+      "file": "svg/port-usage.svg",
+      "symbolId": "sysml-port-usage",
+      "viewBox": [
+        0,
+        0,
+        240,
+        140
+      ],
+      "anchors": {
+        "north": [
+          120,
+          8
+        ],
+        "east": [
+          232,
+          70
+        ],
+        "south": [
+          120,
+          132
+        ],
+        "west": [
+          8,
+          70
+        ]
+      },
+      "labelSlots": {
+        "label": "hub : Mount"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "525b46c0320a85043e342ac673712dc546e6de6c72babdc1c46c17a0c5dce594"
+    },
+    {
+      "id": "port-glyph",
+      "name": "Boundary port glyph",
+      "family": "Ports",
+      "kind": "glyph",
+      "notation_record": "port-node-boundary",
+      "production_ids": [
+        "8.2.3.12/port-l/1",
+        "8.2.3.12/port-r/1",
+        "8.2.3.12/port-t/1",
+        "8.2.3.12/port-b/1"
+      ],
+      "description": "Small rounded undirected boundary port glyph, supplied as a component without a label or host node.",
+      "limits": "Glyph only. Place it on the appropriate boundary and supply the position-specific port label. It does not include arrows, dotted references, nested ports or proxy dots.",
+      "file": "svg/port-glyph.svg",
+      "symbolId": "sysml-port-glyph",
+      "viewBox": [
+        0,
+        0,
+        24,
+        24
+      ],
+      "anchors": {
+        "center": [
+          12,
+          12
+        ],
+        "north": [
+          12,
+          2
+        ],
+        "east": [
+          22,
+          12
+        ],
+        "south": [
+          12,
+          22
+        ],
+        "west": [
+          2,
+          12
+        ]
+      },
+      "labelSlots": {},
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "58830cb31317281506dbc5d2ddc39784150e91e894f3f65f6aa68302da87f8ad"
+    },
+    {
+      "id": "connection-usage",
+      "name": "Full connection usage",
+      "family": "Connections",
+      "kind": "node",
+      "notation_record": "connection-edge-node",
+      "production_ids": [
+        "8.2.3.13/connection/1",
+        "8.2.3.13/connection-name-compartment/1"
+      ],
+      "description": "Minimal full connection usage node.",
+      "limits": "No compartments or elaboration links. The host renderer determines how the modeled connection is related to its endpoints.",
+      "file": "svg/connection-usage.svg",
+      "symbolId": "sysml-connection-usage",
+      "viewBox": [
+        0,
+        0,
+        240,
+        140
+      ],
+      "anchors": {
+        "north": [
+          120,
+          8
+        ],
+        "east": [
+          232,
+          70
+        ],
+        "south": [
+          120,
+          132
+        ],
+        "west": [
+          8,
+          70
+        ]
+      },
+      "labelSlots": {
+        "label": "link"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=246",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=247"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "b9550c395793243a3c3e4a7f2c732a46b954af64717520dd80ba856d247cb6e0"
+    },
+    {
+      "id": "connection-binary",
+      "name": "Binary connection edge",
+      "family": "Connections",
+      "kind": "edge",
+      "notation_record": "connection-edge-node",
+      "production_ids": [
+        "8.2.3.13/connection-graphical/1",
+        "8.2.3.13/connection-label/1"
+      ],
+      "description": "Solid undirected binary connection line with an editable optional label.",
+      "limits": "Attach start/end anchors to valid connection ends. Direction indication, roles, multiplicities and adornments are omitted. This line does not imply flow direction.",
+      "file": "svg/connection-binary.svg",
+      "symbolId": "sysml-connection-binary",
+      "viewBox": [
+        0,
+        0,
+        280,
+        72
+      ],
+      "anchors": {
+        "start": [
+          12,
+          36
+        ],
+        "end": [
+          268,
+          36
+        ]
+      },
+      "labelSlots": {
+        "label": "link"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=247",
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=248"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "cf0689e7a5e48af8b52783323287ef9b5617336ec0b09a53487fedd0bbfab791"
+    },
+    {
+      "id": "connection-nary",
+      "name": "Three-ended connection",
+      "family": "Connections",
+      "kind": "edge",
+      "notation_record": "connection-nary",
+      "production_ids": [
+        "8.2.3.13/n-ary-connection/1",
+        "8.2.3.13/n-ary-connection-dot/1",
+        "8.2.3.13/n-ary-segment/1"
+      ],
+      "description": "Representative three-ended usage connection with a filled central dot and solid segments.",
+      "limits": "A fixed layout with three endpoint anchors. The host renderer must reroute or add segments for other layouts/end counts. Role labels and multiplicities are omitted.",
+      "file": "svg/connection-nary.svg",
+      "symbolId": "sysml-connection-nary",
+      "viewBox": [
+        0,
+        0,
+        280,
+        160
+      ],
+      "anchors": {
+        "junction": [
+          140,
+          80
+        ],
+        "end1": [
+          12,
+          80
+        ],
+        "end2": [
+          268,
+          24
+        ],
+        "end3": [
+          268,
+          136
+        ]
+      },
+      "labelSlots": {
+        "label": "link"
+      },
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=248"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "ed04dbf4b8ced56873e2a54242dda92a2bc31134ab56f9bc1c45803e99f507a0"
+    },
+    {
+      "id": "binding-connection",
+      "name": "Binding connection",
+      "family": "Connections",
+      "kind": "edge",
+      "production_ids": [
+        "8.2.3.13/binding-connection/1"
+      ],
+      "description": "Solid binding line with the required equals sign.",
+      "limits": "Endpoint usage nodes must have compatible types. The equals sign is fixed; the component does not validate endpoint compatibility.",
+      "file": "svg/binding-connection.svg",
+      "symbolId": "sysml-binding-connection",
+      "viewBox": [
+        0,
+        0,
+        280,
+        72
+      ],
+      "anchors": {
+        "start": [
+          12,
+          36
+        ],
+        "end": [
+          268,
+          36
+        ]
+      },
+      "labelSlots": {},
+      "source_urls": [
+        "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=249"
+      ],
+      "verification": "RepresentativeSourceChecked",
+      "sha256": "e8fe805bc03e2958e27525e57cbe98391d0ba5f757aef22be9000c7c1350c99c"
+    }
+  ]
+}

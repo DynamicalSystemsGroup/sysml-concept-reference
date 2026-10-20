@@ -1,0 +1,148 @@
+# Generated RDF; rebuild with scripts/build_inventory.py or scripts/build_profiles.py. Do not edit.
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix id: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/> .
+@prefix inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wgs: <https://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/binding-connection>
+    dct:description "Solid binding line with the required equals sign." ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=249> ;
+    rdf:type inv:SVGShapeAsset ;
+    rdfs:label "Binding connection" ;
+    inv:asset "shapes/svg/binding-connection.svg" ;
+    inv:caveat "Endpoint usage nodes must have compatible types. The equals sign is fixed; the component does not validate endpoint compatibility." ;
+    inv:realizesProduction <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.13/binding-connection/1> ;
+    inv:sha256 "e8fe805bc03e2958e27525e57cbe98391d0ba5f757aef22be9000c7c1350c99c" ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/connection-binary>
+    dct:description "Solid undirected binary connection line with an editable optional label." ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=247>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=248> ;
+    rdf:type inv:SVGShapeAsset ;
+    rdfs:label "Binary connection edge" ;
+    inv:asset "shapes/svg/connection-binary.svg" ;
+    inv:caveat "Attach start/end anchors to valid connection ends. Direction indication, roles, multiplicities and adornments are omitted. This line does not imply flow direction." ;
+    inv:realizesProduction <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.13/connection-graphical/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.13/connection-label/1> ;
+    inv:relatedNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/connection-edge-node> ;
+    inv:sha256 "cf0689e7a5e48af8b52783323287ef9b5617336ec0b09a53487fedd0bbfab791" ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/connection-nary>
+    dct:description "Representative three-ended usage connection with a filled central dot and solid segments." ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=248> ;
+    rdf:type inv:SVGShapeAsset ;
+    rdfs:label "Three-ended connection" ;
+    inv:asset "shapes/svg/connection-nary.svg" ;
+    inv:caveat "A fixed layout with three endpoint anchors. The host renderer must reroute or add segments for other layouts/end counts. Role labels and multiplicities are omitted." ;
+    inv:realizesProduction <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.13/n-ary-connection-dot/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.13/n-ary-connection/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.13/n-ary-segment/1> ;
+    inv:relatedNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/connection-nary> ;
+    inv:sha256 "ed04dbf4b8ced56873e2a54242dda92a2bc31134ab56f9bc1c45803e99f507a0" ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/connection-usage>
+    dct:description "Minimal full connection usage node." ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=246>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=247> ;
+    rdf:type inv:SVGShapeAsset ;
+    rdfs:label "Full connection usage" ;
+    inv:asset "shapes/svg/connection-usage.svg" ;
+    inv:caveat "No compartments or elaboration links. The host renderer determines how the modeled connection is related to its endpoints." ;
+    inv:realizesProduction <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.13/connection-name-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.13/connection/1> ;
+    inv:relatedNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/connection-edge-node> ;
+    inv:sha256 "b9550c395793243a3c3e4a7f2c732a46b954af64717520dd80ba856d247cb6e0" ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-definition>
+    dct:description "Minimal sharp-corner part definition node with an editable name label." ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=240>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    rdf:type inv:SVGShapeAsset ;
+    rdfs:label "Part definition" ;
+    inv:asset "shapes/svg/part-definition.svg" ;
+    inv:caveat "No compartments, boundary ports, aliases or additional prefixes. The host renderer supplies these when required." ;
+    inv:realizesProduction <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/part-def-name-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/part-def/1> ;
+    inv:relatedNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/part-definition-node> ;
+    inv:sha256 "17e648a053e102e27e38e3e4a04fefc768a267d30280697d0269fbac87604843" ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-reference>
+    dct:description "Dashed rounded referential part usage node, retaining its ref part keyword." ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    rdf:type inv:SVGShapeAsset ;
+    rdfs:label "Referential part usage" ;
+    inv:asset "shapes/svg/part-reference.svg" ;
+    inv:caveat "This remains a PartUsage. The displayed multiplicity is an example, not a default or a validation result." ;
+    inv:realizesProduction <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/part-name-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/part-ref/1> ;
+    inv:relatedNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/part-node> ;
+    inv:sha256 "0c64878a41c8d3d479af2985a2929fe57cc72fa657e6c3eed48acc49788a5e5e" ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/part-usage>
+    dct:description "Minimal solid rounded part usage node with an editable name/type label." ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241> ;
+    rdf:type inv:SVGShapeAsset ;
+    rdfs:label "Composite part usage" ;
+    inv:asset "shapes/svg/part-usage.svg" ;
+    inv:caveat "Represents the composite example. Prefix combinations, compartments and port attachments are not included." ;
+    inv:realizesProduction <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/part-name-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.11/part/1> ;
+    inv:relatedNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/part-node> ;
+    inv:sha256 "4ce90bea6c9c4379b5c04b08f1fbf152cf6a3cb875d3aa4f0143dbd4f6e86755" ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-glyph>
+    dct:description "Small rounded undirected boundary port glyph, supplied as a component without a label or host node." ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=244>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=245> ;
+    rdf:type inv:SVGShapeAsset ;
+    rdfs:label "Boundary port glyph" ;
+    inv:asset "shapes/svg/port-glyph.svg" ;
+    inv:caveat "Glyph only. Place it on the appropriate boundary and supply the position-specific port label. It does not include arrows, dotted references, nested ports or proxy dots." ;
+    inv:realizesProduction <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-b/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-l/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-r/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-t/1> ;
+    inv:relatedNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/port-node-boundary> ;
+    inv:sha256 "58830cb31317281506dbc5d2ddc39784150e91e894f3f65f6aa68302da87f8ad" ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .
+
+<https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/svg-shape/port-usage>
+    dct:description "Minimal full port usage node with an editable name/type label." ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:source <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=242>, <https://www.omg.org/spec/SysML/2.0/Language/PDF#page=243> ;
+    rdf:type inv:SVGShapeAsset ;
+    rdfs:label "Full port usage" ;
+    inv:asset "shapes/svg/port-usage.svg" ;
+    inv:caveat "This is the full node form. Nested ports, direction glyphs and reference/proxy alternatives are omitted." ;
+    inv:realizesProduction <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-name-compartment/1>, <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/graphical-production/8.2.3.12/port-usage/1> ;
+    inv:relatedNotation <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/notation/port-node-boundary> ;
+    inv:sha256 "525b46c0320a85043e342ac673712dc546e6de6c72babdc1c46c17a0c5dce594" ;
+    inv:sourceArtifact <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/id/source/sha256/46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a> .

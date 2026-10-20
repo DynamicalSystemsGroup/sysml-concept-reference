@@ -32,6 +32,8 @@ jobs:
         run: uv run --locked python scripts/build_profiles.py
       - name: Build notation coverage register
         run: uv run --locked python scripts/build_notation.py
+      - name: Build reusable SVG library
+        run: uv run --locked python scripts/build_shapes.py
       - name: Validate RDF and SPARQL queries
         run: uv run --locked python scripts/check_inventory.py
       - name: Build concept browser

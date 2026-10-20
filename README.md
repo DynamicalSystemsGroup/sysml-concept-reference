@@ -14,6 +14,7 @@ It contains **98 named entries** from §§8.3.6–8.3.27: 93 metaclasses, 5 enum
 |---|---|
 | [GitHub Pages publishing](docs/publishing.md) | Site build, preview, deployment workflow and update instructions |
 | [Concept browser](docs/concept-browser.html) | Offline browsing of the first RDF slice: meanings, properties, ancestry, mechanisms and source links |
+| [Reusable SVG library](docs/svg-shapes.html) | Standalone components, symbol sprite, manifest, renderer helper and downloadable bundle |
 | [Notation coverage](docs/notation-coverage.md) | Source register of 192 labeled cells and 639 grammar occurrences; representative mappings and explicit review gaps |
 | [RDF inventory guide](docs/rdf-inventory.md) | Data model, SHACL/SPARQL commands, reproduction and coverage limits |
 | [Language research](docs/language-research.md) | Findings, source distinctions, behavioral scope, known uncertainties and query reproduction |

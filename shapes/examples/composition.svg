@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" role="img" aria-label="Two part usages joined by a binary connection">
+  <title>Compose part usages with a binary connection</title>
+  <svg viewBox="0 0 280 72" width="280" height="72" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Binary connection edge" x="240" y="84">
+    <title>Binary connection edge</title>
+    <desc>Solid undirected binary connection line with an editable optional label. Attach start/end anchors to valid connection ends. Direction indication, roles, multiplicities and adornments are omitted. This line does not imply flow direction.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=247", "https://www.omg.org/spec/SysML/2.0/Language/PDF#page=248"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.13/connection-graphical/1", "8.2.3.13/connection-label/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <path d="M12 36H268" fill="none" vector-effect="non-scaling-stroke" />
+    </g>
+    <g data-layer="labels" fill="#11113a" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle" style="fill:var(--sysml-text,#11113a);font-family:var(--sysml-font,system-ui,sans-serif);font-size:16px;text-anchor:middle">
+      <text x="140" y="24" data-slot="label">link</text>
+    </g>
+  </svg>
+  <svg viewBox="0 0 240 140" width="240" height="140" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Composite part usage" x="20" y="50">
+    <title>Composite part usage</title>
+    <desc>Minimal solid rounded part usage node with an editable name/type label. Represents the composite example. Prefix combinations, compartments and port attachments are not included.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.11/part/1", "8.2.3.11/part-name-compartment/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="8" y="8" width="224" height="124" vector-effect="non-scaling-stroke" rx="14" />
+    </g>
+    <g data-layer="labels" fill="#11113a" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle" style="fill:var(--sysml-text,#11113a);font-family:var(--sysml-font,system-ui,sans-serif);font-size:16px;text-anchor:middle">
+      <text x="120" y="58">«part»</text>
+      <text x="120" y="94" data-slot="label">axle : Axle</text>
+    </g>
+  </svg>
+  <svg viewBox="0 0 240 140" width="240" height="140" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Composite part usage" x="500" y="50">
+    <title>Composite part usage</title>
+    <desc>Minimal solid rounded part usage node with an editable name/type label. Represents the composite example. Prefix combinations, compartments and port attachments are not included.</desc>
+    <metadata>{"license": "Apache-2.0", "license_url": "https://www.apache.org/licenses/LICENSE-2.0", "copyright": "Copyright 2026 Dynamical Systems Group", "source": ["https://www.omg.org/spec/SysML/2.0/Language/PDF#page=241"], "source_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a", "production_ids": ["8.2.3.11/part/1", "8.2.3.11/part-name-compartment/1"], "provenance": "Original reusable redraw; not an official OMG figure or a conformance result."}</metadata>
+    <g data-layer="geometry" fill="#fff" stroke="#11113a" stroke-width="2" style="fill:var(--sysml-fill,#fff);stroke:var(--sysml-stroke,#11113a);stroke-width:var(--sysml-stroke-width,2)">
+      <rect x="8" y="8" width="224" height="124" vector-effect="non-scaling-stroke" rx="14" />
+    </g>
+    <g data-layer="labels" fill="#11113a" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle" style="fill:var(--sysml-text,#11113a);font-family:var(--sysml-font,system-ui,sans-serif);font-size:16px;text-anchor:middle">
+      <text x="120" y="58">«part»</text>
+      <text x="120" y="94" data-slot="label">wheel : Wheel</text>
+    </g>
+  </svg>
+</svg>

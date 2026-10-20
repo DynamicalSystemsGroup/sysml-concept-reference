@@ -1,0 +1,9 @@
+PREFIX inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+# One row per reusable asset, independently of evidence/production link counts.
+SELECT ?shape ?name ?file ?license ?limitations (GROUP_CONCAT(DISTINCT STR(?source); separator=" | ") AS ?sources)
+WHERE {
+  ?shape a inv:SVGShapeAsset ; rdfs:label ?name ; inv:asset ?file ;
+    dct:license ?license ; inv:caveat ?limitations ; dct:source ?source .
+} GROUP BY ?shape ?name ?file ?license ?limitations ORDER BY ?name

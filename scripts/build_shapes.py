@@ -5,6 +5,7 @@ from copy import deepcopy
 import hashlib
 from html import escape
 import json
+import re
 from pathlib import Path
 import shutil
 import xml.etree.ElementTree as ET
@@ -77,7 +78,8 @@ def write_svg(root,path):
 def validate_definitions(config,index):
     ids=set();productions={p['id'] for p in index['productions']}
     for shape in config['shapes']:
-        if shape['id'] in ids:raise ValueError('Duplicate SVG ID')
+        if not re.fullmatch(r'[a-z][a-z0-9-]*',shape['id']) or shape['id'] in ids:
+            raise ValueError('Invalid or duplicate SVG ID')
         ids.add(shape['id'])
         if not shape['production_ids'] or not set(shape['production_ids'])<=productions:
             raise ValueError('SVG shape lacks indexed production evidence')

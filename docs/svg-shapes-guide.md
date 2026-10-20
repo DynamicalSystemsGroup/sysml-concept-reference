@@ -46,3 +46,16 @@ Attachment points are geometry coordinates, separate from the model's semantic o
 The first set provides a part definition; composite and referential parts; a full port and boundary glyph; a full connection; binary and three-ended connections; and a binding edge. The port glyph needs host placement and a label. Node compartments, optional arrows, proxy/reference port variants and connection adornments remain outside this set.
 
 The [bundle guide](../shapes/README.md) documents all files, customization options and rebuild instructions. The catalogue definitions are in [data/svg-shapes.json](../data/svg-shapes.json), with [RDF asset metadata](../data/rdf/svg-shapes.ttl) alongside the existing inventory. Asset count is distinct from notation-record or source-unit coverage: see the [coverage dashboard](notation-coverage.md).
+
+## Verify reuse
+
+The test suite checks manifest hashes, source mappings, clone-safe SVG structure, sprite equivalence, bundle contents and attachment-coordinate math. The retained [browser interaction check](../tests/shapes-browser-check.js) exercises filtering, the copy handler, the renderer example, plain-text labels, duplicate-ID avoidance and invalid options. It runs separately from the Python suite.
+
+With a local site preview on port 8000 and Playwright CLI available, run:
+
+```bash
+playwright-cli open http://127.0.0.1:8000/docs/svg-shapes.html
+playwright-cli run-code --filename=tests/shapes-browser-check.js
+```
+
+The copy-handler check uses a stub clipboard to verify the copied SVG without changing the system clipboard.

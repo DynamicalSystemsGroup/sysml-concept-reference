@@ -1,0 +1,25 @@
+PREFIX inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# Count each source unit once, independently of its evidence links or mappings.
+SELECT ?section ?family (COUNT(DISTINCT ?production) AS ?indexedProductions)
+       (COUNT(DISTINCT ?cell) AS ?indexedCells)
+       (COUNT(DISTINCT ?mappedProduction) AS ?mappedProductions)
+       (COUNT(DISTINCT ?mappedCell) AS ?mappedCells)
+WHERE {
+  ?section a inv:NotationSection ; rdfs:label ?family .
+  OPTIONAL {
+    {
+      ?production a inv:GraphicalProductionOccurrence ; inv:inNotationSection ?section .
+      OPTIONAL {
+        ?notation a inv:Notation ; inv:supportingProduction ?production .
+        BIND(?production AS ?mappedProduction)
+      }
+    } UNION {
+      ?cell a inv:NotationSourceCell ; inv:inNotationSection ?section .
+      OPTIONAL {
+        ?notation2 a inv:Notation ; inv:supportingSourceCell ?cell .
+        BIND(?cell AS ?mappedCell)
+      }
+    }
+  }
+} GROUP BY ?section ?family ORDER BY ?section

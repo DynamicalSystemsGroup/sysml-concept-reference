@@ -51,6 +51,7 @@ Fetch missing official XMI into ignored `sandbox/official-sources/`, verify the 
 uv sync --locked
 uv run --locked python scripts/build_inventory.py --fetch
 uv run --locked python scripts/build_profiles.py
+uv run --locked python scripts/build_notation.py
 uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/build_browser.py
 uv run --locked python -m unittest discover -s tests -v
@@ -79,3 +80,7 @@ Bounds and defaults retain raw XMI encodings beside UML-normalized values and ev
 Not yet implemented: complete metamodel extraction; operations and constraint evaluation; standard libraries; complete syntax/notation mappings; reconciliation of every seed record; model validation or execution. The four-profile reconciliation checks selected structural fields only. SHACL validates catalogue integrity, not SysML conformance. OWL describes catalogue vocabulary rather than executable SysML semantics.
 
 Tests cover provenance, normalization, identity-based inheritance, missing evidence, stale effective sets, reconciliation discrepancies, browser interactions and published links. Source-dependent tests explicitly skip if originals are missing. The Node browser smoke check executes the generated application against a DOM test double; it is not a visual layout test.
+
+## Graphical notation source units
+
+The [notation register](notation-register.md) keeps source cells and grammar declaration occurrences separate from curated `inv:Notation` records. The [dashboard](notation-coverage.md) reports distinct units rather than evidence-join row counts. `notation-register.ttl` adds appearance, labels, compartments, attachments, applicability, alternatives and supporting source-unit links to the six existing grouped records. Shared conventions have their own records. Source indexing does not imply that every graphical alternative or imported dependency is audited.

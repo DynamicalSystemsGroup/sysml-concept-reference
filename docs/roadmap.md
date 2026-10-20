@@ -44,3 +44,7 @@ Examples proposed here are not executed tests. Add actual expected/observed evid
 ## Publication and verification
 
 Keep reviewed research and reproducible extraction inputs/configuration public where redistribution permits. Keep credentials and local sessions out of Git. Record provenance before incorporating external material. No notebook sharing changes, remote publication, commits or pushes are implied by this plan.
+
+## Graphical coverage baseline
+
+The [notation dashboard](notation-coverage.md) and [source register](notation-register.md) now index all 27 §8.2.3 subsections and all 26 Clause 7 tables: 639 production occurrences and 192 labeled source cells. Six representative records are reconciled to this baseline; shared conventions and the next review batches are recorded. This completes the source-register baseline, not the subsequent full graphical-alternative audit or illustration programme.

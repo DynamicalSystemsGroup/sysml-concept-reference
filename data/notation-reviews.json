@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "scope": "Reconciliation of the six existing grouped records and shared convention summaries; representative coverage only",
+  "notations": [
+    {
+      "id": "part-node",
+      "production_ids": [
+        "8.2.3.11/part/1",
+        "8.2.3.11/part-ref/1",
+        "8.2.3.11/part-name-compartment/1"
+      ],
+      "table_cell_ids": [
+        "table-9/cell-2"
+      ],
+      "geometry": "Rounded rectangular usage node; the illustrated composite and reference forms share the same basic geometry.",
+      "line_style": "Solid outline for the composite example; dashed outline for the reference example.",
+      "labels": "Part usage prefix and name/type follow part-name-compartment and usage-name-with-alias; the example uses «part» and «ref part».",
+      "compartments": "The grammar permits an interconnection view and compartment stack. These are not fully illustrated.",
+      "attachments": "port-t, port-b, port-l and port-r positions are permitted by the part production; side ports are not illustrated here.",
+      "applicability": "A referential part remains a PartUsage. The redraw demonstrates outline and label forms, not every permitted part context.",
+      "alternatives": "Composite and referential forms are grouped here. Compartment contents, boundary attachments and prefix combinations need further audit.",
+      "represents": "SysML PartUsage",
+      "illustrated_forms": "One solid composite part node and one dashed referential part node.",
+      "coverage_claim": "RepresentativeOnly"
+    },
+    {
+      "id": "part-definition-node",
+      "production_ids": [
+        "8.2.3.11/part-def/1",
+        "8.2.3.11/part-def-name-compartment/1"
+      ],
+      "table_cell_ids": [
+        "table-9/cell-1"
+      ],
+      "geometry": "Sharp-corner rectangular definition node.",
+      "line_style": "Solid outline in the original redraw.",
+      "labels": "Definition prefix, part def keyword and definition-name-with-alias; the minimal example uses «part def».",
+      "compartments": "Interconnection contents and a compartment stack may extend the definition node; omitted in the minimal redraw.",
+      "attachments": "The part-def production provides top, bottom, left and right port positions; these remain unillustrated.",
+      "applicability": "Represents a part definition rather than a particular usage of that definition.",
+      "alternatives": "Boundary ports, additional prefixes, aliases and compartment contents remain to be audited separately.",
+      "represents": "SysML PartDefinition",
+      "illustrated_forms": "Minimal part definition node with keyword and name.",
+      "coverage_claim": "RepresentativeOnly"
+    },
+    {
+      "id": "port-node-boundary",
+      "production_ids": [
+        "8.2.3.12/port-usage/1",
+        "8.2.3.12/port-name-compartment/1",
+        "8.2.3.12/port-l/1",
+        "8.2.3.12/port-r/1",
+        "8.2.3.12/port-t/1",
+        "8.2.3.12/port-b/1",
+        "8.2.3.12/port-label/1"
+      ],
+      "table_cell_ids": [
+        "table-10/cell-2",
+        "table-9/cell-3"
+      ],
+      "geometry": "Full rounded usage node or small rounded boundary glyph. The boundary redraw illustrates one attachment position.",
+      "line_style": "Solid node and boundary glyph in the redraw; directional arrows are omitted.",
+      "labels": "The full form uses the port-name-compartment. Boundary labels use QualifiedName with an optional colon and QualifiedName.",
+      "compartments": "Full nodes can have a compartment stack and nested ports. Neither is exhausted by the illustration.",
+      "attachments": "The grammar gives separate left, right, top and bottom boundary productions with position-specific labels.",
+      "applicability": "Use boundary position and optional direction indications according to the corresponding port production; one drawn position does not cover all four.",
+      "alternatives": "All four orientations, direction glyphs, nesting and proxy alternatives require distinct checks. No direction is inferred from the undirected glyph.",
+      "represents": "SysML PortUsage",
+      "illustrated_forms": "Full port usage node and a single compact boundary-port example.",
+      "coverage_claim": "RepresentativeOnly"
+    },
+    {
+      "id": "port-reference-restrictions",
+      "production_ids": [
+        "8.2.3.12/port-l/1",
+        "8.2.3.12/port-r/1",
+        "8.2.3.12/port-t/1",
+        "8.2.3.12/port-b/1",
+        "8.2.3.12/proxy-v/1",
+        "8.2.3.12/proxy-h/1"
+      ],
+      "table_cell_ids": [],
+      "geometry": "Reference port outlines and proxy-dot alternatives are described from the source; there is no local redraw.",
+      "line_style": "The source note restricts dotted-line port productions to nested ports; no general rule for all ports is asserted.",
+      "labels": "Reference forms reuse port-label; proxy-v and proxy-h use proxy-label. The imported proxy-label dependency remains to be resolved.",
+      "compartments": "The nested-port context is part of the applicability restriction, not evidence that arbitrary diagram nesting implies ownership.",
+      "attachments": "Horizontal and vertical proxy productions correspond to side attachment alternatives.",
+      "applicability": "Dotted reference ports are possible only for nested ports. A proxy option is valid only on a part usage contained within an interconnection view.",
+      "alternatives": "Reference versus proxy forms are grouped for restriction tracking and must be split before claiming exhaustive visual coverage.",
+      "represents": "SysML PortUsage and restricted proxy connection points",
+      "coverage_claim": "RepresentativeOnly"
+    },
+    {
+      "id": "connection-edge-node",
+      "production_ids": [
+        "8.2.3.13/connection/1",
+        "8.2.3.13/connection-name-compartment/1",
+        "8.2.3.13/connection-graphical/1",
+        "8.2.3.13/connection-end/1",
+        "8.2.3.13/connection-label/1"
+      ],
+      "table_cell_ids": [
+        "table-11/cell-5",
+        "table-11/cell-6"
+      ],
+      "geometry": "Rounded full connection usage node or binary line joining connection ends.",
+      "line_style": "Solid line for the binary example; optional direction-indication arrow is not drawn and does not by itself assert flow semantics.",
+      "labels": "The node uses connection-name-compartment; the edge has an optional connection-label. Role names, multiplicities and c-adornment are separate grammar elements.",
+      "compartments": "The full connection node can contain a compartment stack, omitted in the minimal redraw.",
+      "attachments": "The binary grammar uses connection-end, which can be a usage-node or usage-edge.",
+      "applicability": "The redraw covers a connection usage node and undirected binary representation; it is not the definition-edge or binding notation.",
+      "alternatives": "Directed indication, adornments, end labels, elaboration and proxy connections remain unillustrated.",
+      "represents": "SysML ConnectionUsage",
+      "illustrated_forms": "Undirected binary connection line and minimal full connection usage node.",
+      "coverage_claim": "RepresentativeOnly"
+    },
+    {
+      "id": "connection-nary",
+      "production_ids": [
+        "8.2.3.13/n-ary-connection/1",
+        "8.2.3.13/n-ary-connection-dot/1",
+        "8.2.3.13/n-ary-segment/1",
+        "8.2.3.13/cdot-label/1"
+      ],
+      "table_cell_ids": [
+        "table-11/cell-8"
+      ],
+      "geometry": "Filled central dot with segments to usage nodes, as described in the graphical grammar.",
+      "line_style": "Solid segments; source description only, without a local redraw.",
+      "labels": "Central cdot-label uses UsageDeclaration; each segment has role name and multiplicity elements.",
+      "compartments": "This record describes the n-ary relationship form rather than a full node compartment stack.",
+      "attachments": "Each n-ary-segment links the central n-ary-connection-dot to a usage-node.",
+      "applicability": "Representative n-ary usage connection; do not substitute the separate n-ary definition grammar or infer arbitrary endpoint semantics.",
+      "alternatives": "The definition dot/segments are separate productions. End labels and all cardinality/context rules need a full audit.",
+      "represents": "SysML ConnectionUsage with multiple ends",
+      "coverage_claim": "RepresentativeOnly"
+    }
+  ],
+  "shared_rules": [
+    {
+      "id": "graph-structure",
+      "title": "Views contain nodes, edges and connection points",
+      "description": "Graphical views render nodes connected by edges. Definition and usage nodes may have ports or parameter connection points. These are presentation structures, not automatically model ownership.",
+      "evidence_pages": [
+        225
+      ],
+      "production_ids": []
+    },
+    {
+      "id": "compartments-are-views",
+      "title": "Compartments and selection",
+      "description": "A node may have compartments. Each compartment is a view of selected members, rendered textually or graphically as specified by its grammar. Record selection and rendering separately.",
+      "evidence_pages": [
+        225
+      ],
+      "production_ids": [
+        "8.2.3.6/compartment-stack/1"
+      ]
+    },
+    {
+      "id": "partial-productions",
+      "title": "Complete and partial productions",
+      "description": "Table 30 distinguishes complete productions from distributed partial productions. Repeated production names retain every source occurrence; the register flags reversed or spaced operators without silently repairing the source.",
+      "evidence_pages": [
+        225,
+        226
+      ],
+      "production_ids": []
+    },
+    {
+      "id": "layout-flexibility",
+      "title": "Layout and stretching",
+      "description": "The graphical grammar generally constrains containment and connectivity. Elements may generally be relocated and stretched to fit their contents. A redraw layout is not a unique required coordinate system.",
+      "evidence_pages": [
+        226
+      ],
+      "production_ids": []
+    },
+    {
+      "id": "line-routing",
+      "title": "Connecting lines and jumps",
+      "description": "Connecting lines may have straight or curved segments. Segments may have a semicircular jump where they overlap another connecting line.",
+      "evidence_pages": [
+        226
+      ],
+      "production_ids": []
+    },
+    {
+      "id": "text-dependencies",
+      "title": "Imported textual productions",
+      "description": "Graphical grammar symbols conventionally use lowercase names and hyphens. Mixed-case references import textual productions from §8.2.2; their dependencies must be reviewed rather than treated as new visual symbols.",
+      "evidence_pages": [
+        226
+      ],
+      "production_ids": []
+    },
+    {
+      "id": "text-selection",
+      "title": "Selecting an element inside a textual compartment",
+      "description": "The source specifies graying a substring covering one element in a textual compartment. Selection highlighting is distinct from the permanent appearance of that element.",
+      "evidence_pages": [
+        227
+      ],
+      "production_ids": [
+        "8.2.3.2/element-inside-textual-compartment/1"
+      ]
+    },
+    {
+      "id": "names-aliases",
+      "title": "Names and aliases",
+      "description": "Definition and usage name productions reuse textual declarations and can append alias labels. The usage-name-with-alias production also has an optional caret. Prefix and inherited/derived marker semantics require their textual and Clause 7 evidence.",
+      "evidence_pages": [
+        231,
+        233
+      ],
+      "production_ids": [
+        "8.2.3.6/definition-name-with-alias/1",
+        "8.2.3.6/usage-name-with-alias/1",
+        "8.2.3.6/el-prefix/1"
+      ]
+    },
+    {
+      "id": "extension-restrictions",
+      "title": "Metadata keyword extensions",
+      "description": "The extended definition/usage productions have applicability notes requiring an extension keyword to name a MetadataDefinition directly or indirectly specializing the KerML SemanticMetadata metaclass. A full KerML dependency audit remains open.",
+      "evidence_pages": [
+        233
+      ],
+      "production_ids": [
+        "8.2.3.6/extended-def/1",
+        "8.2.3.6/extended-usage/1"
+      ]
+    },
+    {
+      "id": "standard-views",
+      "title": "Standard views and valid contents",
+      "description": "Table 34 names eight standard view definitions and associates five with default-compartment grammar sections; geometry, grid and browser entries have blank default-compartment cells. View content/filter requirements are a separate dependency audit. The §8.2.3.26 note references §9.2.18 while the actual package is §9.2.20.",
+      "evidence_pages": [
+        225,
+        287,
+        545,
+        546
+      ],
+      "production_ids": []
+    }
+  ]
+}

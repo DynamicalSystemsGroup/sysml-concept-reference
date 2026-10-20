@@ -12,6 +12,10 @@ Browse 17 focus concepts and eight supporting ancestors. Inspect 180 property de
 
 Start with [PartUsage](../docs/concepts/part-usage.md), [PartDefinition](../docs/concepts/part-definition.md), [PortUsage](../docs/concepts/port-usage.md) and [ConnectionUsage](../docs/concepts/connection-usage.md): source-checked draft profiles connecting properties, relationships, examples and representative graphical notation to evidence.
 
+## Track graphical notation coverage
+
+The [notation dashboard](../docs/notation-coverage.md) indexes 192 labeled source cells and 639 graphical grammar production occurrences. It links our six grouped notation records to their sources and tracks illustration scope separately from indexing. These are source-unit counts, not unique-symbol counts.
+
 ## Read the evidence
 
 | Guide | What you will find |

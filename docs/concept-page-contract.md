@@ -32,7 +32,7 @@ Same-name declarations are not automatically the same property. Unresolved compe
 
 ## Graphical and example evidence
 
-Representative variants have been checked against rendered official pages; complete graphical grammars have not been inventoried. A concept may have several valid representations. Visual nesting is not converted automatically into a semantic ownership or composition statement.
+Representative variants have been checked against rendered official pages; graphical grammar declarations are now indexed in the [source register](notation-register.md), while complete graphical alternatives remain unaudited. A concept may have several valid representations. Visual nesting is not converted automatically into a semantic ownership or composition statement.
 
 Illustrations in `docs/assets/notation/` are original vector redraws based on the cited syntax. They are not copied official figures. The shared [assembly example](../data/examples/assembly.sysml) is source-reviewed but has not been run through a SysML parser or semantic engine.
 
@@ -49,9 +49,10 @@ Rebuild the normalized metamodel from the hash-pinned originals, then generate p
 ```bash
 uv run --locked python scripts/build_inventory.py --fetch
 uv run --locked python scripts/build_profiles.py
+uv run --locked python scripts/build_notation.py
 uv run --locked python scripts/check_inventory.py
-uv run --locked python -m unittest discover -s tests -v
 uv run --locked python scripts/build_browser.py
+uv run --locked python -m unittest discover -s tests -v
 uv run --locked python scripts/build_site.py
 ```
 

@@ -1,0 +1,9 @@
+PREFIX inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+# Unmapped means no representative link, not a proved count of missing symbols.
+SELECT ?unit ?kind ?name ?section ?page ?source WHERE {
+  VALUES ?kind { inv:GraphicalProductionOccurrence inv:NotationSourceCell }
+  ?unit a ?kind ; rdfs:label ?name ; inv:inNotationSection ?section ; inv:pdfPage ?page ; dct:source ?source .
+  FILTER NOT EXISTS { ?notation a inv:Notation ; inv:supportingProduction|inv:supportingSourceCell ?unit . }
+} ORDER BY ?section ?page ?name

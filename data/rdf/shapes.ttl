@@ -108,3 +108,59 @@ inv:NotationShape a sh:NodeShape ; sh:targetClass inv:Notation ;
     sh:property [ sh:path inv:verificationStatus ; sh:hasValue inv:RepresentativeNotationVisuallyChecked ] ;
     sh:property [ sh:path inv:depictionStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( inv:OriginalRedraw inv:SourceDescriptionOnly ) ] ;
     sh:property [ sh:path inv:evidence ; sh:minCount 1 ; sh:class inv:EvidenceLocation ] .
+
+inv:NotationSectionShape a sh:NodeShape ;
+    sh:targetClass inv:NotationSection ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path dct:source ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path inv:sourceArtifact ; sh:minCount 1 ; sh:class inv:SourceArtifact ] .
+
+inv:NotationSourceTableShape a sh:NodeShape ;
+    sh:targetClass inv:NotationSourceTable ;
+    sh:property [ sh:path inv:tableNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path inv:sourceRole ; sh:minCount 1 ; sh:maxCount 1 ; sh:in (inv:RepresentativeNotation inv:SemanticDependency inv:DiagramExample) ] ;
+    sh:property [ sh:path dct:source ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+inv:NotationSourceUnitShape a sh:NodeShape ;
+    sh:targetClass inv:GraphicalProductionOccurrence, inv:NotationSourceCell ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:inNotationSection ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:NotationSection ] ;
+    sh:property [ sh:path inv:sourceArtifact ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:SourceArtifact ] ;
+    sh:property [ sh:path inv:pdfPage ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path dct:source ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+inv:GraphicalProductionShape a sh:NodeShape ;
+    sh:targetClass inv:GraphicalProductionOccurrence ;
+    sh:property [ sh:path inv:productionOperator ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("=" "=|" "|=") ] ;
+    sh:property [ sh:path inv:indexStatus ; sh:hasValue inv:TextIndexed ] ;
+    sh:property [ sh:path inv:spacedBarAfterEquals ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] .
+
+inv:NotationSourceCellShape a sh:NodeShape ;
+    sh:targetClass inv:NotationSourceCell ;
+    sh:property [ sh:path inv:inSourceTable ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:NotationSourceTable ] ;
+    sh:property [ sh:path inv:indexStatus ; sh:hasValue inv:GridLabelIndexed ] ;
+    sh:property [ sh:path inv:labelCellBounds ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+inv:NotationReviewShape a sh:NodeShape ;
+    sh:targetSubjectsOf inv:supportingSourceCell ;
+    sh:targetSubjectsOf inv:coverageClaim ;
+    sh:class inv:Notation ;
+    sh:property [ sh:path inv:coverageClaim ; sh:hasValue inv:RepresentativeOnly ; sh:maxCount 1 ] ;
+    sh:property [ sh:path inv:supportingProduction ; sh:minCount 1 ; sh:class inv:GraphicalProductionOccurrence ] ;
+    sh:property [ sh:path inv:supportingSourceCell ; sh:class inv:NotationSourceCell ] ;
+    sh:property [ sh:path inv:geometry ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:lineStyle ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:labelRule ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:compartmentRule ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:attachmentRule ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:condition ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:alternativeRule ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path inv:representedKinds ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+inv:SharedNotationRuleShape a sh:NodeShape ;
+    sh:targetClass inv:SharedNotationRule ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path dct:description ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path dct:source ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path inv:sourceArtifact ; sh:minCount 1 ; sh:maxCount 1 ; sh:class inv:SourceArtifact ] ;
+    sh:property [ sh:path inv:supportingProduction ; sh:class inv:GraphicalProductionOccurrence ] .

@@ -1,0 +1,8 @@
+PREFIX inv: <https://github.com/DynamicalSystemsGroup/sysml-concept-reference/vocab#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# Exactly one row per curated record; compound records can contain multiple forms.
+SELECT ?notation ?concept ?title ?status (COUNT(DISTINCT ?evidence) AS ?evidenceLocations)
+WHERE {
+  ?notation a inv:Notation ; inv:concept ?concept ; rdfs:label ?title ;
+    inv:verificationStatus ?status ; inv:evidence ?evidence .
+} GROUP BY ?notation ?concept ?title ?status ORDER BY ?title

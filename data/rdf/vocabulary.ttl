@@ -132,3 +132,29 @@ inv:SourceReviewedNotExecuted rdfs:label "Source-reviewed example; no parser or 
 inv:RepresentativeNotationVisuallyChecked rdfs:label "Representative notation checked against rendered official pages" .
 inv:OriginalRedraw rdfs:label "Original illustrative redraw, not an official figure" .
 inv:SourceDescriptionOnly rdfs:label "Description of an additional source variant" .
+
+# Notation source units are separate from curated, possibly compound variants.
+inv:NotationSection a owl:Class .
+inv:NotationSourceTable a owl:Class .
+inv:NotationSourceCell a owl:Class .
+inv:GraphicalProductionOccurrence a owl:Class .
+inv:SharedNotationRule a owl:Class .
+inv:inNotationSection a owl:ObjectProperty .
+inv:inSourceTable a owl:ObjectProperty .
+inv:supportingProduction a owl:ObjectProperty .
+inv:supportingSourceCell a owl:ObjectProperty .
+inv:sourceRole a owl:ObjectProperty .
+inv:indexStatus a owl:ObjectProperty .
+inv:coverageClaim a owl:ObjectProperty .
+inv:tableNumber a owl:DatatypeProperty .
+inv:productionOperator a owl:DatatypeProperty .
+inv:spacedBarAfterEquals a owl:DatatypeProperty .
+inv:labelCellBounds a owl:DatatypeProperty .
+inv:geometry a owl:DatatypeProperty .
+inv:lineStyle a owl:DatatypeProperty .
+inv:labelRule a owl:DatatypeProperty .
+inv:compartmentRule a owl:DatatypeProperty .
+inv:attachmentRule a owl:DatatypeProperty .
+inv:alternativeRule a owl:DatatypeProperty .
+inv:representedKinds a owl:DatatypeProperty .
+inv:illustratedForms a owl:DatatypeProperty .

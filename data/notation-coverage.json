@@ -1,0 +1,250 @@
+{
+  "scope": "\u00a78.2.3 production occurrences and labeled cells in Clause 7 Tables 1\u201326; not a unique-symbol or graphical-alternative census",
+  "counts": {
+    "grammar_sections": 27,
+    "clause7_tables": 26,
+    "labeled_table_cells": 192,
+    "representative_notation_cells": 182,
+    "production_occurrences": 639,
+    "distinct_production_names": 523,
+    "explicit_partial_occurrences": 97,
+    "reversed_operator_occurrences_needing_review": 19,
+    "spaced_bar_occurrences_needing_review": 5,
+    "curated_notation_records": 6,
+    "source_checked_representative_records": 6,
+    "illustrated_records": 4,
+    "illustration_files": 4,
+    "mapped_production_occurrences": 23,
+    "mapped_table_cells": 7,
+    "unmapped_production_occurrences": 616,
+    "unmapped_table_cells": 185,
+    "fully_audited_production_occurrences": 0,
+    "fully_audited_table_cells": 0,
+    "shared_rules_described": 10
+  },
+  "families": [
+    {
+      "section": "8.2.3.1",
+      "title": "Graphical Notation Overview",
+      "production_occurrences": 0,
+      "table_cells": 0,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.2",
+      "title": "Elements and Relationships Graphical Notation",
+      "production_occurrences": 9,
+      "table_cells": 0,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.3",
+      "title": "Dependencies Graphical Notation",
+      "production_occurrences": 9,
+      "table_cells": 2,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.4",
+      "title": "Annotations Graphical Notation",
+      "production_occurrences": 12,
+      "table_cells": 10,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.5",
+      "title": "Namespaces and Packages Graphical Notation",
+      "production_occurrences": 25,
+      "table_cells": 12,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.6",
+      "title": "Definition and Usage Graphical Notation",
+      "production_occurrences": 31,
+      "table_cells": 24,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.7",
+      "title": "Attributes Graphical Notation",
+      "production_occurrences": 10,
+      "table_cells": 3,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.8",
+      "title": "Enumerations Graphical Notation",
+      "production_occurrences": 9,
+      "table_cells": 3,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.9",
+      "title": "Occurrences Graphical Notation",
+      "production_occurrences": 50,
+      "table_cells": 10,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.10",
+      "title": "Items Graphical Notation",
+      "production_occurrences": 12,
+      "table_cells": 3,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.11",
+      "title": "Parts Graphical Notation",
+      "production_occurrences": 18,
+      "table_cells": 8,
+      "mapped_production_occurrences": 5,
+      "mapped_table_cells": 3
+    },
+    {
+      "section": "8.2.3.12",
+      "title": "Ports Graphical Notation",
+      "production_occurrences": 20,
+      "table_cells": 4,
+      "mapped_production_occurrences": 9,
+      "mapped_table_cells": 1
+    },
+    {
+      "section": "8.2.3.13",
+      "title": "Connections Graphical Notation",
+      "production_occurrences": 39,
+      "table_cells": 13,
+      "mapped_production_occurrences": 9,
+      "mapped_table_cells": 3
+    },
+    {
+      "section": "8.2.3.14",
+      "title": "Interfaces Graphical Notation",
+      "production_occurrences": 17,
+      "table_cells": 6,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.15",
+      "title": "Allocations Graphical Notation",
+      "production_occurrences": 14,
+      "table_cells": 5,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.16",
+      "title": "Flows Graphical Notation",
+      "production_occurrences": 30,
+      "table_cells": 5,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.17",
+      "title": "Actions Graphical Notation",
+      "production_occurrences": 72,
+      "table_cells": 26,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.18",
+      "title": "States Graphical Notation",
+      "production_occurrences": 46,
+      "table_cells": 11,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.19",
+      "title": "Calculations Graphical Notation",
+      "production_occurrences": 14,
+      "table_cells": 2,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.20",
+      "title": "Constraints Graphical Notation",
+      "production_occurrences": 26,
+      "table_cells": 5,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.21",
+      "title": "Requirements Graphical Notation",
+      "production_occurrences": 68,
+      "table_cells": 8,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.22",
+      "title": "Cases Graphical Notation",
+      "production_occurrences": 4,
+      "table_cells": 0,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.23",
+      "title": "Analysis Cases Graphical Notation",
+      "production_occurrences": 12,
+      "table_cells": 3,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.24",
+      "title": "Verification Cases Graphical Notation",
+      "production_occurrences": 23,
+      "table_cells": 7,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.25",
+      "title": "Use Cases Graphical Notation",
+      "production_occurrences": 22,
+      "table_cells": 4,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.26",
+      "title": "Views and Viewpoints Graphical Notation",
+      "production_occurrences": 39,
+      "table_cells": 13,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    },
+    {
+      "section": "8.2.3.27",
+      "title": "Metadata Graphical Notation",
+      "production_occurrences": 8,
+      "table_cells": 5,
+      "mapped_production_occurrences": 0,
+      "mapped_table_cells": 0
+    }
+  ],
+  "limits": [
+    "Indexing is not a visual rule audit; mapped does not mean fully covered.",
+    "Text extraction cannot enumerate two-dimensional alternatives, adornments or all imported dependencies.",
+    "Repeated names and same-label cells retain distinct source occurrences.",
+    "Table 16 is a semantic dependency, Table 25 diagram examples; neither is added to representative-notation cell count.",
+    "No unique-symbol or remaining-illustration total is asserted."
+  ]
+}

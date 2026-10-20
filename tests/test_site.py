@@ -20,12 +20,16 @@ class SiteTests(unittest.TestCase):
                          "data/index.html", "queries/index.html", "assets/style.css",
                          "assets/brand/dsg-wordmark.png", "assets/brand/fonts/ibm-plex-sans.woff2",
                          "docs/concepts/part-usage.html", "docs/concepts/port-usage.html",
-                         "docs/assets/notation/connection-usage.svg", "data/rdf/profiles.ttl"):
+                         "docs/assets/notation/connection-usage.svg", "data/rdf/profiles.ttl",
+                         "docs/notation-coverage.html", "docs/notation-register.html",
+                         "data/notation-source-index.json", "data/notation-coverage.json",
+                         "data/rdf/notation-register.ttl"):
                 self.assertTrue((output / path).is_file(), path)
             self.assertEqual((output / "data/rdf/metamodel.ttl").read_bytes(), (ROOT / "data/rdf/metamodel.ttl").read_bytes())
             self.assertFalse((output / "sandbox").exists())
             self.assertFalse((output / ".venv").exists())
             self.assertFalse((output / "scripts").exists())
+            self.assertIn('href="notation-coverage.html"', (output / "docs/concept-browser.html").read_text())
             self.assertIn('href="../index.html"', (output / "docs/concept-browser.html").read_text())
             self.assertIn('/blob/main/scripts/build_browser.py', (output / "docs/rdf-inventory.html").read_text())
 

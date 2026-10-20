@@ -19,6 +19,8 @@ def load_graph(include_profiles=True):
         g.parse(ROOT / f"data/rdf/{name}.ttl")
     if include_profiles and (ROOT / "data/rdf/profiles.ttl").exists():
         g.parse(ROOT / "data/rdf/profiles.ttl")
+        if (ROOT / "data/rdf/notation-register.ttl").exists():
+            g.parse(ROOT / "data/rdf/notation-register.ttl")
     return g
 
 

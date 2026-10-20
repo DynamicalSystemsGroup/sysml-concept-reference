@@ -53,6 +53,14 @@ async page => {
   assert(result.literal&&result.noScript&&result.keyword,'Unsafe label edit or changed keyword');
   assert(result.stroke==='rgb(127, 96, 27)','Theme not applied');
   assert(result.duplicateIds===0&&result.failures.length===0,'Invalid API option accepted or duplicate IDs');
+  const staticContext=await page.context().browser().newContext({javaScriptEnabled:false});
+  try{
+    const staticPage=await staticContext.newPage();await staticPage.goto(base+'/docs/svg-shapes.html');
+    assert(await staticPage.locator('.shape-card').count()===9,'Static cards missing');
+    assert(await staticPage.getByRole('link',{name:'Download SVG',exact:true}).count()===9,'Static downloads missing');
+    assert(await staticPage.locator('.shape-filters').isHidden(),'Inactive static filters visible');
+    assert(await staticPage.locator('[data-copy]:visible').count()===0,'Inactive static copy buttons visible');
+  }finally{await staticContext.close()}
   assert(errors.length===0,errors.join('\n'));
   return {galleryCards:9,connectionFilter:4,copyHandler:'passed',composition:'passed',safeLabels:'passed',theme:'passed',cloneIds:'passed',invalidOptions:'passed'};
 }

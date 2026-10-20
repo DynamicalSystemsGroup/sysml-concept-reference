@@ -1,6 +1,8 @@
 'use strict';
 const search=document.querySelector('#shape-search'), family=document.querySelector('#shape-family');
 const cards=[...document.querySelectorAll('.shape-card')];
+document.querySelector('.shape-filters').hidden=false;
+for(const button of document.querySelectorAll('[data-copy]'))button.hidden=false;
 function filterShapes(){
   const query=search.value.trim().toLowerCase();let count=0;
   for(const card of cards){

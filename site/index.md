@@ -1,6 +1,6 @@
-# Understand the concepts behind SysML v2
+# SysML concepts and components
 
-A source-backed catalogue of KerML and SysML concepts, their properties, relationships and underlying mechanisms.
+Study the language with source-backed explanations, or borrow graphical components for your own modeling tools. Choose the path that fits what you want to do.
 
 ## Start with the foundations
 
@@ -12,7 +12,7 @@ Start with [PartUsage](../docs/concepts/part-usage.md), [PartDefinition](../docs
 
 ## Borrow the SVG components
 
-Use the [SVG shape library](../docs/svg-shapes.html) to download reusable parts, ports and connections. Transparent assets, editable labels, attachment coordinates and a symbol sprite are available under Apache 2.0.
+If you are building a renderer or modeling interface, use the [SVG shape library](../docs/svg-shapes.html) to download reusable parts, ports and connections. Transparent assets, editable labels, attachment coordinates and a symbol sprite are available under Apache 2.0.
 
 ## Track graphical notation coverage
 

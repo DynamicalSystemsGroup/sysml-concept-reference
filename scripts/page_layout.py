@@ -111,6 +111,9 @@ def prepare_body(body,current):
     kind=page_kind(current)
     match=re.search(r'<h1\b[^>]*>.*?</h1>',body,re.S)
     title_html=match[0] if match else ''
+    if kind=='home' and 'id="understand-the-concepts-behind-sysml-v2"' not in title_html:
+        # Keep the previous homepage title fragment working as its copy evolves.
+        title_html='<span id="understand-the-concepts-behind-sysml-v2" aria-hidden="true"></span>'+title_html
     rest=body[:match.start()]+body[match.end():] if match else body
     intro=re.match(r'\s*(<p\b[^>]*>.*?</p>)',rest,re.S)
     lead=intro[1] if intro else ''
@@ -124,9 +127,14 @@ def prepare_body(body,current):
     label={'home':'Language reference','concept':'Concept profile','coverage':'Notation research','register':'Source register','document':'Research and methods'}.get(kind,'Reference tools')
     facts,note=page_facts(current)
     heading=f'<header class="page-heading"><p class="page-category">{label}</p>{title_html}{lead}</header>'
-    if facts:heading+=scope_panel(facts,note)
+    if facts and kind!='home':heading+=scope_panel(facts,note)
     if kind=='home':
-        heading+=f'''<div class="entry-routes"><a class="entry-primary" href="{relative('docs/concept-browser.html',current)}"><span>Explore concepts</span><strong>Understand the language</strong><p>Meanings, relationships, notation and inherited properties.</p></a><div><a href="{relative('docs/notation-coverage.html',current)}"><strong>Inspect notation coverage</strong><span>Follow the source register and review gaps.</span></a><a href="{relative('docs/svg-shapes.html',current)}"><strong>Borrow SVG shapes</strong><span>Download components for your renderer.</span></a></div></div>'''
+        heading+=f'''<nav class="entry-routes" aria-label="Choose your path">
+<a class="entry-path" href="{relative('docs/concept-browser.html',current)}"><span class="entry-label">For learning</span><strong>Study SysML concepts</strong><p>Understand what concepts mean, how they relate and compose, and how they appear in diagrams. Follow examples and links to the official specification.</p><span class="entry-action">Explore concepts</span></a>
+<a class="entry-path" href="{relative('docs/svg-shapes.html',current)}"><span class="entry-label">For building tools</span><strong>Borrow graphical components</strong><p>Download reusable SVG parts, ports and connections for your renderer. Inspect shapes, edit labels and colors, and use attachment coordinates.</p><span class="entry-action">Open the SVG library</span></a>
+<a class="entry-evidence" href="{relative('docs/notation-coverage.html',current)}"><strong>Inspect the evidence and coverage</strong><span>Trace notation to official sources and see what has been indexed, illustrated or reviewed.</span></a>
+</nav>'''
+        if facts:heading+=scope_panel(facts,note)
     chunks=re.split(r'(?=<h2\b)',rest)
     if kind=='concept':
         order=['What to understand','Graphical notation','Relationships and composition','Connected example','Properties','Reconciliation and limits']

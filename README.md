@@ -38,3 +38,9 @@ Use ignored `sandbox/` for downloaded sources and working evidence. Do not commi
 Validation covers extraction provenance, normalization, inheritance, profiles, RDF integrity, generated browser behavior and published links. Source-dependent tests skip when originals are unavailable. These checks do not establish SysML conformance.
 
 The site uses the official [Dynamical Systems Group](https://www.dynamicalsystemsgroup.com/) identity: navy, paper and brass, with locally hosted open-source typography. Asset sources and licenses are recorded in [brand provenance](site/assets/provenance.json).
+
+## License
+
+Copyright 2026 Dynamical Systems Group. Except where otherwise noted, original project code, documentation and illustrations are licensed under the [Apache License 2.0](LICENSE).
+
+Third-party material retains its existing terms. OMG specifications and source-derived material remain subject to the applicable source terms recorded in the [source manifest](data/source-manifest.json). Bundled fonts retain their included SIL Open Font License notices; see [asset provenance](site/assets/provenance.json). DSG names and logos are not included in the Apache license grant.

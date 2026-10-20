@@ -53,7 +53,7 @@ def layout(body: str, title: str, current: str, source: str | None = None) -> st
 <nav aria-label="Primary">{a('Explore concepts', 'docs/concept-browser.html')}{a('Research', 'docs/rdf-inventory.html')}<a href="{REPO}">GitHub</a></nav></header>
 <div class="shell"><aside class="sidebar"><details open><summary>Contents</summary><nav aria-label="Research guides">{navigation}</nav></details></aside>
 <main id="main"><article>{body}{edit}</article></main></div>
-<footer class="site-footer"><strong>A Dynamical Systems Group project</strong><nav aria-label="DSG links"><a href="https://www.dynamicalsystemsgroup.com/">DSG website</a><a href="https://github.com/DynamicalSystemsGroup">DSG on GitHub</a><a href="{REPO}">Source repository</a></nav><p>Research based on official OMG sources. Editorial interpretations and coverage limits are recorded with the evidence.</p></footer>
+<footer class="site-footer"><strong>A Dynamical Systems Group project</strong><nav aria-label="DSG links"><a href="https://www.dynamicalsystemsgroup.com/">DSG website</a><a href="https://github.com/DynamicalSystemsGroup">DSG on GitHub</a><a href="{REPO}">Source repository</a><a href="{escape(relative('LICENSE', current))}">Apache 2.0 license</a></nav><p>Research based on official OMG sources. Editorial interpretations and coverage limits are recorded with the evidence.</p></footer>
 </body></html>'''
 
 
@@ -117,6 +117,7 @@ def build(output: Path) -> tuple[int, int]:
     mapping.update({p: "docs/" + p.relative_to(ROOT / "docs").with_suffix(".html").as_posix() for p in sorted((ROOT / "docs").rglob("*.md"))})
     browser = ROOT / "docs/concept-browser.html"
     mapping[browser] = "docs/concept-browser.html"
+    mapping[ROOT / "LICENSE"] = "LICENSE"
     downloads = [ROOT / "data/language-inventory.json", ROOT / "data/source-manifest.json",
                  ROOT / "data/notation-source-index.json", ROOT / "data/notation-reviews.json", ROOT / "data/notation-coverage.json",
                  ROOT / "data/namespace-migration.json", ROOT / "data/concept-profiles.json", ROOT / "data/property-explanations.json", ROOT / "data/profile-reconciliation.json",

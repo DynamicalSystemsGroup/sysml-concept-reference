@@ -1,6 +1,7 @@
 [project]
 name = "sysml-concept-reference"
 version = "0.1.0"
+license = "Apache-2.0"
 description = "Source-backed KerML and SysML language concept inventory"
 requires-python = ">=3.11"
 dependencies = []

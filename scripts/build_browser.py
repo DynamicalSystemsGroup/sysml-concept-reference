@@ -7,6 +7,7 @@ from rdflib import RDF, RDFS
 from rdflib.namespace import DCTERMS
 
 from check_inventory import INV, ROOT, check, load_graph
+from page_layout import layout
 from property_resolution import inheritance_paths, resolve_properties
 
 
@@ -88,12 +89,14 @@ def main():
     browser_data = payload(g)
     data = json.dumps(browser_data, sort_keys=True, ensure_ascii=True).replace("<", "\\u003c")
     template = (ROOT / "scripts/browser-template.html").read_text()
-    brand = (ROOT / "site/brand.css").read_text().replace('url("fonts/', 'url("assets/brand/fonts/')
-    template = template.replace("__BRAND_STYLES__", brand)
     destination = ROOT / "docs/assets/brand"
     destination.mkdir(parents=True, exist_ok=True)
     shutil.copytree(ROOT / "site/assets", destination, dirs_exist_ok=True)
-    (ROOT / "docs/concept-browser.html").write_text(template.replace("__INVENTORY_DATA__", data).replace("__CONCEPT_ANCHORS__", "".join(f'<span id="{escape(uri, quote=True)}"></span>' for uri in sorted(browser_data["concepts"]))))
+    body=template.replace("__INVENTORY_DATA__",data).replace("__CONCEPT_ANCHORS__","".join(f'<span id="{escape(uri,quote=True)}"></span>' for uri in sorted(browser_data["concepts"])))
+    sections=[('detail','Overview'),('notation','Graphical notation'),('relationships','Relationships'),('examples','Connected example'),('inheritance','Direct bases'),('properties','Properties'),('sources','Official sources')]
+    html=layout(body,'Concept browser','docs/concept-browser.html','scripts/browser-template.html',inline=True,prepared=True,sections=sections)
+    html=html.replace('</head>','<style>'+(ROOT/'site/browser.css').read_text()+'</style></head>')
+    (ROOT/'docs/concept-browser.html').write_text(html)
     print("Built docs/concept-browser.html")
 
 

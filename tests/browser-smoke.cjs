@@ -17,7 +17,7 @@ class Element {
   replaceChildren(...children){this.children=[...children];this._text='';}
   setAttribute(key,value){this.attrs[key]=value;}
 }
-for(const id of ['inventory-data','search','support','results','concepts','detail','counts','sources']){const el=new Element('div');el.id=id;}
+for(const id of [...html.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1])){const el=new Element('div');el.id=id;}
 nodes.get('inventory-data').textContent=json;
 const location={protocol:'file:',hash:''};
 const callbacks={};

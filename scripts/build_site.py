@@ -13,49 +13,7 @@ from urllib.parse import quote, unquote, urlsplit, urlunsplit
 from markdown_it import MarkdownIt
 
 ROOT = Path(__file__).resolve().parents[1]
-REPO = "https://github.com/DynamicalSystemsGroup/sysml-concept-reference"
-NAV = [
-    ("Home", "index.html"),
-    ("Concept browser", "docs/concept-browser.html"),
-    ("SVG shape library", "docs/svg-shapes.html"),
-    ("Notation coverage", "docs/notation-coverage.html"),
-    ("Notation source register", "docs/notation-register.html"),
-    ("Concept-page contract", "docs/concept-page-contract.html"),
-    ("Part usage", "docs/concepts/part-usage.html"),
-    ("Part definition", "docs/concepts/part-definition.html"),
-    ("Port usage", "docs/concepts/port-usage.html"),
-    ("Connection usage", "docs/concepts/connection-usage.html"),
-    ("RDF inventory", "docs/rdf-inventory.html"),
-    ("Official sources", "docs/official-machine-readable-specs.html"),
-    ("Language research", "docs/language-research.html"),
-    ("Roadmap", "docs/roadmap.html"),
-    ("Data downloads", "data/index.html"),
-    ("SPARQL queries", "queries/index.html"),
-    ("Publishing", "docs/publishing.html"),
-]
-
-
-def relative(destination: str, current: str) -> str:
-    return Path(os.path.relpath(destination, Path(current).parent)).as_posix()
-
-
-def layout(body: str, title: str, current: str, source: str | None = None) -> str:
-    def a(label, path):
-        active = ' aria-current="page"' if path == current else ""
-        return f'<a href="{escape(relative(path, current))}"{active}>{escape(label)}</a>'
-    navigation = "".join(a(label, path) for label, path in NAV)
-    edit = f'<p class="edit"><a href="{REPO}/blob/main/{quote(source)}">View this page’s source on GitHub</a></p>' if source else ""
-    return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{escape(title)} | SysML Concept Reference</title><meta name="description" content="Source-backed KerML and SysML v2 concepts, properties, relationships and research.">
-<link rel="stylesheet" href="{escape(relative('assets/brand/brand.css', current))}"><link rel="stylesheet" href="{escape(relative('assets/style.css', current))}"><link rel="icon" href="{escape(relative('assets/brand/dsg-logo.png', current))}" type="image/png"></head>
-<body><a class="skip" href="#main">Skip to content</a>
-<header class="site-nav"><a class="dsg-logo" href="https://www.dynamicalsystemsgroup.com/" aria-label="Dynamical Systems Group website"><img src="{escape(relative('assets/brand/dsg-wordmark.png', current))}" alt="Dynamical Systems Group" width="185" height="48"></a><a class="brand" href="{escape(relative('index.html', current))}">SysML Concept Reference</a>
-<nav aria-label="Primary">{a('Explore concepts', 'docs/concept-browser.html')}{a('Research', 'docs/rdf-inventory.html')}<a href="{REPO}">GitHub</a></nav></header>
-<div class="shell"><aside class="sidebar"><details open><summary>Contents</summary><nav aria-label="Research guides">{navigation}</nav></details></aside>
-<main id="main"><article>{body}{edit}</article></main></div>
-<footer class="site-footer"><strong>A Dynamical Systems Group project</strong><nav aria-label="DSG links"><a href="https://www.dynamicalsystemsgroup.com/">DSG website</a><a href="https://github.com/DynamicalSystemsGroup">DSG on GitHub</a><a href="{REPO}">Source repository</a><a href="{escape(relative('LICENSE', current))}">Apache 2.0 license</a></nav><p>Research based on official OMG sources. Editorial interpretations and coverage limits are recorded with the evidence.</p></footer>
-</body></html>'''
+from page_layout import REPO, NAV, relative, layout
 
 
 class SiteLinks(HTMLParser):
@@ -143,6 +101,7 @@ def build(output: Path) -> tuple[int, int]:
     css = output / "assets/style.css"
     css.parent.mkdir(parents=True)
     shutil.copyfile(ROOT / "site/style.css", css)
+    shutil.copyfile(ROOT / "site/site.js", output / "assets/site.js")
     brand_dir = output / "assets/brand"
     brand_dir.mkdir(parents=True)
     shutil.copyfile(ROOT / "site/brand.css", brand_dir / "brand.css")
@@ -179,15 +138,7 @@ def build(output: Path) -> tuple[int, int]:
         target = output / destination
         target.parent.mkdir(parents=True, exist_ok=True)
         if source.suffix != ".md" or source.is_relative_to(ROOT / "shapes"):
-            if source == browser:
-                html = source.read_text().replace('href="notation-coverage.md"', 'href="notation-coverage.html"')
-                navbar = '<nav class="browser-nav" aria-label="Research site"><strong>SysML Concept Reference</strong><a href="../index.html">Home</a><a href="rdf-inventory.html">Research guide</a><a href="../data/index.html">Download data</a></nav>'
-                html = html.replace("</head>", '<link rel="stylesheet" href="../assets/style.css"></head>', 1)
-                # Only browser-nav styles should affect the existing standalone browser.
-                html = html.replace('<link rel="stylesheet" href="../assets/style.css">', '<style>.browser-nav{display:flex;gap:22px;flex-wrap:wrap;align-items:center;padding:14px 5vw;background:var(--wash);border-bottom:1px solid var(--line);font:14px/1.5 var(--font-body)}.browser-nav strong{margin-right:auto}</style>')
-                target.write_text(html.replace("<body>", "<body>\n" + navbar, 1))
-            else:
-                shutil.copyfile(source, target)
+            shutil.copyfile(source, target)
             continue
         md = MarkdownIt("commonmark", {"html": False}).enable("table")
         tokens = md.parse(source.read_text())
@@ -209,6 +160,8 @@ def build(output: Path) -> tuple[int, int]:
                 elif child.type == "image":
                     child.attrSet("src", rewrite(child.attrGet("src"), source, destination))
         title = next((tokens[i + 1].content for i, t in enumerate(tokens) if t.type == "heading_open"), source.stem)
+        md.renderer.rules["table_open"] = lambda tokens, idx, options, env: '<div class="table-scroll" role="region" tabindex="0" aria-label="Reference table"><table>'
+        md.renderer.rules["table_close"] = lambda tokens, idx, options, env: '</table></div>'
         body = md.renderer.render(tokens, md.options, {})
         target.write_text(layout(body, title, destination, source.relative_to(ROOT).as_posix()))
     for directory, title, paths in (("data", "Download inventory data", [p for p in downloads if p.parent.name != "queries"]),

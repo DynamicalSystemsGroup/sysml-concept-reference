@@ -2,8 +2,6 @@
 
 A source-backed catalogue of KerML and SysML concepts, their properties, relationships and underlying mechanisms.
 
-[Explore the concept browser](../docs/concept-browser.html)
-
 ## Start with the foundations
 
 The first slice separates four mechanisms that can otherwise look like “containment”: **model ownership**, **namespace membership**, **feature context**, and **composition versus reference**.
